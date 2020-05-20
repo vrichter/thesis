@@ -15,13 +15,14 @@ generated:
 prepare: generated
 	$(info input prepared)
 
+%.pdf: %.tex */*.tex generated $(FIGURES)
+	latexmk -pdflua "$<"
 
-
-thesis.pdf: *.tex */*.tex generated $(FIGURES)
-	latexmk -pdflua
+defence.pdfpc2: defence.pdfpc defence.pdf ./process-pdfpc.py
+	cat defence.pdfpc | ./process-pdfpc.py > defence.pdfpc2
 
 .PHONY: all
-all: thesis.pdf
+all: thesis.pdf defence.pdf defence.pdfpc2
 	$(info build finished)
 
 .PHONY: clean

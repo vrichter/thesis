@@ -1,0 +1,291 @@
+\begin{frame}{Detecting Mixed Human-Agent Conversational Groups}
+  \centering
+    \begin{columns}[T] % align columns
+      \begin{column}{.5\textwidth}
+          \def\svgwidth{\textwidth}%
+          \input{generated/conversational_group_defence.pdf_tex}
+      \end{column}
+      \begin{column}{.5\textwidth}
+        \vspace{10pt}
+        \textbf{RQ3: Conversational Group}\\\vspace{5pt} 
+        \onslide<2->{In \textbf{Copresence} of \textcolor{myblue}{Humans} and \textcolor{myblue}{Agents}: }\onslide<3->{How can \textcolor{myblue}{conversational groups} with \textcolor{myblue}{agents} be detected?}\\
+      \vspace{10pt}
+       \onslide<4->\(\rightarrow\) \hspace{5pt} Face detection\\
+       \vspace{5pt}
+       \onslide<5->\(\rightarrow\) \hspace{5pt} Gaze direction\\
+       \vspace{5pt}
+       \onslide<6->\(\rightarrow\) \hspace{5pt} F-Formation\\
+      \end{column}
+    \end{columns}
+  \pnote{25-14}
+\end{frame}
+\begin{frame}{Demonstration Scenario}
+  \begin{columns}[T] % align columns
+    \begin{column}{.5\textwidth}
+      \includegraphics[width=\textwidth]{study-group-shot-cam3}
+    \end{column}
+    \begin{column}{.5\textwidth}
+    \begin{itemize}[label=-]
+      \item<1->[] Demonstration Scenario
+      \item<1->[\(\rightarrow\)] Human-Agent Conversational Goups
+      \item<2-> 10 Guests (8w, 2m) 
+      \item<2->[\(\rightarrow\)] Open, Dynamic Interaction
+     % \item<3-> Present the Apartment (\SI{20}{min})
+     % \item<4-> Free Interaction (\SI{37}{min})
+      \item<3->[] \textcolor{mygreen}{New Corpus}
+      \item<3-> \SI{57}{min} Video, Audio, IPC
+    \end{itemize}
+  \end{column}
+  \end{columns}
+  \vspace{10pt}
+  \pnote{25-14}
+\end{frame}
+\begin{frame}{Person Tracking \& Ground Truth Annotation}
+  \begin{columns}[T] % align columns
+    \begin{column}{.5\textwidth}
+     \centering
+      \onslide<1->{
+        \resizebox{.9\textwidth}{!}{%
+          \def\svgwidth{1.8\textwidth}
+          \input{generated/study-group-shots-openpose.pdf_tex}
+      }}
+  \end{column}%
+  \hspace{-.05\textwidth}
+    \begin{column}{.55\textwidth}
+      \onslide<2->{
+      \resizebox{\textwidth}{!}{%
+        \def\svgwidth{1.5\textwidth}
+        \input{generated/csra_map_annotations.pdf_tex}
+        }
+      }
+   \end{column}%
+  \end{columns}
+  \vspace{5pt}
+  \begin{columns}[T] % align columns
+    \begin{column}{.5\textwidth}
+      \onslide<1->{\footnotesize
+      \begin{itemize}[label=-]
+        \item[] Person Poses
+        \item OpenPose + Apartment Tracking
+      \end{itemize}
+      }
+   \end{column}%
+    \begin{column}{.5\textwidth}
+      \onslide<2->{\footnotesize
+      \begin{itemize}[label=-]
+        \item[]Ground Truth Annotation
+        \item 2D Poses of Agents/Participants
+        \item Agent's Conversational Groups
+        \item Conversational Role of Each Participant
+      \end{itemize}
+      }
+   \end{column}%
+  \end{columns}
+  \pnote{25-14}
+\end{frame}
+\begin{frame}{Best Assignment of Agents to Groups}
+    \newcommand{\ffmcostd}{\vspace{-182.3pt}}
+    {
+      \centering
+      %\(\text{Assignment Cost}\bcite{Setti2015}\onslide<3->{ = \text{Distance Cost}}\onslide<4->{ + \text{Visibility Cost}}\onslide<5->{ + \text{MDL Prior}}\)\\
+      \(\text{Assignment Cost}\onslide<3->{ = \text{Distance Cost}}\onslide<4->{ + \text{Visibility Cost}}\onslide<5->{ + \text{MDL Prior}}\)\\
+    }
+    \vspace{10pt}
+    \onslide<1->{
+      \def\svgwidth{1.\textwidth}
+      \input{generated/fformation-costs-layer1.pdf_tex}
+    }
+    \ffmcostd
+    \onslide<2->{
+      \def\svgwidth{1.\textwidth}
+      \input{generated/fformation-costs-layer6.pdf_tex}
+    }
+    \ffmcostd
+    \onslide<3->{
+      \def\svgwidth{1.\textwidth}
+      \input{generated/fformation-costs-layer3.pdf_tex}
+    }
+    \ffmcostd
+    \onslide<4->{
+      \def\svgwidth{1.\textwidth}
+      \input{generated/fformation-costs-layer4.pdf_tex}
+    }
+    \vspace{-10pt}
+  \pnote{25-14}
+\end{frame}
+\begin{frame}{Evaluating F-Formation Detection for HAI}
+  \begin{columns}[T] % align columns
+    \begin{column}{.55\textwidth}
+    \resizebox{1.\textwidth}{!}{%
+      \begin{tikzpicture}
+        \action<1->{\node (a) at (0,0)
+        {
+          \resizebox{1.\textwidth}{!}{%
+            \scriptsize
+            \input{data/group-ffm-evaluation-beamer.tex}
+          }
+        };}
+        \action<1>{\filldraw [fill=bgcolorframe, draw=bgcolorframe] (-90pt,-58pt) rectangle (105pt,88pt);}
+      \end{tikzpicture}
+    }
+    \end{column}
+    \hspace{-20pt}
+    \begin{column}{.52\textwidth}
+      \footnotesize
+      \vspace{30pt}
+      \begin{itemize}
+        \item[-]<1-> Graph-Cuts with \(\text{MDL} = 4500\), \(\text{Stride} = 50\)
+        \item[-]<1-> \(F_1\) for Tolerance Threshold \([0.5,1]\)
+        \item[-]<2-> Pose detection errors reduce group detection quality
+        \item[-]<3-> Overall worse Performance for Flobi Entrance
+        \item[-]<4-> Good results given the complexity
+        \item[\textcolor{mygreen}{\faCheckCircle}]<5-> \emph{F-Formations known from HHI can be used to detect conversational groups of people and artificial agents.}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \pnote{25-14 (16/17 ist eine gute zeit)}
+\end{frame}
+\begin{frame}{In/Out of Group Distinction}
+  \vspace{20pt}
+  \begin{columns}[T] % align columns
+    \begin{column}{.3\textwidth}
+      \vspace{3pt}
+      \centering
+      \onslide<1->{\resizebox{\textwidth}{!}{%
+      \def\svgwidth{1.5\textwidth}
+        \input{generated/conversational_group_defence.pdf_tex}
+      }}
+    \end{column}%
+    \begin{column}{.3\textwidth}
+      \onslide<1->{
+        \includegraphics[trim={3.5cm .8cm 6cm 0}, clip, width=\textwidth]{meka-face-speaking}
+      }
+   \end{column}%
+   \begin{column}{.3\textwidth}
+      \onslide<1->{
+        \includegraphics[trim={4cm .8cm 5.5cm 0}, clip, width=\textwidth]{meka-face-nonspeaking}
+      }
+   \end{column}%
+  \end{columns}
+  \begin{columns}[T] % align columns
+    \begin{column}{.3\textwidth}
+      \onslide<2->{
+      \centering
+        Costs from F-Formation\\\textcolor{mygreen}{F-Formation}
+      }
+    \end{column}%
+    \begin{column}{.3\textwidth}
+      \onslide<3->{
+      \centering
+        Gaze Angle\\\textcolor{myblue}{Gaze}
+      }
+    \end{column}%
+    \begin{column}{.3\textwidth}
+      \centering
+      \onslide<4->{
+        Face Size\\\textcolor{myred}{Face}
+      }
+    \end{column}%
+  \end{columns}
+  \pnote{25-14}
+\end{frame}
+\begin{frame}{In/Out of Group Distinction}
+  \begin{columns}[T] % align columns
+    \begin{column}{.65\textwidth}
+      \vspace{30pt}
+      \resizebox{1.\textwidth}{!}{%
+        \scriptsize
+        %\input{data/group-ingroup-roc-beamer.tex}
+        \begin{tikzpicture}
+        \node (a) at (0,0)
+        {
+          \input{data/group-ingroup-roc-beamer.tex}
+        };
+        \end{tikzpicture}
+      }
+    \end{column}
+    \hspace{-0.1\textwidth}
+    \begin{column}{.4\textwidth}
+      \vspace{40pt}
+      \small
+      \begin{itemize}
+        \item[-]<2-> F-Formation for Flobi Assistance best
+        \item[-]<3-> Difference btw. others is neglible
+        \item[\textcolor{mygreen}{\faArrowRight}]<4-> Both Gaze and Face Competitive 
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \pnote{25-14}
+\end{frame}
+\begin{frame}{Summary RQ3}
+  In Mixed Human-Agent-Interaction:\\ 
+  \begin{itemize}
+    \item[\textcolor{mygreen}{\faCheckCircle}]<2-> \textcolor{myblue}{F-Formation}s as known from HHI-research can be applied to detect the \textbf{participants} of an artificial agent's conversational group.
+    \item[\textcolor{mygreen}{\faCheckCircle}]<3-> \textcolor{myblue}{Gaze direction} can inform if an artificial agent is \textbf{in} a group or not.
+    \item[\textcolor{mygreen}{\faCheckCircle}]<4-> \textcolor{myblue}{Face detection} can inform if an artificial agent is \textbf{in} a group or not.
+  \end{itemize}
+  \pnote{25-14}
+\end{frame}
+\begin{frame}{Overview}
+    \emph{\goalshort}
+    \centering\\
+    \vspace{10pt}
+    \resizebox{1.\textwidth}{!}{%
+        \footnotesize
+        \begin{tikzpicture}
+        \action<1->{\node (a) at (0,0)
+        {
+          \resizebox{.25\textwidth}{!}{%
+            \includegraphics[trim={8cm 0 2cm 0},clip]{study-addressee-vp57}
+          }
+        };}
+        \action<1->{\node[align=left, anchor=north, text width=.25\textwidth] (at) at (0, -.11\textwidth) {
+        \textbf{RQ1 \scriptsize Addressing Behaviour}\\
+          \vspace{5pt}
+          \textcolor{mygreen}{\faCheckCircle} \Naive{} addressing\\
+          \textcolor{mygreen}{\faCheckCircle} Attention\\
+          \textcolor{mygreen}{\faCheckCircle} Speech
+        };}
+        \action<1->{\node (b) at (.25\textwidth+10,0)
+        {
+          \resizebox{.25\textwidth}{!}{%
+            \includegraphics[trim={0 0 0 2cm},clip]{addressee-meka-intro}
+          }
+        };}
+        \action<1->{\node[align=left, anchor=north, text width=.25\textwidth] (bt) at (.25\textwidth+10, -.11\textwidth) {
+          \textbf{RQ2 \scriptsize Addressee Recognition}\\
+          \vspace{5pt}
+          \textcolor{mygreen}{\faCheckCircle} Mouth movements\\
+          \textcolor{mygreen}{\faCheckCircle} Mutual gaze\\
+          \textcolor{mygreen}{\faCheckCircle} Addressee\\
+          };}
+        \action<1->{\node (c) at (.5\textwidth+20,0)
+        {
+          \resizebox{.25\textwidth}{!}{%
+            \input{generated/conversational_group_defence.pdf_tex}
+          }
+        };}
+        \action<1->{\node[align=left, anchor=north, text width=.25\textwidth] (ct) at (.5\textwidth+20, -.11\textwidth) {
+          \textbf{RQ3 \scriptsize Conversational Group}\\
+          \vspace{5pt}
+          \textcolor{mygreen}{\faCheckCircle} F-Formation\\
+          \textcolor{mygreen}{\faCheckCircle} Gaze direction\\
+          \textcolor{mygreen}{\faCheckCircle} Face detection\\
+          };}
+        \action<1->{\node (d) at (.75\textwidth+30,0)
+        {
+          \resizebox{.25\textwidth}{!}{%
+            \includegraphics[trim={4.1cm 0 0 0},clip]{conversational_group}
+          }
+        };}
+        \action<1->{\node[align=center, anchor=north, text width=.25\textwidth] (dt) at (.75\textwidth+30, -.11\textwidth) {
+          \textbf{RQ4 \scriptsize Conversational Roles}\\
+          \vspace{5pt}
+          Repair \\ Interaction
+        };}
+        \action<1>{\filldraw [fill=bgcolorframe, draw=bgcolorframe, opacity=0.8, fill opacity=0.8] (380pt,-150pt) rectangle (270pt,40pt);}
+        \action<2>{\filldraw [fill=bgcolorframe, draw=bgcolorframe, opacity=0.0, fill opacity=0.0] (380pt,-150pt) rectangle (270pt,40pt);}
+\end{tikzpicture}
+      }
+  \pnote{25-14}
+\end{frame}

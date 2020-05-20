@@ -78,13 +78,40 @@ source("../scripts/tikz-export-config.R")
     ggplot(aes(x=Threshold, y=Value)) +
     geom_line(aes(color=Detector, linetype=Input),size=1) +
     facet_grid(rows=vars(Agent),cols=vars(qm)) + 
-    scale_y_continuous(minor_breaks = seq(0 , 1, 0.05), breaks = seq(0, 1, 0.1)) +
-    scale_x_continuous(minor_breaks = seq(0 , 1, 0.05), breaks = seq(0.5, 1.0, 0.1)) + 
-    coord_fixed(xlim = c(0.5, 1.0), ylim = c(0., 1.)) +
+    scale_y_continuous(minor_breaks = seq(0 , 1, 0.05), breaks = seq(0, 1, 0.1), limits = c(0., 1.)) +
+    scale_x_continuous(minor_breaks = seq(0 , 1, 0.05), breaks = seq(0.5, 1.0, 0.1), limits = c(0.5, 1.0)) + 
+    #coord_fixed(xlim = c(0.5, 1.0), ylim = c(0., 1.)) +
     scale_color_brewer(palette="Set1") +
     xlab("Tolerance Threshold") + 
     labs(color = "Detector:", linetype = "Input:") +
     guides(col = guide_legend(nrow=2)) +
+    theme(legend.position = "bottom",
+          legend.box = "vertical",
+          legend.spacing.y = unit(0.0, 'cm'),
+          legend.text = element_text(margin = margin(r = 10, unit = "pt")),
+          legend.margin=margin(2,2,2,2),
+          legend.box.margin=margin(-10,0,0,0),
+          axis.text.x = element_text(angle = 60))
+)
+
+(
+  plot_ffm_curves_short <-
+    ffm_results %>% 
+    filter(Threshold >= 0.5) %>% 
+    mutate(Config = paste(Algorithm,Mdl,Stride,sep="-")) %>%
+    filter(Config == "Gco-4500-50") %>%
+    mutate(Config = "Graph-Cuts, MDL=4500, Stride=50") %>% 
+    mutate(Detector=Config) %>% 
+    gather(qm,"Value","F1") %>%
+    mutate(qm=recode_factor(qm,Precision="Precision", Recall="Recall",F1="F1", Markedness="Markedness", Informedness="Informedness")) %>%
+    ggplot(aes(x=Threshold, y=Value)) +
+    geom_line(aes(linetype=Input), color=RColorBrewer::brewer.pal(name = "Set1", n = 9)[3], size=1) +
+    facet_wrap(facets = vars(Agent)) + 
+    scale_y_continuous(minor_breaks = seq(0 , 1, 0.05), breaks = seq(0, 1, 0.1), limits = c(0,1)) +
+    scale_x_continuous(minor_breaks = seq(0 , 1, 0.05), breaks = seq(0.5, 1.0, 0.1)) + 
+    scale_color_brewer(palette="Set1") +
+    xlab("Tolerance Threshold") + 
+    ylab("F1") + 
     theme(legend.position = "bottom",
           legend.box = "vertical",
           legend.spacing.y = unit(0.0, 'cm'),
@@ -106,7 +133,7 @@ fun_plot_with_auc <- function(
 {
   xdim_q <- enquo(xdim)
   ydim_q <- enquo(ydim)
-  auc <- results_in_group %>%
+  auc <- evaluation_data %>%
     group_by(agent,feature) %>%
     summarize(auc=fun_auc(!!xdim_q,!!ydim_q)) %>%
     ungroup() %>%
@@ -131,6 +158,20 @@ fun_plot_with_auc <- function(
 )
 
 (
+  plot_in_group_roc_defence <- fun_plot_with_auc(results_in_group %>%
+                                                   mutate(feature=ifelse(feature=="Gco-Agent","F-Formation",feature)) %>%
+                                                   mutate(feature=factor(feature, levels = c("Face", "Gaze", "F-Formation")))
+                                                 ,
+                                                 fpr, recall, 
+                                                 "False Positive Rate (False Alarms)", "True Positive Rate (Recall)",
+                                                 rep(c(0.25,0.75),each=3),rev(c(rep(seq(0.25,0.5,0.125),2))),
+                                                 ggbase = ggplot() + 
+                                                   annotate("rect", xmin = 0.15, xmax = 0.85, ymin = 0.15, ymax = 0.6, alpha = 0.3) + 
+                                                   annotate("text", x = 0.5, y = 0.375, label = "\\footnotesize{AUC}")
+  )
+)
+
+(
   plot_in_group_pr <- fun_plot_with_auc(results_in_group, 
                                         recall, precision, 
                                         "True Positive Rate (Recall)", "Positive Predictive Value (Precision)",
@@ -145,9 +186,12 @@ fun_plot_with_auc <- function(
 fun_write_all_out <- function(){
   fun_write_info(info, filename="data.info_group.ini")
   fun_write_plot_tex(plot_ingroup_counts, 'group-ingroup-counts.tex', hfac=0.75*plot_height_factor_golden_ratio)
-  fun_write_plot_tex(plot_ffm_curves, 'group-ffm-evaluation.tex', hfac=1.5*plot_height_factor_golden_ratio)
+  fun_write_plot_tex(plot_ffm_curves, 'group-ffm-evaluation.tex', hfac=2.6*plot_height_factor_golden_ratio)
   fun_write_plot_tex(plot_in_group_roc, 'group-ingroup-roc.tex', hfac=1.*plot_height_factor_golden_ratio)
   fun_write_plot_tex(plot_in_group_pr, 'group-ingroup-pr.tex', hfac=1.*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_ffm_curves_short, 'group-ffm-evaluation-beamer.tex', hfac=1.5*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_in_group_roc_defence, 'group-ingroup-roc-beamer.tex', hfac=1*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_in_group_roc_defence + coord_cartesian(xlim = c(0,0.225), ylim=c(0.7,0.925)), 'group-ingroup-roc-beamer-zoomed.tex', hfac=1*plot_height_factor_golden_ratio)
 }
 if(write_out) { 
   fun_write_all_out()

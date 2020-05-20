@@ -1,9 +1,9 @@
 \usetikzlibrary{shapes,arrows}
 \tikzset{
   root/.style     = {circle, fill=black},
-  role/.style     = {shape=rectangle, line width=0.1em, rounded corners, draw=mygreen, align=center, fill=white, minimum height=1.5em},
-  decision/.style = {diamond, line width=0.1em, draw=myblue, aspect=2, align=center, fill=white, minimum width=7em, text width=5em, text height=0.5em, inner sep=0em},
-  input/.style    = {trapezium, line width=0.1em, draw=myred, trapezium left angle=60, trapezium right angle=120, align=center, fill=white, minimum height=1.5em}
+  role/.style     = {shape=rectangle, line width=0.1em, rounded corners, draw=mygreen, align=center, fill=bgcolor, minimum height=1.5em},
+  decision/.style = {diamond, line width=0.1em, draw=myblue, aspect=2, align=center, fill=bgcolor, minimum width=7em, text width=5em, text height=0.5em, inner sep=0em},
+  input/.style    = {trapezium, line width=0.1em, draw=myred, trapezium left angle=60, trapezium right angle=120, align=center, fill=bgcolor, minimum height=1.5em}
 }
 \begin{tikzpicture}
   [
@@ -24,17 +24,17 @@
    \node [input, above=of mug, yshift=1em] (imug) {Addressee Recognition};
 
    \path (root) edge[->] (ing);
-   \path (iing) edge[->] node [rotate=-90,fill=white] {\(|g(P_{agent})|>1\)} (ing);
-   \path (ispe) edge[->] node [rotate=-90,fill=white] {\(\text{Active}(\text{SP})\)} (spe);
-   \path (imug) edge[->] node [rotate=-90,fill=white] {\(P(A|G,M) > 50\%\)} (mug);
-   \path (ing) edge[->] node [fill=white] {Yes}  (spe);
-   \path (ing) edge[->] node [fill=white,rotate=90] {No}  (rno);
-   \path (spe) edge[->] node [fill=white,rotate=90] {Yes}  (rsp);
-   \path (spe) edge[->] node [fill=white] {No}  (mug);
+   \path (iing) edge[->] node [rotate=-90,fill=bgcolor] {\(|g(P_{agent})|>1\)} (ing);
+   \path (ispe) edge[->] node [rotate=-90,fill=bgcolor] {\(\text{Active}(\text{SP})\)} (spe);
+   \path (imug) edge[->] node [rotate=-90,fill=bgcolor] {\(P(A|G,M) > 50\%\)} (mug);
+   \path (ing) edge[->] node [fill=bgcolor] {Yes}  (spe);
+   \path (ing) edge[->] node [fill=bgcolor,rotate=90] {No}  (rno);
+   \path (spe) edge[->] node [fill=bgcolor,rotate=90] {Yes}  (rsp);
+   \path (spe) edge[->] node [fill=bgcolor] {No}  (mug);
    \path (mug) edge[->] (rad);
    \path (mug) edge[->] (rme);
-   \node [fill=white,above=of rad, yshift=-1.5em, xshift=-1em] {Yes};
-   \node [fill=white,above=of rme, yshift=-1.5em, xshift=1.75em] {No};
+   \node [fill=bgcolor,above=of rad, yshift=-1.5em, xshift=-1em] {Yes};
+   \node [fill=bgcolor,above=of rme, yshift=-1.5em, xshift=1.75em] {No};
 \end{tikzpicture}
 
 

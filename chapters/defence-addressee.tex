@@ -1,0 +1,227 @@
+\begin{frame}{\Naive{} Addressing Behaviour in Smart Environments}
+  \centering
+    \begin{columns}[T] % align columns
+      \begin{column}{.5\textwidth}
+        \includegraphics[trim={8cm 5cm 2cm 0cm},clip,width=\textwidth]{study-addressee-vp57-cam1}
+      \end{column}
+      \begin{column}{.5\textwidth}
+        \vspace{40pt}
+        \textbf{RQ1: Addressing Behaviour}\\\vspace{5pt} 
+        \onslide<2->{In \textcolor{myblue}{\naive{}} human interaction with a smart environment: }\onslide<3->{Which \textcolor{myblue}{behaviours} can be observed}\onslide<4->{ to distinguish \textcolor{myblue}{addressed} entities?}
+      \end{column}
+    \end{columns}
+    \pnote{40-33}
+\end{frame}
+\begin{frame}{Addressing Apartment Study}
+  \begin{columns}[T] % align columns
+    \begin{column}{.5\textwidth}
+      \centering
+      \vspace{-10pt}
+      \resizebox{1.\textwidth}{!}{%
+        \footnotesize
+        \begin{tikzpicture}
+          \action<1->{\node (a) at (0,0)
+          {
+            \resizebox{1.\textwidth}{!}{%
+              \def\svgwidth{1.3\textwidth}
+              \input{generated/csra_map_study_addressee.pdf_tex}
+            }
+          };}
+        \end{tikzpicture}
+      }
+    \end{column}
+    \begin{column}{.5\textwidth}
+      \onslide<1->{Solve 7 Daily Tasks \\}
+      \vspace{5pt}
+      \onslide<2->{WoZ \(\rightarrow\) Any solution possible \\}
+      \vspace{5pt}
+      \onslide<3->{
+        Participants: 47 (25w, 22m)\\
+        {\scriptsize \(18 \leq \text{age} \leq 50\), \(\mu_{age}=25.26\), \(\sigma_{age}=5.69\)\\}
+      \vspace{5pt}
+      \onslide<4->{Study Aim\obcite{4-}{Bernotat2016}: Solutions \& Addressees \\}}
+    \end{column}
+  \end{columns}
+  \centering
+  \onslide<5->{
+    \textcolor{mygreen}{\textbf{My Aim: Find out how participants address entities!}}\obcite{5-}{Richter2016}
+  }
+  \pnote{
+    40-33 - use the apartment study we conducted in the csra
+  }
+\end{frame}
+\begin{frame}{Observations of Addressing Behaviour}
+  \onslide<1->{I extract properties of \textcolor{mygreen}{successfull communication attempts} from the corpus\obcite{1-}{Holthaus2016a}}
+    \vspace{10pt}
+    \\\onslide<2->{\textcolor{mypurple}{\textbf{Addressee}}}
+    \\\onslide<3->{\textcolor{myorange}{\textbf{Speech}} \hspace{2pt} Naming, Politeness, Phrasing, Sentence, Keywords}
+    \\\onslide<4->{\textcolor{myyellow!80!black}{\textbf{Visual}} \hspace{2pt} Attention, Modality, Gestures, Emotions, Participant}
+    \\\onslide<5->{\textcolor{mygray}{\textbf{Other}} \hspace{2pt} Task Order, Condition, Wizard Addressee, Task, Addressee is Attention}
+    \\\onslide<6->{\begin{center}\textcolor{mygreen}{\faArrowRight} \textbf{307} observations in \textbf{16} variables\end{center}}
+  \pnote{
+    40-33 - elan annotations at time of wizard action
+  }
+\end{frame}
+\begin{frame}{Addressee Recognition Models}
+  \begin{columns}[T] % align columns
+    \begin{column}{.25\textwidth}
+      \centering
+      \vspace{5pt}
+      Bayesian Networks:\\
+      \onslide<2->{\textcolor{myred}{Attention}\\}
+      \onslide<3->{\textcolor{myblue}{Manual}\\}
+       \vspace{5pt}
+       Variable Sets:\\
+       \onslide<4->{Speech\\}
+       \onslide<5->{Visual\\}
+       \onslide<6->{Speech + Visual\\}
+       \onslide<7->{All\\}
+    \end{column}
+    \hspace{-.05\textwidth}
+    \begin{column}{.8\textwidth}
+      \centering
+      \begin{tikzpicture}
+       \action<2->{\node (a) at (0,0)
+       {
+         \resizebox{.32\textwidth}{!}{%
+           \def\svgwidth{.45\textwidth}
+           \input{generated/bn-attention-defence.pdf_tex}
+         }
+       };}
+       \action<3->{\node (a) at (0,-.25\textwidth)
+       {
+         \resizebox{.95\textwidth}{!}{%
+           \def\svgwidth{1.2\textwidth}
+           \input{generated/bn-manual-defence.pdf_tex}
+         }
+       };}
+      \end{tikzpicture}
+    \end{column}
+  \end{columns}
+  \pnote{
+    40-33 - after investigating correlations btw. vars\\
+    manual represents dependency structure as understood by an expert
+  }
+\end{frame}
+\begin{frame}{Addressee Recognition Results}
+  \begin{columns}[T] % align columns
+    \begin{column}{.45\textwidth}
+      \centering
+      \resizebox{1.\textwidth}{!}{%
+          %\Large
+          \begin{tikzpicture}
+          \action<1->{\node (a) at (0,0)
+          {
+            \resizebox{1.\textwidth}{!}{%
+              \input{data/cv-beamer.tex}
+            }
+          };}
+          \action<1>{\filldraw [fill=bgcolorframe, draw=bgcolorframe] (3.3,3.5) rectangle (-2.5,-3.2);}
+          \action<2>{\filldraw [fill=bgcolorframe, draw=bgcolorframe] (3.3,3.5) rectangle (-1.1,-3.2);}
+          \action<3>{\filldraw [fill=bgcolorframe, draw=bgcolorframe] (3.3,3.5) rectangle (0.2,-3.2);}
+          \action<4>{\filldraw [fill=bgcolorframe, draw=bgcolorframe] (3.3,3.5) rectangle (1.6,-3.2);}
+         \end{tikzpicture}
+       }
+    \end{column}
+    \hspace{20pt}
+    \begin{column}{.55\textwidth}
+      \resizebox{1.2\textwidth}{!}{%
+      \begin{tikzpicture}
+        \hspace{-40pt}
+         \node (a) at (0,0)
+         {
+           \resizebox{.32\textwidth}{!}{%
+             \def\svgwidth{.9\textwidth}
+             \input{generated/bn-attention-defence.pdf_tex}
+           }
+         };
+         \node (a) at (.6\textwidth,0)
+         {
+           \resizebox{.8\textwidth}{!}{%
+             \def\svgwidth{2.2\textwidth}
+             \input{generated/bn-manual-defence.pdf_tex}
+           }
+         };
+        \end{tikzpicture}
+      }
+      \vspace{0pt}
+      \footnotesize
+      \begin{itemize}
+        \item[\textbf{Speech}] \action<2->{\(Attention\) has no Information\\\(Manual\) predicts \(\approx 55\%\)}
+        \item[\textbf{Visual}] \action<3->{Both around \(89\%\), \\\(Attention\) cannot be outperformed} 
+        \item[\textbf{Speech+Visual}] \action<4->{\(Attention\) cannot be outperformed}
+        \item[\textbf{All}] \action<5->{\(Manual\) achieves \(\approx 96\%\)}
+      \end{itemize}
+    \end{column}
+  \end{columns}
+  \pnote{
+    40-33
+  }
+\end{frame}
+\begin{frame}{Summary RQ1}
+  I Investigated:\\
+  \begin{itemize}
+    \item<1->[\textcolor{mygreen}{\faCheckCircle}] \textcolor{myblue}{Addressing behaviour} of \textcolor{myblue}{\naive{}} users in a smart environment. 
+    \item<2->[\textcolor{mygreen}{\faCheckCircle}] \textcolor{myblue}{Attention} is the most important information in addressing (\(\approx 89\%\)).
+    \item<3->[\textcolor{mygreen}{\faCheckCircle}] \textcolor{myblue}{Speech} can predict addressee in \(\approx 55\%\) of interactions.
+  \end{itemize}
+  \pnote{40-33}
+\end{frame}
+\begin{frame}{Overview}
+    \emph{\goalshort}
+    \centering\\
+    \vspace{10pt}
+    \resizebox{1.\textwidth}{!}{%
+        \footnotesize
+        \begin{tikzpicture}
+        \action<1->{\node (a) at (0,0)
+        {
+          \resizebox{.25\textwidth}{!}{%
+            \includegraphics[trim={8cm 0 2cm 0},clip]{study-addressee-vp57}
+          }
+        };}
+        \action<1->{\node[align=left, anchor=north, text width=.25\textwidth] (at) at (0, -.11\textwidth) {
+        \textbf{RQ1 \scriptsize Addressing Behaviour}\\
+          \vspace{5pt}
+          \textcolor{mygreen}{\faCheckCircle} \Naive{} addressing\\
+          \textcolor{mygreen}{\faCheckCircle} Attention\\
+          \textcolor{mygreen}{\faCheckCircle} Speech
+        };}
+        \action<1->{\node (b) at (.25\textwidth+10,0)
+        {
+          \resizebox{.25\textwidth}{!}{%
+            \includegraphics[trim={0 0 0 2cm},clip]{addressee-meka-intro}
+          }
+        };}
+        \action<1->{\node[align=center, anchor=north, text width=.25\textwidth] (bt) at (.25\textwidth+10, -.11\textwidth) {
+          \textbf{RQ2 \scriptsize Addressee Recognition}\\
+          \vspace{5pt}
+          React \\ to Addressing
+          };}
+        \action<1->{\node (c) at (.5\textwidth+20,0)
+        {
+          \resizebox{.25\textwidth}{!}{%
+            \input{generated/conversational_group_defence.pdf_tex}
+          }
+        };}
+        \action<1->{\node[align=center, anchor=north, text width=.25\textwidth] (ct) at (.5\textwidth+20, -.11\textwidth) {
+          \textbf{RQ3 \scriptsize Conversational Group}\\
+          \vspace{5pt}
+          Participate \\ in Interaction
+          };}
+        \action<1->{\node (d) at (.75\textwidth+30,0)
+        {
+          \resizebox{.25\textwidth}{!}{%
+            \includegraphics[trim={4.1cm 0 0 0},clip]{conversational_group}
+          }
+        };}
+        \action<1->{\node[align=center, anchor=north, text width=.25\textwidth] (dt) at (.75\textwidth+30, -.11\textwidth) {
+          \textbf{RQ4 \scriptsize Conversational Roles}\\
+          \vspace{5pt}
+          Repair \\ Interaction
+        };}
+        \action<1>{\filldraw [fill=bgcolorframe, draw=bgcolorframe, opacity=0.8, fill opacity=0.8] (380pt,-150pt) rectangle (50pt,40pt);}
+        \action<2>{\filldraw [fill=bgcolorframe, draw=bgcolorframe, opacity=0.8, fill opacity=0.8] (380pt,-150pt) rectangle (160pt,40pt);}
+\end{tikzpicture}
+      }
+\end{frame}

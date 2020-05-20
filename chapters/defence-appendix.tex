@@ -1,0 +1,570 @@
+\appendix
+\begin{frame}{Copresence}
+  \begin{block}{\citefullauthor*{goffman1963}}
+    [People in copresence] sense that they are close enough to be \textbf<2->{perceived} in whatever they are doing %, including their experiencing of others, and close enough to be perceived in this sensing of being perceived.
+    [\dots] 
+    Copresence renders persons uniquely \textcolor<3->{myred}{accessible}, \textcolor<4->{myred}{available}, and \textcolor<5->{myred}{subject} to one another.
+  \end{block}
+\end{frame}
+\begin{frame}[c,standout]
+  \pdfpcmovie[autostart,width=0.95\textwidth]{\includegraphics[width=0.95\textwidth]{generated/aido-short.jpg}}{generated/aido-short.mp4}\\
+  \tiny{Scene from \url{https://www.youtube.com/watch?v=W58U6mmPrmk}}\\
+  This is a commercial video of Aido. [short excerpt] 
+\end{frame}
+%\begin{frame}{The Future of Smart Enironments}
+%  \resizebox{1.\textwidth}{!}{%
+%  \def\svgwidth{1.5\textwidth}
+%    \input{generated/csra-windowshot-interaction.pdf_tex}
+%  }
+%\end{frame}
+\begin{frame}{Interaction with Whom? \(\rightarrow\) Interactive Entities}
+  \begin{figure}[htb]
+  \centering
+  \begin{tikzpicture}[
+    sibling distance=12em,
+    level distance = 3em,
+    every node/.style = {shape=rectangle, draw, align=center, top color=lightcolor, bottom color=lightcolor}
+    ]
+  \action<1>{\node {Interactive Entities};}    
+  \action<2>{\node {Interactive Entities}
+      child { node {Device} }
+      child { node {Autonomous Agent} }
+      ;}
+  \action<3>{\node {Interactive Entities}
+      child { node {Device} }
+      child { node {Autonomous Agent}
+        child { node {Human} }
+        child { node {Artificial Agent} }
+      }
+      ;}
+  \action<4>{\node {Interactive Entities}
+      child { node {Device} }
+      child { node {Autonomous Agent}
+        child { node {Human} }
+        child { node {Artificial Agent}
+          child { node {Robot} }
+          child { node {Virtual Agent} }
+        }
+      }
+      ;}
+  \end{tikzpicture}
+\end{figure}
+\end{frame}
+\begin{frame}{Original Goal}
+  \centering
+  Use the perception of a smart environment and its agents to recognize the conversational state and expectations of inhabitants towards different kinds of artificial agents.
+\end{frame}
+\begin{frame}{Research Questions}
+  \emph{Use the perception of a smart environment and its agents to recognize the conversational state and expectations of inhabitants towards different kinds of artificial agents.}
+  \pause
+  \begin{itemize}
+      \item[RQ1:] \hypaddress
+      \pause
+      \item[RQ2:] \hypmeka
+      \pause
+      \item[RQ3:] \hypfformation
+      \pause
+      \item[RQ4:] \hyproles
+  \end{itemize}
+\end{frame}
+\begin{frame}{Interaction Where? \(\rightarrow\) The CSRA Map}
+  \begin{figure}[t]
+    \begin{tikzpicture}[every node/.style={anchor=south,inner sep=0pt},x=1mm, y=1mm,] 
+      \action<1-6>{\node (fig2) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-g10.png}};} % base
+      \action<1-6>{\node (fig2) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-g11837.png}};} % robot room
+      \action<1-6>{\node (fig2) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-layer1.png}};} % furniture
+      \action<1-6>{
+        \node[label={\small Kitchen}] (kl) at (-24,50) {};
+        \node[label={\small Hallway}] (kl) at (-23.5,35) {};
+        \node[label={\small Living Room}] (kl) at (16,39) {};
+        \node[label={\small Bath}] (kl) at (-23.5,13) {};
+        \node[label={\small Robot}] (rob) at (20,18) {};
+        \node[label={\small Room}] (rob2) at (20,14) {};
+        } % room names
+      \action<2-6>{\node (fig2) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-layer40.png}};} % agents
+      \action<3-6>{\node (fig3) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-layer2.png}};} % floor
+      \action<3-6>{\node (fig3) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-layer10.png}};} % movement 
+      \action<3-6>{\node (fig3) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-layer24.png}};} % doors
+      \action<4-6>{\node (fig4) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-g12835.png}};} % mics 1
+      \action<4-6>{\node (fig4) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-g12901.png}};} % mics 2
+      \action<4-6>{\node (fig5) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-layer6.png}};} % speakers
+      \action<5-6>{\node (fig6) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-layer3.png}};} % beamer
+      \action<5-6>{\node (fig6) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-layer25.png}};} % lamps
+      \action<6>{\node (fig6) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-g5699.png}};} % kinect1
+      \action<6>{\node (fig7) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-layer30.png}};} % kinect2
+      \action<6>{\node (fig7) at (0,0){\includegraphics[scale=0.09]{generated/csra-map-defence-layer23.png}};} % domecams
+    \end{tikzpicture}
+  \end{figure}
+\end{frame}
+ \begin{frame}{Addressing Apartment Variables --- Addressee}
+  \begin{description}
+      \item[{Addressee final reduced [Ar]:}] From \emph{Addressee final} by combining parts of the \gls{apartment} into a single group \emph{Parts of the apartment}.
+      Values: \emph{Unspecific [U], Parts of the Apartment [Ap], Robot [R], Light in the hallway [LH], } or \emph{Floor lamp [LF]}.
+      \item[{Focus of attention reduced [Fr]:}] From \emph{Focus of attention}.
+      Values: as in [Ar]
+      \item[{Addressee equals focus [Aef]:}] \emph{Addressee final} \(==\) \emph{Focus of attention}
+  \end{description}
+\end{frame}
+\begin{frame}{Addressing Apartment Variables --- Method}
+  \begin{description}
+      \item[{Expression reduced [Er]:}] From \emph{Expression (facial, gestural, verbal)} by clustering emotions into \emph{negative}, \emph{neutral}, and \emph{positive}.
+      \item[{Method [M]:}] Used modality---\emph{speech}, \emph{gesture} or \emph{touch}.
+      \item[{Method specific reduced [Msr]:}] Gestures (\emph{clap}, \emph{wave}, \emph{wipe}, and \emph{point}) extracted from \emph{Method specific}.
+  \end{description}
+\end{frame}
+\begin{frame}{Addressing Apartment Variables --- Speech}
+  \begin{description}
+      \item[{Speech form of address [Sf]:}] Entity named or not in speech.
+      \item[{Speech politeness [Sp]:}] Polite or not polite phrasing.
+      \item[{Speech type of sentence reduced [Str]}] Extracted \emph{Speech type of sentence}.
+      Values: \emph{Command}, \emph{Question}, or \emph{Statement}. 
+      \item[{Speech phrasing [Sph]:}] Extracted from \emph{Speech type of sentence}.
+      Values: \emph{Sentence} or \emph{Words}.
+      \item[{Speech specific reduced [Ssr]:}] Extracted from \emph{Speech specific}, by detecting the first appearance of addressing terms.
+      Values: \emph{you}, \emph{light}, \emph{robot}, and \emph{none}.
+  \end{description}
+\end{frame}
+\begin{frame}{Observations of Addressing Behaviour}
+      \resizebox{1.\textwidth}{!}{%
+          \footnotesize
+          \begin{tikzpicture}
+          \node (a) at (0,0)
+          {
+            \includegraphics[trim={0 7cm 0cm 0cm},clip]{study-addressee-vp57-elan.png}
+          };
+         \end{tikzpicture}
+       }
+      \begin{footnotesize}
+        \textbf{307} observations of successful communication attempts in \textbf{16} variables \vspace{10pt}
+      \\\textcolor{mypurple}{\textbf{Addressee [Ar]}} \hspace{2pt} \textit{Unspecific, Parts of the Apartment, Robot, Light in the hallway  or Floor lamp}
+      \pause
+        \\\textcolor{myorange!50!black}{\textbf{Speech}} \hspace{2pt} Naming, Politeness, Phrasing, Sentence, Keywords
+      \pause
+        \\\textcolor{myyellow!50!black}{\textbf{Visual}} \hspace{2pt} FoA, Modality, Gestures, Emotions
+      \pause
+        \\\textcolor{mygray}{\textbf{Other}} \hspace{2pt} Id, Order, Condition, Wizard Addressee, Task
+      \obcite{8-}{Holthaus2016a}
+      \end{footnotesize}
+\end{frame}
+\begin{frame}{Addressee [Ar] Predictors}
+  \begin{columns}[T] % align columns
+    \begin{column}{.5\textwidth}
+      \centering
+      \vspace{-10pt}
+      \resizebox{1.\textwidth}{!}{%
+          \footnotesize
+          \begin{tikzpicture}
+          \action<1->{\node (a) at (0,0)
+          {
+            \resizebox{1.\textwidth}{!}{%
+              \input{data/chisq_all-beamer.tex}
+            }
+          };}
+          \action<2->{\node (a) at (.6pt,0)
+          {
+            \resizebox{1.\textwidth}{!}{%
+              \input{data/cramer_all-beamer.tex}
+            }
+          };}
+          \action<4->{\node (a) at (.25\textwidth,-.55\textwidth)
+          {
+            \resizebox{.5\textwidth}{!}{%
+              \input{data/adr_by_task-beamer.tex}
+            }
+          };}
+          \action<3->{\node (a) at (-.25\textwidth,-.55\textwidth)
+          {
+            \resizebox{.5\textwidth}{!}{%
+              \input{data/equality_from_foa-beamer.tex}
+            }
+          };}
+         \end{tikzpicture}
+       }
+    \end{column}
+    \hspace{-.1\textwidth}
+    \begin{column}{.6\textwidth}
+      \begin{itemize}
+        \item<1-> Pearson: Overall strong correlations
+        \item<2-> Cramer V: Strongest association for Fr, Aw, T, M, S*
+        \item<3-> Addressee mostly equals the focus of attention
+        \item<4-> Addressee distribution is task dependant
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}
+\begin{frame}{Addressing Apartment Variables --- Other}
+  \begin{description}
+      \item[{Wizard \gls{addressee} [Aw]:}] Encodes which entity is chosen by the \gls{wizard} to react to a communication attempt.
+      It can take the values \emph{Apartment}, \emph{Floor lamp}, or \emph{Robot}.
+      \item[{Wizard task [T]:}] Tells which task is solved in a specific observation.
+      \item[{Condition [C]:}] Encodes whether the participant is in the verbal or non-verbal condition.
+      \item[{Order [O]:}] tells whether the tasks were be solved in normal or alternative order.
+      \item[{Participant Id [Pid]:}] Numerically identifies the participant.
+  \end{description}
+\end{frame}
+\begin{frame}{Addressing Models}
+  \resizebox{1.\textwidth}{!}{%
+      \footnotesize
+      \begin{tikzpicture}
+      \action<1->{\node (a) at (-22cm,0)
+      {
+        \resizebox{.6\textwidth}{!}{%
+          \def\svgwidth{.2\textwidth}
+          \input{generated/bn-baseline.pdf_tex}
+        }
+      };}
+      \action<2->{\node (a) at (0,0)
+      {
+        \resizebox{2.5\textwidth}{!}{%
+          \def\svgwidth{.9\textwidth}
+          \input{generated/bn-manual.pdf_tex}
+        }
+      };}
+      \action<3->{\node (a) at (-9cm,-9.5cm)
+      {
+        \resizebox{2.5\textwidth}{!}{%
+          \def\svgwidth{.9\textwidth}
+          \input{generated/bn-auto.pdf_tex}
+        }
+      };}
+      \action<4->{\node (a) at (14cm,-9.5cm)
+      {
+        \resizebox{.9\textwidth}{!}{%
+        \begin{tikzpicture}
+          \node (a) at (0.1,0.2) {\textcolor{mygreen!80!black}{\faTree}};
+          \node (a) at (0.05,0.1) {\textcolor{mygreen!70!black}{\faTree}};
+          \node (a) at (0.15,0.1) {\textcolor{mygreen!90}{\faTree}};
+          \node (a) at (0,0) {\textcolor{mygreen}{\faTree}};
+          \node (a) at (0.1,0) {\textcolor{mygreen!50}{\faTree}};
+          \node (a) at (0.2,0) {\textcolor{mygreen}{\faTree}};
+        \end{tikzpicture}
+        }
+      };}
+     \end{tikzpicture}
+  }
+\end{frame}
+ \begin{frame}{Predictor Quality \tiny{with 5\% confidence intervals}}
+    \begin{columns}[T] % align columns
+      \begin{column}{.5\textwidth}
+     \begin{figure}[htb]
+      \resizebox{\textwidth}{!}{%
+        \input{data/meka-perf-gaze-beamer.tex}
+      }
+      \vspace{-70pt}
+    \end{figure}
+    \begin{figure}[htb]
+      \resizebox{\textwidth}{!}{%
+        \input{data/meka-perf-mouth-beamer.tex}
+      }
+    \end{figure}
+    \end{column}%
+      \begin{column}{.5\textwidth}
+        \begin{center}
+        \begin{scriptsize}
+          Mutual Gaze Recognition
+          \\ \vspace{10pt}
+          \begin{tabular}{l | c | c }
+                  & Baseline & Study \\ \hline
+            \(P\) &  0.766 - 0.882&   \textbf{0.889 - 0.975} \\ 
+            \(R\) &  \textbf{0.975 - 1.000} &  0.828 - 0.936 \\
+           \end{tabular}
+          \\ \vspace{10pt}
+          \(M(G_S) = 0.52 \)\quad\(I(G_S) = 0.62\)\quad\( DOR(G_S) = 22\)
+          \\ \vspace{10pt}
+          Speaker classification
+          \\ \vspace{10pt}
+          \begin{tabular}{l | c | c }
+                  & Baseline & Study \\ \hline
+            \(P\) &  0.625 - 0.766 &   \textbf{0.794 - 0.922} \\ 
+            \(R\) &  \textbf{0.970 - 1.00} &  0.779 - 0.911 \\
+           \end{tabular}
+          \\ \vspace{10pt}
+          \(M(S_S) = 0.54 \)\quad\(I(S_S) = 0.55\)\quad\( DOR(S_S) = 13\)
+          \end{scriptsize}
+        \end{center}
+   \end{column}%
+   \end{columns}
+  \end{frame}
+  \begin{frame}{Addressee from mutual gaze \tiny{with 5\% confidence intervals}}
+    \begin{columns}[T] % align columns
+      \begin{column}{.5\textwidth}
+        \begin{figure}[htb]
+          \resizebox{\textwidth}{!}{%
+            \input{data/meka-perf-mad-beamer.tex}
+          }
+        \end{figure}
+      \end{column}%
+      \begin{column}{.5\textwidth}
+        \begin{center}
+        \begin{scriptsize}
+          \begin{tabular}{l | c | c }
+                    & Annotation & Recognition \\ \hline
+            \(P\)   & 0.828 - 0.936 & 0.810 - 0.927  \\ 
+            \(R\)   & 0.946 - 0.998 & 0.856 - 0.958 \\
+            \(A\)   & 0.843 - 0.938 & 0.778 - 0.892 \\
+            \(F_1\) & 0.935        & 0.896 \\
+            \(M\)   & 0.824        & 0.587 \\
+            \(I\)   & 0.621        & 0.530 \\
+            \(DOR\) & 113          & 17 \\
+           \end{tabular}
+          \end{scriptsize}
+        \end{center}
+   \end{column}%
+   \end{columns}
+  \end{frame}
+\begin{frame}{Scenario Post Processing}
+  \centering
+  \resizebox{.4\textwidth}{!}{%
+        \def\svgwidth{1.5\textwidth}
+        \input{generated/ffm-movements.pdf_tex}
+      }
+  \vspace{10pt}
+  \footnotesize
+  \begin{itemize}[label=-]
+        \item[] Corpus
+        \item sampling \SI{15}{\Hz}
+        \item[\(\approx\)]  \SI{51}{\kilo\nothing} observations  
+  \end{itemize}
+\end{frame}
+\begin{frame}{F-Formation Matching Group Detection}
+  \onslide<2->{
+  \begin{definition}[Tolerant Match]
+      \label{def.tm}
+       With a threshold \(T \in [0,1]\) (\gls{tolerance threshold}), a predicted group \(G_k\) is a \emph{tolerant match} if at least \(T|G_k|\) participants of the group are correctly assigned and less than \(1-T|G_k|\) participants are falsely assigned to it~\cite[]{Setti2015}.
+  \end{definition}
+  }
+    \vspace{10pt}\onslide<3->{For an agent:}
+     \\ \onslide<3->{\textbf{\acrshort{tp}:}} \onslide<4->{assigned group matches the annotation (\gls{tolerant match})} \vspace{3pt}
+     \\ \onslide<3->{\textbf{\acrshort{fp}:}} \onslide<5->{falsely assigned to any group} \vspace{3pt}
+     \\ \onslide<3->{\textbf{\acrshort{tn}:}} \onslide<6->{correctly assigned to no group} \vspace{3pt}
+     \\ \onslide<3->{\textbf{\acrshort{fn}:}} \onslide<7->{falsely assigned to no, or the wrong group (\gls{tolerant match})}
+\end{frame}
+\begin{frame}{Features \& Roles}
+ \begin{columns}[T] % align columns
+   \begin{column}{.67\textwidth}
+       \newcommand{\binar}{\textcolor{black}{B}}
+       \newcommand{\conti}{\textcolor{black}{C}}
+       \newcommand{\multi}{\textcolor{black}{M}}
+       \begin{scriptsize}
+         \begin{tabular}{l | c  c | c  c  c}
+                                                    & \multicolumn{2}{c}{simple} & \multicolumn{3}{c}{dense / lstm} \\
+                                                    & \onslide<1->{\(dt\)} & \onslide<1->{\(bn\)} & \onslide<1->{\(rule\)}& \onslide<1->{\(rule_{raw}\)} & \onslide<1->{\(full\)} \\ \hline
+           \onslide<1->{Agent In Group            } & \onslide<2->{\binar} & \onslide<3->{\binar} & \onslide<4->{\binar}   & \onslide<5->{\conti        } & \onslide<6->{        } \\
+           \onslide<1->{Agent Speaking            } & \onslide<2->{\binar} & \onslide<3->{\binar} & \onslide<4->{\binar}   & \onslide<5->{\binar        } & \onslide<6->{ \binar } \\
+           \onslide<1->{Agent Addressed           } & \onslide<2->{\binar} & \onslide<3->{      } & \onslide<4->{      }   & \onslide<5->{              } & \onslide<6->{        } \\ \hline
+           \onslide<3->{Mutual Gaze               } & \onslide<2->{      } & \onslide<3->{\binar} & \onslide<4->{\binar}   & \onslide<5->{\conti        } & \onslide<6->{ \conti } \\
+           \onslide<3->{Mouth Movements           } & \onslide<2->{      } & \onslide<3->{\binar} & \onslide<4->{\binar}   & \onslide<5->{\conti        } & \onslide<6->{        } \\ \hline
+           \onslide<6->{Agent ID                  } & \onslide<2->{      } & \onslide<3->{      } & \onslide<4->{      }   & \onslide<5->{              } & \onslide<6->{ \binar } \\
+           \onslide<6->{Number of detected Faces  } & \onslide<2->{      } & \onslide<3->{      } & \onslide<4->{      }   & \onslide<5->{              } & \onslide<6->{ \conti } \\
+           \onslide<6->{Size of interl. Face      } & \onslide<2->{      } & \onslide<3->{      } & \onslide<4->{      }   & \onslide<5->{              } & \onslide<6->{ \conti } \\
+           \onslide<6->{Keypoints of interl. Face } & \onslide<2->{      } & \onslide<3->{      } & \onslide<4->{      }   & \onslide<5->{              } & \onslide<6->{ \multi\(_{136}\) } \\
+           \onslide<6->{Conv. Group Size          } & \onslide<2->{      } & \onslide<3->{      } & \onslide<4->{      }   & \onslide<5->{              } & \onslide<6->{ \conti } \\
+           \onslide<6->{Conv. Group o-space centre} & \onslide<2->{      } & \onslide<3->{      } & \onslide<4->{      }   & \onslide<5->{              } & \onslide<6->{ \multi\(_{2}\) } \\
+           \onslide<6->{Conv. Group Costs         } & \onslide<2->{      } & \onslide<3->{      } & \onslide<4->{      }   & \onslide<5->{              } & \onslide<6->{ \multi\(_{4}\) } \\
+          \end{tabular}
+         \end{scriptsize}
+   \end{column}%
+   \begin{column}{.33\textwidth}
+     \centering
+     \resizebox{.8\textwidth}{!}{%
+         \scriptsize
+         \begin{tikzpicture}
+         \node (a) at (0,0)
+         {
+           \resizebox{1.35\textwidth}{!}{%
+             \input{figures/role-rule.tex}
+           }
+         };
+         \node (b) at (0,-4.4)
+         {
+           \def\svgwidth{1.1\textwidth}
+           \resizebox{1.35\textwidth}{!}{%
+           \input{generated/role_nn_models_dense.pdf_tex}
+           }
+         };
+         \node (c) at (0,-9)
+         {
+           \def\svgwidth{1.1\textwidth}
+           \resizebox{1.35\textwidth}{!}{%
+           \input{generated/role_nn_models_lstm.pdf_tex}
+           }
+         };
+         \end{tikzpicture}
+       }
+   \end{column}%
+ \end{columns}
+\end{frame}
+\begin{frame}{Role Confusion Matrices with Counts}
+    \centering
+    \resizebox{.9\textwidth}{!}{%
+      \scriptsize
+      \input{data/role-cm-counts-beamer.tex}
+    }
+\end{frame}
+\begin{frame}{Results - Simple Models}
+  \begin{columns}[T] % align columns
+    \begin{column}{.7\textwidth}
+      \resizebox{1.\textwidth}{!}{%
+        \scriptsize
+        \begin{tikzpicture}
+          \node (b) at (0,0)
+          {
+            \resizebox{\textwidth}{!}{%
+            \input{data/role-cm-simple-beamer.tex}
+            }
+          };
+          \action<1-3>{\filldraw [fill=bgcolorframe, draw=bgcolorframe] (.12\textwidth,-.125\textwidth) rectangle (.48\textwidth,.215\textwidth);}
+        \end{tikzpicture}
+      }
+    \end{column}%
+    \begin{column}{.4\textwidth}
+      \vspace{10pt}
+      \footnotesize
+      \begin{itemize}[label=-]
+        \item<1->[] Rule Model 
+        \item<2-> Non-Participant good
+        \item<3-> Bias for \(Addressee\)
+      \end{itemize}
+      \vspace{5pt}
+      \begin{itemize}[label=-]
+        \item<4->[] Bayes Model
+        \item<4-> Non-Participant good 
+        \item<5-> Bias for \(Side\text{-}Participant\)
+        \item<6-> \emph{optimal} results
+      \end{itemize}
+      \vspace{5pt}
+      \begin{itemize}[label=-]
+        \item<7->[\textcolor{mygreen}{\faCheckCircle}] Simple Models
+      \end{itemize}
+    \end{column}%
+  \end{columns}
+\end{frame}
+\begin{frame}{Low-Level Features \& Time Sequences}
+  \begin{columns}[T] % align columns
+    \begin{column}{.25\textwidth}
+      \vspace{10pt}
+      \centering
+      \resizebox{\textwidth}{!}{%
+          \scriptsize
+          \begin{tikzpicture}
+          \node (b) at (0,0)
+          {
+            \resizebox{1.35\textwidth}{!}{%
+            \def\svgwidth{1.3\textwidth}
+            \input{generated/nnl-defence-dense.pdf_tex}
+            }
+          };
+          \action<6->{\node (c) at (0,-5)
+          {
+            \resizebox{1.35\textwidth}{!}{%
+            \def\svgwidth{1.3\textwidth}
+            \input{generated/nnl-defence-t2.pdf_tex}
+            }
+          };}
+          \action<6->{\node (c) at (0,-5)
+          {
+            \resizebox{1.35\textwidth}{!}{%
+            \def\svgwidth{1.3\textwidth}
+            \input{generated/nnl-defence-t1.pdf_tex}
+            }
+          };}
+          \action<6->{\node (c) at (0,-5)
+          {
+            \resizebox{1.35\textwidth}{!}{%
+            \def\svgwidth{1.3\textwidth}
+            \input{generated/nnl-defence-lstm.pdf_tex}
+            }
+          };}
+           \end{tikzpicture}
+        }
+    \end{column}%
+    \begin{column}{.75\textwidth}
+    \onslide<2->{
+\footnotesize\hspace{30pt}
+    \begin{itemize}
+      \item<2->[]Feature Sets
+      \item<3->[\(Rule\)] 4D Binary, same as Bayesian Network
+      \item<4->[\(Rule_{raw}\)] 4D Continuous, from underlying cost functions  
+      \item<5->[\(full\)] 148D Continuous, Agent ID - Face Keypoints - Number of Persons - Group Position - Group Sub-Costs 
+    \end{itemize}
+    \vspace{20pt}
+    \begin{itemize}
+      \item<6->[]Same Feature Sets
+      \item<6->[\(time\)] Time Sequences of 15 Observations \(\approx\) \SI{1}{\second}
+    \end{itemize}
+    }
+    \end{column}%
+  \end{columns}%
+\end{frame}
+\begin{frame}{Results - Accuracy \& Mean \(F_1\)}
+  \begin{columns}[T] % align columns
+    \begin{column}{.55\textwidth}
+      \resizebox{1.\textwidth}{!}{%
+        \small
+        \input{data/role-nn-acc-f1-beamer.tex}
+      }
+    \end{column}%
+    \begin{column}{.45\textwidth}
+      \small
+      \vspace{20pt}
+      \begin{itemize}[label=-]
+        \item<2-> For lower-level features
+      \begin{itemize}[label=-]
+        \item<2-> \(Dense\) increase accuracy
+        \item<3-> \(F1_\mu\) decreases
+      \end{itemize}
+        \item<4-> Best results
+      \begin{itemize}[label=-]
+        \item<4-> \(Lstm\) with \(rule\) features
+      \end{itemize}
+      \end{itemize}
+      \vspace{10pt}
+      \begin{itemize}[label=-]
+        \item<5->[\(\rightarrow\)] Look at best configurations
+      \end{itemize}
+    \end{column}%
+  \end{columns}
+\end{frame}
+\begin{frame}{Confusion Matrix}
+  \begin{tabulary}{\textwidth}{ l C C }
+    TP  & true positive             & Correctly accepted elements in a \gls{confusion matrix}. \\
+     FN  & false negative            & Wrongly rejected elements in a \gls{confusion matrix} (\emph{Type II Error}). \\
+     FP  & false positive            & Wrongly accepted elements in a \gls{confusion matrix} (\emph{Type I Error}). \\
+     TN  & true negative             & Correctly rejected elements in a \gls{confusion matrix}. \\
+     CP  & condition positive        & The sum of positive elements in the sample of a \gls{confusion matrix}. \\
+     CN  & condition negative        & The sum of negative elements in the sample of a \gls{confusion matrix}. \\
+     PP  & predicted positive        & The sum of elements accepted by a model. \\
+     PN  & predicted negative        & The sum of elements rejected by a model. \\
+  \end{tabulary}
+\end{frame}
+\begin{frame}{Confusion Matrix 2}
+  \begin{tabulary}{\textwidth}{ l C C }
+     TPR & true positive rate        & \(TPR=\frac{TP}{CP}\) Probability of detection, also known as \gls{recall} or \gls{sensitivity}. \\
+     FPR & false positive rate       & \(FPR=\frac{FP}{CN}\) Probability of false alarm, also known as \gls{fallout}. \\
+     FNR & false negative rate       & \(FNR=\frac{FN}{CP}\) Miss rate. \\
+     TNR & true negative rate        & \(TNR=\frac{TN}{CN}\) Also known as \gls{specificity} or \gls{selectivity}. \\
+     PPV & positive prediction value & \(PPV=\frac{TP}{PP}\) Also known as \gls{precision}. \\
+     FOR & false omission rate       & \(FOR=\frac{FN}{PN}\) \\
+     FDR & false discovery rate      & \(FDR=\frac{FP}{PP}\) \\
+     NPV & negative prediction value & \(NPV=\frac{TN}{PN}\) \\
+  \end{tabulary}
+\end{frame}
+\begin{frame}{Informedness and Markdedness}
+  		\[\text{markedness} = PPV+NPV-1 = \text{precision} + \frac{TN}{PN} - 1\]
+  		An alternative measure for \gls{precision} which is not biased by the \gls{prevalence} of the sample. It tells how trustworthy the models predictions are. 1 means all predictions are correct, -1 means all predictions are wrong.
+      \\ 
+  		\[\text{informedness} = TPR+TNR-1 = \text{recall} + \text{selectivity} -1\]
+  		An alternative measure for \gls{recall} which is not biased by the \gls{prevalence} of the sample~\bcite{powers2008}. It tells whether the model can detect positive and negative observations. 1 means all observations will be correctly retrieved, -1 means all will be wrongfully retrieved.
+\end{frame}
+\begin{frame}{DOR}
+  \footnotesize
+  diagnostic odds ratio
+                \[DOR=\frac{LR+}{LR-}\]
+        The diagnostic odds ratio is an indicator for test quality which is independent from the prevalence of the test set.
+        It can be read as \emph{The odds of correcly accepting is \(x\) times higher than the odds of falsely rejecting}.
+  Therefore, tests with discriminative power have a DOR \(>1\)~\bcite{glas2003}. \\
+  positive likelihood ratio
+  \[LR+=\frac{TPR}{FPR}\]
+  negative likelihood ratio
+  \[LR-=\frac{FNR}{TNR}\]
+\end{frame}

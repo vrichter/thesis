@@ -26,10 +26,15 @@ Dr. Basil Ell\\
 \newcommand{\myName}{\myAuthor\xspace}
 \newcommand{\myLocation}{Bielefeld\xspace}
 \newcommand{\myTime}{December 2019\xspace}
+\newcommand{\myDefense}{April 24, 2020\xspace}
 
+\makeatletter
+\@ifundefined{institute}{%
 \newcommand*{\institute}[1]{\def\theinstitute{#1}}
 \newcommand*{\degree}[1]{\def\thedegree{#1}}
 \newcommand*{\reviewers}[1]{\def\thereviewers{#1}}
 \newcommand*{\board}[1]{\def\theboard{#1}}
 \newcommand*{\defense}[1]{\def\thedefense{#1}}
 \newcommand*{\titlegraphics}[1]{\def\thetitlegraphics{#1}}
+}{}
+\makeatother

@@ -17,7 +17,7 @@ prepare: generated
 
 
 
-diss.pdf: *.tex */*.tex generated $(FIGURES)
+thesis.pdf: *.tex */*.tex generated $(FIGURES)
 	latexmk -pdflua
 
 .PHONY: all

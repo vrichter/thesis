@@ -1,0 +1,62 @@
+digraph
+{
+  rankdir=TD
+  // concentrate=true
+  nodesep=0.2
+  ranksep=0.4
+  bgcolor="gray98"
+  // Define the nodes
+  // colors: "#E41A1C" "#377EB8" "#4DAF4A" "#984EA3" "#FF7F00" "#FFFF33" "#A65628"
+  // green #4DAF4A
+  // blue #377EB8
+  // violett #984EA3
+  // orange #FF7F00
+  // red #E41A1C
+
+  subgraph cluster0 {
+    label="Mouth"
+    color="gray98"
+    edge [style=bold,color="#E41A1C"]
+    node [fontname="Liberation Serif", fontsize=17, style="bold", color="#E41A1C"]
+    Addressee2   [label="Addressee"]
+    Mouth2       [label="Mouth Movements"]
+    Addressee2 -> Mouth2
+  }
+  subgraph cluster1 {
+    label="Gaze"
+    color="gray98"
+    edge [style=bold,color="#377EB8"]
+    node [fontname="Liberation Serif", fontsize=17, style="bold", color="#377EB8"]
+    Addressee1   [label="Addressee"]
+    Gaze1        [label="Mutual Gaze"]
+    Addressee1 -> Gaze1
+  }
+  subgraph cluster2 {
+    label="Both"
+    color="gray98"
+    edge [style=bold,color="#4DAF4A"]
+    node [fontname="Liberation Serif", fontsize=17, style="bold", color="#4DAF4A"]
+    Addressee3   [label="Addressee"]
+    Mouth3       [label="Mouth Movements"]
+    Gaze3        [label="Mutual Gaze"]
+    Addressee3 -> Gaze3
+    Addressee3 -> Mouth3
+  }
+  subgraph cluster3 {
+    label="All"
+    color="gray98"
+    edge [style=bold,color="#984EA3"]
+    node [fontname="Liberation Serif", fontsize=17, style="bold", color="#984EA3"]
+    Addressee4   [label="Addressee"]
+    Mouth4       [label="Mouth Movements"]
+    Gaze4        [label="Mutual Gaze"]
+    Speaking4   [label="Robot Speaking"]
+    Task4       [label="Task"]
+    Addressee4 -> Gaze4
+    Addressee4 -> Mouth4
+    Addressee4 -> Task4
+    Addressee4 -> Speaking4
+  }
+   edge [style=invis]
+  Gaze1 -> Addressee4
+}

@@ -1,0 +1,301 @@
+\iniload{meka.info}{data/data.info_meka.ini}
+\begin{frame}{Addressing in Human-Robot Conversational Groups}
+  \centering
+    \begin{columns}[T] % align columns
+      \begin{column}{.5\textwidth}
+         \includegraphics[trim={0 0 0 2cm},clip,width=\textwidth]{addressee-meka-intro}
+         %\includegraphics[trim={1.5cm 0cm 0.5cm 0.5cm},clip,width=\textwidth]{csra-group-hri}
+      \end{column}
+      \begin{column}{.5\textwidth}
+        \vspace{10pt}
+        \textbf{RQ2: Addressee Recognition}\\\vspace{5pt} 
+        \onslide<2->{In a \textcolor{myblue}{Conversational Group}: }\onslide<3->{How can an agent \textcolor{myblue}{recognize}} \onslide<4->{if it is \textcolor{myblue}{addressed} or not?}\\
+      \vspace{10pt}
+        \footnotesize
+       \onslide<5->\(\rightarrow\) \hspace{5pt} Mouth Movements reveal Speakers\\
+       \vspace{10pt}
+       \onslide<6->\(\rightarrow\) \hspace{5pt} Mutual Gaze as Turn Release\\
+       \vspace{10pt}
+       \onslide<7->\(\rightarrow\) \hspace{5pt} Addressee Recognition by Combining\obcite{7-}{Richter}\\
+      \end{column}
+    \end{columns}
+  \pnote{33-25}
+\end{frame}
+\begin{frame}{Addressing Floka Study \& Corpus}
+  \begin{columns}[T] % align columns
+    \begin{column}{.5\textwidth}
+      \resizebox{\textwidth}{!}{%
+      \footnotesize
+      \begin{tikzpicture}
+      \action<1->{\node (a) at (0,0)
+      {
+        \resizebox{.5\textwidth}{!}{\def\svgwidth{.5\textwidth}
+        \input{generated/addressee-meka-process-layer_base.pdf_tex}
+      }};}
+      \action<2->{\node (a) at (0,0)
+      {
+        \resizebox{.5\textwidth}{!}{\def\svgwidth{.8\textwidth}
+        \input{generated/addressee-meka-process-layer_agents.pdf_tex}
+      }};}
+      \action<3->{\node (a) at (0,0)
+      {
+        \resizebox{.5\textwidth}{!}{\def\svgwidth{1.2\textwidth}
+        \input{generated/addressee-meka-process-layer1.pdf_tex}
+      }};}
+      \action<4->{\node (a) at (0,0)
+      {
+        \resizebox{.5\textwidth}{!}{\def\svgwidth{1.2\textwidth}
+        \input{generated/addressee-meka-process-layer2.pdf_tex}
+      }};}
+      \action<5->{\node (a) at (0,0)
+      {
+        \resizebox{.5\textwidth}{!}{\def\svgwidth{1.2\textwidth}
+        \input{generated/addressee-meka-process-layer3.pdf_tex}
+      }};}
+      \action<6->{\node (a) at (0,0)
+      {
+        \resizebox{.5\textwidth}{!}{\def\svgwidth{1.2\textwidth}
+        \input{generated/addressee-meka-process-layer4.pdf_tex}
+      }};}
+      \action<7->{\node (a) at (0,0)
+      {
+        \resizebox{.5\textwidth}{!}{\def\svgwidth{1.2\textwidth}
+        \input{generated/addressee-meka-process-layer5.pdf_tex}
+      }};}
+      \action<8->{\node (a) at (0,0)
+      {
+        \resizebox{.5\textwidth}{!}{\def\svgwidth{1.2\textwidth}
+        \input{generated/addressee-meka-process-layer6.pdf_tex}
+      }};}
+    \end{tikzpicture}
+  }
+    \end{column}%
+    \hspace{-.05\textwidth}
+    \begin{column}{.55\textwidth}
+        \resizebox{1.\textwidth}{!}{%
+        \begin{tikzpicture}
+         \action<1->{\node (a) at (0,0)
+         {
+           \resizebox{.5\textwidth}{!}{
+           \input{data/meka-da-countsplot-beamer.tex}
+         }};}
+         \action<1-9>{\filldraw [fill=bgcolorframe, draw=bgcolorframe] (1.9,1.3) rectangle (-0.8,-1.3);}
+        \end{tikzpicture}
+        }
+    \end{column}%
+    \end{columns}
+      \centering
+      \footnotesize
+    \onslide<9->{
+        5 trials - 
+        15 participants (2f, 13m) - 
+        \SI{53}{min} interaction\\
+    }
+    \onslide<10->{
+        841 recognized utterances - 
+        176 task utterances - 
+        Annotation of \(G(p)\), \(S(p)\), \(A(p)\)
+    }
+  \pnote{33-25}
+\end{frame}
+\begin{frame}{Visual Speaker Detection}
+  \begin{columns}[T] % align columns
+    \begin{column}{.64\textwidth}
+      \begin{tikzpicture}
+       \action<1->{\node (a) at (0,0)
+       {
+          \def\svgwidth{.95\textwidth}
+          \input{generated/meka-addressee-gzetool.pdf_tex}
+       };}
+        \action<1->{\node (a) at (-45pt,-49pt)
+        {
+          \textcolor{myyellow}{\faArrowLeft}
+        };}
+       \action<1->{\node (a) at (53pt,-47pt)
+       {
+         \textcolor{myyellow}{\faArrowRight}
+       };}
+       \action<1->{\filldraw [fill=bgcolorframe, draw=bgcolorframe, opacity=0.8, fill opacity=0.8] (-125pt,17pt) rectangle (125pt,70pt);}
+      \end{tikzpicture}
+    \end{column}%
+    \begin{column}{.35\textwidth}
+      \vspace{15pt}
+      \small
+      Facial Landmark Detection\\
+      \hspace{20pt}\(\rightarrow D_p\)\\
+      \vspace{5pt}
+      \pause
+      Mouth Movements\\
+      \hspace{20pt}\(S(p) = \text{Var}(\mathbf{D_p}) > d\)\\
+      \vspace{5pt}
+      \pause
+      Predicts Speaker\\
+      \hspace{20pt}\(Accuracy = \inidata{meka.info}{model.mouthmovement.Study.Acc.}\)\\
+      \hspace{20pt}\(DOR = \inidata{meka.info}{model.mouthmovement.Study.DOR}\)\\
+      \vspace{5pt}
+    \end{column}%
+    \end{columns}
+    \centering
+    \pause
+      \textcolor{mygreen}{\faCheckCircle} \textbf{Mouth movements reveal Speakers}\\
+  \pnote{33-25}
+\end{frame}
+\begin{frame}{Turn Release Detection}
+  \begin{columns}[T] % align columns
+    \begin{column}{.64\textwidth}
+      \begin{tikzpicture}
+       \action<1->{\node (a) at (0,0)
+       {
+          \def\svgwidth{.95\textwidth}
+          \input{generated/meka-addressee-gzetool.pdf_tex}
+       };}
+        \action<1->{\node (a) at (-60pt,45pt)
+        {
+          \textcolor{mygreen}{\LARGE\faArrowsH}
+        };}
+       \action<1->{\node (a) at (63pt,45pt)
+       {
+         \textcolor{mygreen}{\LARGE\faArrowsV}
+       };}
+       \action<1->{\filldraw [fill=bgcolorframe, draw=bgcolorframe, opacity=0.8, fill opacity=0.8] (-125pt,-70pt) rectangle (125pt,-35pt);}
+      \end{tikzpicture}
+    \end{column}%
+    \begin{column}{.35\textwidth}
+      \vspace{15pt}
+      \small
+      Gaze Detection\\
+      \hspace{20pt}\(\rightarrow \alpha_p, \beta_p\)\\
+      \vspace{5pt}
+      \pause
+      Mutual Gaze\\
+      \hspace{20pt}\(G(p) = | \alpha_p | < \theta \land | \beta_p | < \theta\)\\
+      \vspace{5pt}
+      \pause
+      Predicts Turn Release\\
+      \hspace{20pt}\(Accuracy = \inidata{meka.info}{model.mutualgaze-addressee.Recognition.Acc.}\)\\
+      \hspace{20pt}\(DOR = \inidata{meka.info}{model.mutualgaze-addressee.Recognition.DOR}\)\\
+      \vspace{5pt}
+    \end{column}%
+    \end{columns}
+    \centering
+    \pause
+    \vspace{1.5pt}
+      \textcolor{mygreen}{\faCheckCircle} \textbf{Mutual Gaze as Turn Release}\\
+  \pnote{33-25}
+\end{frame}
+\begin{frame}{Bayesian Addressee Detection Models}
+  \centering
+  \begin{figure}[tbh]
+   \resizebox{1.\textwidth}{!}{%
+    \def\svgwidth{1.5\textwidth}
+    \input{generated/bn-addressee-defence.pdf_tex}
+   }
+  \end{figure}
+  \pnote{33-25}
+\end{frame}
+\begin{frame}{Bayesian Addressee Detection Results}
+  \begin{columns}[T] % align columns
+    \begin{column}{.7\textwidth}
+      \vspace{-20pt}
+      \begin{tikzpicture}
+       \action<1->{\node (a) at (0,0)
+       {
+          \resizebox{.95\textwidth}{!}{%
+          \footnotesize
+          \input{data/meka-roc-models-beamer.tex}
+       }};}
+       \action<1>{\filldraw [fill=bgcolorframe, draw=bgcolorframe] (10pt,-40pt) rectangle (130pt,67pt);}
+      \end{tikzpicture}
+    \end{column}%
+    \hspace{-20pt}
+    \begin{column}{.35\textwidth}
+      \vspace{10pt}
+      \hspace{15pt}
+      \begin{tabular}{l | c | c }
+        Model & AUC-A & AUC-C \\ \hline
+        Mouth & 0.866 & \onslide<2->{0.654} \\
+        Gaze  & 0.754 & \onslide<2->{0.737} \\
+        Both  & 0.948 & \onslide<2->{0.830} \\
+        All   & 0.975 & \onslide<2->{0.896} \\
+      \end{tabular}
+      \vspace{10pt}
+      \footnotesize
+      \begin{itemize}
+        \item<1->[-] High performance on annotations
+        \item<2->[-] Strong influence of recognition errors
+        \item<3->[-] Combining these features strongly enhances results 
+      \end{itemize}
+    \end{column}%
+  \end{columns}
+  \pnote{33-25}
+\end{frame}
+\begin{frame}{Summary RQ2}
+  In a conversational group\\
+  \begin{itemize}
+    \item<2->[\textcolor{mygreen}{\faCheckCircle}] \textcolor{myblue}{Mouth Movements} can be used to recognize speakers.
+    \item<3->[\textcolor{mygreen}{\faCheckCircle}] \textcolor{myblue}{Mutual Gaze} can be interpreted as a turn release action.
+    \item<4->[\textcolor{mygreen}{\faCheckCircle}] \textcolor{myblue}{Addressee} recognition can be done by combining these features.
+  \end{itemize}
+  \pnote{33-25}
+\end{frame}
+\begin{frame}{Overview}
+    \emph{\goalshort}
+    \centering\\
+    \vspace{10pt}
+    \resizebox{1.\textwidth}{!}{%
+        \footnotesize
+        \begin{tikzpicture}
+        \action<1->{\node (a) at (0,0)
+        {
+          \resizebox{.25\textwidth}{!}{%
+            \includegraphics[trim={8cm 0 2cm 0},clip]{study-addressee-vp57}
+          }
+        };}
+        \action<1->{\node[align=left, anchor=north, text width=.25\textwidth] (at) at (0, -.11\textwidth) {
+        \textbf{RQ1 \scriptsize Addressing Behaviour}\\
+          \vspace{5pt}
+          \textcolor{mygreen}{\faCheckCircle} \Naive{} addressing\\
+          \textcolor{mygreen}{\faCheckCircle} Attention\\
+          \textcolor{mygreen}{\faCheckCircle} Speech
+        };}
+        \action<1->{\node (b) at (.25\textwidth+10,0)
+        {
+          \resizebox{.25\textwidth}{!}{%
+            \includegraphics[trim={0 0 0 2cm},clip]{addressee-meka-intro}
+          }
+        };}
+        \action<1->{\node[align=left, anchor=north, text width=.25\textwidth] (bt) at (.25\textwidth+10, -.11\textwidth) {
+          \textbf{RQ2 \scriptsize Addressee Recognition}\\
+          \vspace{5pt}
+          \textcolor{mygreen}{\faCheckCircle} Mouth movements\\
+          \textcolor{mygreen}{\faCheckCircle} Mutual gaze\\
+          \textcolor{mygreen}{\faCheckCircle} Addressee\\
+          };}
+        \action<1->{\node (c) at (.5\textwidth+20,0)
+        {
+          \resizebox{.25\textwidth}{!}{%
+            \input{generated/conversational_group_defence.pdf_tex}
+          }
+        };}
+        \action<1->{\node[align=center, anchor=north, text width=.25\textwidth] (ct) at (.5\textwidth+20, -.11\textwidth) {
+          \textbf{RQ3 \scriptsize Conversational Group}\\
+          \vspace{5pt}
+          Participate \\ in Interaction
+          };}
+        \action<1->{\node (d) at (.75\textwidth+30,0)
+        {
+          \resizebox{.25\textwidth}{!}{%
+            \includegraphics[trim={4.1cm 0 0 0},clip]{conversational_group}
+          }
+        };}
+        \action<1->{\node[align=center, anchor=north, text width=.25\textwidth] (dt) at (.75\textwidth+30, -.11\textwidth) {
+          \textbf{RQ4 \scriptsize Conversational Roles}\\
+          \vspace{5pt}
+          Repair \\ Interaction
+        };}
+        \action<1>{\filldraw [fill=bgcolorframe, draw=bgcolorframe, opacity=0.8, fill opacity=0.8] (380pt,-150pt) rectangle (160pt,40pt);}
+        \action<2>{\filldraw [fill=bgcolorframe, draw=bgcolorframe, opacity=0.8, fill opacity=0.8] (380pt,-150pt) rectangle (270pt,40pt);}
+\end{tikzpicture}
+      }
+  \pnote{33-25}
+\end{frame}

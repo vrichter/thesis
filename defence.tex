@@ -1,0 +1,57 @@
+\PassOptionsToPackage{%
+  table,%
+  dvipsnames%
+}{xcolor}
+%\PassOptionsToPackage{%
+%  verbose%
+%}{geometry}
+\documentclass[%
+  aspectratio=169%
+]{beamer}
+\input{config/colours.tex}
+\input{config/title-author-date.tex}
+% metadata
+\title{\myTitle}
+\subtitle{\tiny\mySubtitle}
+\author{\myAuthor}
+\date{\today}
+\institute{
+  AGAI / CITEC, Bielefeld University\\[0.6cm]Committee: Prof. Franz Kummert, Prof. Katrin Solveig Lohan, Prof. Ulrich Rückert, Dr. Basil Ell}
+\newcommand{\hypaddress}{Which behaviours in \naive{} human interaction with a \gls{smart environment} can be observed  to distinguish which agent is addressed with a deliberate communicational act?}
+\newcommand{\hypmeka}{How can an \gls{artificial agent} visually recognize whether it was addressed by a person within its \gls{conversational group} or not?}
+\newcommand{\hypfformation}{How can \glspl{focused interaction} of people with \glspl{artificial agent} be automatically recognized in a \gls{smart environment}?}
+\newcommand{\hyproles}{How to determine \glspl{conversational role} of \glspl{artificial agent} in dynamically changing interactions in a \gls{smart environment}?}
+\newcommand{\goalshort}{Use the perceptive abilities of the smart environment to recognize the conversational state and expectations of inhabitants towards artificial agents.}
+% packages and data for this presentation
+\input{config/config-defence.tex}
+\DeclareSIUnit{\nothing}{\relax}
+%% visual config
+\usetheme[%
+  sectionpage=none,%
+  numbering=counter,%
+  progressbar=frametitle,%
+  block=fill,%
+]{metropolis}
+\AtBeginSection{
+  \frame{
+    \sectionpage
+    \tableofcontents[currentsection]
+  }
+}
+\setbeamerfont{section in toc}{size=\small}
+\setbeamerfont{subsection in toc}{size=\scriptsize}
+\setbeamerfont{subsubsection in toc}{size=\scriptsize}
+%\setbeameroption{show notes on second screen=bottom}
+\setbeameroption{hide notes}
+%
+%
+% content
+\begin{document}
+  \include{chapters/defence-introduction}
+  \include{chapters/defence-addressee}
+  \include{chapters/defence-meka}
+  \include{chapters/defence-group}
+  \include{chapters/defence-role}
+  \include{chapters/defence-conclusion}
+  \include{chapters/defence-appendix}
+\end{document}

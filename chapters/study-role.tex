@@ -2,7 +2,7 @@
 
 With \gls{conversational group} detection, an agent can behave towards people depending on whether they are part of its \gls{conversational group} or not.
 It can show \gls{civil inattention} towards some while optimizing the mutual observability with others.
-However, to correctly interact with the people within the group further information is required.
+However, to correctly interact with the people within the group, further information is required.
 The agent needs to guide its attention towards the \gls{speaker} and identify utterances addressed towards it. 
 Simultaneously, it should support the interaction by acting according to its role, or may apply \gls{turn taking} to influence the roles within the group.
 However, to efficiently use them, the agent needs to know its current role (\cref{sec.rw.hi.focused-rw.addressing,sec.rw.hi.focused-rw.turntaking}). 
@@ -439,6 +439,28 @@ This observation is even stronger for the \gls{ann} models.
 The \glspl{f1score} of the \emph{dense} models for \emph{Addressee} is equal to or worse than the \(BnM\) models.
 While the \emph{lstm} model can achieve results between the \(Rule\) and \(BnM\) models, it's best recognition of \emph{Addressee} is achieved with the \(full\) feature set.
 
+By looking at the confusion matrices of the best performing \(dense\) and \(lstm\) models in comparison to the \(rule\) and \(BnM\) model (\cref{fig:role-cm}) further observations can be made.  
+\begin{figure}[htbp]
+    \centering
+    \begin{footnotesize}
+    \input{data/role-cm.tex}
+    \end{footnotesize}
+    \caption[Confusion Matrices of Best Role Models.]{\label{fig:role-cm} 
+    Confusion Matrices of the \(rule\), \(BnM\) and best performing \(dense\) and \(lstm\) models.
+    The results are normalized by the amount of observations of each role in the corpus.
+    The green tiles, represent \gls{recall} and the red tiles can be interpreted as the chance to misclassify into the corresponding role.
+    }
+\end{figure}
+%
+The \gls{recall} of \emph{Non-Participant} is high in all models.
+%
+However, when the agent is part of a \gls{conversational group} the \(rule\) model shows a bias towards predicting \emph{Addressee} and the other models towards \emph{Side-Participant}.
+%
+The higher accuracy of the \(dense\) model is rooted in its focus on \emph{Non-Participant}. 
+While it has the best result for this role, all other predictions are worse than the \(BnM\) model's.
+%
+Only the \(lstm\) model trained with the \(rule\) feature set can outperform the \(BnM\) model for most \glspl{conversational role}.
+
 \subsection{Discussion}
 
 By utilizing \glspl{ann} for the recognition of \glspl{conversational role}, the overall \gls{accuracy} can be improved in comparison to the \(Rule\) model.
@@ -450,6 +472,7 @@ It, by definition, produces statistically optimal results.
 This is confirmed by the observation that achieving higher \gls{accuracy} is only possible by providing the models with more information.
 By using the \(full\) feature set, the \emph{dense} models can achieve an \gls{accuracy} of \(\approx 85\%\) which is better than the \gls{accuracy} of the \(BnM\) model.
 A comparison with the \glspl{f1score} suggests that the increased \gls{accuracy} is achieved by further enhancing the recognition of \emph{Non-Participant}.
+This can be confirmed by investigating the corresponding confusion matrices. 
 For \emph{Side-Participant} the recognition remains unchanged and gets worse for the other roles.
 By observing the situation over time, the models that use \gls{lstm} layers can outperform the \(Rule\) and \(BnM\) models.
 In combination with the \(rule\) or \(rule_{raw}\) feature set, these models achieve the overall best \gls{accuracy} and \(F1_\mu\).

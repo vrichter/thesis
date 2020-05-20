@@ -28,6 +28,7 @@ Most of the approaches used in \gls{hri} employ information about the participan
 To distinguish which person speaks at a particular time, techniques for sound source localization or close-talk microphones are often applied~\cite{Lang2003,Skantze2014}.
 In this chapter, I present a multi-party, \acrlong{hri} scenario, designed to confront the \gls{robot} with the problems of participation in a \gls{conversational group} and autonomous decision whether to react to an utterance within the group or not.
 We designed this scenario, implemented it on the \gls{floka}, and applied it in an experimental study in the \gls{csra}~\cite{Richter}.
+While the study design and execution was collaboratively perfomed by the authors of the paper, I was responsible for the addressee recognition that was applied during the study and is evaluated in this chapter.
 This scenario is particularly suitable for the evaluation of \gls{addressee} recognition approaches for \glspl{artificial agent}.
 A description of the study set-up, recording and annotation, used platform, implemented attention and dialogue management systems, as well as an initial evaluation of the used addressing recognition can be found in the corresponding publication~\cite{Richter}.
 On the basis of the collected data, I investigate \Cref{hyp.meka} by examining the following claims: 
@@ -244,7 +245,7 @@ In the following sections I use this data to assess the claims stated for this c
 In \cref{meka.h1}, I suggest that a person can be visually identified as having the role of \gls{speaker} by observing mouth movements.
 The corresponding model is defined in \cref{eq:meka.sp}, and applied during the user study.
 For the evaluation of visual speaker detection, I call this model the \emph{study-model}.
-Additionally, I create an \emph{accept-all-model} that always assumes that the focused person has the \gls{speaker} role.
+Additionally, I create an \emph{accept-all-model} that always assumes that there is a speaking person in front of the robot.
 This is a reasonable approach because a proportion of \inidata{meka.info}{prev.mouthmovements} (\gls{prevalence}) of the observations shows a speaking focused person.
 On the basis of the relevant utterances, recognized during the study, and the created ground truth annotations, I assess the models' performances.
 To this end, I calculate their \gls{precision}, \gls{recall}, and \gls{accuracy} with 95\% confidence intervals according to~\citewithauthor{clopper1934}\footnote{Using \code{binom.test} from the \code{stats} package (v3.5.1) in R~\cite{stats}.} and \gls{f1score} as commonly used measurements for classifier performance.

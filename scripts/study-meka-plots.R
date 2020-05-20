@@ -125,6 +125,34 @@ roc_orig <- fun_calc_curve_and_plot(result, base_data,
                                )
 
 (roc_orig$plot)
+
+roc_defence <- roc_orig$result %>%
+  filter(model != "Both+Self") %>%
+  mutate(model = fct_drop(model),
+         model = factor(model, levels=c("Mouth","Gaze","Both","All")))
+auc_defence <- roc_orig$auc %>%
+  filter(model != "Both+Self") %>%
+  mutate(model = fct_drop(model),
+         model = factor(model, levels=c("Mouth","Gaze","Both","All")))
+(
+plot_roc_orig_defence <- roc_defence %>%  ggplot() +
+  geom_line(aes(x=xdim, y=ydim,color=model), size=1) +
+  facet_wrap(facets = vars(roc_defence$data)) +
+  scale_y_continuous(minor_breaks = seq(0 , 1, 0.05), breaks = seq(0, 1, 0.1)) +
+  scale_x_continuous(minor_breaks = seq(0 , 1, 0.05), breaks = seq(0, 1, 0.2)) +
+  scale_color_brewer(palette="Set1") +
+  scale_fill_brewer(palette="Set1") +
+  coord_fixed(ratio = 1, expand = TRUE, clip = "on") + 
+  labs(x="False Positive Rate (False Alarms)", y="True Positive Rate (Recall)", color="Model:", shape="Study:") + 
+  theme(
+    panel.spacing.x=unit(1, "lines"), 
+    legend.position = "bottom", 
+    legend.box = "vertical",
+    legend.box.spacing = unit(0.1, "lines"),
+    legend.spacing.y=unit(0, "lines")
+  ) 
+)
+ 
 roc_pr <- fun_calc_curve_and_plot(result, base_data, 
                                `recall`, `precision`, 
                                "Recall", "Precision", 
@@ -157,6 +185,11 @@ fun_write_all_out <- function(){
   fun_write_plot_tex(plot_cl_performance_mad,   'meka-perf-mad.tex', hfac=0.7*plot_height_factor_golden_ratio)
   fun_write_plot_tex(roc_orig$plot,             'meka-roc-models.tex', hfac=1.1668*plot_height_factor_golden_ratio)
   fun_write_plot_tex(roc_pr$plot,               'meka-rocpr-models.tex', hfac=1.1668*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_da_counts, 'meka-da-countsplot-beamer.tex', hfac=plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_cl_performance_mouth, 'meka-perf-mouth-beamer.tex', hfac=0.8*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_cl_performance_gaze,  'meka-perf-gaze-beamer.tex', hfac=0.8*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_cl_performance_mad,   'meka-perf-mad-beamer.tex', hfac=1.3*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_roc_orig_defence,     'meka-roc-models-beamer.tex', hfac=1.3*plot_height_factor_golden_ratio)
 }
 
 if(write_out) { 

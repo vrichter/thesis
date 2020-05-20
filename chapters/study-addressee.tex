@@ -329,7 +329,7 @@ It is subsumed by \emph{Method}.
 The following variables (abbreviations in square brackets) are derived from the manually annotated tiers:
 \begin{description}
     \item[{Addressee final reduced [Ar]:}] Is created from \emph{Addressee final} by combining parts of the \gls{apartment} into a single group \emph{Parts of the apartment}.
-    This encompasses furniture, switches, and screens but not except the task relevant lights.
+    This encompasses furniture, switches, and screens but not the task relevant lights.
     Furthermore the entities \emph{self} (addressed four times) and \emph{not discernible} (never addressed) are included in \emph{Unspecific}.
     The mapping can be seen in \cref{app:study-addressee-addressees-codes}.
     This is a reasonable pooling that allows quantitative analyses by greatly reducing the amount of possible \glspl{addressee}.
@@ -634,14 +634,41 @@ Using the predictions of the created models (\emph{BF}, \emph{BM}, \emph{BA}, an
 For this evaluation a confidence interval of 95\% is used.
 I use the following notation: \(BN_A\) refers to the \emph{BN} model in the \emph{All} condition.
 The other conditions are abbreviated with \emph{S} (\emph{Speech}), \emph{V} (\emph{Visual}), and \emph{O} (\emph{Observable}).
-The results can be seen in \cref{fig:study-addressee-bn-cv}.
+The results can be seen in \cref{fig:study-addressee-bn-cv-val} and are visualized in \cref{fig:study-addressee-bn-cv}.
+
+\begin{colored_table}{htb}
+    \centering
+    \DTLsetseparator{,}  
+    \DTLloaddb{address-cv}{data/cv-values.csv}
+    \begin{tabulary}{\textwidth}{C C C C C}
+    \toprule
+     & Speech & Visual & Observable & All
+    \DTLforeach{address-cv}{%
+      \nw=network,%
+      \one=Speech,%
+      \two=Visual,%
+      \three=Observable,%
+      \four=All%
+    }{%
+      \DTLiffirstrow{\\\midrule}{\\}
+      \nw & \one & \two & \three & \four
+    }\\
+    \bottomrule
+    \end{tabulary}
+    \caption[One vs. all cross validation values.]{\label{fig:study-addressee-bn-cv-val} 
+    Accuracy with 95\% confidence interval of the \gls{bayesiannetwork} based \emph{BF} (focus only/baseline), \emph{BM} (manual), \emph{BA} (auto generated) models, and the \gls{randomforest} based classifier \emph{RF}.
+    The performance is measured using \gls{cv} with the four sets of input variables (\emph{Speech}, \emph{Visual}, \emph{Observable}, and \emph{All}).
+    %In the \emph{Speech} condition \emph{BF} performs worse than the other \glspl{bayesiannetwork}.
+    %In the \emph{All} condition \emph{BM} and \emph{RF} are better than \emph{BF}, \emph{BA} is not.
+    }
+\end{colored_table}
 
 \begin{figure}[tbh]
   \centering
   \input{data/cv.tex}
     \caption[One vs. all cross validation results.]{\label{fig:study-addressee-bn-cv} 
-    Classification performance of the \gls{bayesiannetwork} based \emph{BF} (focus only/baseline), \emph{BM} (manual), \emph{BA} (auto generated) models, and the \gls{randomforest} based classifier \emph{RF}.
-    The performance is measured using \gls{cv} with the four sets of input variables (\emph{Speech}, \emph{Visual}, \emph{Observable}, and \emph{All}).   Confidence intervals (95\%) are shown at each bar.
+    Accuracy of the \gls{bayesiannetwork} based \emph{BF} (focus only/baseline), \emph{BM} (manual), \emph{BA} (auto generated) models, and the \gls{randomforest} based classifier \emph{RF}.
+    The performance is measured using \gls{cv} with the four sets of input variables (\emph{Speech}, \emph{Visual}, \emph{Observable}, and \emph{All}). Confidence intervals (95\%) are shown at each bar.
     %In the \emph{Speech} condition \emph{BF} performs worse than the other \glspl{bayesiannetwork}.
     %In the \emph{All} condition \emph{BM} and \emph{RF} are better than \emph{BF}, \emph{BA} is not.
     }

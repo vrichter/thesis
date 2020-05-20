@@ -1,0 +1,196 @@
+\begin{frame}{Recognizing Conversational Roles}
+  \centering
+    \begin{columns}[T] % align columns
+      \begin{column}{.5\textwidth}
+        \includegraphics[trim={4.1cm 0 0 0},clip,width=\textwidth]{conversational_group}
+      \end{column}
+      \begin{column}{.5\textwidth}
+        \vspace{10pt}
+        \textbf{RQ4: Conversational Roles}\\\vspace{5pt} 
+        \onslide<2->{In \textcolor{myblue}{unconstrained interactions} in a smart environment: } \onslide<3->{How can the \textcolor{myblue}{conversational role} of an \textcolor{myblue}{agent} be recognized?}\\
+      \vspace{10pt}
+       \onslide<4->\(\rightarrow\) \hspace{5pt} Simple Models\\
+       \vspace{5pt}
+       \onslide<5->\(\rightarrow\) \hspace{5pt} Low-Level Features\\
+       \vspace{5pt}
+       \onslide<6->\(\rightarrow\) \hspace{5pt} Time Sequences\\
+      \end{column}
+    \end{columns}
+  \pnote{14-5}
+\end{frame}
+\begin{frame}{Demonstration Corpus}
+  \begin{columns}[T] % align columns
+    \begin{column}{.5\textwidth}
+      \centering
+      \onslide<1->{\resizebox{\textwidth}{!}{%
+        \def\svgwidth{1.5\textwidth}
+        \input{generated/csra_map_annotations.pdf_tex}
+      }}
+    \end{column}%
+    \begin{column}{.5\textwidth}
+      \resizebox{\textwidth}{!}{%
+        \scriptsize
+        \begin{tikzpicture}
+        \action<1->{\node (c) at (0,0)
+        {
+          \resizebox{\textwidth}{!}{%
+          \def\svgwidth{\textwidth}
+          \input{generated/defence_role_annotations_real-image.pdf_tex}
+          }
+        };}
+        \action<1->{\node (c) at (0,0)
+        {
+          \resizebox{\textwidth}{!}{%
+          \def\svgwidth{\textwidth}
+          \input{generated/defence_role_annotations_real-groups.pdf_tex}
+          }
+        };}
+        \action<2->{\node (c) at (0,0)
+        {
+          \resizebox{\textwidth}{!}{%
+          \def\svgwidth{\textwidth}
+          \input{generated/defence_role_annotations_real-speaker.pdf_tex}
+          }
+        };}
+         \action<3->{\node (c) at (0,0)
+        {
+          \resizebox{\textwidth}{!}{%
+          \def\svgwidth{\textwidth}
+          \input{generated/defence_role_annotations_real-addressee.pdf_tex}
+          }
+        };}
+         \action<4->{\node (c) at (0,0)
+        {
+          \resizebox{\textwidth}{!}{%
+          \def\svgwidth{\textwidth}
+          \input{generated/defence_role_annotations_real-sideparticipant.pdf_tex}
+          }
+        };}
+         \end{tikzpicture}
+      }
+    \end{column}%
+  \end{columns}
+        57 Minutes of 2 Agents at \SI{15}{\Hz} \(\rightarrow\) \SI{102}{\kilo\nothing} Observations \\
+        \footnotesize
+        \onslide<2-> \textcolor{myred}{Speaker} (3408) 
+        \onslide<3-> \textcolor{mygreen}{Addressee} (5689)
+        \onslide<4-> \textcolor{myblue}{Side-Participant} (18358)
+        \onslide<5-> \textcolor{black}{Non-Participant} (74213)
+  \pnote{14-5}
+\end{frame}
+\begin{frame}{Simple Models \& High-Level Features}
+  \centering
+  \resizebox{.8\textwidth}{!}{%
+    \begin{tikzpicture}
+    \action<1->{\node (c) at (0,0)
+    {
+      \resizebox{.7\textwidth}{!}{%
+      \def\svgwidth{0.98\textwidth}
+         {\footnotesize
+         \input{generated/rule-model-defence.pdf_tex}
+         }
+      }
+    };}
+    \action<2->{\node (c) at (0,-90pt)
+    {
+      \resizebox{.6\textwidth}{!}{%
+      \def\svgwidth{0.98\textwidth}
+         {\footnotesize
+         \input{generated/bn-role-defence.pdf_tex}
+         }
+      }
+    };}
+     \end{tikzpicture}
+  }
+  \pnote{14-5}
+\end{frame}
+\begin{frame}{Low-Level Features \& Time Sequences}
+      \centering
+      \vspace{20pt}
+      \resizebox{.8\textwidth}{!}{%
+          \scriptsize
+          \begin{tikzpicture}
+          \node (b) at (0,0)
+          {
+            \resizebox{1.35\textwidth}{!}{%
+            \def\svgwidth{.3\textwidth}
+            \input{generated/nnl-defence-dense.pdf_tex}
+            }
+          };
+          \action<1->{\node (c) at (30,0)
+          {
+            \resizebox{1.35\textwidth}{!}{%
+            \def\svgwidth{.3\textwidth}
+            \input{generated/nnl-defence-t2.pdf_tex}
+            }
+          };}
+          \action<1->{\node (c) at (30,0)
+          {
+            \resizebox{1.35\textwidth}{!}{%
+            \def\svgwidth{.3\textwidth}
+            \input{generated/nnl-defence-t1.pdf_tex}
+            }
+          };}
+          \action<1->{\node (c) at (30,0)
+          {
+            \resizebox{1.35\textwidth}{!}{%
+            \def\svgwidth{.3\textwidth}
+            \input{generated/nnl-defence-lstm.pdf_tex}
+            }
+          };}
+           \end{tikzpicture}
+        }
+        \begin{itemize}[label=-]
+          \item<2-> Train with different feature sets, number of layers, units in each layer
+          \item<3-> Feature sets: High-level (4D as Bayes Model) \(\rightarrow\) Low-Level (148D)
+          \item<4-> For lstm: sequences of 15 observations \(\approx\) \SI{1}{\second}
+        \end{itemize}
+  \pnote{14-5}
+\end{frame}
+\begin{frame}{Results - Confusion Matrices}
+  \begin{columns}[T] % align columns
+    \begin{column}{.65\textwidth}
+      \resizebox{1.\textwidth}{!}{%
+        \scriptsize
+        \begin{tikzpicture}
+          \action<3->{\node (b) at (0,0)
+          {
+            \resizebox{\textwidth}{!}{%
+              \input{data/role-cm-beamer.tex}
+            }
+          };}
+        \end{tikzpicture}
+      }
+    \end{column}%
+    \hspace{-10pt}
+    \begin{column}{.45\textwidth}
+      \footnotesize
+      \vspace{10pt}
+      \begin{itemize}[label=-]
+        \item<1-> Best \(Dense\) uses low-level features
+        \item<2-> Best \(Lstm\) uses high-level features
+        \item<3->[] Confusion Matrices
+        \item<4-> Good prediction of \(Non\text{-}Participants\)
+        \item<5-> Bias of \(Rule\) for \(Addressee\)
+        \item<6-> Bias of Others for \(Side\text{-}Participants\)
+        \item<7-> \(Dense\) optimizes for \(Non\text{-}Participants\)
+        \item<8-> \(Lstm\) better by a small margin
+      \end{itemize}
+      \vspace{10pt}
+      %\begin{itemize}[label=-]
+      %  \item<9->[\textcolor{mygreen}{\faCheckCircle}] Simple Models
+      %  \item<10->[\textcolor{myred}{\faTimesCircle}] Low-Level Features
+      %  \item<11->[\textcolor{mygreen}{\faCheckCircle}] Time Sequences
+      %\end{itemize}
+    \end{column}%
+  \end{columns}
+  \pnote{14-5 \\ this is recall!!}
+\end{frame}
+\begin{frame}{Summary RQ4}
+  \begin{itemize}
+    \item[\textcolor{mygreen}{\faCheckCircle}]<1-> \textcolor{myblue}{Simple Models} can recognize conversational roles on high-level features.
+    \item[\textcolor{myred}{\faTimesCircle}]<2-> \textcolor{myblue}{Low-Level Features} do not further enhance the recognition.
+    \item[\textcolor{mygreen}{\faCheckCircle}]<3-> \textcolor{myblue}{Time Sequences} can be observed to further enhance the recognition.
+  \end{itemize}
+  \pnote{14-5}
+\end{frame}

@@ -1,6 +1,6 @@
 $ENV{'TEXINPUTS'}='./texmf//:';
 
-$pdflatex = 'pdflatex -shell-escape -interaction=nonstopmode';
+$pdflatex = 'echo "This will not build using pdflatex! Please use lualatex."; false';
 $lualatex = 'lualatex -shell-escape -interaction=nonstopmode';
 $pdf_mode = 4;
 
@@ -19,6 +19,7 @@ sub makeglossaries {
 #add generated extensions so they are cleaned correctly
 push @generated_exts, 'glo', 'gls', 'glg';
 push @generated_exts, 'acn', 'acr', 'alg';
+push @generated_exts, '4ct', '4tc', 'xref', 'tmp';
 $clean_ext .= ' %R.ist %R.xdy %R.lol %R.bbl %R.synctex.gz(busy) %R.run.xml %R.thm _minted-%R';
 
 add_cus_dep('py', 'pdf', 0, 'py2pdf');

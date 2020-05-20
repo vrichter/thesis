@@ -65,57 +65,138 @@ model_performance_sets %>%
   facet_wrap(facets = vars(class))
 #}
 
-plot_cm = FALSE
-if(plot_cm){
-  load("study-role-eval-result-data.RData")
-  table_models <-
-    bind_rows(
-      model_performance %>% group_by(model.type,class) %>% filter(f1==max(f1)),
-      model_performance %>% group_by(model.type,class) %>% filter(precision==max(precision)),
-      model_performance %>% group_by(model.type,class) %>% filter(recall==max(recall)),
-      model_performance %>% group_by(model.type,class) %>% filter(markedness==max(markedness)),
-      model_performance %>% group_by(model.type,class) %>% filter(informedness==max(informedness)),
-      model_performance %>% group_by(model.type,class) %>% filter(mean.f1==max(mean.f1)),
-      model_performance %>% group_by(model.type,class) %>% filter(accuracy==max(accuracy))
-    )$model %>% unique()
-  #table_models <- model_performance$model %>% unique()
+data_tile <- model_performance %>% 
+  select(model, model.base, model.seed, class, starts_with('predicted.')) %>%
+  mutate(sum = predicted.speaker+predicted.addressee+predicted.member+`predicted.non-member`) %>%
+  gather(predicted, "amount", "predicted.speaker", "predicted.addressee", "predicted.member", "predicted.non-member") %>% 
+  mutate(
+    predicted = str_remove(predicted, 'predicted[.]'),
+    class = factor(class, levels = c('speaker', 'addressee', 'member', 'non-member')),
+    predicted = factor(predicted, levels = levels(class))
+  ) %>% # collect different seeds
+  group_by(model.base, class, predicted) %>%
+  summarize(sum=sum(sum), amount=sum(amount), seeds=length(unique(model.seed))) %>%
+  ungroup() %>%
+  mutate(model=model.base) %>%
+  select(-model.base)
   
-  roles_eval_subset <- roles_eval_result_data %>% filter(model %in% table_models)
-  data_tile <- lapply(unique(roles_eval_subset$model), function(m) {
-    print(paste("create tile-data for,",m))
-    lapply(unique(roles_eval_subset$role.agent), function(role) {
-      data <- roles_eval_subset %>% filter(model==m, role.agent==role)
-      sum <- data %>% nrow()
-      return(list(
-        "model" = m,
-        "role" = role,
-        "speaker" =    (data %>% filter(role.predicted=="speaker") %>% nrow()),
-        "addressee" =  (data %>% filter(role.predicted=="addressee") %>% nrow()),
-        "member" =     (data %>% filter(role.predicted=="member") %>% nrow()),
-        "non-member" = (data %>% filter(role.predicted=="non-member") %>% nrow()),
-        "sum" = sum
-      ))
-    })
-  }) %>% 
-    unlist(recursive = FALSE) %>% 
-    bind_rows() %>%
-    gather(predicted,"amount","speaker","addressee","member","non-member") %>%
-    mutate(predicted = factor(predicted, levels = levels(role)))
-  
-  data_tile %>%
-    mutate(amount = amount/sum) %>% 
-    mutate(model = model %>% str_replace_all(., "(dropout_0.5_|hist_15|epochs|units|lr_0.0001_|regularize|hl|leaky_FALSE|vsplit_0)",".") %>% str_replace_all(., "_", ".") %>% str_replace_all(., "[.]+",".")) %>%
-    mutate(value = sprintf("%.2f",amount)) %>% 
-    ggplot() +
-    geom_tile(aes(x=predicted,y=role,fill=amount)) + 
-    facet_wrap(facets = vars(model)) + 
-    scale_fill_gradient(low = "white", high = "red") + 
-    theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1)) + 
-    geom_text(aes(x=predicted, y=role, label = value), color = "black", size = 4) + 
-    scale_y_discrete(limits = rev(levels(data_tile$role)))
-}
 
-model_performance %>% 
+data_tile <- data_tile %>% filter(model %in% c(
+  "rule",
+  "bnmrulec",
+  "keras_full_dropout_0.5_epochs_50_units_128_lr_0.0001_hl_1_leaky_FALSE_vsplit_0",
+  "lstmdist_rule_dropout_0.5_hist_15_epochs_50_units_128_lr_0.0001_hl_1_leaky_FALSE_vsplit_0"
+)) %>% 
+  mutate(
+    class = recode_factor(class, speaker = "Speaker", addressee = "Addressee", member = "Side-Participant", `non-member` = "Non-Participant"),
+    predicted = recode_factor(predicted, speaker = "Speaker", addressee = "Addressee", member = "Side-Participant", `non-member` = "Non-Participant"),
+    model = factor(model)
+  ) %>% 
+  mutate(
+    thesismodel = recode_factor(model, 
+                              `rule`="rule",
+                              `bnmrulec`="BnM",
+                              `keras_full_dropout_0.5_epochs_50_units_128_lr_0.0001_hl_1_leaky_FALSE_vsplit_0`="D.F.128.1",
+                              `lstmdist_rule_dropout_0.5_hist_15_epochs_50_units_128_lr_0.0001_hl_1_leaky_FALSE_vsplit_0`="L.R.128.1"
+                              ),
+    beamermodel = recode_factor(model, 
+                              `rule`="Rule",
+                              `bnmrulec`="Bayes",
+                              `keras_full_dropout_0.5_epochs_50_units_128_lr_0.0001_hl_1_leaky_FALSE_vsplit_0`="Dense-Low-Level",
+                              `lstmdist_rule_dropout_0.5_hist_15_epochs_50_units_128_lr_0.0001_hl_1_leaky_FALSE_vsplit_0`="Lstm-Rule"
+                              ),
+    model = thesismodel,
+  )    
+
+(
+plot_cm_models <- data_tile %>% 
+  mutate(Amount = amount/sum, Predicted = predicted) %>% 
+  mutate(value = sprintf("%.2f",Amount)) %>% 
+  mutate(Number = sprintf("%.0f", amount/seeds)) %>% 
+  mutate(Role = class,
+         goodbad = ifelse(Role == Predicted,"good","bad"),
+         ) %>% 
+  ggplot() +
+  geom_tile(aes(x=Predicted,y=Role,alpha=Amount,fill=goodbad)) + 
+  facet_wrap(facets = vars(thesismodel)) + 
+  scale_fill_manual(values = c(good = RColorBrewer::brewer.pal(name = "Set1", n = 9)[3], bad = RColorBrewer::brewer.pal(name = "Set1", n = 9)[1])) +
+  theme(axis.text.x = element_text(angle = 20, vjust = 1, hjust = 1),
+        panel.background = element_blank(),
+        legend.position = "None") + 
+  geom_text(aes(x=Predicted, y=Role, label = value), color = "black", size = 4) + 
+  scale_y_discrete(limits = rev(levels(data_tile$class)))
+)
+
+(
+plot_cm_models_beamer <- data_tile %>% 
+  mutate(Amount = amount/sum, Predicted = predicted) %>% 
+  mutate(value = sprintf("%.2f",Amount)) %>% 
+  mutate(Number = sprintf("%.0f", amount/seeds)) %>% 
+  mutate(Role = class,
+         goodbad = ifelse(Role == Predicted,"good","bad"),
+         ) %>% 
+  ggplot() +
+  geom_tile(aes(x=Predicted,y=Role,alpha=Amount,fill=goodbad)) + 
+  facet_wrap(facets = vars(beamermodel)) + 
+  scale_fill_manual(values = c(good = RColorBrewer::brewer.pal(name = "Set1", n = 9)[3], bad = RColorBrewer::brewer.pal(name = "Set1", n = 9)[1])) +
+  theme(axis.text.x = element_text(angle = 20, vjust = 1, hjust = 1),
+        panel.background = element_blank(),
+        legend.position = "None") + 
+  geom_text(aes(x=Predicted, y=Role, label = value), color = "black", size = 4) + 
+  scale_y_discrete(limits = rev(levels(data_tile$class)))
+)
+
+(
+plot_cm_models_simple <- data_tile %>% 
+  filter(beamermodel %in% c("Rule","Bayes")) %>%
+  mutate(model = fct_drop(beamermodel)) %>%
+  mutate(Amount = amount/sum, Predicted = predicted) %>% 
+  mutate(value = sprintf("%.2f",Amount)) %>% 
+  mutate(Number = sprintf("%.0f", amount/seeds)) %>% 
+  mutate(Role = class,
+         goodbad = ifelse(Role == Predicted,"good","bad"),
+         ) %>% 
+  ggplot() +
+  geom_tile(aes(x=Predicted,y=Role,alpha=Amount,fill=goodbad)) + 
+  facet_wrap(facets = vars(model)) + 
+  scale_fill_manual(values = c(good = RColorBrewer::brewer.pal(name = "Set1", n = 9)[3], bad = RColorBrewer::brewer.pal(name = "Set1", n = 9)[1])) +
+  theme(axis.text.x = element_text(angle = 20, vjust = 1, hjust = 1),
+        panel.background = element_blank(),
+        legend.position = "None") + 
+  geom_text(aes(x=Predicted, y=Role, label = value), color = "black", size = 4) + 
+  scale_y_discrete(limits = rev(levels(data_tile$class))) +
+  coord_fixed()
+)
+
+(
+plot_cm_models_counts <- data_tile %>% 
+  mutate(Amount = amount/sum, Predicted = predicted) %>% 
+  mutate(value = sprintf("%.2f",Amount)) %>% 
+  mutate(Number = sprintf("%.0f", amount/seeds)) %>% 
+  mutate(Role = class,
+         goodbad = ifelse(Role == Predicted,"good","bad"),
+         ) %>% 
+  ggplot() +
+  geom_tile(aes(x=Predicted,y=Role,alpha=Amount,fill=goodbad)) + 
+  facet_wrap(facets = vars(beamermodel)) + 
+  scale_fill_manual(values = c(good = RColorBrewer::brewer.pal(name = "Set1", n = 9)[3], bad = RColorBrewer::brewer.pal(name = "Set1", n = 9)[1])) +
+  theme(axis.text.x = element_text(angle = 20, vjust = 1, hjust = 1),
+        panel.background = element_blank(),
+        legend.position = "None") + 
+  geom_text(aes(x=Predicted, y=Role, label = Number), color = "black", size = 4) + 
+  scale_y_discrete(limits = rev(levels(data_tile$class)))
+)
+
+data_tile %>% 
+  filter(model=="BnM") %>%
+  group_by(class) %>% 
+  summarize(Sum=sum(amount)) %>% 
+  mutate(Class=class, Role="Role") %>%
+  ggplot() + 
+  geom_bar(aes(x=Role, y=Sum, fill=Class), stat = 'identity', position = 'stack')
+
+
+model_performance %>%
   filter(model.type %in% c("bnmrulec", "rule", "keras", "lstm", "lstma", "lstmconv", "lstmdist")) %>%
   mutate(model.data = ifelse(is.na(model.data) | model.data == "resample", "rule", model.data)) %>%
   mutate(model.epochs = ifelse(is.na(model.epochs), "1", model.epochs)) %>%
@@ -365,6 +446,28 @@ fun_plot_acc <- function(data, plot, errorbar.width=1, name.colorlab="Measure @ 
     scale_y_continuous(limits=c(0.5,0.9), name="Value", breaks = seq(0,1,0.1), expand = c(0,0)) + 
     theme(legend.position = "bottom")
 )
+# plot defence plot
+(
+  plot_nn_acc_f1_defence <- fun_plot_acc(
+    data=model_performance_time %>% filter(model.epochs == "50"), 
+    plot=ggplot() + 
+      geom_vline(xintercept = seq(0,24,4)+0.5, linetype = "dashed", color = "gray") + 
+      geom_text(data = tibble(names=rep(c("\\(rule\\)","\\(rule_{raw}\\)","\\(full\\)"),2), x= seq(2.5,24,4), y = 0.7), mapping = aes(x=x, y=y, label=names), color=mycolors[4]) +
+      geom_line(data = tibble(x=c(7.5,8.5), y = c(rule.accuracy-0.025,rule.accuracy)), mapping = aes(x=x, y=y)) +
+      geom_line(data = tibble(x=c(16.5,15.5), y = c(rule.accuracy-0.025,bnm.accuracy)), mapping = aes(x=x, y=y)) +
+      geom_line(data = tibble(x=c(8.5,9.5), y = c(rule.f1+0.03,rule.f1)), mapping = aes(x=x, y=y)) +
+      geom_line(data = tibble(x=c(4.5,5), y = c(rule.f1+0.07,bnm.f1)), mapping = aes(x=x, y=y)) +
+      geom_label(data = 
+                   tribble(
+                     ~names,                            ~x,  ~y,
+                     "\\(Bayes\\) model \\(F1_\\mu\\)",   4.5, bnm.f1+0.065,
+                     "\\(Rule\\) model \\(F1_\\mu\\)",  8.5, bnm.f1+0.025,
+                     "\\(Rule\\) model accuracy",       6.5, rule.accuracy-0.025,
+                     "\\(Bayes\\) model accuracy",       16.5, rule.accuracy-0.025), 
+                 mapping = aes(x=x, y=y, label=names), fill="white")  
+  ) +
+    scale_y_continuous(limits=c(0.5,0.9), name="Value", breaks = seq(0,1,0.1), expand = c(0,0))
+)
 
 rule.f1.class <- model_performance %>% filter(model=="rule") %>% select(class,f1) %>% arrange(class)
 bnm.f1.class <- model_performance %>% filter(model=="bnmrulec") %>% select(class,f1) %>% arrange(class)
@@ -545,6 +648,7 @@ data <- model_performance_time %>% filter(modelconf %in% show_models_long, model
       legend.key.size = unit(1,"line")
     )
 )
+
 #library(RColorBrewer)
 #display.brewer.all()
 #display.brewer.pal(name = "Set1",n = 9)
@@ -570,11 +674,16 @@ fun_write_all_out <- function(){
   fun_write_plot_tex(plot_measures_rule, 'role-rule-measures.tex', hfac=0.8*plot_height_factor_golden_ratio)
   fun_write_plot_tex(plot_accuracy_rule, 'role-rule-accuracy.tex', hfac=0.8*plot_height_factor_golden_ratio, vfac=1*(5.9/11))
   fun_write_plot_tex(plot_f1_rule, 'role-rule-f1.tex', hfac=0.8*plot_height_factor_golden_ratio, vfac=1*(4.9/11))
-  fun_write_plot_tex(plot_nn_acc_f1, 'role-nn-acc-f1.tex', hfac=1.5*plot_height_factor_golden_ratio)
-  fun_write_plot_tex(plot_nn_f1_class, 'role-nn-f1-class.tex', hfac=1.5*plot_height_factor_golden_ratio)
+  fun_write_plot_tex(plot_nn_acc_f1, 'role-nn-acc-f1.tex', hfac=2.0*plot_height_factor_golden_ratio)
+  fun_write_plot_tex(plot_nn_f1_class, 'role-nn-f1-class.tex', hfac=2.0*plot_height_factor_golden_ratio)
   fun_write_plot_tex(plot_nn_acc_f1_less, 'role-nn-acc-f1-less.tex', hfac=1.5*plot_height_factor_golden_ratio)
-  fun_write_plot_tex(plot_nn_f1_class_less, 'role-nn-f1-class-less.tex', hfac=1.5*plot_height_factor_golden_ratio)
-  fun_write_plot_tex(plot_nn_f1_class_long, 'role-nn-f1-class-long.tex')
+  fun_write_plot_tex(plot_nn_f1_class_less, 'role-nn-f1-class-less.tex', hfac=2.5*plot_height_factor_golden_ratio)
+  fun_write_plot_tex(plot_nn_f1_class_long, 'role-nn-f1-class-long.tex', hfac=2.4*plot_height_factor_golden_ratio)
+  fun_write_plot_tex(plot_cm_models, 'role-cm.tex', hfac=1*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_nn_acc_f1_defence, 'role-nn-acc-f1-beamer.tex', hfac=1.5*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_cm_models_beamer, 'role-cm-beamer.tex', hfac=1*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_cm_models_simple, 'role-cm-simple-beamer.tex', hfac=1*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_cm_models_counts, 'role-cm-counts-beamer.tex', hfac=1*plot_height_factor_golden_ratio)
 }
 if(!draft) {
   fun_write_all_out() 

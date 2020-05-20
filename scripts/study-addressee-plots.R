@@ -141,9 +141,59 @@ source("../scripts/tikz-export-config.R")
           axis.ticks = element_blank(),
           legend.text = element_text(margin = margin(r = 10, unit = "pt"))
     ) +
-    labs(x=NULL, y='\\(P(correct)\\)') +
+    labs(x=NULL, y='Accuracy') +
     guides(fill=guide_legend(title = "Classifier", title.theme = element_text(margin = margin(r=10, unit= "pt"))))
 )
+
+cv_result_short <- cv_result %>%
+    mutate(network = recode_factor(network,`BF  `="Attention", `BM  `="Manual")) %>%
+    mutate(data = recode_factor(data,Speech="Speech", Visual="Visual", Observable="Speech + Visual")) %>%
+    filter(network %in% c("Attention", "Manual")) %>%
+    mutate(network = droplevels(network), data = droplevels(data))
+(
+  plot_cv_short <- cv_result_short %>% 
+    ggplot(aes(x=network, y=mean, fill=network)) +
+    geom_bar(stat="identity") +
+    geom_errorbar(aes(ymin=lower, ymax=upper), width=.2) +
+    facet_grid(cols=vars(cv_result_short$data)) +
+    scale_fill_brewer(palette='Set1') +
+    theme(legend.position = "bottom",
+          axis.text.x = element_blank(),
+          axis.ticks = element_blank(),
+          legend.text = element_text(margin = margin(r = 10, unit = "pt"))
+    ) +
+    labs(x=NULL, y='Accuracy with 95\\% confidence intervals') +
+    guides(fill=guide_legend(title = "Model", title.theme = element_text(margin = margin(r=10, unit= "pt"))))
+)
+
+(
+plot_cv_values <- cv_result %>%
+    group_by(data) %>% 
+    mutate(highlight=lower>min(upper)) %>% 
+    ungroup() %>%
+    mutate(
+    data = fct_rev(data),
+    bf = ifelse(highlight,"",""),
+    value=sprintf("\\(%s{%.2f \\pm %.2f}\\)",bf, mean, upper-lower)
+  ) %>% 
+    ggplot() + 
+    geom_tile(aes(x=network, y=data), color="black", alpha=0.0) + 
+    geom_text(aes(x=network, y=data, label = value)) + 
+    scale_color_brewer(palette = 'Set1') +
+    labs(x="Classifier", y="Variable Set") + 
+    theme(panel.background = element_blank())
+)
+
+plot_cv_values <- cv_result %>%
+    group_by(data) %>% 
+    mutate(highlight=lower>min(upper)) %>% 
+    ungroup() %>%
+    mutate(
+    bf = ifelse(highlight,"",""),
+    value=sprintf("\\(%s{%.2f \\pm %.2f}\\)",bf, mean, upper-lower)
+  ) %>%
+  select(network, data, value) %>%
+  spread(data, value)
 
 #write to files
 fun_write_all_out <- function(){
@@ -157,6 +207,12 @@ fun_write_all_out <- function(){
   fun_write_plot_tex(plot_cramer_all, 'cramer_all.tex', hfac=0.75, vfac=1)
   fun_write_plot_tex(plot_chisq_all, 'chisq_all.tex', hfac=0.75, vfac=1)
   fun_write_plot_tex(plot_cv, 'cv.tex', hfac=0.8*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_cramer_all, 'cramer_all-beamer.tex', hfac=0.75, vfac=1)
+  fun_write_plot_beamer_tex(plot_chisq_all, 'chisq_all-beamer.tex', hfac=0.75, vfac=1)
+  fun_write_plot_beamer_tex(plot_adr_by_task, 'adr_by_task-beamer.tex', vfac=0.49, hfac=0.60*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_equality_from_foa, 'equality_from_foa-beamer.tex', vfac=0.49, hfac=0.60*plot_height_factor_golden_ratio)
+  fun_write_plot_beamer_tex(plot_cv_short, 'cv-beamer.tex', hfac=2.*plot_height_factor_golden_ratio)
+  write_csv(plot_cv_values, 'cv-values.csv')
 }
 
 if(write_out) { 

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="4f5db9be-cceb-425b-85b1-a25d395644ae" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-15T17:54:59.281Z</CreationDate>
+            <ModificationDate>2016-01-15T17:54:59.281Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bb85cf6e-f792-4092-a94c-ed11f27c1d2e#t=136.900/141.500;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Die ersten 02:25 Min. passiert nichts.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="4dc5fe41-5755-4568-a1b7-f7e1613a4c39" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T13:03:20.918Z</CreationDate>
+            <ModificationDate>2016-01-18T13:03:20.918Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bb85cf6e-f792-4092-a94c-ed11f27c1d2e#t=149.511/152.111;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Jasmin ist nicht VL.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="751a2eb8-27c3-4760-aa8b-2eb7ef6b15e3" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T13:04:12.246Z</CreationDate>
+            <ModificationDate>2016-01-18T13:04:12.246Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bb85cf6e-f792-4092-a94c-ed11f27c1d2e#t=156.311/165.311;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt Vorstellung durch Apartment nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="44a0daf5-509b-44a8-bef6-971e91f42ed1" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T13:06:38.319Z</CreationDate>
+            <ModificationDate>2016-01-18T13:06:38.319Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bb85cf6e-f792-4092-a94c-ed11f27c1d2e#t=192.911/195.511;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt "Hi" zur Person mit Notaus.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="92190a0a-96bb-4ac6-99ec-3690b4142357" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T13:10:17.680Z</CreationDate>
+            <ModificationDate>2016-01-18T13:10:17.680Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bb85cf6e-f792-4092-a94c-ed11f27c1d2e#t=217.500/228.600;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest hier schon die Karte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="25d68678-0ba9-4c3d-aea7-41cbffb34d8f" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T14:37:17.829Z</CreationDate>
+            <ModificationDate>2016-01-18T14:41:09.855Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bb85cf6e-f792-4092-a94c-ed11f27c1d2e#t=387.300/480.800;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP hat hier Probleme das Paket zu finden, was für mich verständlich ist: die VP hat die zwei Aufgaben zuvor (Anruf und Uhrzeit) gelöst, indem sie einen Bildschirm adressiert hat, auf dem dann schriftlich die Lösung stand. Bei der Paketaufgabe steht auf den Bildschirmen dann nichts, sondern ein Ton ertönt und der Griff des Paketschranks leutet blau. Es ist nicht logisch, dass nicht auf dem Bildschirm steht, wo das paket ist. Die VP muss dann denken, dass das Apartment / der Bildschirm nicht funktionieren. Unglücklich ist auch, dass der Roboter nicht wirklich auf den Paketschrank zeigt. Ton und blaues Leuchten scheinen als Hinweis, wo das Paket ist nicht aus zu reichen.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="555e967e-a670-4f52-ac83-24ae815e76dc" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T14:32:25.003Z</CreationDate>
+            <ModificationDate>2016-01-18T14:32:25.003Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bb85cf6e-f792-4092-a94c-ed11f27c1d2e#t=462.375/465.475;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP ist nicht unhöflich, wirkt aber etwas ungeduldig. Der Tonfall klingt so, als würde die VP "Wo ist das Paket?" mit Nachdruck sagen.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="d8dddae1-b465-49d6-90f1-791e1fc3eb06" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T14:46:30.954Z</CreationDate>
+            <ModificationDate>2016-01-18T14:46:30.954Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bb85cf6e-f792-4092-a94c-ed11f27c1d2e#t=535.450/539.650;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt der Notaus-Person, dass er sich an die VP wenden soll, Notaus-Person sagt VL ist draußen.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="87ed652d-3c8c-44d9-ab52-1838b7c377cb" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T14:47:30.675Z</CreationDate>
+            <ModificationDate>2016-01-18T14:47:30.675Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bb85cf6e-f792-4092-a94c-ed11f27c1d2e#t=544.850/555.450;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Jasmin ist nicht VL. VP macht alle Aufgaben, bis auf die Paketaufgabe. Insgesamt neutrale Stimmung.</Message>
+    </ColTime>
+</ColTimeList>

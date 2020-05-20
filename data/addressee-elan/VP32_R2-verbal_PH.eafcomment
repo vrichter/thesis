@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="02db8b34-d483-46c9-a294-a4a8ea8336c9" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-11T10:40:01.056Z</CreationDate>
+            <ModificationDate>2015-12-11T10:40:01.056Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1b0a4f77-5c29-4f3b-8261-b6ae84250587#t=38.400/39.800;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Apartment stellt sich zu spät vor. Nicht direkt nach Nennung des Schlüsselwortes.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="27cacf81-3732-450b-81cd-ed1b14dcefd2" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-11T11:17:55.239Z</CreationDate>
+            <ModificationDate>2015-12-11T11:17:55.239Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1b0a4f77-5c29-4f3b-8261-b6ae84250587#t=42.740/43.640;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt Vorstellung durch das Apartment nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="c3898443-da5a-4884-8d75-4a3b05acec61" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-11T12:09:41.430Z</CreationDate>
+            <ModificationDate>2015-12-11T12:09:41.430Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1b0a4f77-5c29-4f3b-8261-b6ae84250587#t=241.425/244.351;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Es kann sein, dass hier die weiße Musikbox angesehen wird, das ist aber nicht klar zu erkennen.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="82aa1bfd-a24f-47a1-8ee8-4fcabf80b42d" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-11T12:09:01.549Z</CreationDate>
+            <ModificationDate>2015-12-11T12:09:01.549Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1b0a4f77-5c29-4f3b-8261-b6ae84250587#t=247.184/251.146;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP reagiert nicht darauf, dass das Apartment zwei mal "eingegangen" sagt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ec34b6b5-40c3-424e-bc4e-12c032fd0a0f" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-11T12:29:10.550Z</CreationDate>
+            <ModificationDate>2015-12-11T12:29:10.550Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1b0a4f77-5c29-4f3b-8261-b6ae84250587#t=270.461/273.461;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Wieder enorme Verzögerung, bis Reaktion erfolgt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ed7a7ee7-8791-4279-ba70-95bf573e730b" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-11T12:39:17.332Z</CreationDate>
+            <ModificationDate>2015-12-11T12:39:17.332Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1b0a4f77-5c29-4f3b-8261-b6ae84250587#t=314.662/315.625;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt: "OK".</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="af1c200f-18ba-4045-b5c6-323be76c8cb8" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-11T12:40:04.115Z</CreationDate>
+            <ModificationDate>2015-12-11T12:41:57.235Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1b0a4f77-5c29-4f3b-8261-b6ae84250587#t=320.365/323.403;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP fragt Notausperson, ob sie zur VL gehen soll und ihre Sachen mitnehmen soll."</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="5bc33422-7d0b-44d6-ab43-f7f6ab417e34" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-11T12:41:05.547Z</CreationDate>
+            <ModificationDate>2015-12-11T12:41:05.547Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1b0a4f77-5c29-4f3b-8261-b6ae84250587#t=334.291/337.662;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP geht schnell aus dem Apartment. VP macht alle Aufgaben. Wirkt insgesamt etwas unsicher, zeigt aber auch freudige Emotionen.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="37f38f60-7be9-4eb2-b366-7d789b61ad81" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-11T11:06:12.003Z</CreationDate>
+            <ModificationDate>2015-12-11T11:06:12.003Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1b0a4f77-5c29-4f3b-8261-b6ae84250587#t=337.830/340.630;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Am Ende noch etwa zwei Minuten Video, in denen nichts mehr passiert.</Message>
+    </ColTime>
+</ColTimeList>

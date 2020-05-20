@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="dbabfb0a-1479-442d-b910-4902c5993d82" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-11T14:58:18.720Z</CreationDate>
+            <ModificationDate>2016-02-11T14:58:18.720Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:4fe51cef-9ee9-4323-a04a-0bd49373a993#t=69.150/80.050;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP nicht die Begrüßung des Apartments nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="321c3577-da75-4ebd-9c7f-2d97defd2665" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-11T15:05:07.724Z</CreationDate>
+            <ModificationDate>2016-02-11T15:05:07.724Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:4fe51cef-9ee9-4323-a04a-0bd49373a993#t=179.900/183.600;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon die erste Karte</Message>
+    </ColTime>
+</ColTimeList>

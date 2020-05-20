@@ -1,0 +1,210 @@
+\chapter{Human-Agent Interaction Corpus}\label{sec.group.corpus}
+
+% entry quote
+\blockcquote[p. 156]{goffman1963}{By definition, an accessible engagement does not exhaust the situation; [\dots] What we find instead is some obligation and some effort on the part of both participants and bystanders to act as if the engagement were physically cut off from the rest of the situation.}
+
+% introduction to the whole part with what is done in this chapter
+%In the following three chapters I broaden the problem of \gls{addressee} recognition for \glspl{artificial agent} in two directions which become increasingly important when the agent is used over longer time periods and with changing interaction partners. 
+%\blockquote{\Cref{hyp.fformation}: \hypfformation}
+%On the other hand, when the \gls{robot} is in a \gls{conversational group} it needs to recognize its \gls{conversational role} to be able to act accordingly.
+%This problem is stated in:
+%\blockquote{\Cref{hyp.roles}: \hyproles}
+To investigate \Cref{hyp.fformation}\rqnote{hyp.fformation}{\hypfformation} and \Cref{hyp.roles}\rqnote{hyp.roles}{\hyproles}, a corpus of open, multi-centric interactions between people and \glspl{artificial agent} is needed.
+In this chapter, I discuss the requirements of such a corpus and present a suitable scenario.
+On this basis, I create a corpus of interactions between a group of people and the \gls{flobi} agents in the \gls{csra}.
+This corpus is utilized in the following chapters to examine the recognition of \glspl{conversational group} (\cref{ch.fformation}) and \glspl{conversational role} (\cref{ch.roles}) of \glspl{artificial agent}. 
+ 
+\section{Introduction}
+
+% 1. Opening context or background. 
+As discussed in \cref{sec.rw.hi}, people who are \glsatt{copresence}, always interact with each other in some way.
+In a \gls{focused interaction} they \gls{turn} towards each other, reduce their distance, and increase the frequency and duration of mutual gazes (\cref{sec.rw.hi.focused}).
+Moreover, they can have different \glspl{conversational role} which are dynamically negotiated using the \gls{turn taking system}.
+In an \gls{unfocused interaction}, people display that they are part of the situation.
+They acknowledge the presence of others but direct their attention somewhere else to show \gls{civil inattention}.
+They reduce mutual gazes, increase their distance and \gls{turn} away from each other (\cref{sec.rw.hi.unfocused}).
+It is necessary for people to be able to distinguish and display whether and with whom they are in a focused or \gls{unfocused interaction}.
+Otherwise, they are not able to act appropriately and may be perceived as offensive~\cite[p. 29, p. 157]{goffman1963}.
+
+\Glspl{artificial agent}---e.g. in form of \glspl{robot} or \glspl{virtual agent}---are potential interaction partners.
+In a \gls{smart environment} that contains interactive \glspl{artificial agent}, people are always in their \gls{copresence}.
+%In contrast, a \glsatt{copresence} agent that is part of a \gls{focused interaction}, needs to adhere to the requirements of \glspl{focused interaction}.
+%As presented in \cref{sec.rw.hi.focused} this includes maximizing mutual monitoring possibilities within the group and reducing the same from outside the group.
+%Furthermore, it needs to mind its \gls{conversational role} and the dynamics of \gls{turn taking} (\cref{sec.rw.hi.focused}).
+To be able to behave in a manner that is appropriate to the situation, an agent first needs to understand it.
+As presented in \cref{sec.rw.hi.focused-rw.groups}, there already exists work on the detection of human-only \glspl{conversational group}.
+However, work on the detection of mixed \glspl{conversational group} in \gls{hai} is sparse.
+The possible effects of specific formations and the relevance of human \glspl{conversational group} for socially acceptable \glsatt{robot} navigation are more in focus of \gls{hai} research (\cref{sec.rw.hi.focused-rw.mixedgroups}).
+As a sub-problem of \gls{conversational role} recognition, approaches to the recognition of utterances addressed towards the agent are presented in \cref{sec.rw.hi.focused-rw.addressing}.
+However, the presented interactions are restricted.
+The agent is controlled by a \gls{wizard}, its \gls{conversational group} is fixed or the participants are augmented with close-talk microphones.
+To investigate, how dynamically changing \glspl{conversational group} with people and \glspl{artificial agent} can be detected and how the \glspl{conversational role} within such groups can be recognized, a fitting interaction corpus is required.
+%In contrast, I investigate how \glspl{focused interaction} containing people and \glspl{artificial agent} can be recognized in a \gls{smart environment} and how this knowledge can further be applied to recognize the \gls{conversational role} of the agents.
+
+% available corpora
+In the \gls{conversational group} detection community there are multiple, frequently used datasets for the evaluation of recognition models.
+The most widely adopted are \emph{Synthetic} and \emph{Coffee Break} from~\citewithauthor{Cristani2011}, \emph{IDIAP Poster Data} from~\citewithauthor{Hung2011}, \emph{Cocktail Party} form~\citewithauthor{Setti2013}, and \emph{GDet} from~\citewithauthor{Bazzani2013}.
+They are used for the evaluation of vision based \gls{conversational group} detection models as performed by~\citewithauthor{Setti2015} and~\citewithauthor{Vascon2016}.
+Furthermore, there are multi-modal datasets like \emph{SALSA} from~\citewithauthor{Alameda-Pineda2016} and \emph{MatchNMingle} from~\citewithauthor{Cabrera-Quiros2018}.
+The authors use these datasets to evaluate multi-modal approaches to \gls{conversational group} detection and subsequent analyses of group properties.
+All these datasets show similar situations:
+A crowded place where people stand and interact at a poster presentation, coffee break, speed-dating or similar socializing event.
+These scenarios are intentionally chosen to allow people to act as natural as possible while simultaneously allowing the observation of many interactions and changing groups.
+None of these scenarios feature \glspl{artificial agent}.
+
+Datasets for the analysis of \glspl{conversational role}, often use fixed groups of people without \glspl{artificial agent}~\cite{Jovanovic2006,Akhtiamov2017,Makino2018}.
+If \glspl{artificial agent} are present in such interactions, they are controlled by a \gls{wizard}~\cite{VanTurnhout2005,Jayagopi2013a}, or only distinguish utterances addressed at them from others~\cite{Bohus2011,Skantze2014}.
+Furthermore, these systems consider \glspl{conversational group} only as a distinction between interacting and non-interacting people, using simple heuristics.
+%
+Additionally, if people without experience in \gls{hai} find themselves in \gls{copresence} with an \gls{artificial agent} its novelty may lead to a higher amount of attention and overall amplified measures.
+Therefore, a scenario is needed in which a group of people can freely interact with each other and with \glspl{artificial agent} for an extended time.
+This way they can get accustomed to the situation and act more natural.
+
+\section{Scenario}
+
+To fulfil the presented requirements, I use collect a new corpus in the \gls{csra}.
+For a visualization of the recorded videos see \cref{fig:group-perspectives}.
+\begin{figure}[htb]
+  \centering
+    \def\svgwidth{\textwidth}
+    \input{generated/study-group-shots.pdf_tex}
+    \caption[Group detection study video perspectives.]{\label{fig:group-perspectives} The 14 perspectives from which videos are recorded during the study. 
+    The overview perspectives are in the top row (\emph{O}, blue background), 
+    the web-cam perspectives are in the right column (\emph{W}, orange background), and the remaining images show top-down perspectives (\emph{T1:} kitchen and hallway with green background and \emph{T2:} living-room with violet background).
+    }
+\end{figure}
+The corpus I contains the following scenario:
+A group is invited into the \gls{apartment} for a demonstration composed of three parts.
+\begin{description}
+    \item[Briefing] In the first part, the presenter---a person that is acquainted with the environment and realizes the demonstration---and the guests ga\-ther in front of the \gls{apartment}.
+    The participants get an explanation about what the \gls{apartment} is, what is being recorded during the study, and their rights regarding data privacy.
+    After the participants gave their consent, the main part of the demonstration begins.
+    \item[Presentation] The presenter enters the \gls{apartment} together with the participants and guides them through the hallway, living room and kitchen.
+    In each room the group stops and the presenter gives information about the \gls{apartment} or shows interaction possibilities.
+    In the hallway and kitchen, respectively an interaction with the \gls{virtual agent} \gls{flobi}---the host of the \gls{apartment}---is performed.
+    The living room is used to give information about the \gls{apartment}'s actuation and introspection capabilities.
+    \item[Free Interaction] In the third part of the demonstration, the participants are allowed to freely chat, test the different control metaphors of the \gls{apartment} or interact with the \glspl{virtual agent}.
+    During this period, the presenter remains in the \gls{apartment} to answer further questions.
+\end{description}
+The scenario is recorded using the \gls{apartment}'s study facilities.
+The recording is started before the \gls{apartment} is entered and stopped after the last participant left.
+
+\section{Recording}
+
+With this approach I perform a long demonstration for a group of students and their lecturers.
+The recording contains 
+\begin{enumerate*}[label=(\arabic*)]
+    \item four overview videos from the \gls{apartment}'s corners,
+    \item two web-cam videos from the agents' perspective, 
+    \item eight top-down videos,
+    \item two audio streams, and 
+    \item the communication between software components of the \gls{csra}.
+To see the video perspectives, refer to \cref{fig:group-perspectives}.
+\end{enumerate*}
+This resulting \SI{57}{\minute} of unconstrained, mixed human and human-agent interaction are composed of \SI{20}{\minute} presentation and \SI{37}{\minute} free interaction. 
+The participants are 8 women and 3 men---including the presenter.
+This dataset is a good basis for the analysis of mixed, human-agent interactions.
+Before it can be used to evaluate automatic \gls{conversational group} detection and \gls{conversational role} recognition in mixed human-agent interactions, some processing and annotation is required.
+A visualisation of the annotations can be seen in \cref{fig:map-annotation}.
+\begin{figure}[htb]
+  \centering
+    \def\svgwidth{\textwidth}
+    \input{generated/csra_map_annotations.pdf_tex}
+    \caption[Group and role annotations.]{\label{fig:map-annotation}
+    Annotations of the scene from \cref{fig:group-perspectives}.
+    The participant's and agent's poses are shown as triangles with annotated \emph{participant-id}.
+    \Glspl{conversational group} are highlighted in yellow.
+    \Glspl{conversational role} are shown in red (\gls{speaker}), green (\gls{addressee}), blue (\gls{side-participant}), and white (\gls{non-participant}).
+    }
+\end{figure}
+
+\section{Annotation}
+
+The study recording contains multiple video streams, audio streams and communication between software components of the \gls{csra}.
+To be able to examine \cref{hyp.fformation,hyp.roles}, a set of ground truth annotations is required. 
+A visualization of the annotations for the scene in \cref{fig:group-perspectives} can be seen in \cref{fig:map-annotation}.
+To this end, the required information is annotated on the basis of the top-down videos of the hallway and kitchen \emph{T1}.
+The remaining areas (\emph{T2}) of the \gls{apartment} are not annotated because they are not relevant for interactions with the \glspl{flobi}.
+The following information is manually annotated:
+\begin{enumerate*}[label=(\arabic*)]
+    \item Pose (position and rotation) of all participants and \glspl{flobi},
+    \item participant ids,
+    \item all \glspl{conversational group} the \glspl{flobi} participate in, and
+    \item \glspl{conversational role} for all annotated \glspl{conversational group}.
+\end{enumerate*}
+Annotations are done whenever a change in the participants pose, a group, or a role can be observed.
+In comparison to annotating fixed time intervals, this reduces the amount of needed annotations and allows an arbitrary sampling of annotations.
+Participants poses can be interpolated between annotations and groups and roles are static between changes.
+Furthermore, poses of the same person, when annotated from multiple viewpoints, can be averaged to further enhance estimations of the participants pose.
+The final dataset is created by sampling these annotations at a fixed rate of \SI{15}{\Hz}.
+The overall distribution of group-sizes for the two agents at this sampling rate can be seen in \cref{fig:group-sizes}.
+\begin{figure}[htb]
+    \centering
+    \input{data/group-ingroup-counts.tex}
+    \caption[Distribution of group sizes of agents.]{\label{fig:group-sizes}
+    The distribution of observed group sizes for the two agents in the group annotations of the corpus.
+    The counts are additionally shown on top of the bars.
+    A group size of 1 means that the agent is alone---not in a group with others.
+    }
+\end{figure}
+
+\section{Automatic Data Extraction}\label{sec.group.extraction}
+
+To assess the possibilities of fully automatic recognition of \glspl{conversational group} and \glspl{conversational role}, the following features are extracted from the system communication recordings:
+\begin{enumerate*}[label=(\arabic*)]
+   \item Positions of persons in the \gls{apartment} (at \SI{30}{\Hz}) from the person tracking system. Furthermore, in the \gls{fov} of both \glspl{flobi} (\(W\) perspectives in \cref{fig:group-perspectives}): 
+   \item the \gls{roi} of each detected face,
+   \item the recognized gaze-directions, and
+   \item the detected facial landmarks (A visualization of these features can be seen in \vref{fig:meka-features}). Finally, for each agent
+   \item whether it is speaking.
+\end{enumerate*}
+
+As the person tracking of the \gls{csra} does not provide rotational information, I additionally apply the~\citesoftware{openposegit} to the overview recordings (\emph{O} in \cref{fig:group-perspectives}) to detect 2D key-points of participants in video coordinates (see \cref{fig:group-openpose}).
+\begin{figure}[htb]
+    \centering
+    \def\svgwidth{0.95\textwidth}
+    \begin{footnotesize}
+    \input{generated/study-group-shots-openpose.pdf_tex}
+    \end{footnotesize}
+    \caption[Automatic pose extraction.]{\label{fig:group-openpose}
+    Visualization of the automatic pose extraction.
+    The image shows the scene in \cref{fig:group-perspectives}, from the perspective of \(C_3\) (see \cref{fig:map-annotation}), augmented with person key-points as they are detected by~\citewithauthor{openposegit}.
+    White circles (\(A\), \(C\), \(E\), \(G\), \(H\), and the \emph{false-positive} \(I\)) depict positions as they were detected by the \gls{apartment}'s person tracking system.
+    Red arrows (\(B\), \(C\), \(D\), \(E\), and \(F\)) depict poses---position and rotation---as they were derived from the results of~\citewithauthor{openposegit}.
+    The information used to derive poses is highlighted for \(F\).
+    In this case, violet points depict points of the feet that are used to calculate the position (green point), gray arrows show rejected orientation hypotheses, and the yellow arrow depicts which orientation hypothesis was accepted.
+    }
+\end{figure}
+On the basis of these key-points I create additional person hypotheses as follows:
+For each detected person, the mean of all detected feet-key-points is calculated as the position in image coordinates.
+The person's orientation is estimated from the following orientation-candidate vectors:
+\begin{description}
+    \item[shoulders] perpendicular to \(\text{left shoulder} \rightarrow \text{right shoulder}\)
+    \item[hip] perpendicular to \(\text{left hip} \rightarrow \text{right hip}\)
+    \item[left foot] along \(\text{left heel} \rightarrow \text{left big toe}\)
+    \item[right foot] along \(\text{right heel} \rightarrow \text{right big toe}\)
+\end{description}
+The longest of these vectors is chosen as the most reliable cue and its direction accepted as the person's orientation in image coordinates.
+Transforming this position and orientation into the floor-plane of the \gls{apartment}, results in an additional source for automatic tracking of persons in the \gls{apartment}.
+
+To fuse detections from multiple camera perspectives and the person tracking, and select the corresponding annotations, the optimal assignment is calculated using the ~\citesoftware{hungarian}.
+This identification of person percepts allows the evaluation of the fully automatic detections.
+A visualization of the annotated and detected overall movements of the participants in the corpus can be seen in \cref{fig:group-person-movement}.
+\begin{figure}[htb]
+    \centering
+    \def\svgwidth{1.0\textwidth}
+    \input{generated/ffm-movements.pdf_tex}
+    \caption[Movements in annotation and detection.]{\label{fig:group-person-movement}
+    All positions of participants and agents in the \emph{T1}-region during the study.
+    Observations are sampled at \SI{15}{\Hz} from the annotations (left) and automatic detections (right).
+    Automatic detections are created by fusing results of the \gls{apartment}'s person tracking and the person detection based on \citewithauthor{openposegit} keypoint detection.
+    Each side shows \(\approx7\cdot10^5\) observations as points with 95\% transparency.
+    Different colours represent the positions of different persons.
+    \Gls{flobi} positions are constant.
+    }
+\end{figure}
+
+The annotated and automatically extracted poses and annotations of \glspl{conversational group} can be used to examine \Cref{hyp.fformation}\rqnote{hyp.fformation}{\hypfformation}.
+The results of the \gls{apartment}'s face detection and gaze recognition can be used for further analyses.
+Furthermore, \Cref{hyp.roles}\rqnote{hyp.roles}{\hyproles} can be investigated by combining the results of the \gls{conversational group} detection with other features.
+These investigations are performed in \cref{ch.fformation,ch.roles}.

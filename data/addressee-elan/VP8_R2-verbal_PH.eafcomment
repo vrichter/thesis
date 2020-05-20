@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="3c342160-88a6-44b3-b922-4728a714dc07" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T15:34:27.509Z</CreationDate>
+            <ModificationDate>2016-01-20T15:34:27.509Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:47d821d7-f6dc-4483-96ef-ad4b2bba1f48#t=28.039/29.739;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP winkt Person mit Notaus zu.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="94d5e351-ac32-4565-9c71-e4571a872225" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T15:39:30.721Z</CreationDate>
+            <ModificationDate>2016-01-20T15:39:30.721Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:47d821d7-f6dc-4483-96ef-ad4b2bba1f48#t=113.200/120.400;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest hier schon die Aufgabenkarte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="b7fbc2a9-aab9-4cfd-be6e-1e1eff63ebde" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T15:42:03.439Z</CreationDate>
+            <ModificationDate>2016-01-20T15:42:03.439Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:47d821d7-f6dc-4483-96ef-ad4b2bba1f48#t=125.000/132.100;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Höflich, weil Vorstellung, das ist eher ungewöhnlich, aber höflich, weil Menschen stellt man sich z.B. ja auch vor.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="67f43072-fe87-4265-9b5f-dabaaa704ca9" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T15:46:34.355Z</CreationDate>
+            <ModificationDate>2016-01-20T15:46:34.355Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:47d821d7-f6dc-4483-96ef-ad4b2bba1f48#t=135.850/140.650;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP wirkt etwas überrascht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="1554f4dd-ff3e-4a2d-b4cc-ddd75232de7e" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T15:17:46.381Z</CreationDate>
+            <ModificationDate>2016-01-20T15:17:46.381Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:47d821d7-f6dc-4483-96ef-ad4b2bba1f48#t=152.000/159.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Wizzardfehler: Apartment reagiert, aber die VP meint den Roboter. Der Roboter hätte nicken müssen, das tut er nicht. Aber nicht schlimm, da die VP nicht merkt, dass nicht der Roboter reagiert hat.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="d1976936-ef41-4d9b-98d4-4d70f2d90670" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T15:48:04.690Z</CreationDate>
+            <ModificationDate>2016-01-20T15:48:04.690Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:47d821d7-f6dc-4483-96ef-ad4b2bba1f48#t=152.100/155.900;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Höflich, weil "Bitte" gesagt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="21dcb2fc-d6cb-4590-b583-b8cdfdb30f9f" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T15:51:04.543Z</CreationDate>
+            <ModificationDate>2016-01-20T15:51:04.543Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:47d821d7-f6dc-4483-96ef-ad4b2bba1f48#t=167.500/170.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Bei der Aussage der VP handelt es sich um ein implizites Kommando.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="69bbe1a2-9113-4223-8a14-222b3c010d3f" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T15:54:45.885Z</CreationDate>
+            <ModificationDate>2016-01-20T15:54:45.885Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:47d821d7-f6dc-4483-96ef-ad4b2bba1f48#t=178.300/181.100;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Keine Reaktion.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="505b61ec-b808-4423-b19e-b590df557038" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T15:21:23.529Z</CreationDate>
+            <ModificationDate>2016-01-20T15:21:23.529Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:47d821d7-f6dc-4483-96ef-ad4b2bba1f48#t=190.650/191.550;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon hier die Aufgabenkarte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="5def4677-cd6c-449d-bd9b-06e4667bff8c" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T15:23:45.799Z</CreationDate>
+            <ModificationDate>2016-01-20T15:23:45.799Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:47d821d7-f6dc-4483-96ef-ad4b2bba1f48#t=191.850/206.050;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Der Roboter sagt: "Es wurde ein Paket angenommen es befindet sich in der Küche". Eigentlich soll er das nicht sagen sondern: Es wurde ein Paket angenommen, es befindet sich im Schrank in der Küche."</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="da11acd3-b18c-4974-86e4-5db98bbc07c2" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T16:08:30.856Z</CreationDate>
+            <ModificationDate>2016-01-20T16:08:30.856Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:47d821d7-f6dc-4483-96ef-ad4b2bba1f48#t=253.550/267.950;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP macht alle Aufgaben. Redet sehr menschlich und sehr viel mit dem Roboter. Ist sehr schnell und scheint Spaß zu haben.
+Bei Licht aus reagiert das Apartment statt des Roboters, was die VP aber nicht merkt (Wizzardfehler).</Message>
+    </ColTime>
+</ColTimeList>

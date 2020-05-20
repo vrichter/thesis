@@ -1,0 +1,897 @@
+\chapter{Principles of Human Interaction}\label{sec.rw}
+Humans are social beings.
+We communicate our thoughts and ideas through speech and coordinate our actions and behaviour to accomplish more than a single individual can achieve.
+We share our knowledge and strengthen our social bonds through multi-modal interaction.
+To make these interactions fluent and successful, people coordinate through behavioural cues.
+This coordination is fundamental for human communication.
+Therefore, and according to \gls{tme}~\cite{Reeves1996}, it can be assumed that people will produce such cues when interacting with \glspl{robot}, \glspl{virtual agent} presented on a screen or smart speakers.
+People understand whether others in their vicinity are open for communication, and who they address with their speech, by observing their behaviour.
+Similarly, an \gls{artificial agent} needs to observe the communicative cues, directed at it---or others---to better understand and utilize human behaviour and expectations.
+In their book on \gls{tme},~\citefullauthor{Reeves1996} already point out the necessity of politeness for computers~\cite{Reeves1996}.
+They argue that systems need to greet, use eye contact and match the users' modality.
+This is especially important in long-term and \gls{in the wild} interactions, where the agent is a potential interaction partner, but one of many.
+For an agent to be acceptable to humans not only within a single interaction but in the long-term it needs to behave socially appropriate.
+This \gls{robotiquette}~\cite[]{dautenhahn2007socially} means that an agent needs to behave appropriately even when it is not interacted with.
+In such a situation it---for example---may leave the interaction and orient somewhere else to show \gls{civil inattention}~\cite[]{goffman1963}.
+
+To be able to better satisfy human expectations, and simplify interactions in \glspl{smart environment} for \naive{} persons, knowing these expectations is crucial.
+Knowledge about human interactive behaviour towards one another can be used to reason about the motives and causes of communication signals in human behaviour.
+Additionally, this allows understanding which signals and behaviours would be naturally comprehensible for humans and therefore can effectively be used by \glspl{artificial agent} in interaction.
+Therefore, I start the literature review by outlining how people interact with each other.
+Furthermore, interaction can not always be focused.
+An \gls{artificial agent} that is in \gls{copresence} with humans for an extended period needs to handle both \gls{focused interaction} and \gls{unfocused interaction}.
+To account for the different requirements of these two types of interaction, I divide the literature on human interaction with other humans, \glspl{artificial agent}, and \glspl{smart environment} along this distinction.
+
+In the first part of this chapter, I investigate everyday interactions between humans.
+I illustrate the difference between \glslink{unfocused interaction}{unfocused} and \gls{focused interaction}, and how people behave in such situations.
+Furthermore, I analyse \glspl{focused interaction} with regard to \glspl{conversation} and the roles that can be taken by the participants in this process.
+In the second part, I present a taxonomy of \glspl{interactive entity} that I use throughout this work.
+With a literature review on human interaction with \glspl{artificial agent} and \glspl{smart home}, I investigate how far human interaction principles can be, or already are, applied in such scenarios.
+Finally, I assess to what extent the presented effects and patterns in human interaction are transferable to people with different cultural backgrounds.
+
+\section{Interaction between Humans}\label{sec.rw.hi}
+
+As of today, there is an ever growing set of ways for people to interact with each other, even without being physically collocated.
+Emails, telephones, and other technical solutions allow communication across great distances or even distributed through time.
+However, depending on the applied solution, such interactions are restricted.
+The restriction can be in the available modalities, as in communication via telephone.
+Moreover, a distribution over longer time periods---as when using text-messaging---can be an intended property or just a side effect of the technical solution.
+Although these ways of interaction and the way people utilize them are interesting in themselves, they often strongly differ from direct interaction.
+For example, people speaking on the telephone introduce themselves and exhibit a set of other verbal interactions which would be clumsy, or otherwise redundant for people who have unobstructed physical access to each other~\cite[]{Auer}.
+According to~\citewithauthor{Schegloff1968} these additional interactions are introduced to gather information which otherwise would be transmitted multi-modally or known from the situational context.
+These additional interactions show which information the participants need to be able to successfully communicate with each other.
+As I focus on collocated communication in this thesis, I only consult other types when they highlight crucial parts of the interaction.
+
+The kind of interaction in focus of this work happens when people have direct, physical access to each other without any obstructions.
+\citefullauthor*{goffman1963} termed this\newdefgls{copresence}:
+\blockcquote[p. 17]{goffman1963}{[To be copresent] persons must sense that they are close enough to be perceived in whatever they are doing, including their experiencing of others, and close enough to be perceived in this sensing of being perceived.}
+\Citeauthor*{goffman1963} further states:
+\blockcquote[p. 22]{goffman1963}{Copresence renders persons uniquely accessible, available, and subject to one another.}.
+In \gls{copresence} people can interact in a focused or unfocused manner but they can not avoid interaction.
+Additionally, people perceive the presence of others differently depending on their distance.
+The subdivision of the space which people claim around them and concede to others is investigated in the field of \gls{proxemics} and has an effect on both focused and \gls{unfocused interaction}.
+
+\subsection{Proxemics}\label{sec.rw.hi.proxemics}
+
+\Gls{proxemics} are important in both focused and \gls{unfocused interaction} between people.
+\citefullauthor*{Hall1969} coined the term \gls{proxemics} while investigating peoples usage of public space~\cite[]{Hall1969}.
+\newdefGls{proxemics} define four circularly extending distances---\gls{intimatedist}, \gls{personaldist}, \gls{socialdist} and \gls{publicdist}--- around a person with different physiological and interactional implications (see \cref{tab:rw-proxemics}).
+\begin{colored_table}{hbt}
+  \centering
+    \begin{tabulary}{\textwidth}{ l C C }
+      \toprule
+        Distance          & Close Phase                & Far Phase                  \\ \midrule
+        Intimate distance & \(\leq \SI{0.15}{\meter}\) & \(\leq \SI{0.46}{\meter}\) \\
+        Personal distance & \(\leq \SI{0.76}{\meter}\) & \(\leq \SI{1.22}{\meter}\) \\
+        Social distance   & \(\leq \SI{2.13}{\meter}\) & \(\leq \SI{3.66}{\meter}\) \\
+        Public distance   & \(\leq \SI{7.62}{\meter}\) & \SI{7.62}{\meter} and more \\
+        \bottomrule
+    \end{tabulary}
+    \caption[Proxemic radii according to~\citeauthor*{Hall1969}.]{\label{tab:rw-proxemics} The different proxemic radii around a person and their properties according to~\citewithauthor{Hall1969}.
+    Each distance is further divided into an inner and outer phase. 
+    The exact distances vary depending on culture, age, gender and other characteristics of the person and situation.
+   }
+\end{colored_table}
+Within\newdefgls{intimatedist} physical contact is probable.
+It may only be entered by partners.
+The used voice is low or whispered.
+People that know each other well can discuss personal topics within\newdefgls{personaldist}.
+Here the other is within arm's reach but not touched and the voice level is moderate.
+The \gls{closephase} of the\newdefgls{socialdist} is used for less personal interactions between colleagues or during social gatherings.
+The voice level is normal and the distance can be interpreted as a hint to the participants' involvement.
+In the \gls{farphase} of the \gls{socialdist} people can easily engage and disengage without being rude.
+The voice level becomes louder.
+At\newdefgls{publicdist} the voice gets loud and the phrasing more formal.
+Non-verbal communication is performed through gestures and bodily stance since facial expressions cannot be perceived~\cite[p.117-125]{Hall1969}.
+The distances are not exact but vary depending on the culture, relationship, context, age, gender and size of the participants.
+
+\subsection{Unfocused Interaction}\label{sec.rw.hi.unfocused}
+
+Being physically \glsatt{copresence} not only allows people to multi-modally sense others but obliges them to communicate and interact.
+Each action that is performed in \gls{copresence} can, and will be perceived by others and interpreted in the situational and social context.
+As~\citefullauthor*{kendon1990} notes: \blockcquote[p. 27]{kendon1990}{[A]ll aspects of behaviour in a situation of co-presence must be considered at least, potentially, to have a role in the communication process.}
+The purpose of\newdefgls{unfocused interaction} is the management of \gls{copresence}.
+To this end, people adjust their movements, gestures, sound level, and overall displayed involvement in the situation at hand~\cite[]{goffman1963}.
+
+\subsubsection{Coordination and Social Communication}
+
+When people in \gls{copresence} do not actively participate in a mutual activity, they still interact with each other---albeit unfocused.
+Two persons that pass each other on the pavement in opposite directions, are communicating.
+They at least require some coordination to not bump into each other.
+Simultaneously, there is more communication happening between them than necessary for this task alone.
+As they approach each other, they traverse through different \glsatt{proxemics} distances, where different behaviours are perceived as adequate (see \cref{sec.rw.hi.proxemics}).
+While being in the \gls{publicdist}, both may look at each other freely but will---according to~\citewithauthor{goffman1963}---avert their gaze at around \SI{2.4}{\meter}.
+This is near the boundary of the \gls{closephase} of the \gls{socialdist} (see \cref{tab:rw-proxemics}).
+A similar pattern is observed in an investigation of human greeting behaviour at a social event by~\citeauthor*{kendon1990}:
+\blockcquote[p. 163]{kendon1990}{[W]e note that people do not usually look at one another continuously as they approach one another, and they may often look sharply away just prior to the close salutation.}
+
+\subsubsection{Civil inattention}\label{sec.rw.hi.unfocused.inatt}
+
+In many situations, not engaging in a \gls{focused interaction} becomes an active process in itself.
+Being \glsatt{copresence} in a lift or in facing seats on a bus causes people to actively divert their attention.
+They stare out of the window, accurately examine their fingernails or play with their mobile phones.
+This actively displayed non-perception of others, is often referred to as\newdefgls{civil inattention}~\cite[p. 84]{goffman1963}.
+It can be used to maintain the unfocused nature of an interaction although, e.g. the distance or orientation of the participants favours \gls{focused interaction} (see \cref{sec.rw.hi.proxemics,sec.rw.hi.focused}).
+
+\subsubsection{Initiation of Focused Interaction}\label{sec.rw.hi.unfocused.init}
+
+As the actions of people in \gls{copresence} are subject to observation by others, individuals can use the situation to signal their intent to transition into a \gls{focused interaction}.
+To this end, they need to establish a situation in which both are ready and willing to perform this transition:
+\blockcquote[p. 91]{goffman1963}{An encounter is initiated by someone making an opening move, typically by means of a special expression of the eye but sometimes by a statement or a special tone of voice at the beginning of a statement.}
+It can even be much more tentative according to~\citewithauthor{kendon1990} who observes two individuals \emph{p} and \emph{q} prior to a greeting:
+\blockcquote[p. 170]{kendon1990}{[W]e see \emph{p} orienting to \emph{q}, but not approaching him until \emph{q} has oriented his eyes to \emph{p}. \emph{p} by his orientation to \emph{q} may be said to announce his intention to approach, but he does not do so until \emph{q} has given his "clearance".}
+Similarly, an investigation of customer-bartender interactions shows that customers fully orient towards the bartender---using their gaze and body orientation---to show their intention to initiate an interaction~\cite[]{Gaschler2012a}.
+When ever people are in \gls{copresence} with others their behaviour is observed and interpreted.
+To behave in a socially accepted manner, they need to recognize the intentions of the people in their vicinity and recognizably show their intentions.
+
+\subsection{Focused Interaction}\label{sec.rw.hi.focused}
+
+The area in front of a person is best suited for \gls{focused interaction}.
+This is where their capabilities of manipulation and reception can be applied most efficiently and parsimoniously.
+Furthermore, it is the area of which the person has the most control.
+Whenever people interact with their environment in a focused way---e.g. when they read a book or look into a shop window---they naturally create a distinctive space between them and the object of interest.
+This space is called the\newdefgls{transactional segment}~\cite[p. 240]{Ciolek1980}.
+Other people in the situation will try to avoid crossing this area to not disrupt the interaction.
+The \gls{transactional segment} of people can vary with their size and activity, but is always a narrow region in front of them (examples can be seen in \cref{fig:rw.ffm}).
+\begin{figure}[htb]
+    \centering
+    \def\svgwidth{1.0\textwidth}
+    \input{generated/fformations.pdf_tex}
+    \caption[F-Formations in focused interactions.]{\label{fig:rw.ffm} 
+    \Glspl{transactional segment}, \glspl{ffm} and \glspl{ospace}, \glspl{pspace} and \glspl{rspace} as known from~\citewithauthor{Ciolek1980}.
+    The \glspl{transactional segment} of persons are shown as green cones in front of them (individually presented in \emph{ts}).
+    Usual \glspl{ffm} are shown for groups \emph{(circular)} and dyadic interactions \emph{(H)--(I)}.
+    The formations \emph{(H)--(V)} are also known as \emph{\visavis} and \emph{(L)--(I)} as \emph{side-by-side}.
+    The \glspl{ospace}, \glspl{pspace} and \glspl{rspace} of each formation are highlighted in orange, blue and brown and marked with letters (\emph{o}, \emph{p} and \emph{r}) respectively.
+    }
+\end{figure}
+
+\subsubsection{Face Engagements}\label{sec.rw.hi.faceengagements}
+
+While people can interact with many things in a focused manner, the interaction with other persons has a special significance.
+\citeauthor*{goffman1963} uses the term\newdefgls{face engagement} or \gls{encounter} for instances of \gls{focused interaction} between people.  
+He defines them as follows:
+\blockcquote[p. 89]{goffman1963}{Face engagements comprise all those instances of two or more participants in a situation joining each other openly in maintaining a single focus of cognitive and visual attention---what is sensed as a single \emph{mutual activity}, entailing preferential communication rights.}
+When talking about both \glspl{face engagement} and single, unengaged persons, the term\newdefgls{participation unit} can be used~\cite[p.91]{goffman1963}.
+The definition of \gls{face engagement} addresses many properties of \glspl{focused interaction} between humans.
+First of all, it naturally requires two or more persons to participate.
+These persons cooperate on a common task, which requires them to focus their cognitive and visual attention to the same target.
+Because all participants need to share the same, single focus of attention, one person can not be in multiple \glspl{participation unit} at the same time.
+Finally, this cooperation is exhibited openly.
+Therefore, other people in \gls{copresence} can observe and distinguish \glspl{participation unit} and to which of them each person in the situation belongs.
+If not stated differently, I use the term \gls{focused interaction} as a synonym to \gls{face engagement}.
+
+\subsubsection{Conversational Groups}\label{sec.rw.hi.cg}
+
+The arrangements that people take over when forming a \gls{face engagement}, depend on factors such as the task at hand, the spacial structure, and the crowdedness of the environment.
+It is more probable to find \glspl{face engagement} in places that already are spatially distinct or identifiably separated from the rest of the environment.
+Furthermore, when in an open space---as on a pavement or a campus---the participants of a \gls{focused interaction} may move closer together than in a confined private room.
+
+When people want to communicate efficiently over a prolonged time, the communication itself is the focus of attention.
+Therefore, participants need to optimize their mutual reception of each other.
+They enter an\newdefgls{ffm}:
+\blockcquote[p. 209]{kendon1990}{An F-formation arises whenever two or more people sustain a spatial and orientational relationship in which the space between them is one to which they have equal, direct, and exclusive access.}
+The more cognitively stressful or critical the \gls{conversation} gets, the higher the preference to establish such a configuration~\cite[p. 10]{Auer}.
+Being in an \gls{ffm} entails, that the participants orient in a way that their \glspl{transactional segment} overlap and create a \enquote{joint interaction space}.
+They cooperate and dynamically adapt their position and orientation to maintain this space.
+They ensure that members have equal access to it and restrict the access of non-members.
+This separates the environment into three actively maintained spaces (exemplary visualizations of these spaces can be seen in \cref{fig:rw.ffm}).
+The\newdefgls{ospace} is the joint interaction space of the \gls{ffm} with equal access by all participants.
+The\newdefgls{pspace} is the space occupied by the participants bodies, limbs and belongings.
+It functions as a barrier that shields the joint interaction space from the environment.
+Finally, the group is surrounded by the\newdefgls{rspace}.
+The \gls{rspace} functions as an extra buffer between the group and other people or groups in \gls{copresence}.
+Other \glspl{participation unit} avoid this space or---if they need to cross it---show significant avoidance behaviours~\cite[p. 241--260]{Ciolek1980}.
+When \glspl{non-participant} do not avoid the \gls{rspace} of an \gls{ffm}, this has a situational meaning.
+On the one hand, people can enter the \gls{rspace} to announce their intention to participate~\cite[p. 231]{kendon1990}.
+On the other hand, people can stay in the \gls{rspace} as a ratified associate of the \gls{focused interaction}.
+In this role they have no direct access to the \gls{ospace} and can not play an active role---they still are \glspl{non-participant}.
+They can passively follow the interaction~\cite[p. 233]{kendon1990}.
+
+\Glspl{ffm} can manifest in different forms (see \cref{fig:rw.ffm}).
+When a group of more than two persons enters an \gls{ffm}, they arrange in a \emph{circular} or \emph{semi-circular} manner.
+This ensures, that each member has equal access to the \gls{ospace} and excludes external persons to the highest possible degree.
+Deviations from the circular arrangement and from a uniform distribution of participants within the \gls{pspace} have a situational meaning~\cite[p. 216]{kendon1990}.
+Such a deviation is often observed when one or more participants of the group have a special role in the interaction---as e.g. a tour-guide.
+In addition to the \emph{circular} arrangement, a set of dyadic \glspl{ffm}, as they are known from~\citewithauthor{Ciolek1980}, are shown in \cref{fig:rw.ffm}.
+It can be seen that the \emph{H}-configuration the maximally closed dyadic case.
+This way the participants achieve the best exclusion of others and have the most control over their \gls{ospace}.
+By gradually changing the configuration through \emph{N}, \emph{V}, \emph{L} and \emph{C} the interaction becomes more open to the environment.
+The interaction occupies less of the visual attention of the participants and allows them to display more attention towards the environment.
+This allows more control over environment and simplifies joining for \glspl{non-participant}~\cite[p. 226]{kendon1990}.
+The \emph{I}- or \emph{side-by-side}-configuration represents the most open \gls{ffm}.
+The participants look into the same direction while standing close enough that their \glspl{transactional segment} overlap.
+While an \gls{ospace} is still maintained, the participants loose the ability to observe many of the others non-verbal communication.
+Instead, they gain the ability to look at the same part of the environment---creating a joint view of the world~\cite[p. 251]{kendon1990}.
+
+\subsubsection{Conversational Roles}\label{sec.rw.hi.cr}
+
+This work focuses on\newdefglspl{conversation}, verbal interactions that are performed in \gls{focused interaction}.
+\Glspl{conversation} are highly organized interactions, in which a set of roles is negotiated, assumed and switched by the participants.
+Every \gls{conversation} has a\newdefgls{speaker}.
+This is the only person---at a moment---who has the right to speak.
+The roles of the other participants and associates of the \gls{conversation} depend on the \gls{speaker}.
+The \gls{speaker} in a \gls{conversation} produces speech acts, which are directed toward\newdefglspl{addressee}.
+In a dyadic \gls{conversation} the person that is not the \gls{speaker} automatically assumes the role of \gls{addressee}~\cite[]{Sacks1978}.
+In a multi-party \gls{conversation}---when more than two persons converse---the \gls{addressee} is less obvious.
+Consequently, the \gls{speaker} can select the participant or participants that ought to be \gls{addressee} by naming, pointing, gazing or a multi-modal combination of cues---e.g. by using second personal pronouns and gaze~\cite[]{Auer2017}. 
+Nevertheless, often only one participant is mainly addressed with a speech act.
+The other participants of the \gls{conversational group} are\newdefglspl{side-participant} (ratified listeners).
+They are an active part of the \gls{conversation} and share the responsibility for its success.
+Although the speech is not directly addressed at them it is produced with them in mind.
+Finally, people that are not part of the \gls{conversational group} have a role regarding the group too.
+Ratified associates can reside in the \gls{rspace} of the \gls{conversational group}.
+In this role they can attend the \gls{conversation} and may be considered by the \gls{speaker} during speech production but can neither become \gls{speaker} nor \gls{addressee} without first fully entering the \gls{conversation}~\cite[]{Traum2003}.
+Other people, that are not ratified by the \gls{speaker} but can hear what is said in the \gls{conversation} can be called overhearer.
+Therefore, every person in \gls{copresence}, that is not part of the \gls{conversation} or a ratified associate, is a potential overhearer.
+In this work, I use the role\newdefgls{non-participant} for both ratified associates and overhearers.
+An exemplary scene with conversing people and their assumed roles can be seen in \cref{fig:rw.roles}.
+\begin{figure}[htb]
+    \centering
+    \def\svgwidth{1.0\textwidth}
+    \input{generated/conversational_roles.pdf_tex}
+    \caption[Exemplary conversational group with roles.]{\label{fig:rw.roles} 
+    An exemplary \gls{conversational group} in the front (red triangle) and a second group in the back (white triangle).
+    The group in the front consists of a \gls{speaker} (red dot), \gls{addressee} (green dot), and a \gls{side-participant} (blue dot).
+    Other \glsatt{copresence} persons are \glspl{non-participant} regarding this group.
+    }
+\end{figure}
+
+\subsubsection{Turn-Taking System}\label{sec.rw.hi.tt}
+
+The right to speak is a resource of the \gls{conversation}.
+This resource is often called the\newdefgls{turn} or \gls{conversational floor}~\cite[]{Hayashi1988a}.
+It is not owned by one participant throughout the \gls{conversation} but taken, yielded, and competed for~\cite[]{Sacks1978}.
+The transition of the \gls{turn} from one participant of the \gls{conversational group} to another is organized through the\newdefgls{turn taking system}.
+According to~\citewithauthor{Sacks1978}, it is a system that is \enquote{interactionally managed}.
+Hence, it is the responsibility of the participants of a \gls{conversation} to coordinate and ensure its effective application.
+Furthermore, it considers the transition between the current and next \gls{speaker} but not the previous and next \gls{turn}.
+Therefore, it is a \enquote{local system}.
+As a result of the \gls{turn taking system}, only one person can be the \gls{speaker} at a point of time.
+Exceptions, occur in case of errors (e.g. miscommunication of the \gls{turn} transition between the participants), deliberate violations of the system (e.g. interruptions) or termination sequences of an interaction (where people change into simultaneous speech and rhythmical alignment)~\cite[p. 3]{Auer}.
+In case of an error, a set of repair mechanisms can be applied to resolve the situation---e.g. one of the simultaneous \glspl{speaker} will prematurely stop speaking and leave the \gls{turn} to the other.
+The next \gls{speaker} is negotiated between the participants during the current \gls{turn}.
+While current \glspl{speaker} can use their role to select the next \gls{speaker}---this is often the \gls{addressee}---and release the \gls{turn}, all other participants can compete for the next \gls{turn}.
+They can apply \gls{turn}-allocation techniques to communicate their intent to speak or use other means to show their preference for next \gls{speaker}.
+This can effectively constraint the current \gls{turn} by shortening or lengthening the conceded time.
+Finally, as participants of a \gls{conversation} are highly trained in applying the \gls{turn taking system}, the gaps between \glspl{turn} can get as small as \SI{200}{\ms} and even smaller.
+This suggests that the next \gls{speaker} is not only established before the end of a \gls{turn} but can estimate the time of transition and prepare an own contribution to minimize the gap~\cite[]{Heldner2010}.
+
+\subsubsection{Role of Gaze in Conversation}\label{sec.rw.hi.gaze}
+
+Gaze is an important \glsatt{conversation} cue.
+It has multiple, often competing functions in \gls{conversation}.
+It can be used to monitor the non-verbal behaviour of co-participants, express own attitudes and feelings, or regulate the \gls{conversational floor}~\cite[]{Kendon1967}.
+As a result, gaze can be used as a predictor for \glsatt{conversation} attention and addressing behaviours of \glspl{speaker}.
+\citewithauthor{Vertegaal2001} show that \glspl{speaker} look more often at the \gls{addressee} of their utterance than at other participants of the interaction.
+This still applies when the \gls{speaker} is addressing multiple persons.
+In this case---although the \gls{speaker}'s attention gets divided between multiple \glspl{addressee}---the \gls{speaker}'s overall amount of attention towards \glspl{addressee} increases and each \gls{addressee} gets more attention than people who are not addressed.
+Similarly, there is a high chance of 88\% that a listener will look at the \gls{speaker} instead of a ratified participant according to~\citewithauthor{Vertegaal2001}.
+Listeners in a \gls{conversation} show a set of further interesting behaviours.
+They use their gaze to show their level of participation~\cite[]{Auer2017}.
+It can be observed that listeners shift their visual attention to the next \gls{speaker} around \SI{50}{\ms} prior to the end of a \gls{turn}, according to~\citewithauthor{Holler2015}.
+The author argues that his shows their ability to predict the time of the transition and the next \gls{speaker} in advance.
+As already discussed in \ref{sec.rw.hi.tt}, such changes of gaze can have further reasons, as gaze does not only indicate a person's attention but additionally is an important cue in the negotiation of the next \gls{speaker}.
+This is even more important for \glspl{speaker}, as their influence on the negotiation of the next \gls{speaker} is higher.
+A \gls{speaker}, who looks at a participant at the end of the \gls{turn} grants privileged access to the counterpart.
+This privilege can even become an urge if the gaze remains on the participant and no one else self-selects~\cite[]{Auer2017}.
+
+\section{Interaction with Artificial Agents}\label{sec.rw.hai}
+
+Before I expand on the current state of research on human interaction with different kinds of non-human entities, I want to establish which kinds of entities may be interesting for human interaction in \glspl{smart environment} and which terms I use for the different groups throughout this work.
+For a visualization see \cref{fig:rw.entities}.
+\begin{figure}[htb]
+    \centering
+    \begin{tikzpicture}[
+      sibling distance=12em,
+      level distance = 3em,
+      every node/.style = {shape=rectangle, draw, align=center, top color=lightcolor, bottom color=lightcolor}
+      ]
+    \node {Interactive Entities}
+        child { node {Device} }
+        child { node {Autonomous Agent}
+          child { node {Human} }
+          child { node {Artificial Agent}
+            child { node {Robot} }
+            child { node {Virtual Agent} }
+          }
+        }
+        ;
+\end{tikzpicture}
+    \caption[Taxonomy of interactive entities.]{\label{fig:rw.entities} 
+    The taxonomy of \gls{interactive entity} groups as used in this document.
+    Subsets are represented as sub-trees and leaves.
+    }
+\end{figure}
+
+In \cref{sec.rw.hi}, I present properties of human interaction with other humans in \gls{copresence}.
+The non-human entities that a person can interact with in a \gls{smart environment}, and which are in the focus of this work, can be categorized into \glspl{device}, \glspl{robot}, and \glspl{virtual agent}.
+With\newdefgls{interactive entity}, I indicate any entity that can perceive the actions of another entity and change its internal state on that account.
+This includes \glspl{device}, \glspl{robot}, \glspl{virtual agent}, and humans.
+In case of\newdefglspl{device}, the action can be as simple as pressing a button, performing a fixed gesture or speaking a command.
+The resulting state change can be a change of the lighting if the \gls{device} is a lamp or the volume if the \gls{device} is an amplifier.
+To distinct\newdefglspl{autonomous agent} from other kinds of \glspl{interactive entity}, the definition of~\citewithauthor{Dautenhahn1998} can be used:
+\blockcquote[]{Dautenhahn1998}{Autonomous agents are entities inhabiting our world, being able to react and interact with the environment they are located in and with other agents of the same and different kinds.}.
+Furthermore, an \gls{autonomous agent} has its own believes, and goals and the interaction is a way to achieve these goals.
+Although, many\newdefgls{artificial agent} are not designed in a way that explicitly models their goals and how to approach them, they are always designed by humans for a specific purpose which is served trough interaction.
+A\newdefgls{robot} is an \gls{artificial agent} associated with an embodiment that occupies physical space.
+\Glspl{robot} may manipulate things, navigate through space, or reconfigure themselves---thus, altering the availability of space.
+%\todo{In case it becomes interesting at some point:~\cite{Li2015} write about the difference in physical present agents and \glspl{virtual agent}.}
+A\newdefgls{virtual agent} does not occupy physical space as such---thus, its movements do not necessarily change the availability of space.
+Nevertheless, \glspl{virtual agent} can have an embodiment that is visualized in some way---e.g. on a screen, as a spot of light, or in form of a loudspeaker---and where attention can be directed to.
+According to this taxonomy, \glspl{ipa} are \glspl{virtual agent}.
+For simplicity, the term \emph{agent} is used synonymously with \gls{artificial agent} throughout this work.
+If not explicitly stated, the term \acrfull{hai} is used for interactions with both \glspl{robot} and \glspl{virtual agent} while \acrfull{hri} is used for interactions with \glspl{robot} only.
+Whether the \gls{smart environment} as such can act as a single \gls{device}, as an agent, or a combination of both strongly depends on its interface and the intended way of usage.
+It may be perceived as a single \gls{device} with many functionalities or just as a casing for other \glspl{device} and agents.
+Similarly, it can be perceived as one big \gls{artificial agent} or as a \gls{device} that is controlled by an agent.
+
+\subsection{Agents in Unfocused Interaction}\label{sec.rw.hi.unfocused-rw}
+
+Humans communicate mainly with other humans.
+Therefore, it feels natural for us to model \glspl{robot} and their communication skills according to our understanding and expectations of communication.
+Social spaces and \gls{unfocused interaction} as known from \acrfull{hhi} can---to some extent---be similarly applied to human interactions with \glspl{robot} or \glspl{virtual agent}. 
+The following works illustrate that the \gls{copresence} of \glspl{artificial agent} has an impact on human behaviour and show ways to handle such situations.
+
+%% how people react to / respect \gls{proxemics} with agents
+% proxemic, mutual gaze, distances, robot
+People apply \glsatt{proxemics} rules to \glspl{artificial agent}.
+It has been shown that people concede a \gls{personaldist} to \glspl{robot} and \glspl{virtual agent} and react to intrusions of \glspl{artificial agent} into their own \gls{personaldist} similarly as one could expect it in \gls{hhi}.
+\citewithauthor{Takayama2016} evaluated how mutual gaze influences the distance people feel comfortable when approaching a \gls{robot} and when a \gls{robot} approaches them.
+Their results support the idea that the \glsatt{proxemics} rules regarding the size of the \gls{personaldist} people employ in interaction with \glspl{robot} are similar to the rules in \gls{hhi}.
+In a comparison of reactions to approaching humans and \glspl{robot},~\citewithauthor{Sardar2012} show that people tend to show even more compensatory behaviour with \glspl{robot} than with other humans when they enter their \gls{personaldist}.
+% proxemic, mutual gaze, distances, vr 
+A similar investigation of human interaction in a virtual reality is done by~\citewithauthor{Bailenson2001}.
+They compare the proxemic behaviour of people in interaction with a humanoid \gls{virtual agent} and with a geometric object (a pylon).
+They show that people grant the agent more \gls{personaldist} than they grant the pylon.
+Furthermore, this personal space grows when the agent's gaze behaviour gets more realistic.
+% summary
+This shows that the \gls{copresence}, form, and actions of \glspl{artificial agent} in \gls{unfocused interaction} affect human behaviour.
+
+%% how \glspl{robot} can use / respect \gls{proxemics} / social spaces
+Like people, \glspl{robot} can use the public space to initiate \glspl{conversation}.
+\citewithauthor{Holthaus} investigated how a \gls{robot} can behave towards people in different \glslink{personaldist}{personal} and \glspl{socialdist} to support a dyadic interaction.
+He shows that the user interaction can be enhanced by employing strategies such as gradually increasing attention towards approaching people and proactively greeting at appropriate distances.
+\citewithauthor{Shi2011} present a model for the initiation of a \gls{conversation} by a \gls{robot}.
+To this end, they observe a scenario in \gls{hhi}, where a shop owner welcomes customers and presents a product.
+They use these observations to develop a set of positioning rules that can be utilised in different phases of the interaction.
+Their \gls{robot}'s positioning is rated better, when it behaves according to the found rules in contrast to always greeting and always standing by the product.
+\citewithauthor{Satake2009} present a \gls{robot} that approaches people in a mall to give recommendations.
+By approaching people from the front at \gls{publicdist}, the \gls{robot} shows its presence and intention to interact.
+It prompts the initiation of \gls{conversation} non-verbally by facing them directly at \gls{socialdist}.
+Verbal interaction is only initiated when people stop by the \gls{robot}.
+The authors can show that this approach results in more successful interactions than approaching on the shortest path and directly starting to talk at \gls{socialdist}.
+With their behaviour in \gls{copresence}, \glspl{robot} can prompt people to initiate a \gls{focused interaction}.
+Therefore, it is important for \glspl{robot} in \gls{unfocused interaction} to behave in a manner that signals their intention.
+
+% additional spaces, social navigation
+Even when not intending to communicate with humans, an \gls{artificial agent} in \gls{copresence} needs to understand human communication to behave in a socially acceptable manner.
+This is actively investigated in the field of social navigation.
+To this end,~\citewithauthor{Lindner2011} created a taxonomy of social spaces by defining five types of spaces.
+In this taxonomy, \Gls{proxemicspace}\footnote{Original term \emph{personal space} changed to \gls{proxemicspace} to avoid confusion.} describes the zones used in~\citeauthor*{Hall1969}'s \gls{proxemics}.
+The \gls{activityspace} corresponds to the activity of one or more agents.
+The \gls{affordancespace} corresponds to a potential activity.
+\Gls{territoryspace}---e.g. a fenced area or closed room---may not be entered without permission.
+Furthermore, the space affected by an activity---e.g. by noise or odour---is described as the \gls{penetratedspace}.
+These spaces may overlap but do not necessarily need to fully contain each other in contrast to \gls{proxemics}.
+Knowledge about these spaces is used to navigate while better respecting the personal space and activities of other agents.
+Similarly,~\citewithauthor{Rios-Martinez2012} generate navigation plans by considering the \gls{personaldist}, \gls{ips} and \gls{ospace} of people to reduce discomfort.
+An overview of different notions of social spaces and \gls{robot} navigation in \gls{copresence} with people is presented by~\citewithauthor{Rios-Martinez2015}.
+These works intend to enhance the acceptability of the way \glspl{robot} navigate based on interactional, \glsatt{conversation}, and social aspects of the usage of space in \gls{copresence}.
+%\cite{Sebastian2017} investigate socially adequate navigation 
+%\todo{\cite{Li2018} investigate distance and perceived willingness to interact for virtual vs real \glspl{robot} vs people. closed stance results in smaller distance but open stance in more willingness, preference for real}
+%\todo{\cite{Truong2018} present a framework for socially aware \gls{robot} navigation. Use \gls{proxemics} and group properties to find appropriate pose to approach people.}
+
+\subsection{Agents in Focused Interactions}\label{sec.rw.hi.focused-rw}
+
+It is widely accepted, that the principles of human \gls{conversation} (\cref{sec.rw.hi.focused}) can be transferred to human interactions with \glspl{artificial agent}.
+\Citeauthor*{Spexard2007} emphasize that \blockcquote[]{Spexard2007}{[t]he user should be able to communicate with the system by, e.g., natural speech, ideally without reading an instruction manual in advance}.
+Similarly,~\citewithauthor{Dautenhahn2005} found that \SI{71}{\percent} of the participants of their study wished that a \gls{robot} companion would communicate in a \enquote{human-like} manner.
+She further discusses: \blockcquote[]{Dautenhahn2005}{The fact that subjects wanted a \gls{robot} companion to have
+humanlike communication was not a surprising one, as it is a natural human instinct to want to communicate using speech and gestures that are recognisable by humans.\\}
+In the following, I show that the effect of an agent's behaviour on the course of a \gls{focused interaction} can not be ignored.
+Agents need to understand the social signals humans show and how their own behaviour is perceived by humans. 
+Furthermore, I present literature on the problems of \gls{addressee} recognition, \gls{turn taking} behaviour generation, and the detection and utilization of \glspl{conversational group} from the perspective of computer sciences.
+
+\subsubsection{Impact on the Perception of Interaction and Human Behaviour}\label{sec.rw.hi.focused-rw.perception}
+% agents have an impact on the interaction
+As in \gls{hhi}, in \glspl{focused interaction} in \gls{hai}, a common goal must be approached in a collaborative manner---otherwise there would be no need for interaction.
+Simultaneously, because people are highly trained to observe their interaction partners and assess their beliefs and intentions, every property of the agent's behaviour is under evaluation and can affect the interaction.
+When an agent does not perceive its interaction partner, its behaviour still has implications.
+
+%% human like non-verbal behaviour makes \gls{robot} more lively
+In a comparison of affective behaviour generation in story-telling performed by a humanoid \gls{robot},~\citewithauthor{RosenthalvonderPutten2018} find that human-like---and in parts \gls{robot}-specific---non-verbal behaviour can increase the perceived animacy of the \gls{robot} and the participant's willingness for self-disclosure.
+Furthermore, when an agent can observe its interaction partner it can dynamically adjust its behaviour.
+% speaking in closed loop
+\citewithauthor{Kopp2018}, present a \gls{virtual agent} that recognizes human backchannel signals and produces multi-modal \glsatt{conversation} cues previously extracted from human interactions.
+In a user study, the authors show that the approach allows participants to successfully apply repair strategies.
+%% choice anticipation from gaze
+A \gls{robot} that observes the participants gaze and---anticipating a choice---reaches for objects in a collaborative ordering task is created by~\citewithauthor{Huang2016}.
+The authors show that such a behaviour conveys the impression that the \gls{robot} is aware of the users choice.
+It is apparent that the behaviour of agents during a \gls{focused interaction} with humans can have a strong influence on the development of the interaction and the human perception of the agent.
+%% generate \glsatt{conversation} cues to enhance interaction
+As gaze plays an important role in \gls{conversation} (\cref{sec.rw.hi.gaze}), the generation of eye-gaze has a high impact on the interaction too.
+It can be used to generate \gls{turn taking}-cues, greatly enhancing the efficiency and perceived quality of the interaction with a \gls{virtual agent}~\cite{Cassell1999}.
+\citewithauthor{Andrist2014} present a humanoid \gls{robot} that shows gaze aversions.
+A gaze aversion at the beginning of an utterance is thereby ought to display internal processing.
+By displaying aversions between two utterances the agent tries to hold the \gls{conversational floor}.
+In a corresponding interaction study, the authors show that such a behaviour not only increases the perceived thoughtfulness of the \gls{robot} but also allows the \gls{robot} to keep the \gls{turn} longer before getting interrupted.
+An in-depth overview on generation of eye-gaze for \glspl{virtual agent} and its effects is performed by \citewithauthor{Ruhland2015}.
+% agents can affect the \glspl{conversational role} within an interaction
+All of these works investigate dyadic interactions between an \gls{artificial agent} and a person.
+Therefore, their need for the distinction of \glspl{addressee} and \glspl{conversational role} is limited.
+
+However, in multi-party interactions, agents can have different \glspl{conversational role} and a strong influence on their distribution.
+%% impose roles by looking
+\citewithauthor{Mutlu2009} conducted an experiment in which a \gls{robot} leads two persons through a travel consultation.
+The \gls{robot} leads the participants through the interaction by talking and occasionally asking questions about their preferences.
+While doing so, it communicates different \glspl{conversational role} to the participants by applying gaze behaviour known from \gls{hhi}.
+As a result, the participants of the study nearly always adhere to the imposed roles.
+As a side note,~\citewithauthor{Mutlu2009} observe that in some cases repeatedly addressed participants pass their \gls{turn} to the \gls{side-participant}.
+In these cases the authors assume that the \glspl{addressee} feel uncomfortable with the other participant being ignored and try to involve them in the interaction.
+In this set-up a \gls{wizard} recognizes speech and activates the \gls{robot}s reactions.
+The system can not automatically recognize the situation to generate appropriate \glsatt{robot} behaviour.
+A similar effect on the \gls{conversational role} distribution can be achieved with agents in virtual reality as shown by~\citewithauthor{Pejsa}.
+In this set-up, a participant is interacting with two \glspl{virtual agent} (all three have fixed positions).
+By manipulating the agents orientation and gaze behaviour the \gls{conversational role} of the human participant is affected.
+This manifests in adapting amounts of the participants total speaking time.
+In this set-up a speech recognition system is used.
+The agents take \glspl{turn} with the participant based on recognitions of single speech acts and always show the same (inclusive or exclusive) behaviour.
+As the agents ask questions and wait for an answer, no distinction of the participants \gls{addressee} is performed.
+%% mediate roles by intervening in imbalanced interactions
+\citewithauthor{Matsuyama2015} introduce a \gls{robot}-mediator to a \gls{conversation} that equalizes this distribution. 
+Their \gls{robot} takes part in a \gls{conversation} as a fourth participant.
+When one person withdraws from the \gls{conversation} it acquires the \gls{turn} and then draws the person back into the discussion through addressing.
+They evaluate this behaviour by showing a recording of such an interaction and letting people rate the \gls{robot}'s behaviour.
+Observers rate the \gls{robot}'s behaviour as more acceptable and with a higher level of groupness, when it acquires the \gls{turn} and waits for approval before addressing the other participant.
+While the generated behaviour is rated effective, the model for the detection of withdrawing participants and appropriate moment for intervention are only evaluated on a synthetic data.
+
+%% \gls{robot} is chosen to stand in p-space when approaching
+People prefer \glspl{robot} that comply with group arrangements which are known from \gls{hhi} (as presented in \cref{sec.rw.hi.cg}).
+In a cross cultural study~\citewithauthor{Joosse2014} confronted people with images of a family in circular \gls{ffm} with a \gls{robot} positioned in changing distances to the groups centre.
+While they found different preferences in people from China, USA, and Argentina the overall predominant preference was for configurations where the \gls{robot} stayed out of the groups \gls{ospace}, and somewhere within the \gls{pspace}.
+This is in agreement with how humans create \glspl{ffm} (\cref{sec.rw.hi.cg}).
+%% people adjust \gls{robot} to \visavis with appropriate distance
+Similarly, \citewithauthor{Huttenrauch2009} perform a study in which people guide a \gls{robot} through their home and present different objects and rooms to it.
+An analysis of the recorded interactions reveals that the participants prefer to assume \emph{\visavis} formations and an \gls{ospace}-size as known from \gls{hhi}.
+%% \gls{robot} changes f-formation by rotating
+Finally, adaptivity of humans when it comes to maintaining \glspl{ffm}, is utilized by a museum-guide \gls{robot} presented by~\citewithauthor{Kuzuoka2010}.
+By changing its bodily orientation, the \gls{robot} can change its \gls{conversational group} from a \emph{\visavis} formation into an \emph{L-shaped} formation.
+Thereby the groups focus can be directed to the exhibit that the \gls{robot} is talking about.
+While these works show that people form and maintain \glspl{conversational group} with \glspl{artificial agent} similar to interactions with other humans, none tries to detect \glspl{conversational group}.
+
+The presented works show that many of the observations drawn from \gls{hhi} are transferable to \gls{hai}.
+They show that it is possible for \glspl{artificial agent} to influence the interaction according to their goals.
+However, while showing the potential of \gls{hai}, the recognition of human \glsatt{conversation} cues is out of the focus of most of these works.
+To use these effects autonomously, \glspl{artificial agent} first need to understand the behaviour of their human interlocutors.
+
+\subsubsection{Automated Addressee Recognition}\label{sec.rw.hi.focused-rw.addressing}
+
+Addressee recognition is an important sub-problem in the recognition of \glspl{conversational role} and often investigated  separately.
+As \cref{hyp.address,hyp.meka} mainly focus on this problem, I present literature that specifically focuses on \gls{addressee} recognition.
+% in hhi
+%% bayesian network from annotations
+In \gls{hhi}, the identification of \glspl{addressee} of an utterance is important for automatic \gls{conversation} analysis.
+\citewithauthor{Jovanovic2006} present a \gls{bayesiannetwork} classifier that predicts the \gls{addressee} of an utterance in a four-party meeting.
+They incorporate lexical features of the utterance, information about the previous \gls{turn}, the type of meeting and how often participants look at each other.
+Using all these features they achieve an \gls{accuracy} of \(\approx 82\%\).
+They can achieve \(\approx 73\%\) \gls{accuracy} with context information---the \gls{speaker}, \gls{addressee}, and dialogue act of the previous utterance---alone.
+Furthermore, they note that gaze is not an important \gls{addressee} indicator in their set-up.
+This may stem from the circular seating arrangement in their corpus and the existence of external gaze targets as whiteboards and notes.
+%% rule based from annotations
+\citewithauthor{OpdenAkker2009} compare this approach with other recognition methods using the same corpus and an adapted feature set.
+The authors show that a simple, rule based \gls{addressee} recognition can achieve a similar \gls{accuracy} as the \gls{bayesiannetwork} approach---\(\approx 65\%\) vs \(\approx 62\%\) using their feature set.
+Furthermore, when using only information about the gaze distribution of the \gls{speaker} during the utterance, they already achieve an \gls{accuracy} of \(\approx 57\%\).
+Both approaches use manually annotated information as input for their \gls{addressee} recognition systems.
+%% automatic addressing recognition---do not tell how they detect \gls{speaker}
+An automatic \gls{addressee} detection system for three-party \gls{hhi} is presented by~\citewithauthor{Takemae2006}.
+The authors use a gaze prediction from the participants head rotations to calculate relative amounts and frequencies of looking at people and mutual gaze between them.
+These measures are then combined using \gls{naivebayes} to estimate whether a single person was addressed or the whole group.
+In case of a single \gls{addressee}, the person with the largest amount of gaze from the \gls{speaker} is chosen. 
+After manually removing back-channel utterances, they achieve an \gls{accuracy} of \(\approx 74\%\) on their dataset. 
+%\todo{read~\cite{Makino2018} use a 3 person hhi corpus to recognize \gls{turn} taking from gaze patterns. Annotated data.}
+%\todo{read~\cite{Malik2019} again hhi corpus and annotated data.}
+%\todo{read~\cite{Akhtiamov2017} acoustic \gls{addressee} recognition in human-human-alexa and adult-adult-child interaction}
+These works concentrate on \gls{hhi}, so no non-human entities can be addressed.
+Additionally, the participants are equipped with microphones or placed at specific positions, so the set-ups are rigid.
+Furthermore, only \citewithauthor{Takemae2006} does not require pre-annotated information to decide, to whom an utterance is addressed.
+
+% in hai
+%% from annotations
+Research on interaction with \glspl{virtual agent} focuses more on fully automatic recognition systems that potentially can be used in interactions.
+A mixed multi-party interaction between two humans and a computer screen is presented by~\citewithauthor{VanTurnhout2005}.
+In this scenario the two persons discuss an excursion through the Netherlands and fill a corresponding form through verbal interaction with a computer screen.
+The system is controlled by a \gls{wizard} and the interactions annotated afterwards to investigate \gls{addressee} recognition in such a scenario.
+By using a \gls{naivebayes} classifier to combine information about looking behaviour, utterance features and the systems dialogue state, the authors achieve an \gls{auc} result of \(\approx 0.81\) for the decision whether the agent was addressed or not.
+They further observe, that adding the screen into the interaction strongly biases the distribution of the participants' gaze towards the monitor.
+When \glspl{speaker} address the monitor they focus it in \(\approx 95\%\) of the observations.
+When they address the other participant, they look at them only in 42\% of the cases.
+%% first with automatic gaze recognition
+A system that does not rely on pre annotated features and therefore can work autonomously is presented by~\citewithauthor{Huang2011}.
+The used scenario is a travel planning set-up with a humanoid \gls{virtual agent}.
+During the study, the agent is controlled by a \gls{wizard}.
+The system approximates the participants \gls{vfoa} by detecting head rotations and uses duration and focus-change features in combination with prosodic information.
+By applying \pgls{svm}, they achieve an \gls{accuracy} of around 80\% on pre-segmented utterances.
+Both systems perform \gls{addressee} recognition for each recognized utterance.
+%% hhi observations to hai
+An approach that decides on the agent's \gls{conversational role} while the person speaks and acts accordingly is proposed by~\citewithauthor{Vertegaal2001}.
+The authors transfer \gls{hhi}-principles to \gls{hai} by investigating three-party \gls{hhi}-discussions and extracting addressing behaviours for their \glspl{virtual agent}.
+%Through their corpus, they observe that \glspl{speaker} look at \glspl{addressee} more often than at \glspl{side-participant}.
+%Speakers furthermore compensate the division of their gaze for multiple \glspl{addressee} by increasing their overall amount of looking at \glspl{addressee}.
+%This way, when multiple people are addressed, they still get more attention then \glspl{side-participant}.
+%Finally they measure that listeners look even more at speakers than vice versa. 
+They use their insights to create a multi-agent \glsatt{conversation} system---two faces on a screen---for interaction with single persons.
+Gaze tracking and utterance analysis are used to decide the \gls{conversational role} for each agent and generate corresponding attentional behaviours (looking at the \gls{speaker} when addressed or otherwise at the \gls{addressee}).
+In this set-up the \gls{addressee} is the agent that the \gls{speaker} looks at during the utterance and the other is the \gls{side-participant}.
+While this system can both recognize which agent is addressed and generate corresponding behaviour, it is created to always interact with a single person.
+%% fully autonomous hai. ssl + vfoa 
+A fully autonomous \gls{virtual agent}, that can interact with groups of people, is presented by~\citewithauthor{Bohus2011}.
+In this set-up the \gls{speaker} of an utterance is detected through sound source localization and the \gls{addressee} is defined as the \glspl{speaker} \gls{vfoa}.
+Furthermore, long utterances and non-understandings are assumed as not addressed towards the agent.
+They suggest to combine their sound source localization with visual cues to enhance their addressee detection.
+
+% hri
+%% mic and cam as a robot
+Similar approaches are made in \Gls{hri} research.
+A simple interaction between two persons and \gls{robot}---consisting of a camera and a microphone---is presented by~\citewithauthor{Katzenmaier2004}.
+In this scenario one person presents the \gls{robot} to the other, directs commands toward it and discusses its advantages and disadvantages.
+In the analysis of their recordings, the authors observe a similar effect as \citewithauthor{VanTurnhout2005}.
+When the presenter looks at the \gls{robot}, the \gls{robot} is addressed in \(\approx 65\%\) of the observations.
+In the remaining observations, the other participant is addressed.
+When the other participant is looked at, the \gls{robot} is almost never addressed.
+They combine an \gls{addressee} predictor that uses the presenters head orientation with one that used acoustic features to achieve an \gls{accuracy} of \(\approx 92\%\).
+%% humavips
+An interaction with a humanoid \gls{robot} can be found in the work of \citewithauthor{Jayagopi2013a} and \citewithauthor{Sheikhi2014}.
+This is a \gls{woz} scenario, in which the \gls{robot} performs a quiz with two persons.
+In this scenario, \gls{vfoa} of all participants and the \glspl{robot} dialogue-context information are used to classify the \glspl{addressee} of utterances.
+With this feature combination, an \gls{accuracy} of \(\approx 82\%\) can be achieved, when the possible \glspl{vfoa} are reduced to only the participants of the interaction.
+Both systems do not recognize the \gls{addressee} during the interaction.
+% 
+A multi-modal approach is presented by ~\citewithauthor{Lang2003} where potential interaction partners in the vicinity of the \gls{robot} are tracked.
+Using sound source localization, the \gls{robot} directs its attention towards a person that has a high probability of talking.
+If the \gls{robot} is additionally faced by the person, it is considered \gls{addressee}.
+% furhat card game, \gls{turn} taking
+A similar approach with a \glsatt{robot} head is used by~\citewithauthor{Skantze2014} in a three-party card game scenario.
+They distinguish \glspl{speaker} by using close talk microphones and their \glspl{addressee} from the \glspl{speaker} \gls{vfoa}.
+This interaction if further investigated by~\citewithauthor{Johansson2015} to include different information into the decision.
+From information about head poses, part of speech, card movements, prosody and the \glspl{robot} dialogue state they train \pgls{mlp} that decides whether the \gls{robot} should react to an utterance or not.
+These systems use acoustic information to detect the current \gls{speaker} and information about this participant to infer the \gls{addressee}.
+% this is more of a \glsatt{conversation} states beginning and ending work
+%%  \gls{robot} comes into a bar---interaction states
+%A different approach is chosen in~\cite{Gaschler2012a} for a \glsatt{robot} barkeeper.
+%The authors observed how people interact with barkeepers when ordering a drink.
+%They find that such an interaction can be divided into \emph{attention request}, \emph{ordering}, and \emph{closing interaction} and that customers show specific behaviours in each of these states.
+%They train a \gls{hmm} to recognize these different interaction states from peoples gaze, body orientation and relative positions.
+%Their initial model achieves an \gls{accuracy} of \(\approx 78\%\) on these task specific states.
+%\todo{\cite{Hara2018} use back channel and audio features to distinguish keep \gls{turn} from switch \gls{turn} in dyad with remote controlled \gls{robot}}
+% summary / conclusion
+
+Most \gls{hai}-research in which \gls{addressee} recognition is performed, does that on the basis of utterances.
+The systems incorporate multiple sources to decide whether a recognized utterance was addressed at the agent or not.
+If people want to participate in such an interaction, the need to equip themselves with a microphone or reside in the agents \gls{fov}.
+The agent, either assumes all observable people to be part of the \gls{conversation} or performs dyadic interaction with the most prominent person.
+
+\subsubsection{Turn-taking behaviour generation}\label{sec.rw.hi.focused-rw.turntaking}
+
+As seen in \cref{sec.rw.hi.cr,sec.rw.hi.tt} \glspl{conversational role} and \gls{turn taking} are intertwined problems.
+An agent that interacts with another agent necessarily conducts \gls{turn} taking.
+Nevertheless, most systems do not explicitly model this behaviour as such.
+
+% \gls{turn} taking
+A few investigations concentrate on how an agent can generate behaviour to actively shape the course of the interaction.
+%% furhat
+\citewithauthor{Skantze2014} generate \gls{turn} taking behaviours with their \gls{robot} during a card playing game and show that they can be applied effectively.
+They can show that focusing on a participant after asking a question increases the probability that this participant will take the \gls{turn}.
+They further show that---by generating filled pauses or smiling and looking away---the \gls{robot} can successfully obtain a yielded \gls{turn} and prevent others from taking it.
+Finally, they observe that the \glspl{robot} gaze has an impact on the next-\gls{speaker} selection even if the \gls{robot} is a \gls{side-participant}.
+While this system actively uses \gls{turn taking}, it only does that after getting addressed and to overcome its processing times.
+
+% \gls{turn} changes
+Other systems investigate the correct detection of \gls{turn} changes.
+To better recognize the end of an utterance~\citewithauthor{Bilac2017} apply a multi-modal approach too.
+They recognize filled pauses and gaze aversions produced by human interaction partners to better distinguish between the end of a \gls{turn} and hesitations.
+With this approach they can reduce the number of interruptions made by the \gls{robot}, allowing their participants to produce longer utterances.
+A similar target is pursued by~\citewithauthor{Lala2018}.
+In this work, the authors use different types of dyadic \glspl{conversation} with a remote controlled humanoid \gls{robot}.
+They train models to predict when a \gls{turn} is transferred from the participant to the \gls{robot} based on acoustic and linguistic features.
+These systems do not model \gls{turn taking}.
+
+% \gls{turn} taking model
+A multi-party interaction system with a \gls{turn} manager is presented by~\citewithauthor{Zarkowski2019}.
+In this scenario, a \glsatt{robot} head plays a trivia game with two persons.
+Instead of always reacting to speech after a short silence, the \gls{turn} manager ensures that the \gls{robot} has the \gls{conversational floor} before talking.
+It assumes to have the \gls{turn} when the last \gls{speaker} looks at the \gls{robot} or when silence persists.
+Furthermore, the \gls{robot} pays visual attention to both interaction partners and grants them more discussion time after asking a question.
+With these changes, the authors can increase the percentage of correct \gls{turn} exchanges from 51.5\% to 80.5\%.
+An explicitly modelled \gls{turn taking system} for an \gls{artificial agent} is presented by~\citewithauthor{Bohus2011}.
+The agent classifies peoples gaze and speech as \gls{turn} management actions.
+The entity in the \gls{speaker}'s \gls{vfoa} is perceived as addressed and obliged to take the \gls{turn} at the end of the utterance.
+If the \gls{addressee} rejects the \gls{turn}, the other participant can take it---when the agent was not addressed but no one else answered for a specific time duration it still can take the \gls{turn}.
+The agent accepts interruptions by yielding the \gls{turn}.
+It looks at the \gls{speaker} when listening, at the intended \gls{addressee} when speaking and in between \glspl{turn} at the participant that ought to be the next \gls{speaker}.
+This system implicitly models the \glspl{conversational role} \gls{speaker}, \gls{addressee}, and \gls{side-participant}.
+The act of taking a \gls{turn} that is not claimed or yielding in case of interruptions, can potentially repair misunderstandings in the \gls{turn} management.
+While this approach tackles multiple requirements of \glspl{conversation}, it is only applied at the end of utterances, when the \gls{conversational floor} is transferred from one participant to another.
+To generate behaviour during a \gls{turn}, an explicit model and recognition of \glspl{conversational role} is additionally required.
+
+% Don't know what to do with these:
+%%~\cite{Homke2017} eye-blinking of \gls{addressee} as communication (specific to durations of blinking)
+%%~\cite{Minh2018} deep learning for \gls{addressee} recognition in images with annotated text (deep learning magic for hhi in images)
+
+\subsubsection{Conversational Group Detection}\label{sec.rw.hi.focused-rw.groups}
+
+\Glspl{conversational group} and their detection in computer sciences are investigated from the side of \gls{hhi}-\gls{conversation} analysis as \glspl{ffm}.
+Most approaches use the positions and orientations of \glsatt{copresence} people to estimate their probable affiliation to groups.
+Evaluations are performed on corpora that show people freely communicate, create, and change \glspl{conversational group} in an open space---e.g. at coffee breaks or poster presentations.
+% voting on grid
+\citewithauthor{Cristani2011} inject uncertainty into their pose estimations and use a voting algorithm on a regular grid to find \glspl{ospace} and the corresponding participants.
+They evaluate using a synthetic and two realistic datasets to achieve a precision of 0.75 and a recall of 0.86.
+They simultaneously optimize these estimations to achieve a better results than other state-of-the-art approaches.
+% graph cuts
+\citewithauthor{Setti2015} formulate the problem of detecting \glspl{ffm} as a graph-cuts problem and present an extensive comparison of methods on multiple datasets.
+Furthermore, their approach achieves the best performance in an initial evaluation of recognizers on a new dataset~\cite{Alameda-Pineda2016}.
+%% group associates
+In the work of \citewithauthor{Zhang2016}, the notion of \gls{ffm} is extended to consider \emph{ratified associates} (\cref{sec.rw.hi.cg}).
+By detecting persons that are not full participants of the \gls{conversation} they can enhance the overall performance of \gls{ffm} detectors.
+%% multi-modal, minimalistic
+A multi-modal approach using accelerometer data and speech activity information from a worn sensor-\gls{device} is presented by~\citewithauthor{Hung2014}.
+They use the data to recognize dyadic \glspl{conversational group}.
+% optimize simultaneously with orientation
+\citewithauthor{Ricci2015} and~\citewithauthor{Ricci2017} argue that the recognition of persons orientations and affiliation to \glspl{conversational group} can both benefit from their high interdependency.
+They use model this interdependency to simultaneously enhance both predictions.
+%% matrix completion, multi modal
+Similarly,~\citewithauthor{Alameda-Pineda2018} exploit the inherent coupling of the human head and body pose together with their temporal consistency and multi-modal data.
+They enhance the prediction of persons head and body orientations by formulating it as a matrix completion problem and show that this can further increase the quality of \gls{ffm} detectors.
+Furthermore, they confirm that \gls{ffm} detection works better on the basis of body orientations than head orientations. 
+%% further analyses
+As~\citewithauthor{Alameda-Pineda2018} propose, the results of \gls{ffm} detection can be used for further, higher level analyses of social interactions.
+\citewithauthor{Cristani2011a} correlate the physical distances of people in an interaction with their social relations.
+They can show that there is a high correlation only when one considers the geometric constraints that \gls{ffm} impose on the situation.
+%\todo{\cite{Solera2016} detect social groups --- not cg --- from correlations}
+None of these works considers the presence of \glspl{artificial agent} in such an interaction.
+
+\subsubsection{Utilizing Conversational Groups}\label{sec.rw.hi.focused-rw.mixedgroups}
+% f-formations in hri
+In the context of \gls{hai}, the detection of \gls{ffm} is not the focus of analysis.
+Therefore, the problem of recognizing \glspl{conversational group} is not reported on (this applies to the majority of work presented in \cref{sec.rw.hi.focused-rw.addressing}).
+Nevertheless, there is some work that tries to utilize the properties of \gls{ffm} to enhance the acceptability of \glspl{robot}.
+%% navigation and o-space
+\citewithauthor{Rios-Martinez2011} enable a \gls{robot} to consider \glspl{conversational group} in its navigation.
+To this end they formulate the crossing of \gls{personaldist} and \gls{ospace} as a navigational risk (the rink of acting socially inappropriate).
+This allows their \gls{robot} to successfully avoid disturbing \glspl{conversational group}.
+As a side effect, when the navigational goal is set to the centre of an \gls{ospace}, the \gls{robot} approaches the group and positions itself automatically within the groups \gls{pspace}.
+%% maintain o-space
+A \gls{robot} that actively seeks to join \glspl{conversational group} and blend in is presented by~\citewithauthor{Althaus2004}.
+It follows three simple rules: (1) approach a person, (2) detect other persons and their orientation in vicinity, and (3) maintain orientation and distance to the centre of the group.
+% force model
+A similar effect is achieved by~\citewithauthor{Repiso2018}.
+In this work a force model is used to navigate a \gls{robot}, accompanied by a person, to a second person to form a group.
+The \gls{robot} stops at a specific distance and rotates towards the centre of the group to optimize engagement.
+The authors use \gls{proxemics} as their quality measure.
+%% shape ffm
+A transfer from \gls{hhi} to \gls{hai} of how an \gls{ffm} can be actively assumed is performed by~\citewithauthor{Yamaoka2010} and \citewithauthor{Shi2015}.
+The authors analyse how presenters position themselves when explaining an object to someone else.
+They implement a behaviour that positions the \gls{robot} in a way that the \gls{robot} and listener are in each other's and the object in both \gls{fov}.
+It furthermore, maintains a specific distance to the listener and object which results in an L-shaped (see \cref{fig:rw.ffm}) \gls{ffm}.
+% summary
+The presented works utilize properties of \gls{ffm} to enhance \glsatt{robot} navigation or allow them to approach a group of persons.
+However, they model these groups implicitly and do not detect \glspl{ffm}, analyse their properties, or use them to distinguish interlocutors of the \gls{robot} from \glsatt{copresence} people.
+
+% generation of ffm and effects
+When it comes to interactions in virtual environments the generation of \glsatt{conversation} behaviour between multiple agents and their influence on humans is of high interest.
+%% hai join group
+\citewithauthor{Rehm2005} present a virtual environment in which \glspl{virtual agent} can wander around and create \glspl{conversational group}.
+In a user study they can show that people prefer joining open groups over closed formations (see \cref{fig:rw.ffm} for a visualization of both kinds of groups).
+%% hai friendliness
+\citewithauthor{Cafaro2016} generate \glsatt{conversation} behaviour of \glspl{virtual agent} and let persons join the group or navigate to a goal behind it.
+In this scenario, the agents stand in a circular \gls{ffm} with differing distances while showing different signals of friendliness within the group and towards the participant.
+The authors of these works do not elaborate on how the detection of \glspl{conversational group} in their scenarios could be performed.
+
+\subsection{Summary}
+
+Artificial agents affect the behaviour of people in \gls{copresence}.
+On the one hand, people grand them a form of \gls{proxemics} by assuming similar distances as in interactions with other people.
+Although this effect depends on the embodiment of the agent, it can be measured with a wide range of embodiments.
+On the other hand, agents can actively influence the interaction with a person.
+They can signal that they want to enter or leave a \gls{focused interaction}.
+They can assume and change \glspl{ffm}.
+Within a group, they can regulate the distribution of \glspl{conversational role} through their gaze or by acquiring and yielding \glsatt{conversation} \glspl{turn}.
+Furthermore, human \glspl{conversational group} can be detected and the roles an agent assumes in \glspl{conversation} too.
+The effects are measurable and the systems can achieve acceptable results in their respective scenarios.
+However, there is little work on agents that combine all of these possibilities into one system. 
+In the following section I investigate whether such observations can be transferred to interactions with \glspl{device} and \glspl{smart environment} and how human interaction with them may look like.
+
+\section{Interaction with Devices and Smart Environments}\label{sec.rw.hi.dev-rw}
+
+Making the distinction between \glspl{focused interaction} and \glspl{unfocused interaction} in human interaction with \glspl{device} and control of \glspl{smart environment} is not as obvious as it is in \gls{hai}.
+As devices usually only react to inputs, they are acted upon but can not actively participate in a \gls{focused interaction}.
+However, \glspl{smart environment} can utilize the presence of inhabitants and use their actuators to engage in ways that may or may not urge people to actively engage with them.
+To point out this difference, I start this section with some examples of \gls{unfocused interaction} with smart devices.
+In the main part of this section, however, I present how \gls{focused interaction} with \glspl{device} and \glspl{smart environment} can be performed using different modalities and what implications this has for \gls{addressee} recognition.
+
+\subsection[Unfocused Interaction]{Unfocused Interaction with Devices \& Smart Environments}\label{sec.rw.hi.unfocused-dev-rw}
+% proxemic behaviour of \glspl{device} / smart spaces
+% how does \gls{unfocused interaction} look like with devices
+In contrast to \gls{hai}, it is not obvious how human \gls{unfocused interaction} with \glspl{device} and \glspl{smart environment} manifests.
+However, as the \glsalt{tme} applies to interactive and communicative \glspl{device}, they can use notions of space.
+\citewithauthor{Greenberg1991} present a variant of \gls{proxemics} for human interaction in \gls{ubicomp}.
+In contrast to~\citeauthor*{Hall1969}'s distances between people, this theory aims at interactions between all kinds of entities.
+The authors distinguish different dimensions---distance, orientation, movement, identity and location.
+%Depending on the task at hand, their units of measurement can be continuous or discrete.
+An architecture for the creation of interfaces that use this notion of \gls{proxemics} is presented by~\citewithauthor{Marquardt2011}.
+The authors present exemplary use cases which analyse peoples relative positions and posture to adapt the way information is presented on an advertisement display or for the control of music and games.
+The idea of an interactive advertising display is further explored by~\citewithauthor{Wang2012}.
+Their system tracks people in front of it and presents products by trying to attract and keep the peoples' attention.
+The used strategies change with the persons relative position and orientation.
+\citewithauthor{Sorensen2013} present a multi-room music system.
+Based on peoples positions and movements, the music can be automatically adapted to \emph{follow} them through their home.
+The control interface---on a smart phone---additionally adapts according to their location to allow control of the music in their direct vicinity.
+These systems adapt to the behaviour of people in \gls{copresence} without actively engaging.
+
+% ambient displays ignore \gls{proxemics} but interact in an unfocused way
+Additionally, one can take advantage of peoples receptiveness to their surroundings to design information displays.
+\citewithauthor{Cha2016} present a lamp that unobtrusively shows the inhabitants their amount of physical activity by changing the transparency of its shades.
+\citewithauthor{Leichsenring2016} aim to raise people awareness of their of water consumption.
+To this end, the sound that is produced by the flowing water is captured, amplified, and played back.
+Similarly,~\citewithauthor{Grossvogt2018} artificially increase the reverberation of a kitchen to make the average electricity consumption perceptible to inhabitants.
+A matrix of led lamps is used to signal recommendations for inhabitants to change light, door and blinds states in a work presented by \citewithauthor{Domaszewicz2016}.
+This way the information can be perceived, but people are not forced to actively engage with it.
+
+\subsection[Focused Interaction]{Focused Interaction with Devices \& Smart Environments}\label{sec.rw.hi.focused-dev-rw}
+
+There is a lot of current research on human interaction with \glspl{smart home}, some of which contain \glspl{artificial agent}.
+However, the recognition of addressing behaviour and differentiation of addressed entities is often out of focus.
+In the following, I give an overview of different ways an inhabitant can interact with \glspl{device} in a \gls{smart environment} in a focused way using different modalities.
+
+% Touch
+\subsubsection{Touch \& Gui}\label{sec.rw.hi.focused-dev-rw.touch}
+
+Touch, especially in the form of switches and buttons, is the prevalent way of controlling technical \glspl{device}.
+It promotes a strong coupling between the area that is touched and the controlled functionality---one switch controls one set of lights.
+When this coupling is dissolved, e.g. by using remote controls and \glspl{gui}, new metaphors are required to communicate the \gls{addressee} and functionality.
+An interesting approach to \gls{smart home} control with a single, yet simple remote is presented by~\citewithauthor{Sandnes2017}.
+In this proposal, the remote control---a disk-shaped \gls{device} with dial and click possibilities---recognizes the spatially closest \gls{device} and provides a set of manipulation possibilities within this context.
+Therefore, a person can switch a lamp by moving close to it and clicking, or change the radio-volume by moving there and using the dial.
+This is a good example for the trade-off that has to be made between simplicity and functionality in the design of an interaction.
+The complexity of \gls{device} selection---the addressing---is traded for the possibility to control \glspl{device} from a remote location.
+The simplicity of the remote, at the same time, only allows to control a small set of functionalities of a \gls{device}.
+
+% Gui
+%\subsubsection{GUI}\label{sec.rw.hi.focused-dev-rw.gui}
+This trade-off can be addressed by using \glspl{gui}.
+A \gls{gui} can ease the \gls{device} selection through different metaphors and afterwards present a dedicated control interface for the \gls{device}.
+The selection can be achieved by providing a menu, a 2D representation \cite{Pohling2018}\footnote{\citesoftware{bcozy}}, or a 3D representation of the premises \cite[]{Borodulkin2002}.
+\citeauthor*{Borodulkin2002} postulate that the 3D view design is realistic and the interaction is intuitive.
+Augmented reality can be used to further widen these interaction possibilities.
+\citewithauthor{Seifried2009} present a system, in which the user sees a live image of the current room, augmented with control menus on a couch table-display.
+Thus, touching a \gls{device} on the image allows access to its controls and the live video provides a direct feedback of the results of the interaction.
+A similar, but mobile approach is realized by \citewithauthor{Pohling2018}\footnote{\citesoftware{bcomfy}}.
+In this approach a person can freely move around.
+A smartphone application shows a live view from the phone's camera, augmenting the video stream with menus at the locations of controllable \glspl{device}.
+\Glspl{gui} are controlled by touch interaction.
+Either directly on a screen or through pointing \glspl{device} such as a computer mouse.
+Furthermore, the interaction is not performed directly with the controlled \gls{device}, but with its representation in the \gls{gui}.
+
+By projecting a \gls{gui} into the environment simple objects can be augmented with further functionalities.
+Such a system that supports people in preparing a meal is presented by \citewithauthor{Neumann2017}.
+To this end, a projector is used to highlight ingredients on the kitchen counter.
+Cookware is augmented with information about as the current and required level of filling or temperature.
+The interaction is done implicitly by performing the required cooking steps or explicitly by via touch and gestures.
+A projected \gls{gui} for \gls{smart home} control is presented by~\citewithauthor{Pizzagalli2018}.
+In this case the projection allows the control of basic functionalities like light and temperature via touch.
+
+% Gestures
+\subsubsection{Gestures}\label{sec.rw.hi.focused-dev-rw.gestures}
+
+When an interaction is desired, that is independent from the persons position but not performed with a remote control, gestures can be used.
+To switch lights and open or close curtains,~\citewithauthor{Kim2006} propose eight distinct gestures.
+In this case, a gesture encodes the \gls{addressee} and desired action simultaneously.
+However, combining the selection of the \gls{addressee} and the action into one single gesture results in a steep combinatoric growth, requiring a distinct gesture for each combination of \gls{device} and functionality.
+Therefore, most systems keep the \gls{addressee} selection and control action separated.
+\citewithauthor{Mayer2014} extract the addressed \gls{device} from the inhabitants gaze using smart glasses.
+Similarly,~\citewithauthor{Budde2013} detect pointing gestures using a \gls{kinect}.
+Both suggest using a smartwatch or smartphone to further control the selected \gls{device}.
+Although they rely on a \gls{gui}, they allow selecting the \gls{addressee} with a different modality.
+The \gls{gui} can automatically show the interface of the addressed entity.
+\citewithauthor{Carrino2011} use a dedicated pointing \gls{device} to specify the \gls{addressee}, which then can be interacted with using gestures or speech.
+They argue that communication through deictic gestures, symbolic gestures and speech commands is natural.
+Inversely,~\citewithauthor{Kuhnel2011} select the \gls{addressee} via a smartphone screen and control the functionality through gestures.
+This way they can use the same gesture for lowering the blinds as for lowering the volume.
+An interesting alternative---presented by~\citewithauthor{Verweij2017}---is to visualize unique movements, which a person can follow with a gesture to activate a specific functionality.
+The \gls{addressee} is found by correlating the gesture with the displayed movement.
+In this case, gestures do not need to be learnt beforehand and work with all \glspl{device} that can display some kind of motion.
+
+To efficiently communicate using gestures, a vocabulary of gestures is needed.
+Most of the presented systems, therefore, combine gestures with other modalities to reduce the size of the required vocabulary.
+Nevertheless, for most people this is not the primary way of communicating---neither with \glspl{device} nor with other people.
+Therefore, such interactions create the need for prior training.
+Furthermore, as the \gls{addressee} is not necessarily inherent to the gesture, the problem of communicating the \gls{addressee} gains additional importance.
+
+% Speech
+\subsubsection{Speech}\label{sec.rw.hi.focused-dev-rw.speech}
+
+For verbal communication, people already have a huge vocabulary and know how to use it to convey their intentions.
+Although, arbitrarily complex information can be transmitted via speech, the \gls{addressee} in human \glspl{conversation} is often not included in the words but displayed with other modalities or inferred from the context (\cref{sec.rw.hi.cr}).
+%In interaction with \gls{robot}-inhabited \glspl{smart home}, the addressing is often proposed to be done by pointing at or calling the addressed entity by its distinct name.
+\citewithauthor{Portet2013} perform a \gls{woz} study, in which the participants need to trigger some \gls{smart home} functionalities during an interview.
+To solve this task, most participants use indirect speech acts like \enquote{it's time to lower the blinds} or direct commands like \enquote{lower blinds}.
+While they say they would prefer directly stating their intent \enquote{to the home} instead of speaking with a \gls{device} or \gls{robot}, it is not further investigated how they would address the home.
+Modern \glspl{artificial agent} can not cope with the complexity of free human speech.
+They need to narrow down the possible interactions and simplify the problem.
+Therefore, most \Glspl{ipa} are activated using a keyword.
+Although this keyword is not always a name, it is a direct, verbal addressing from the agents point of view.
+The speech that is following the keyword can be interpreted as a command or question directed at the agent.
+For human interaction with a \gls{smart home},~\citewithauthor{Potamitis2003} recognize combinations of \code{<agent>} and \code{<command>} which can be surrounded and interleaved by arbitrary words.
+The recognized \code{<command>} is then passed to the chosen \code{<agent>}.
+The authors argue that interaction via speech is user-friendly and that calling the agent by name is robust.
+Authors often do not further elaborate on how the distinction of \glspl{addressee} can be performed in \gls{robot} inhabited \glspl{smart home}.
+In the work of~\citewithauthor{Park2007} and \citewithauthor{Park2008}, different agents can be addressed to control a \gls{smart home} by \textquote{naming or pointing}.
+Similarly,~\citewithauthor{Baeg2007} and~\citewithauthor{Gross2012} present \gls{hri} scenarios in \glspl{smart home} but give no information on how they decide who is addressed.
+Other scenarios present \glspl{gui} for \gls{smart home} control that can be used with verbal commands~\cite{Vanus2013,Zhao2016} but do not distinguish between different \glspl{addressee}.
+A study that investigates the addressing behaviour of \naive{} users in a smart \glsatt{robot} flat is presented by~\citewithauthor{Bernotat2016}.
+The study shows empirically which modalities and interfaces people prefer to use for a set of daily tasks.
+It is not further investigated in which ways the participants convey the \gls{addressee} of their communication.
+
+If one does not want to have a remote, gesture, or name for each function of a \gls{smart environment}, the coupling between \gls{addressee} and command needs to be eliminated.
+Therefore, command and \gls{addressee} need to be encoded separately.
+In contrast to touch, gestures and speech in general do not contain the \gls{addressee}.
+Therefore, the \gls{addressee} needs to be actively encoded in the command, localized using additional modalities or inferable from the situation.
+While different ways of displaying the \gls{addressee} in communication with a \gls{smart environment} are presented, none of these works explores which metaphors \naive{} users conceive in such a situation.
+
+\section{Cross-Cultural Applicability}\label{sec.rw.hi.limitations}
+
+Most of the \gls{hhi}-behaviours presented in this chapter are drawn from observations of interactions between people from central European or North American countries.
+Their applicability to interactions from different countries or cultures is not necessarily given.
+% gaze and configurations 
+Gaze behaviours and formations of \glspl{conversational group} can vary strongly.
+Two good examples for such cultural variances are compiled by \citewithauthor{Rossano2009}:
+In question-answer interactions between native \glspl{speaker} in Tzeltal---a Mayan language spoken in Tenejapa, a region in Mexico---the participants sit side by side and almost never exchange gazes.
+On the contrary, in similar interactions in \yele{}---spoken on Rossel Island, in eastern Papua New Guinea---mutual gaze can be sustained even during silence and \gls{speaker} changes \cite{Rossano2009}.
+This difference can be observed in the way the participants of an interaction form \glspl{conversational group}.
+While people from Tenejapa prefer sitting side-by-side, people from Rossel Island prefer sitting face-to-face.
+Furthermore, this entails different ways of showing recipiency.
+As Tzeltal \glspl{speaker} do not see the others face, the \gls{addressee} regularly produces phrasal back-channel acts, repeating whole parts of the previously said.
+Conversations in \yele{} use an inventory of visual, facially performed feedback~\cite[]{Rossano2009}.
+% \gls{turn} taking and roles
+According to~\citewithauthor{Hayashi1988a}, the rules for \gls{turn} management can be different too.
+Japanese \glspl{speaker} often deliberately talk simultaneously for a duration of multiple sentences.
+They do this in a coordinated and rhythmically synchronized manner.
+This behaviour is recognized as supportive and emphasizing the harmony of the interaction.
+American \glspl{speaker} on the contrary, use simultaneous talk when competing for the \gls{conversational floor}.
+% adaptation and models
+Such conflicting conventions can result in misunderstandings, repair, and eventual adaptation of behaviour between people.
+The \gls{turn taking} system as presented in \vref{sec.rw.hi.tt}, results from culture specific assumptions and must be adapted when assumptions change.
+Nevertheless, it stays a coherent system with simple rules.
+As~\citeauthor*{Meyer2018} writes: \blockcquote[p. 304]{Meyer2018}{[T]he resulting \glsatt{conversation} organization is by no means \enquote{cha\-o\-tic} or \enquote{anarchic}. To the contrary, it is not less well ordered and comprehensible than the classical pattern.}.
+An \gls{artificial agent}, designed with a specific cultural background in mind and faced with unpredicted conventions would make similar mistakes as people do in such a situation.
+In the best case scenario the agent would need to recognize such mistakes and adapt its behaviour---as people do.
+% In~\cite{Jan2007} a \gls{conversation} model for \glspl{virtual agent} is presented that can be adjusted with proxemic, gaze nd turn-overlap parameters for different cultural preferences.
+% concentrate on central-european culture
+Although \gls{conversation} depends on the participants cultural background, similarities and patterns can be found between the presented literature on \gls{hhi} and \gls{hai}.
+In this work I focus on the observability of addressing behaviour in \glspl{smart environment}, the formation of \glspl{conversational group} in \gls{hai}, and the \glspl{conversational role} an \gls{artificial agent} can assume in such a situation.
+I aim to create models that can work or be adapted for interactions with people from different backgrounds.
+Nevertheless, the models presented in this work are biased towards the characteristics of interaction between central European adults, as they are the main group of subjects I have access to.
+
+\section{Summary}\label{sec.rw.hi.summary}
+
+The aim of this chapter is to create an idea of how people interact with others and what their expectations towards an interaction with an \gls{artificial agent}, \gls{smart environment} or \gls{device} may be.
+I first give an overview of how humans interact with other humans in \cref{sec.rw.hi}.
+To this end, I introduce what \gls{copresence} is and the notion of \gls{proxemics} (\cref{sec.rw.hi.proxemics}) as a generally accepted partitioning of space around a person with corresponding types of social interaction.
+In \cref{sec.rw.hi.unfocused}, I collect observations on what \gls{copresence} means beyond \gls{proxemics} and which kinds of interaction take place in \glspl{unfocused interaction}.
+I give an overview of \glspl{focused interaction} in \cref{sec.rw.hi.focused}.
+After a definition of \glspl{face engagement} (\cref{sec.rw.hi.faceengagements}), I present an inspection of human interaction in \glspl{conversation}.
+This comprises how people form and maintain \glspl{conversational group} (\cref{sec.rw.hi.cg}), which roles they assume within and regarding such groups (\cref{sec.rw.hi.cr}) and the rules by which they negotiate these roles (\cref{sec.rw.hi.tt}).
+Finally, I discuss gaze as a prominent \glsatt{conversation} cue in \cref{sec.rw.hi.gaze}.
+% hai
+In the second part of this chapter, I present research on human interaction with \glspl{artificial agent} (\cref{sec.rw.hai}).
+To this end, I first establish a taxonomy of the agents that are relevant for this thesis (\cref{fig:rw.entities}).
+I show that effects, known from unfocused \gls{hhi}, can be reproduced or similarly observed in human interaction with \glspl{artificial agent} (\cref{sec.rw.hi.unfocused-rw}).
+In the context of \gls{focused interaction}, I show the importance of the behaviour of \glspl{artificial agent} on the overall and perceived quality of \gls{hai} (\cref{sec.rw.hi.focused-rw.perception}).
+Subsequently, I present how \gls{addressee} recognition is performed (\cref{sec.rw.hi.focused-rw.addressing}) and how \gls{turn taking} behaviour generation can be modelled (\cref{sec.rw.hi.focused-rw.turntaking}).
+After summarizing how human \glspl{conversational group} can be automatically detected (\cref{sec.rw.hi.focused-rw.groups}), I show how \glspl{conversational group} are harnessed in recent research on human interaction with \glspl{artificial agent} (\cref{sec.rw.hi.focused-rw.mixedgroups}).
+% smart homes
+In the third section of this chapter, I deal with human interaction in present \glspl{smart environment} (\cref{sec.rw.hi.dev-rw}).
+I show how \gls{proxemics} can be used for more situated and automatic adaptation of \gls{device} functionalities and interfaces (\cref{sec.rw.hi.unfocused-dev-rw}).
+In \cref{sec.rw.hi.focused-dev-rw}, I present work on focused human interaction with \glspl{smart environment} (\cref{sec.rw.hi.focused-dev-rw}) and how different modalities affect the problem of determining the \gls{addressee} of communication.
+% limitations
+I conclude this chapter by expanding on the cross-cultural applicability of the presented works, observations, and models and establishing the bounds of generalizability of this thesis (\cref{sec.rw.hi.limitations}).

@@ -1,0 +1,43 @@
+# Enable some more warnings
+CmdLine
+{
+    -wall
+    -n30
+    -n22
+    -n21
+}
+
+# Remove \label here as a package takes care of handling these cases
+PostLink =
+{
+    \index
+}
+
+Silent
+{
+    \eg
+    \ie
+    \cf
+    \etc
+    \slash
+    \fshyp
+    \bshyp
+    \endfoot
+    \endhead
+    \endlastfoot
+}
+
+# Because autoref is used in this document, manual use of \ref is intended and might appear without a non-breaking space
+Linker = {}
+
+# Allow en-dash (--) for intermediate clauses
+WordDash =
+{
+    2
+}
+
+# UserWarnRegex
+# {
+#     (?!#10:Maybe! use! \fshyp)POSIX:[^[:space:]]/[^[:space:]]
+#     (?!#11Maybe! use! \fshyp! to! allow! hyphenation)POSIX:\\slash
+# }

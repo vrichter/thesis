@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="5049b55e-5047-41b8-97f5-e9994afafc5e" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T11:10:23.390Z</CreationDate>
+            <ModificationDate>2016-01-05T11:10:23.390Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=139.000/145.400;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Die ersten 2:30 Min passiert nichts.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="c62571f3-3b0b-4829-ab22-7dfb737fbbe6" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T11:52:56.740Z</CreationDate>
+            <ModificationDate>2016-01-05T11:52:56.740Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=160.945/167.845;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt Vorstellung durch das Apartment nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="7cb74be6-155d-43b6-b9e3-f22752e1cd50" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T11:55:40.548Z</CreationDate>
+            <ModificationDate>2016-01-05T11:55:40.548Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=183.945/192.945;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Höflich, weil mit Lächeln.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="5fc16829-7719-4572-8e83-636d838bda5b" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T11:58:19.371Z</CreationDate>
+            <ModificationDate>2016-01-05T11:58:19.371Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=221.895/228.395;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon die Aufgabenkarte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="961fbce5-dea1-4066-b988-08684f202c12" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T11:58:53.659Z</CreationDate>
+            <ModificationDate>2016-01-05T11:58:53.659Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=228.895/232.395;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt etwas unverständliches.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="4b9af62b-c03e-4b06-a668-8181d8686da6" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T12:06:39.689Z</CreationDate>
+            <ModificationDate>2016-01-05T12:06:39.689Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=255.326/318.526;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP guckt in dieser Phase häufiger kurz zum Licht im Flur.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="8daf0bb3-e718-4d84-8a2e-55fc60d667d2" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T12:18:52.511Z</CreationDate>
+            <ModificationDate>2016-01-05T12:18:52.511Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=348.926/357.526;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VPliest die Aufgabenkarte nochmal.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="f13e4a36-4a27-414f-a2e1-29f49ca3f8f3" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T12:37:14.411Z</CreationDate>
+            <ModificationDate>2016-01-05T12:42:33.329Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=520.700/533.300;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Tiers (Aufmerksamkeitsfokus und Adressat final bezüglich der Schranktüren) heißen unterschiedlich, meinen aber das Selbe.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="f6554494-d044-47af-a370-f21791a4fa88" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T13:06:14.772Z</CreationDate>
+            <ModificationDate>2016-01-05T13:06:14.772Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=613.700/615.700;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP guckt erneut in diese Kamera.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="cea2163c-0bb9-46b9-bbf3-9ebca09f852c" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T13:07:29.340Z</CreationDate>
+            <ModificationDate>2016-01-05T13:07:29.340Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=642.100/656.500;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP guckt erneut in den Paketschrank.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ae2b8235-d4f2-4b90-9527-53df82a56260" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T13:12:27.659Z</CreationDate>
+            <ModificationDate>2016-01-05T13:12:27.659Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=682.750/690.350;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Achtung: Tiers bei Aufmerksamkeitsfokus und Adressat Final meienn das gleiche!</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="2f639ae2-d4ae-4786-a5b2-efa55e53b774" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T13:08:47.820Z</CreationDate>
+            <ModificationDate>2016-01-05T13:09:15.644Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=685.800/692.900;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP guckt in die Schränke im Wohnzimmer.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ff671817-e459-4c25-8980-03e1e2d5fdca" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T13:18:08.402Z</CreationDate>
+            <ModificationDate>2016-01-05T13:18:08.402Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=710.200/711.500;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Es gibt hier keine Reaktion auf Misserfolg.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="0e6280c5-2264-444f-821b-241ff1c58153" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T13:40:43.853Z</CreationDate>
+            <ModificationDate>2016-01-05T13:40:43.853Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=714.650/723.150;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Für mich ist das kein Lösungsversuch. Für den Wizzard schon. meiner Meinung hat die VP aber keine Absicht mit dem Schließen der Tür irgendwas zu steuern, sondern sucht eher etwas hinter der Tür. Ich glaube der Wizzard will der VP helfen, damit die Aufgabe endlich vorbei ist.
+Problem außerdem: Tür der Küche gibt es nicht als Aufmerksamkeitsfokus und Adressat final.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="98ecdc1c-36fd-49d0-a698-09890c188784" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T13:45:07.700Z</CreationDate>
+            <ModificationDate>2016-01-05T13:45:07.700Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=771.126/772.726;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Wieder der Blick in die Kamera.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="da64793b-8c2e-40b2-9e58-368e77efafe3" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T13:48:01.236Z</CreationDate>
+            <ModificationDate>2016-01-05T13:48:01.236Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=812.626/817.226;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Hier macht die VP die Schiebetür auf und das ist dann aber kein Lösungsversuch. Das ist nicht konsistent vom Wizzard.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="f02be659-85e3-4f19-9d2c-5c825c7bd269" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-05T14:00:24.569Z</CreationDate>
+            <ModificationDate>2016-01-05T14:00:24.569Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:be2e2340-02a7-4fa1-a3c6-339d0301b9d6#t=896.526/904.426;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP macht alle Aufgaben, an einer Stelle mit der Hilfe des Wizzards. Benutzt als Steuerungsmöglichkeit klatschen, außer bei der Paketaufgabe und der Aufgabe mit dem Anruf.
+Stimmung ist neutral, wenig Emotionen.</Message>
+    </ColTime>
+</ColTimeList>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="51f2636c-4135-4ddc-99b3-ae04fd5e5e3e" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-17T15:43:10.496Z</CreationDate>
+            <ModificationDate>2015-12-17T15:43:10.496Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:f2979593-02e8-4fbc-813f-bbf47e5f8080#t=17.994/28.259;tier=Ausdruck%20spezifisch</AnnotationFile>
+        <Message>VP bemerkt die Begrüßung des Apartments nicht</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="688ef4e8-c5ea-4956-9cf0-65255caaba3e" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-17T15:49:16.110Z</CreationDate>
+            <ModificationDate>2015-12-17T15:49:16.110Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:f2979593-02e8-4fbc-813f-bbf47e5f8080#t=111.558/113.528;tier=Ausdruck%20spezifisch</AnnotationFile>
+        <Message>VP liest schon die erste Karte</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="b06b8c45-425f-4dcc-ab3a-d1b703a85ab3" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-18T10:26:50.611Z</CreationDate>
+            <ModificationDate>2015-12-18T10:26:50.611Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:f2979593-02e8-4fbc-813f-bbf47e5f8080#t=284.262/315.087;tier=Ausdruck%20spezifisch</AnnotationFile>
+        <Message>VP löst fast alle Aufgaben (außer letzte) durch Kommunikation mit dem Roboter.
+Ist höflich mit ihm und erwartet Antworten auf ihre Fragen von ihm.</Message>
+    </ColTime>
+</ColTimeList>

@@ -1,0 +1,707 @@
+% ###################################################################
+\chapter{Addressing Behaviour in Smart Environments}\label{ch.address}
+
+% read data
+\iniload{addr.info}{data/data.info_study-addressing-apartment.ini}
+
+\blockcquote[p. 1]{kendon1990}{We tend not to recall the spacial organization of the event, how we decided when it was our \gls{turn} to speak, how we organized ourselves when we did so and how the others showed that they did, or did not understand what we said.\\}
+%\blockcquote[p. 60]{Kendon1967}{We should thus expect that \emph{p} will seek eye-contact with whoever he is interacting regardless of the specific kind of response he seeks from him, and it will be rewarding to him not because through eye-contact any particular \enquote{need} is gratified, but because through eye-contact \emph{p} knows that he is affecting \emph{q} in some way and that he is, thereby, making progress in whatever he is attempting to do.}
+
+%In this chapter I investigate how \naive{} people narrow down the \gls{addressee} of their communication with entities of a \gls{smart environment} (\Cref{hyp.address}).
+In this chapter, I investigate \Cref{hyp.address}:
+\blockquote{\hypaddress}.
+To this end, I describe a study of \naive{} user interactions in a \gls{smart home} that was carried out jointly by the contributors of the \gls{csra} project \cite{Bernotat2016}.
+The resulting corpus is published by~\citewithauthor{Holthaus2016a}.
+On the basis of this corpus, I investigate how the available information and different modalities correlate with the \gls{addressee} for different mundane tasks.
+I use the collected insights to create and evaluate an initial \gls{addressee} recognition model for multi-modal single user interactions in a \gls{smart environment}.
+Finally, I discuss the relevance of the obtained insights for the research question of this chapter.
+
+\section{Introduction}
+% people
+As discussed in \cref{sec.rw.hi.focused}, a \gls{conversation} is a dynamic yet highly organized process between the participants of a \gls{focused interaction}.
+People use multiple modalities, \glsatt{conversation} cues and information from the overall situational context to distinguish the \gls{addressee} of a \glsatt{conversation} act.
+As people communicate with each other on a regular basis, they have an elaborate understanding of which information needs to be acquired, processed or inferred to reliably know the \gls{addressee} of speech.
+Speakers know which information they must provide for others to understand who their \gls{addressee} is.
+% people with smart homes
+If visitors want to change the illumination settings of a \gls{smart environment}, they are confronted with a problem.
+They do not know how to control the environment.
+They can only draw on their experiences and choose the control metaphors that they think are the most appropriate.
+For people to be able to solve such a problem, the control metaphor needs to be reasonably inferable.
+A \gls{smart environment} therefore, needs to provide control metaphors that are obvious and memorable.
+% agents
+A \gls{smart environment} or \gls{artificial agent} needs to be able to interact efficiently with people who did not undergo a special training to be able to understand and control it.
+By recognizing human \glsatt{conversation} cues, they can better understand the expectations of human interaction partners.
+If a \gls{smart environment} can correctly recognize the content and \gls{addressee} of \naive{} inhabitants communication, it can better fulfil their expectations.
+It can work as expected.
+
+% literature
+In the literature about human interaction with \glspl{smart environment} (summarized in \cref{sec.rw.hi.dev-rw}) different ways are proposed, how a person can select the agent to be addressed in a \gls{smart environment}.
+%The approach is part of the design of the presented agent, \gls{device}, \gls{smart environment}, or study.
+%It can be as simple as pushing a button, or a combination of multi-modal signals.
+%If persons toggle a light switch or \gls{turn} the volume knob on the radio, there is no uncertainty about their intention.
+%Both the \gls{addressee} and the task are fixed and commonly known.
+%However, this requires a distinct control metaphor for each functionality of each controlled \gls{device}.
+%It further requires the person to affect the control, and therefore have it \emph{within reach}.
+%These problems can be tackled with a remote control, a \gls{gui}, or \gls{ipa} which allow increasingly more abstract---and therefore powerful---control metaphors but in return increase the training that is required for a person to master the interaction. 
+%In all cases, a trade off needs to be done between the additional effort of explicitly pre-selecting an \gls{addressee} and the high dimensionality of task descriptions which contain the \gls{addressee}.
+%The reasons given for an approach can be \emph{simplicity}, \emph{convenience}, \emph{naturalness} or \emph{user-friendliness}.
+While the presented research evaluate the selection \gls{accuracy} or task completion rate, none investigates whether the chosen approach is one that a \naive{} user spontaneously would have chosen.
+How \naive{} people convey the \gls{addressee} of their commands is not investigated.
+Furthermore, as suggested in the introductory quote of this chapter, people find it hard to explain which cues they use to understand and control an interaction.
+%Furthermore, although it can be shown that people tend to display comparable social signals in interaction with \glspl{robot} or \glspl{virtual agent} (\cref{sec.rw.hai}) as in \gls{hhi}, it is questionable whether this is generalizable to human interactions with \glspl{device} in a \gls{smart environment} (\cref{sec.rw.hi.dev-rw}).
+%To understand a \naive{} inhabitants communication with a \gls{smart environment}, to know who is addressed with a communicative act or control gesture, it is first necessary to investigate \emph{how} they communicate.
+
+Therefore, it is important to investigate which behaviours can be observed in \naive{} human interaction with a \gls{smart environment} to distinguish which agent is addressed with a deliberate communicational act.
+We performed an initial attempt to such an analysis, with manually extracted observations and a simple model~\cite{Richter2016}.
+In this chapter I present a fully reproducible way of extracting observations of interactions from a corpus, and a detailed analysis of the resulting data and derived models.
+
+\section{Interaction Corpus}
+
+We collected a corpus of multi-modal interactions of \naive{} users with a \gls{robot}-inhabited smart flat~\cite{Holthaus2016a}.
+It was compiled in conjunction with a user study in the \gls{csra}~\cite{Bernotat2016}.
+In the following, I call this the\newdefgls{addressing study}.
+The aim of the \glspl{addressing study} was to observe how \naive{} users would solve everyday tasks in a \gls{smart environment} and whom they would address for that.
+This corpus constitutes a unique basis for investigating how people convey their \gls{addressee} in such a situation.
+Therefore, in this section I present the user study and original corpus, and how I extract the data needed for the following investigation.
+For further information regarding the original corpus and study, please refer to the corresponding publications ~\cite{Holthaus2016a,Bernotat2016}.
+
+\subsection{Experimental Set-up}\label{sec:addressee.experimental.setup}
+
+\begin{figure}[tbh]
+    \centering
+    \def\svgwidth{1.0\textwidth}
+    \input{generated/csra_map_study_addressee.pdf_tex}
+    \caption[Addressing apartment study layout.]{\label{fig:csra.map.addressee} The layout of the \gls{csra}during the study. The \gls{robot} (green) stayed at its position in the living room. The safety person sat in the armchair (yellow). The lamp from the first two tasks is \(L_H\) (purple) and the lamp from the seventh task is \(L_F\) (orange).}
+\end{figure}
+
+
+The study presented by us \cite{Bernotat2016} was created to investigate how \naive{} people would address a smart \glsatt{robot} \gls{apartment} when solving everyday tasks.
+In particular, the question was which entity (\gls{robot}, light, apartment) would be addressed and which modality (speech, gesture, touch) used thereby.  
+It was conducted in the \gls{csra} in a collaborative effort by the contributors of the corresponding project.
+The layout of the \gls{apartment} during the study can be seen in \cref{fig:csra.map.addressee}.
+The 47 study-participants (25 women, 22 men, \(18 \leq \text{age} \leq 50\), \(\mu_{age}=25.26\), \(\sigma_{age}=5.69\)) were recruited from the campus of Bielefeld University, gave consent to the recording of video and audio material and received \EUR{6} compensation for their attendance.
+
+\subsubsection{Study Procedure}
+
+An experimenter brought the participants into the \gls{apartment}, introduced them to the task, and left the \gls{apartment} for the duration of the task.
+After completion, the same experimenter escorted the participant to the post-trial procedure, which encompassed a questionnaire, the possibility to freely ask questions, and the monetary compensation.
+A second experimenter (\gls{woz}) observed the participants' behaviour during the trial from an adjoining room and executed reactions of the \gls{apartment} or the \gls{robot} as required (\cref{sec:ch.address.sec.tasksolution}).
+Due to safety reasons a third experimenter needed to stay in the \gls{apartment} during the trials.
+This person monitored the \gls{robot}, was introduced as such, and did not further interfere with the experiment.
+
+\subsubsection{Briefing}
+
+\begin{figure}[tbh]
+    \centering
+    \def\svgwidth{1.0\textwidth}
+    \input{generated/study-addressee-vp57-all.pdf_tex}
+    \caption[Addressing apartment study camera perspectives.]{\label{fig:study.addressee.views} 
+    A scene in the living room, during the introduction of a participant from the perspective of camera \(C_1\) (top) and the cameras \(C_2\), \(C_3\) and \(C_4\) (bottom left to right). 
+    The camera positions can be found in the \gls{apartment} map (\cref{fig:csra.map.addressee}).
+    From left to right in \(C_1\) can be seen: the security person (yellow) with the emergency shut-down, the lamp from the seventh task \(L_F\) (orange), the experimenter (grey) introducing the \gls{robot}, the participant (pink) of the trial, the \gls{robot} (green) waving at them. 
+    The screens display the text \enquote{Welcome}.
+    }
+\end{figure}
+
+The experimenter escorted each participant through the entrance, hallway, and kitchen into the living room (\cref{fig:study.addressee.views}), while introducing the \gls{apartment} (a map can be seen in \cref{fig:csra.map.addressee}).
+The participants were told they are in a smart flat, which rooms are the hallway, kitchen and living room, showed the \gls{robot} and explained the role of the security person.
+Whenever a room was mentioned by the experimenter, the ceiling light of this room was turned on by the \gls{wizard} for a short time.
+When the \gls{robot} was introduced, it raised its left arm and waved.
+Seven mundane tasks, written on a set of cards, were handed to the participant.
+The participant was told to solve the tasks intuitively and in the order given by the cards.
+It was forbidden to contact the security person, or to use light switches and remote controls.
+Then the experimenter escorted the participant back into the hallway, left the \gls{apartment} and waited outside to be approachable in case of a problem. 
+
+\subsubsection{Participant's Tasks}
+
+The tasks of the \glspl{addressing study} are specifically designed to meet a set of requirements.
+\begin{enumerate*}[label=(\arabic*)]
+    \item They had to be reasonably simple and
+    \item required in a home environment on a regular basis. At the same time 
+    \item they needed to be diverse enough to allow participants to consider different approaches and \glspl{addressee} for their solution.
+    To further increase the variability of the results, some solutions were discouraged.
+    To this end, light switches were non-functional, and there were no visible clocks and radios.
+    Furthermore, the participants were prohibited to use their own clocks or phones.
+\end{enumerate*}
+After the introduction, the participants started in the hallway (\cref{fig:csra.map.addressee}), holding their task-cards in their hands (a list of the tasks and their order can be found in \cref{tab:study-addressee-tasks}).
+
+\begin{colored_table}{htb}
+    \centering
+    \begin{tabulary}{\textwidth}{ C c c L }
+        \toprule
+        Id & A & V & Task                                                               \\ \midrule
+         1 & 1 &   & Turn on the light in the hallway, then go to the kitchen.                   \\
+         2 & 2 &   & Turn off the light in the hallway.                                          \\
+         3 & 3 &   & Listen to music.                                                            \\
+         4 & 6 & * & Find out if a parcel was delivered.                                         \\
+         5 & 4 & * & Find out if there was a phone call.                                         \\
+         6 & 5 & * & Find out the current time.                                                  \\
+         7 & 7 &   & Alter the brightness of the floor lamp in the living room without talking.  \\
+        \bottomrule
+    \end{tabulary}
+    \caption[Tasks within the addressing apartment study.]{\label{tab:study-addressee-tasks}The tasks that participants needed to solve in the study.
+    Id: shows the original order of the tasks.
+    A: shows the alternative order of the tasks that was used for randomization.
+    V: marks the tasks that elicited a verbal response of the \gls{apartment} or \gls{robot} in the verbal condition with a '*'.
+    }
+\end{colored_table}
+
+The first two tasks, switching light in the current and adjoining room, allow insight on how people address daily appliances from different distances.
+The third task, listening to music, requires the participants to control an entity that has no visible embodiment.
+Tasks (4-6) require the retrieval of information, which is expected to encourage verbal interaction. 
+The last task (7) allows for a continuous control of the result through a closed-loop interaction while enforcing a non-verbal solution. 
+Within the information retrieval tasks, the order of was altered (4, 5, 6 vs. 5, 6, 4).
+The order of the remaining tasks fixed to prevent the information retrieval tasks from biasing the solution of the first three tasks towards verbal interaction.
+
+\subsubsection{Task solution}\label{sec:ch.address.sec.tasksolution}
+
+The \gls{wizard} audio-visually observed the participants' actions and activated the corresponding actions.
+A task solving action was triggered, when the \gls{wizard} observed an action of the participant and recognized it as dedicated to the solution of a task.
+Additionally, the \gls{wizard} chose whether the \gls{robot} or \gls{apartment} should react to the action. 
+The reaction was split into a verbal and a non-verbal condition for the information retrieval tasks (4-6).
+In the verbal condition, the \gls{robot} or \gls{apartment} verbally answered the questions.
+In the non-verbal condition, the \gls{apartment} printed information on the screens (seen \cref{fig:study.addressee.views}) and the \gls{robot} used deictic gestures.
+
+\subsection{Recording \& Annotation}
+
+The trials were observed by the \gls{wizard} through four parallel video streams (\cref{fig:study.addressee.views}) and an audio stream, which all were recorded for later analyses.
+Additionally, system events were recorded using the communication middleware~\cite{rsbsoft}.
+System recordings contain all control instructions from the \gls{wizard}, determining when the \gls{wizard} decided that a task was solved, which \gls{addressee} (\gls{robot} or \gls{apartment}) they selected and which functionality was executed subsequently.
+Furthermore, they contain two additional audio streams (hallway and living room), motion sensor observations, and power consumption data.
+Finally, recordings inform about when doors, cupboards, drawers and windows were opened and closed.
+
+For the manual annotation of the corpus, the~\citesoftware{elansrc} was used.
+To this end, we created overview videos by combining the four camera perspectives (\cref{fig:study.addressee.views}) and the audio stream into a single video file. 
+Furthermore, we created annotation templates in coordination with the final annotators and pre-filled them using a subset of the recorded system events.
+An overview of the kinds of generated and manually annotated tiers of interest for this chapter can be found in \cref{tab:study-addressee-autotiers}.
+A detailed description of the recording and annotation process is presented by~\citewithauthor{Holthaus2016a}.
+\begin{colored_table}{htb}
+    \centering
+    \begin{tabulary}{\textwidth}{ l C C }
+        \toprule
+        Tier                                  & Type & Annotated   \\ \midrule
+        Addressee final                       &  C   & *        \\
+        Focus of attention                    &  C   & *        \\
+        Expression (facial, gestural, verbal) &  C   & *        \\
+        Expression specific                   &  F   & *        \\
+        Method                                &  C   & *        \\
+        Method specific                       &  F   & *        \\
+        Speech form of address                &  C   & *        \\
+        Speech politeness                     &  C   & *        \\
+        Speech type of sentence               &  C   & *        \\
+        Speech specific                       &  F   & *        \\
+        Speech intention                      &  C   & *        \\
+        Study progress coarse                 &  C   & *        \\
+        Study progress fine                   &  C   & *        \\
+        Wizard                                &  C   &          \\
+        \bottomrule
+    \end{tabulary}
+    \caption[Annotated tiers and their properties.]{\label{tab:study-addressee-autotiers}A selection of the tiers, available in the annotations~\cite{elansrc}.
+    Type depicts the kind of annotation: categorical (C), or free-text (F);
+    Source depicts whether the tiers were manually annotated (*) or extracted from system events.
+    A detailed table with all tiers can be seen in \vref{app:study-addressee-autotiers}.
+    } 
+\end{colored_table}
+
+
+\section{Analysis of Addressing Behaviour}\label{sec.addressing.corpus}
+
+Our original aim with the study was to investigate how \naive{} users would intuitively interact with a \gls{robot} inhabited \gls{smart home} to solve simple daily tasks~\cite{Bernotat2016}.
+To this end, interactions were recorded, annotated and analysed.
+The study showed that the participants preferred to solve the given tasks using speech when allowed.
+The method used to solve the tasks \(1-6\) was speech in more than \SI{50}{\percent} of the cases in each task separately.
+In case of information requests and control of the radio---which lacks an embodiment---the proportion of verbal solutions was much higher (\(\SI{88}{\percent}\)).
+When an appliance had to be controlled, and it had a distinct physical location and extent, people more often addressed it directly than through some other entity (\SI{56}{\percent} in tasks 1 and 2 and \SI{89}{\percent} in task 7).
+On the other hand, the \gls{robot} was addressed around \SI{30}{\percent} of the time in the information request tasks, while only \SI{10.6}{\percent} in the lighting tasks and \SI{12.8}{\percent} in the radio task.
+Finally, the \gls{addressee} was \emph{unspecific} in a high proportion of the task solutions (\(\SI{37}{\percent}\) in tasks 4 and 6 and \(\SI{52}{\percent}\) in tasks 3 and 5).
+In the original publication~\cite{Bernotat2016} we analyse which entities of a \gls{smart home} people address to solve different kinds of daily tasks and which modalities they use thereby.
+In the following, I use the resulting corpus to investigate \emph{how} people address these entities.
+
+\subsection{Observations of Addressing Behaviour}\label{sec:ch.address.sec.generation}
+
+The corpus annotations are a good starting point for the investigation of how people display the \gls{addressee} of their deliberate communication.
+To this end, I further examine the participants' behaviour at the moment of addressing.
+This moment can be determined from the tiers \emph{Wizard} and \emph{Study progress fine} (\cref{tab:study-addressee-autotiers}).
+\emph{Study progress fine} shows when the participants attempted to communicate with their environment.
+Such time periods are tagged as \emph{Attempt to a solution}.
+The annotation tier \emph{Wizard} is automatically generated from the reactions of the Wizard during the trial.
+It depicts the point in time, where the \emph{Wizard} activated the solution of a task.
+Furthermore, it tells which the entity---\gls{robot} or \gls{apartment}---was responsible for its realization.
+The action implies that the \gls{wizard} has the necessary information to understand that a task solution is attempted and which \gls{addressee} is more appropriate.
+Furthermore, it means that the \gls{wizard} perceived the action of the participant as in so far complete, that a reaction is advisable.
+This makes the time of the Wizard's action the best moment for the \gls{smart environment} to react to the communication of an inhabitant from an observers point of view.
+To extract observations of interaction in a fully automatic and reproducible way, I apply the following approach:
+For each \emph{Wizard} action the corresponding \emph{Attempt to a solution} annotation is searched and the associated manual annotations extracted.
+To correspond with a solution attempt, a \gls{wizard} action needs to overlap with it in time or happen not later than \inisi{addr.info}{max.time.seconds}{\second} after its end.
+The maximum of \inisi{addr.info}{max.time.seconds}{\second} was chosen on the basis of a sighting of the recordings, which revealed that annotations with a higher difference occurred due to misunderstandings.
+Repeated \gls{wizard} actions, that correspond to the same solution are ignored for the same reason.
+A visualization of the matching process can be seen in \cref{fig:study.addressee.gantt}.
+\begin{figure}[tbh]
+    \centering
+    \newganttchartelement{tier}{tier/.style={draw=white}, tier inline label anchor=center}
+    \begin{ganttchart}[
+        inline,
+        hgrid style/.style=red,
+        x unit=(0.01\textwidth)*0.7,
+        y unit title=.6cm,
+        y unit chart=.8cm
+    ]{1}{100}
+    %\ganttbar[bar/.append style={fill=white, draw=black}]{Study progress fine}{-40}{-1} 
+    \gantttier{\footnotesize{Study progress fine}}{-40}{-1} 
+    \ganttbar[bar/.append style={fill=myorange}]{a}{10}{24} 
+    \ganttbar[bar/.append style={fill=myorange}]{b}{30}{46} 
+    \ganttbar[bar/.append style={fill=myorange}]{c}{60}{90}
+    \ganttbar[bar/.append style={fill=mygray}]{}{0}{9}
+    \ganttbar[bar/.append style={fill=mygray}]{}{25}{29}
+    \ganttbar[bar/.append style={fill=mygray}]{}{47}{59}
+    \ganttbar[bar/.append style={fill=mygray}]{}{91}{101}
+    \\
+    %\ganttbar[bar/.append style={fill=gray}]{Other annotated tiers}{10}{24} 
+    %\ganttbar[bar/.append style={fill=gray}]{}{30}{46} 
+    %\ganttbar[bar/.append style={fill=gray}]{}{60}{90}
+    %\ganttbar[bar/.append style={fill=gray}]{}{0}{9}
+    %\ganttbar[bar/.append style={fill=gray}]{}{25}{29}
+    %\ganttbar[bar/.append style={fill=gray}]{}{47}{59}
+    %\ganttbar[bar/.append style={fill=gray}]{}{91}{101}
+    %\\
+    \gantttier{\footnotesize{Wizard}}{-40}{-1} 
+    \ganttbar[bar/.append style={fill=mygreen}]{1}{16}{19}
+    \ganttbar[bar/.append style={fill=mygreen}]{2}{48}{51}
+    \ganttbar[bar/.append style={fill=mygreen}]{3}{81}{84}
+    \ganttbar[bar/.append style={fill=myblue}]{4}{86}{89}
+    \ganttbar[bar/.append style={fill=myred}]{5}{95}{98}
+    \ganttvrule[vrule/.append style={solid, mygreen, thick}]{}{15}
+    \ganttvrule[vrule/.append style={solid, mygreen, thick}]{}{19}
+    \ganttvrule[vrule/.append style={solid, mygreen, thick}]{}{47}
+    \ganttvrule[vrule/.append style={solid, mygreen, thick}]{}{51}
+    \ganttvrule[vrule/.append style={solid, mygreen, thick}]{}{80}
+    \ganttvrule[vrule/.append style={solid, mygreen, thick}]{}{84}
+    \ganttvrule[vrule/.append style={solid, myblue, thick}]{}{85}
+    \ganttvrule[vrule/.append style={solid, myblue, thick}]{}{89}
+    \ganttvrule[vrule/.append style={solid, myred, thick}]{}{94}
+    \ganttvrule[vrule/.append style={solid, myred, thick}]{}{98}
+
+    \ganttvrule[vrule/.append style={mygray, thin}]{}{9}
+    \ganttvrule[vrule/.append style={mygray, thin}]{}{24}
+    \ganttvrule[vrule/.append style={mygray, thin}]{}{29}
+    \ganttvrule[vrule/.append style={mygray, thin}]{}{46}
+    \ganttvrule[vrule/.append style={mygray, thin}]{}{59}
+    \ganttvrule[vrule/.append style={mygray, thin}]{}{90}
+    \end{ganttchart}
+    \caption[Extraction of interaction observations.]{\label{fig:study.addressee.gantt} 
+    Matching between actions in the \emph{Wizard} tier and instances of \emph{Attempt to solution} (highlighted in orange) in the \emph{Study progress fine} tier. 
+    Green time periods highlight \gls{wizard} actions that can be assigned to a task solution (1 matches a, 2 matches b, and 3 matches c).
+    Blue \gls{wizard} actions (4) are not assigned because the task solution is already observed (3).
+    Red \gls{wizard} actions (5) are not assigned because they are more than \inisi{addr.info}{max.time.seconds}{\second} after a solution attempt.
+    Vertical lines show the boundaries of time periods for better comparability.
+    %The resulting assignment is \(a \rightarrow 1, b \rightarrow 2, c \rightarrow 3\).
+    }
+\end{figure}
+
+The resulting annotations are further filtered:
+Entries where \emph{Addressee final} is \emph{not discernible} (the annotator could not see the person) are unusable for this investigation and therefore removed.
+Furthermore, in case of redundant entries, only one attempt is kept.
+Redundant entries arise from trials that were annotated by multiple raters or from repeated solutions to the same task by the same participant.
+This results in a set of \inidata{addr.info}{sum.entries} annotations of peoples addressing attempts.
+
+In contrast to this approach, the initial evaluation~\cite{Richter2016} was performed based on the information at the moment of the \glspl{wizard} actions for all actions of the \gls{wizard}.
+Missing annotations of \gls{addressee} and attention were subsequently manually annotated.
+This resulted in a different set of observations.
+I use the approach presented in this chapter to achieve reproducible and fully automatic results.
+
+To assess the quality of the annotations, I calculate the inter-rater agreement for the extracted observations.
+Seven trials contain annotations of both raters and therefore, can be used for this analysis.
+As inter-rater agreement, I calculate Cohen's Kappa~\cite{Cohen1960} using the categorical annotations.
+Free form annotations were not sufficiently formalized beforehand and therefore cannot be compared objectively.
+Furthermore, the tiers \emph{Study progress coarse}, \emph{Study progress fine}, and \emph{Speech intention} are constant after the data extraction.
+They are excluded from this calculation.
+The annotators achieve a \inidata{addr.info}{irr.quality}~\cite{Altman} Kappa of \(\kappa = \inidata{addr.info}{irr.value}\).
+
+\subsubsection{Content of Observations}\label{sec:addressee-coorpus-content}
+
+In the following, I describe which information is extracted from the addressing observations in the original data to form the \gls{addressing corpus}.
+\emph{Annotations} and \emph{tiers} in the original corpus will be called \emph{values} and \emph{variables} in the extracted corpus to clarify the distinction.
+
+First of all, information from the tiers \emph{Study progress coarse}, and \emph{Study progress fine} can not be used in the observations because their values are always the same during task solution attempts.
+Similarly, \emph{Speech intention} is always \emph{Communication attempt} or not applicable in the observation.
+It is subsumed by \emph{Method}.
+\emph{Expression specific} is empty in most cases and therefore ignored too.
+The following variables (abbreviations in square brackets) are derived from the manually annotated tiers:
+\begin{description}
+    \item[{Addressee final reduced [Ar]:}] Is created from \emph{Addressee final} by combining parts of the \gls{apartment} into a single group \emph{Parts of the apartment}.
+    This encompasses furniture, switches, and screens but not except the task relevant lights.
+    Furthermore the entities \emph{self} (addressed four times) and \emph{not discernible} (never addressed) are included in \emph{Unspecific}.
+    The mapping can be seen in \cref{app:study-addressee-addressees-codes}.
+    This is a reasonable pooling that allows quantitative analyses by greatly reducing the amount of possible \glspl{addressee}.
+    The resulting variable can assume five different values: \emph{Unspecific [U], Parts of the Apartment [Ap], Robot [R], Light in the hallway [LH], } or \emph{Floor lamp [LF]}.
+    \item[{Focus of attention reduced [Fr]:}] Is created from \emph{Focus of attention}.
+    Targets are grouped with the same mapping as in \emph{Addressee final reduced (Ar)}. 
+    The entity \emph{self} is focused eight times and \emph{not discernible} is focused once.
+    \item[{Addressee equals focus [Aef]:}] Is created by checking whether the annotations in \emph{Addressee final} and \emph{Focus of attention} have the same value.
+    \item[{Expression reduced [Er]:}] Is created from \emph{Expression (facial, gestural, verbal)} by clustering emotions into \emph{negative}, \emph{neutral}, and \emph{positive}.
+    \item[{Method [M]:}] Encodes the used modality---\emph{speech}, \emph{gesture} or \emph{touch}.
+    \item[{Method specific reduced [Msr]:}] Is created by extracting the usage of gestures (\emph{clap}, \emph{wave}, \emph{wipe}, and \emph{point}) from the textual descriptions in \emph{Method specific}.
+    \item[{Speech form of address [Sf]:}] Tells whether the entity is named or not, when speech is used.
+    \item[{Speech politeness [Sp]:}] Tells whether the phrasing is polite or not, when speech is used.
+    \item[{Speech type of sentence reduced [Str]}] Is extracted from the tier \emph{Speech type of sentence}.
+    It can take the values \emph{Command}, \emph{Question}, or \emph{Statement}. 
+    \item[{Speech phrasing [Sph]:}] Is extracted from the tier \emph{Speech type of sentence}.
+    It tells whether a full \emph{Sentence} is said or single \emph{Words}.
+    \item[{Speech specific reduced [Ssr]:}] Is drawn from the speech of the participants, encoded in \emph{Speech specific}, by detecting the first appearance of addressing terms.
+    It can take the values \emph{you}, \emph{light}, \emph{robot}, and \emph{none}.
+\end{description}
+Furthermore, the following variables are extracted from annotations in the \emph{Wizard} tier and meta information about the trial:
+\begin{description}
+    \item[{Wizard \gls{addressee} [Aw]:}] Encodes which entity is chosen by the \gls{wizard} to react to a communication attempt.
+    It can take the values \emph{Apartment}, \emph{Floor lamp}, or \emph{Robot}.
+    \item[{Wizard task [T]:}] Tells which task is solved in a specific observation.
+    \item[{Condition [C]:}] Encodes whether the participant is in the verbal or non-verbal condition.
+    \item[{Order [O]:}] tells whether the tasks were be solved in normal or alternative order.
+    \item[{Participant Id [Pid]:}] Numerically identifies the participant.
+\end{description}
+The resulting 16 dimensional set of observations of human interactions with a \gls{smart environment} is the\newdefgls{addressing corpus} that is used in the following analyses.
+
+\subsection{Predictability of Addressee}\label{sec:addressee-analysis}
+
+In this chapter, I want to find out how \naive{} people narrow down the \gls{addressee} of their communicative actions.
+With the newly generated corpus of addressing-behaviour observations (\gls{addressing corpus}), I can perform this investigation.
+The \gls{addressee} in each observation in this corpus is encoded in the \emph{Addressee final reduced}-variable.
+This is the dependent variable that needs to be predicted.
+Other variables encode observable behaviour of the participants or information that is not part of the displayed behaviour.
+Both types of information can correlate with the choice of addressed entities.
+In the following sections, I investigate the connections between the variables of the \gls{addressing corpus} with a special focus on \emph{Addressee final reduced}.
+
+\subsubsection{Correlations between Variables}
+
+For a better understanding of the \gls{addressing corpus}, I test the variables for statistical independence.
+To this end---for each combination of two variables---a contingency table is created. 
+Applying the null hypothesis that the rows and columns of the table are independent, the variables are tested for independence and a level of significance is calculated.
+The significance tests are performed using \chisq{} test with Monte Carlo simulation\footnote{using \code{chisq.test} from the \code{stats} package (v3.5.1) in R~\cite{stats} with \inidata{addr.info}{chi.square.replicates} replicates.}.
+The Monte Carlo simulation is performed to account for small expected cell counts for some variable combinations.
+The resulting p-values are binned into intervals and visualized in \cref{fig:study-addressees-chisq}.
+\begin{figure}[htb]
+    \centering
+    \input{data/chisq_all.tex}
+    \caption[Association of addressing variables.]{\label{fig:study-addressees-chisq}
+    The p-values obtained from \chisq{} test with Monte Carlo simulation and \inidata{addr.info}{chi.square.replicates} replicates, binned into intervals.
+    Small p-values (blue and white colours) for a combination of variables suggest that there is a correlation between them. 
+    The variables are sorted and abbreviated as presented in \cref{sec:addressee-coorpus-content}.
+    %The abbreviations represent \emph{Addressee final reduced [Ar]}, \emph{Focus of attention reduced [Fr]}, \emph{Addressee equals focus [Aef]}, \emph{Expression reduced [Er]}, \emph{Method [M]}, \emph{Method specific reduced [Msr]}, \emph{Speech form of address [Sf]}, \emph{Speech politeness [Sp]}, \emph{Speech type of sentence reduced [Str]}, \emph{Speech phrasing [Sph]}, \emph{Speech specific reduced [Ssr]}, \emph{Wizard \gls{addressee} [Aw]}, \emph{Wizard task [T]}, \emph{Condition [C]}, \emph{Order [O]}, and \emph{Participant Id [Pid]}.
+}
+\end{figure}
+To better understand the impact of correlations, I additionally examine the effect sizes (association) between the variables.
+To this end \cramv{}\footnote{Cram\'er's V with bias correction (\cramv) is used to prevent overestimation.} is visualized in \cref{fig:study-addressees-cramer}.
+\begin{figure}[htb]
+    \centering
+    \input{data/cramer_all.tex}
+    \caption[\cramv{} for all combinations of variables.]{\label{fig:study-addressees-cramer}
+    The \cramv{} for each combination of variables in the \gls{addressing corpus}.
+    High values (red) represent high association (strong effect size), low values (blue) represent low association (weak effect size).
+    The matrix is symmetric and has a value of 1 on the diagonal as \(\tilde{V}(A,B) = \tilde{V}(B,A)\) and \(\tilde{V}(A,A) = 1\).
+    The variables are sorted and abbreviated as presented in \cref{sec:addressee-coorpus-content}.
+    }
+\end{figure}
+The following observations can be made from correlations and effect sizes between the variables:
+\begin{description}
+    \item[{Addressee final reduced [Ar]:}] The dependent variable shows correlations with most other variables in the corpus.
+    The only exceptions are \emph{Order [O]} and \emph{Expression reduced [Er]}.
+    The strongest effect size can be found in combination with \emph{Wizard \gls{addressee} [Aw]} and \emph{Focus of attention reduced [Fr]}.
+    Furthermore, \emph{Wizard task [T]} shows a considerable effect size.
+    This confirms that the \gls{wizard} and annotators recognize the participants' \gls{addressee} in a similar way and that the task at hand has an influence on the \gls{addressee}---as expected in the study design.
+    The \emph{Participant-Id [Pid]} is a strong cue for the recognition of the addressed entity too, showing that participants had different preferences.
+    Furthermore, the strong correlations and effect sizes with \emph{Method [M]} and the speech related variables \emph{[Sf, Sp, Str, Sph, Ssr]} show that these can be used as predictors too.
+    \item[{Focus of attention reduced [Fr]:}] This shows correlations and effect sizes that are similar to \emph{Addressee final reduced [Ar]}.
+    This observation supports the expectation that they are strongly correlated.
+    \item[{Addressee equals focus [Aef]:}] Knowing this value together with the participants' focus of attention is informative for \gls{addressee} inference.
+    However, it depends on the \gls{addressee} and therefore can not be directly observed.
+    The correlations with \emph{Focus of attention reduced [Fr]} and \emph{Participant id [Pid]} indicate that whether an addressed entity is looked at strongly depends on the entities involved in an interaction.
+    The independence between \emph{C} and \emph{Aef} is in disagreement with the results in the initial evaluation~\cite{Richter2016}.
+    This has mainly two reasons.
+    (1) The original analysis was done based on a reduced set of \glspl{addressee} (similar to \emph{Ar}).
+    (2) The automatic corpus creation process \ref{sec:ch.address.sec.generation} additionally produces not exactly the same observations as the manually annotated observations~\cite{Richter2016}.
+    \item[{Method \& Speech [Msr, Sf, Sp, Str, Sph, Ssr]:}] All the method and speech related variables show similar correlations. 
+    Nevertheless, differences in correlations and effect sizes are still present.
+    Furthermore, a compound effect from the choice of the modality is possible.
+    This suspicion is confirmed by the correlations between \emph{Method specific reduced [Msr]}---which encodes gestures---and the speech specific variables.
+    Nevertheless, as the effect sizes between these variables and the \gls{addressee} vary, they still can provide information that is not encoded in the chosen modality.
+    A short inspection by only considering the verbal part of the dataset shows that the speech based variables still strongly correlate with \gls{addressee} after removing the influence of \emph{Method} (not visualized).
+    This means that the type of gesture, the chosen sentence, the politeness, and the form of addressing all inform about which entity is addressed.
+    \item[{Participant Id [Pid]:}] correlates with all variables except \emph{Wizard task [T]}.
+    The non-correlation with the task and the strong correlations with \emph{Order} and \emph{Condition} result from the study design.
+    The other correlations suggest that the participant's preferences can have a strong influence on the interaction.
+    \item[{Other Variables [Aw, T, C, O]:}] The variables \emph{Wizard \gls{addressee} [Aw]}, \emph{Wizard task [T]}, \emph{Condition [C]}, and \emph{Order [O]} are inherent to the study and can not normally be used directly for \gls{addressee} recognition.
+    Nevertheless, they show some interesting correlations.
+    The strong correlations of \emph{Wizard Task} show that the task at hand is important for the way participants approach an interaction.
+    The correlation of \emph{Condition [C]} with the \gls{addressee} shows that the participants adapt to the capabilities of their environment.
+\end{description}
+To sum up, this analysis shows that there are multiple cues pointing at the \gls{addressee} of \naive{} users communication attempts in a \gls{smart environment}.
+While the task at hand influences which entity is addressed, the participant's focus of attention and chosen modality are strong hints for its recognition.
+Furthermore, multiple other cues that can be considered to further narrow down the \gls{addressee}.
+
+\subsubsection{Addressee and Attention}\label{sec:addressee-equals-attention}
+
+In the previous section, a high of correlation and the strongest effect size can be seen between the \gls{addressee} and focus of attention.
+In this section, I further investigate the distributions of these variables.
+The frequencies of \emph{Addressee final reduced} and \emph{Focus of attention reduced} are visualized in \cref{fig:study-addressee-addressees}.
+\begin{figure}[tbh]
+  \centering
+  \input{data/countsplot2.tex}
+    \caption[Addressee usage in the addressing corpus.]{\label{fig:study-addressee-addressees} 
+    The reduced set of entities, as they can be observed in the \gls{addressing corpus}, for the variables \emph{Addressee final reduced} \emph{[Addressed]}  and \emph{Focus of attention reduced} \emph{[Attention]}.
+    Addressees are distributed on the x-axis (\emph{Unspecific [U]}, \emph{Parts of the apartment [Ap]}, \emph{Robot [R]}, \emph{Light in the hallway [LH]}, and \emph{Floor lamp [LF]}).
+    }
+\end{figure}
+It can be seen that the entities are not addressed equally often. 
+Although, \emph{Parts of the apartment [AP]} combines different \glspl{addressee}, in more than \(\inidata{addr.info}{addressee.most.frequent.prop}\%\) of the interactions, the addressed entity is \emph{Unspecific [U]}, \emph{Robot [R]}, \emph{Light in the hallway \(L_H\) [LH]}, or \emph{Floor lamp \(L_F\) [LF]}.
+Additionally, in \cref{fig:study-addressees-in-tasks} it can be seen that the distribution of \glspl{addressee} is different for the task sets 1--2, 3--6, and 7.
+We \cite{Bernotat2016} suggest that there are multiple reasons for this distribution.
+\begin{enumerate*}[label=(\roman*)]
+    \item The study design requires the participants to control embodied entities in tasks 1, 2, and 7.
+    In such cases people tend to directly address the entity that needs to be controlled, which results in the high proportion of addressed \emph{Light in the hallway} and \emph{Floor lamp}.
+    Furthermore,
+    \item when participants do not address the controlled \gls{device} directly they address something that resembles a control interface (e.g. screens and switches) or an entity that may be able to control the \gls{device} for them (like the robot).
+    The same applies to cases where no embodiment for a functionality can be spotted as in task 3.
+    \item If the participants need to retrieve information (as in tasks 4--6) they prefer addressing an entity that may be able to provide information.
+    One option in such cases is the \gls{robot}.
+    However, especially in the non-verbal condition, where the answers are presented on the screens, people often interacted with the screens.
+\end{enumerate*}
+Additionally, the \gls{addressee} is often \emph{Unspecific [U]} in the tasks 3--6.
+The participants addressed something, often verbally, but it is hard to tell what because they spoke \emph{into the room} or \emph{towards the ceiling}.
+This suggests that they addressed the \gls{apartment} as a single entity or a non-embodied \emph{agent}, which they expected to exist and be able to control the \gls{apartment}.
+
+In addition to the distribution of addressed entities, \cref{fig:study-addressee-addressees} shows how often they were the participant's focus of attention during interactions.
+The similarity of the distributions confirms the observed correlation between the variables.
+Calculating the overall proportion of observations with matching \gls{addressee} and attention (\(\inidata{addr.info}{addressee.equals.attention.p}\%\)) further verifies this observation.
+This is in sync with the literature, as people look at their counterpart when they interact (\cref{sec.rw.hi}).
+The equality between \gls{addressee} and attention is represented by the variable \emph{Addressee equals focus [Aef]} in the corpus.
+A visualization of the distributions of \emph{Addressee equals focus [Aef]} for different \emph{Focus of attention reduced [Fr]} with the corresponding confidence intervals can be found in \cref{fig:study-addressee-equal-foa}.
+\begin{figure}[tbh]
+    \centering
+    \begin{subfigure}[t]{0.49\textwidth}
+        \input{data/adr_by_task.tex}
+        \caption{Addressees in tasks.}
+        \label{fig:study-addressees-in-tasks}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.49\textwidth}
+        \input{data/equality_from_foa.tex}
+        \caption{Match in focus of attention.}
+        \label{fig:study-addressee-equal-foa}
+    \end{subfigure}
+    \caption[Addressees in tasks and \emph{Aef} in \emph{Foa}.]{\label{fig:study-addressee-equal-freq} 
+    (a) shows proportions of \emph{Addressee final} for different \emph{Wizard task}.
+    The colour codes for the different entities can be found in \ref{fig:study-addressee-equal-foa}.
+    (b) shows the probability of matching \emph{Addressee final} and \emph{Focus of attention} given \emph{Focus of attention reduced} for the \glspl{addressee} \emph{Unspecific [U]}, \emph{Parts of the apartment [Ap]}, \emph{Robot [R]}, \emph{Light in the hallway [LH]}, and \emph{Floor lamp [LF]}.
+    The bars are augmented with 95\% confidence intervals.
+    }
+\end{figure}
+This visualization suggests that the \gls{addressee} in the observed interactions is predominately equal to the focus of attention for all types of \glspl{addressee}.
+A difference can be found between interactions with \emph{Robot}, and \emph{Unspecific} or \emph{Parts of the apartment}.
+The \gls{robot} is always addressed when looked at in this corpus.
+The difference may be caused by the diverse embodiment of the anthropomorphic \gls{robot} and the \glspl{device}, switches, and screens that are combined in \emph{Parts of the apartment}.
+These different embodiments result in differently strong social reactions.
+The lower equality of \gls{addressee} and attention for \emph{Unspecific} may additionally be caused by the inherent difficulty of recognizing \emph{Unspecific} as \gls{addressee} or focus of attention.
+Differences between the other entities are within the confidence interval.
+
+\subsubsection{Summary}
+
+In this section I investigated the interdependences of the variables of the \gls{addressing corpus} showing observations of human interactions with changing entities in a \gls{smart environment}.
+I have shown that focus of attention not only correlates with \gls{addressee} with a strong effect size but is predominantly equal to the \gls{addressee} in many interactions.
+Knowledge about peoples attention is therefore informative of their \gls{addressee}.
+Another information that can indicate the \gls{addressee} is the modality (\emph{Method [M]}) that the person uses to conduct this interaction.
+Naturally, the content of speech---if applied---informs about the interaction and therefore the \gls{addressee} too.
+On the one hand, the \gls{addressee} can directly be stated.
+On the other hand, properties like the type of the used sentence, the politeness, or the form of address can narrow the amount of probable \glspl{addressee}.
+When people interact using gestures, the type of gesture can be informative---to a small amount.
+However, it can not be assumed that the variables of the corpus independently contribute to \gls{addressee} recognition.
+Naturally, the \emph{Method} that is applied by a participant always limits the options for method-specific---speech and gesture related---variables.
+Furthermore, dependencies between variables can be caused by deeper relations rooted in interaction or other properties of the interaction that are not encoded in this corpus.
+How the variables can be utilized for \gls{addressee} recognition is investigated in the following section.
+
+\section{Addressee Modelling \& Recognition}\label{sec:addressee-model}
+
+In this section, I evaluate the recognizability of the \gls{addressee} in interactions of the \gls{addressing corpus}.
+To this end, I create models for \gls{addressee} recognition and evaluate them using subsets of the corpus variables.
+The chosen subsets represent different capabilities of an automatic recognizer for the variables.
+Because of the high dimensionality of \emph{Addressee final} and \emph{Focus of attention}, their reduced versions \emph{Addressee final reduced (Ar)} and \emph{Focus of attention reduced (Fr)} are used in this section.
+
+\subsection{Modelling Addressing Behaviour}
+
+I use three different \gls{bayesiannetwork} structures to evaluate the recognizability and deepen the understanding of the interdependencies of the corpus variables.
+\Glspl{bayesiannetwork} are especially suitable for this purpose.
+On the one hand, their structure can be used to impose or interpret the reasoning behind recognition results.
+On the other hand, they can cope with missing or uncertain input data and, therefore, be used in changing environments.
+
+The most simple network is based on the observation that \gls{addressee} and attention are strongly correlated.
+In this baseline model (\emph{BF}), \emph{Focus of attention reduced [Fr]} is conditionally dependent on \emph{Addressee final reduced [Ar]} (\(Ar \rightarrow Fr\)).
+A graphical representation of the model can be seen in \cref{fig:study-addressee-model-bn-baseline}.
+\begin{figure}[tbh]
+    \centering
+    \def\svgwidth{0.2\textwidth}
+    {\footnotesize
+    \input{generated/bn-baseline.pdf_tex}
+    }
+    \caption[Baseline model for addressee recognition.]{\label{fig:study-addressee-model-bn-baseline} 
+    Simple \gls{bayesiannetwork} structure (\emph{BF}) that uses only \emph{Fr} to infer \gls{addressee}.
+    The nodes depict variables in the corpus, the arrows show dependency relationships.
+    The colour of the arrow (blue) matches the network colour in further analyses.
+    The output variable \emph{Ar} is highlighted in purple.
+    }
+\end{figure}
+Because of the distribution of \glspl{addressee} and the high probability of equality between \gls{addressee} and focus, it can be expected that this network always returns the participants' focus of attention as the most probable \gls{addressee}.
+If \emph{Focus of attention reduced [Fr]} can not be observed, the resulting \gls{addressee} is the overall most probable \gls{addressee}.
+As can be seen in \cref{fig:study-addressee-addressees}, this is \emph{Unspecific [U]}.
+
+For the second and third \gls{bayesiannetwork}, I use all variables of the corpus.
+Based on expert knowledge about the study and the observations made during the analysis of correlations (\cref{sec:addressee-analysis}), I manually craft the structure of the \emph{BN} network.
+A detailed reasoning for the chosen structure is presented in \cref{app:bm-reasoning}.
+The resulting structure (shown in \cref{fig:study-addresse-model-bn-manual}) is intuitive and in agreement with the observed correlations (see \cref{sec:addressee-analysis}).
+Not all correlations are represented directly in this network as this would create circular dependencies within the graph and amplify the effect of correlations within the input variables---e.g. between \emph{Method} and the speech variables.
+However, other plausible configurations can be created.
+
+\begin{figure}[tbh]
+  \begin{subfigure}[b]{\textwidth}
+    \centering
+    \def\svgwidth{1.0\textwidth}
+    {\footnotesize
+    \input{generated/bn-manual.pdf_tex}
+    }
+    \caption[\emph{Hand-crafted} Bayesian Network-structure for addressee recognition.]{\label{fig:study-addresse-model-bn-manual}
+    \gls{bayesiannetwork} structure (\emph{BM}) created based on analyses in \cref{sec:addressee-analysis}.
+    }
+  \end{subfigure}
+  \begin{subfigure}[b]{\textwidth}
+    \centering
+    \def\svgwidth{1.0\textwidth}
+    {\footnotesize
+    \input{generated/bn-auto.pdf_tex}
+    }
+    \caption[Auto-generated Bayesian Network-structure for addressee recognition.]{\label{fig:study-addresse-model-bn-auto} 
+    \gls{bayesiannetwork} structure automatically extracted from corpus data (\emph{BA}).
+    }
+  \end{subfigure}
+    \caption[Addressee recognition model \emph{Manual} \& \emph{Auto}.]{\label{fig:study-addresse-model-bn-manauto} 
+    Manual (\emph{BM}) and auto-generated (\emph{BA}) \gls{bayesiannetwork} structures.
+    The nodes depict variables in the corpus, the arrows show dependency relationships.
+    The colours of the arrows match the network colour in further analyses (green for \emph{BM}, red for \emph{BA}).
+    The node positions are fixed for better comparability between the networks.
+    Node styles depict their type:
+    The output variable \emph{Ar} is purple, \emph{Speech} related nodes orange, \emph{Visual} nodes yellow, and non-observable nodes are gray with dashed outlines.
+    }
+\end{figure}
+
+The third network structure---\emph{BA}---is automatically extracted from the corpus data using the a \emph{Hill Climbing} approach\footnote{Using \code{bnlearn::hc} from the \code{bnlearn} package (v4.4) in R~\cite{bnlearn} with 1000 restarts and 1000 perturbations.}.
+The structure of \emph{BA} can be seen in \cref{fig:study-addresse-model-bn-auto}.
+It is interesting to examine the automatically extracted structure and compare it to the manually created model and intuition.
+Both networks have a common core structure: \[Aef \rightarrow Fr \leftarrow Ar \rightarrow Aw\]
+Furthermore, they both show the connection between modality and gesture (\(M \rightarrow Msr\)).
+This suggests that these connections are characteristic for the scenario and data used in this chapter.
+The observed strong interdependence between the speech related variables can be found in the auto generated network too, although in a different structure.
+In \(BA\) the correlation between \gls{addressee} and the speech related variables is represented by \emph{Sph} \(\rightarrow\) \emph{Ar}.
+The only speech related information considered for \gls{addressee} recognition is, therefore, whether the participants use full sentences, single words, or no verbal interaction at all.
+When all input variables are observed, the \gls{addressee} is inferred from \emph{\{Aef, Fr, Aw, Sph\}} only.
+\emph{Method} only contributes when \emph{Str} and \emph{Sph} are unknown.
+Furthermore, the connection \[Msr \leftarrow M \rightarrow Str \rightarrow Sph \rightarrow Ar\] suggests that the only information in method that hints at the \gls{addressee} is whether speech is used or not.
+Similarly, \[C \leftarrow Pid \leftarrow O \leftarrow Sf \leftarrow Sph \rightarrow Ar\] are chained in a way that an observation can provide information for \gls{addressee} recognition only if all other variables between it and \emph{Ar} are unknown.
+The participants' expressions (\emph{Er}) are independent from other observations in the corpus according to \emph{BA}.
+
+For comparison, I additionally create a \gls{randomforest}\footnote{Using \code{randomForest} package (v4.6-14)~\cite{randomForest} in combination with the \code{mlr} package (v2.13)~\cite{mlr} in R.} based classification model---\emph{RF}.
+
+\subsection{Evaluation Procedure}\label{sec:addressee-recognizability}
+
+For the analysis of recognizability of \gls{addressee} \emph{Addressee final reduced [Ar]} is used as the target variable.
+I compile four sets of input variables to represent different capabilities of the underlying system.
+The first set \emph{Speech} represents data that can be deduced when auditory sensor data is available.
+It contains the speech specific variables \emph{Sf}, \emph{Sp}, \emph{Str}, and \emph{Ssr}.
+The second set \emph{Visual} represents data that can be deduced visually.
+It contains the variables \emph{Fr}, \emph{M}, \emph{Msr}, \emph{Pid}, and \emph{Er}.
+By combining \emph{Speech} and \emph{Visual}, the \emph{Observable} set is created.
+It used data that can be observed visually or auditory.
+The final set \emph{All} uses all information available from the corpus.
+These sets are used to evaluate the proposed models.
+
+The evaluation is based on a leave-one-out \gls{cv}.
+%The \gls{bayesiannetwork} and \gls{randomforest} based models need slightly different approaches during the training phase.
+%Because of the generative nature of \glspl{bayesiannetwork}, the networks are always trained using the full set of variables (\emph{All}).
+%The \emph{RF} model is trained and tested with the four variable sets separately as it does not consider variables that cannot be observed during recognition.
+The parameter tuning for the \emph{RF} model is performed in each iteration of the \gls{cv}, within the training set.
+To this end, an additional sub-sampling with 100 iterations is performed in the training of the \emph{RF} model to optimize the parameters \code{ntree} \(\in [1,2000]\), \code{mtry} \(\in [1,numVar]\), \code{nodesize} \(\in [1,100]\), and \code{maxnodes} \(\in [2,100]\)---with \emph{numVar} being the amount of input variables.
+The predictions of \emph{Addressee final reduced} for each iteration of the \gls{cv} are compared to their ground truth annotations to estimate the performance of the models.
+
+\subsection{Results \& Discussion}
+
+Using the predictions of the created models (\emph{BF}, \emph{BM}, \emph{BA}, and \emph{RF}) with the presented variable sets (conditions \emph{Speech}, \emph{Visual}, \emph{Observable}, and \emph{All}) in the \gls{cv}, the model performances with corresponding confidence intervals can be calculated.
+For this evaluation a confidence interval of 95\% is used.
+I use the following notation: \(BN_A\) refers to the \emph{BN} model in the \emph{All} condition.
+The other conditions are abbreviated with \emph{S} (\emph{Speech}), \emph{V} (\emph{Visual}), and \emph{O} (\emph{Observable}).
+The results can be seen in \cref{fig:study-addressee-bn-cv}.
+
+\begin{figure}[tbh]
+  \centering
+  \input{data/cv.tex}
+    \caption[One vs. all cross validation results.]{\label{fig:study-addressee-bn-cv} 
+    Classification performance of the \gls{bayesiannetwork} based \emph{BF} (focus only/baseline), \emph{BM} (manual), \emph{BA} (auto generated) models, and the \gls{randomforest} based classifier \emph{RF}.
+    The performance is measured using \gls{cv} with the four sets of input variables (\emph{Speech}, \emph{Visual}, \emph{Observable}, and \emph{All}).   Confidence intervals (95\%) are shown at each bar.
+    %In the \emph{Speech} condition \emph{BF} performs worse than the other \glspl{bayesiannetwork}.
+    %In the \emph{All} condition \emph{BM} and \emph{RF} are better than \emph{BF}, \emph{BA} is not.
+    }
+\end{figure}
+
+In the \emph{Speech} condition, \emph{BF} performs worse than the other \glspl{bayesiannetwork} and \emph{BM} performs better than all other models.
+In the \emph{All} condition, \emph{BM} and \emph{RF} perform better than \emph{BF}.
+When using the \emph{Visual} or \emph{Observable} sets of variables, no differences in the recognition results of different models can be found.
+When only \emph{Speech} variables are observed, all models perform worse than in the other configurations.
+The \emph{BM} and \emph{RF} networks show better results in \emph{All} than in the other conditions.
+
+This evaluation reveals which properties of the investigated interaction are especially relevant for \gls{addressee} recognition.
+The strong increase in recognition quality that is introduced with the variables in the \emph{Visual} condition shows how informative vision is for such a task.
+There is no difference between the results in \emph{Visual} and \emph{Observable}---neither within the conditions nor in between.
+This entails, that when \emph{Visual} information is known \emph{Speech} does not provide enough information to strongly enhance the recognition model in this scenario.
+Furthermore, \emph{BF} produces results that are as good as the other models in \emph{Visual} and \emph{Observable} and can compete with \emph{BA} in the \emph{All} condition.
+Therefore, it can be assumed that the results in these configurations are primarily based on the values of \emph{Focus of attention reduced}.
+The interaction between the results of the \glspl{bayesiannetwork} in \emph{All} and \emph{Speech} reveals an interesting difference between the models.
+On the one hand, \emph{BM} performs better than \emph{BF} in both the \emph{Speech} and \emph{All} condition.
+On the other hand, \emph{BM} is better than \emph{BA} in the \emph{Speech} condition but not in the \emph{All} condition.
+This means that there is an effect of the \emph{Speech} variables on \(BM\) which is not strong enough to outperform \(BA\) in the \emph{All} condition but sufficient in the \emph{Speech} condition. 
+This difference indicates that \(BM\) can draw additional information compared to \(BA\) from the \emph{Speech} variables.
+As these differences in the results can already be observed in the \emph{Speech} condition, it is probable that the interaction between the \gls{addressee} and the \emph{Speech} variables produces this difference.
+However, it is hard to say how this enhancement is achieved without an in depth analysis of the structures of the networks, the resulting conditional independences given the sets of variables, and the influences of changes in the structure.
+The results of the \gls{randomforest} model do not strongly differ from the results of \(BA\).
+This means that for the task of \gls{addressee} recognition, both automatically tuned models are equally good.
+Nevertheless, the \gls{bayesiannetwork} approach can produce better results when created by a domain expert as in \(BM\).
+The low overall performance of the \gls{addressee} recognition models in the \emph{Speech} condition confirms the importance of visual information for this task.
+Nevertheless, the \gls{bayesiannetwork} models are better than the baseline (\(BF\)) and can infer the \gls{addressee} from speech information alone in 34\%--60\% of the observations.
+
+\section{Summary}
+
+In this chapter I investigated \Cref{hyp.address}\rqnote{hyp.address}{\hypaddress}.
+To this end, I presented a study and a corpus of unconstrained human interactions with entities in a \gls{smart home}.
+The corpus was especially suitable because it contained interactions with all types of non-living entities including a \gls{robot} and did not limit the way in which participants may approach the interaction.
+From this data, I extracted an \gls{addressing corpus} with 307 observations of successful interactions, consisting of sixteen categorical variables.
+An in depth analysis of the mutual covariances between the variables of the corpus, showed that the participants' focus of attention is the most informative cue for \gls{addressee} recognition.
+This is followed by the used modality and the content of the speech---when speech is used.
+Subsequently, an inspection of the values of \gls{addressee} and focus of attention revealed that people predominately focus the addressed entity.
+This was observed for all types of \glspl{addressee} but especially true for interactions with the \gls{robot}.
+Using the gained knowledge, I manually created a \gls{bayesiannetwork} structure for \gls{addressee} recognition.
+I evaluated the model's recognition performance and compared it with a model based only on focus of attention and two data-driven recognition models.
+The evaluation was performed on four sets of input variables which represent different levels of capabilities of a \gls{smart environment}.
+A manually created \gls{bayesiannetwork} structure performed equally well or better than the other models for all presented combinations of input variables.
+The performance of the automatically learnt models was always on par.
+While the content of speech informed about the \gls{addressee} of an interaction, its effect was not strong enough to create differences when focus of attention was likewise observed.
+A recognition performance, that is better than a model that always returns the focus of attention as \gls{addressee}, only was achieved with the manually created \gls{bayesiannetwork} structure or \gls{randomforest} based approach when using all available variables.
+
+The results of this chapter provide some answers to the underlying research question (\Cref{hyp.address}).
+People that were not trained to interact with a specific \gls{smart environment} construct interactions that emerge from their own background and previous experiences.
+In doing so, they exhibit a set of multi-modal cues that can be used to infer who is addressed.
+A human observer naturally interprets these cues and distinguishes the \glspl{addressee}.
+However, to provide an artificial system with such a capability an in-depth understanding of these cues and their interaction is needed.
+In this chapter I have shown that visual observation of inhabitants and especially their focus of attention is an important and strong cue for \gls{addressee} recognition.
+Whether verbal, gestural or touch interaction with lamps, switches, \glspl{robot}, or the \gls{smart environment} as an integrated, \gls{interactive entity}---the attention often can be used to infer who is addressed.
+If the environment can not observe a person's attention---e.g. because of blind spots, occlusions or privacy concerns---it is still, to some degree, possible to recognize the \gls{addressee} using only speech information.
+Furthermore, if the amount of fully annotated data for learning is small, as in the presented corpus, a recognition model that is manually tuned by an expert in human interaction outperforms automatically learnt models.
+This is a reasonable result as an expert can provide the model with background knowledge that cannot be extracted from scarce data.
+
+%The corpus that was investigated in this chapter, forced participants to construct their own interaction metaphors for daily tasks in a \gls{smart home}.
+%This allowed to observe diverse interactions from a \gls{hai} point of view.
+%Nevertheless, the participants of the study were all students of a german university and had a uniform background.
+%Observations of people from different age-groups or with different cultural backgrounds have the possibility to enrich the results and extracted model.

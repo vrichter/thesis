@@ -1,0 +1,842 @@
+/meka/addressee-meka/scatter/Viewing_Person0_Meka/	gaze/addressee	/meka/dialogact/dialogActInformer/	/meka/eval/mouth/dialogact/	meka-addressee	/videorecorder/open/	mouth/addressee	start_time	/videorecorder/start/	/videorecorder/stop/	robot-speaking	/meka/addressee-meka/scatter/Person0_Mouth/	filename	/meka/eval/gaze/dialogact/	trial	annotation_modifier	/meka/eval/all/dialogact/	/meka/addressee-meka/scatter/Addressee/	date	/videorecorder/close/	/meka/rejected/dialogact/dialogActInformer/
+Yes		#<DIALOG-ACT {1010EE17B3}>	negation				7358				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	negation	1	shiftedAnnotationsExplicit	negation	Meka	2016-02-26_13-11-47		
+Yes					ok		9238				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101130C2A3}>
+No			confirmation				15963				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10113108B3}>
+No							21685				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10113153F3}>
+No			ok				23586				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011319C93}>
+Yes							29409				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101131E9C3}>
+Yes		#<DIALOG-ACT {1010EE61D3}>	confirmation				29955				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+Yes							35425				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10113233B3}>
+Yes							35958				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011327C03}>
+Yes		#<DIALOG-ACT {1010EEAAC3}>	confirmation				41335				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010EEF303}>	dataRequest	y			47397				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	dataRequest	1	shiftedAnnotationsExplicit	dataRequest	Meka	2016-02-26_13-11-47		
+Yes							51433				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101132C203}>
+Yes							52376				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	negation	1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011330A83}>
+Yes		#<DIALOG-ACT {1010EF4113}>	ok				54416				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+No	n			n		n	56014			y	Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	lightOn	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011335353}>
+Yes		#<DIALOG-ACT {1010EFDAA3}>	timeRequest	y			57774				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	timeRequest	1	shiftedAnnotationsExplicit	timeRequest	Meka	2016-02-26_13-11-47		
+No							59584				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101133A103}>
+No							59962				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101133EBA3}>
+No							61656				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011343383}>
+No			confirmation				63732				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011347983}>
+No							66226				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101134C203}>
+Yes		#<DIALOG-ACT {1010F02753}>	packetRequest	y			70472				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	packetRequest	1	shiftedAnnotationsExplicit	packetRequest	Meka	2016-02-26_13-11-47		
+Yes	y			n		n	72696			y	Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	packetRequest	1	shiftedAnnotationsExplicit	packetRequest	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011350D93}>
+Yes							74640				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011355B63}>
+Yes							84467				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101135A3F3}>
+Yes	y	#<DIALOG-ACT {1010F074E3}>	experimentsRequest	y			88073				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	experimentsRequest	1	shiftedAnnotationsExplicit	experimentsRequest	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F0C2C3}>	negation				90414				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	negation	1	shiftedAnnotationsExplicit	negation	Meka	2016-02-26_13-11-47		
+Yes	y			n		n	93606			y	Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	lightOff	1	shiftedAnnotationsExplicit	lightOff	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101135EF43}>
+Yes							94678				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	negation	1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101136BC83}>
+No							96514				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011370563}>
+Yes							97525				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	negation	1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011375023}>
+Yes		#<DIALOG-ACT {1010F110B3}>	confirmation				111376				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F158C3}>	ok				120825				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F1A583}>	ok				124796				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F23CD3}>	timeRequest	y		y	128573				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	timeRequest	1	shiftedAnnotationsExplicit	timeRequest	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F28983}>	negation				130297				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	negation	1	shiftedAnnotationsExplicit	negation	Meka	2016-02-26_13-11-47		
+Yes							132104				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10113798B3}>
+Yes		#<DIALOG-ACT {1010F2D1E3}>	confirmation				138534				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+Yes	y			y			141063				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	dataRequest	1	shiftedAnnotationsExplicit	dataRequest	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101137DF03}>
+No				y-falsche person		n	147241				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	lightOn	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10113831A3}>
+Yes				y-falsche person		n	148093				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011387ED3}>
+Yes		#<DIALOG-ACT {1010F31CD3}>	confirmation				150832				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+Yes							156792				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101138C743}>
+No							164131				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10113912B3}>
+Yes							171138				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011395AE3}>
+Yes		#<DIALOG-ACT {1010F36793}>	ok				173382				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes							174076				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101139A103}>
+Yes		#<DIALOG-ACT {1010F3B353}>	lightOn	y			180528				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	lightOn	1	shiftedAnnotationsExplicit	lightOn	Meka	2016-02-26_13-11-47		
+No							182476				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101139E953}>
+No							184957				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10113A2F43}>
+No							186533				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10113A7543}>
+No			negation				187555				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10113ABDB3}>
+Yes	y	#<DIALOG-ACT {1010F40043}>	lightOn	y			194464				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	lightOn	1	shiftedAnnotationsExplicit	lightOn	Meka	2016-02-26_13-11-47		
+Yes	y	#<DIALOG-ACT {1010F44D03}>	ok	y			195122				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F49753}>	ok				196723				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+No							200473				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10113B0683}>
+Yes		#<DIALOG-ACT {1010F4DCB3}>	ok				201546				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes	y	#<DIALOG-ACT {1010F52293}>	experimentsRequest	y			211394				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	experimentsRequest	1	shiftedAnnotationsExplicit	experimentsRequest	Meka	2016-02-26_13-11-47		
+No							213552				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10113B4F33}>
+No			ok				216222				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011421A13}>
+No							217816				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011426733}>
+Yes							219690				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101142B183}>
+No							220678				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101142FC43}>
+No							221491				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114344F3}>
+No							224544				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011438DB3}>
+No							225640				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101143D633}>
+No							226627				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011441EB3}>
+No			negation				229577				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011446743}>
+No							232044				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114533B3}>
+No			ok				233822				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011457C23}>
+Yes		#<DIALOG-ACT {1010F57093}>	confirmation				234731				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F5B963}>	confirmation				237105				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F60173}>	confirmation				238272				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F64973}>	confirmation				242160				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+Yes	y	#<DIALOG-ACT {1010F691B3}>	lightOn	y			248000				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	lightOn	1	shiftedAnnotationsExplicit	lightOn	Meka	2016-02-26_13-11-47		
+No			lightOn	n - falsche person		n	253734			y	Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	lightOn	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101145C493}>
+No			ok				256864				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114611F3}>
+Yes	y	#<DIALOG-ACT {1010F6DE93}>	lightOn	y			258452				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	lightOn	1	shiftedAnnotationsExplicit	lightOn	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F72B53}>	ok				261523				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F775D3}>	gardenRequest	y			262728				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	gardenRequest	1	shiftedAnnotationsExplicit	gardenRequest	Meka	2016-02-26_13-11-47		
+Yes							264091				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011465F23}>
+Yes		#<DIALOG-ACT {1010F7C273}>	confirmation				265550				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+No			confirmation				268050				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101146A7B3}>
+No	n			n			278350				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	lightOn	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101146F063}>
+No			lightOn	y			280981				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	lightOn	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011474013}>
+Yes		#<DIALOG-ACT {1010F80B93}>	lightOn	y			285143				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	lightOn	1	shiftedAnnotationsExplicit	lightOn	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F85A93}>	ok	y			286062				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F8A093}>	ok				288825				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes							291033				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011478D93}>
+No			lightOff	y			295449				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	lightOff	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101147D643}>
+Yes							308560				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114825D3}>
+Yes				y - falsche person			310346				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	callRequest	1	shiftedAnnotationsExplicit	callRequest	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011486E43}>
+Yes		#<DIALOG-ACT {1010F8E5F3}>	ok				311883				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F92B83}>	ok				312966				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010F975F3}>	callRequest	y			317272				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	callRequest	1	shiftedAnnotationsExplicit	callRequest	Meka	2016-02-26_13-11-47		
+Yes							319643				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	negation	1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101148B9E3}>
+Yes							320652				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	negation	1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011490293}>
+Yes		#<DIALOG-ACT {1010F9C133}>	confirmation				329721				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+No							330831				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {1011494B43}>
+Yes		#<DIALOG-ACT {1010FA0983}>	ok				331631				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010FA9BD3}>	timeRequest	 y			333006				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	timeRequest	1	shiftedAnnotationsExplicit	timeRequest	Meka	2016-02-26_13-11-47		
+Yes							334731				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114994B3}>
+No			negation				340068				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {101149DD23}>
+Yes	y	#<DIALOG-ACT {1010FAE893}>	packetRequest	y			347035				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	packetRequest	1	shiftedAnnotationsExplicit	packetRequest	Meka	2016-02-26_13-11-47		
+No	y			n		n	349231			y	Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	packetRequest	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114A2613}>
+No							360808				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114A73F3}>
+Yes		#<DIALOG-ACT {1010FB3643}>	confirmation				366048				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+No			ok				366609				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114ABF13}>
+Yes		#<DIALOG-ACT {1010FB7E63}>	callRequest	y			369819				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	callRequest	1	shiftedAnnotationsExplicit	callRequest	Meka	2016-02-26_13-11-47		
+No							372173				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114B0523}>
+No							373208				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114B4DD3}>
+Yes		#<DIALOG-ACT {1010FC1663}>	timeRequest	 y			375463				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	timeRequest	1	shiftedAnnotationsExplicit	timeRequest	Meka	2016-02-26_13-11-47		
+No	y		lightOff	n		n	377520			y	Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	lightOff	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114B96B3}>
+Yes	y	#<DIALOG-ACT {1010FC6303}>	lightOn	y			380490				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	lightOn	1	shiftedAnnotationsExplicit	lightOn	Meka	2016-02-26_13-11-47		
+Yes	y	#<DIALOG-ACT {1010FCB0F3}>	ok	y			381199				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+No	n			n		n	386038			y	Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	lightOff	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114BE403}>
+No							390270				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	negation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114C3183}>
+No							391314				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114C7A43}>
+Yes		#<DIALOG-ACT {1010FCF673}>	ok				397073				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010FD3E33}>	ok				397575				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010FD83D3}>	lightOff	y			399357				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	lightOff	1	shiftedAnnotationsExplicit	lightOff	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010FDD073}>	ok	y			400051				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010FE15F3}>	ok				400490				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010FE5B73}>	negation				407820				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	negation	1	shiftedAnnotationsExplicit	negation	Meka	2016-02-26_13-11-47		
+No			ok				408370				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114CC293}>
+Yes		#<DIALOG-ACT {1010FEA3B3}>	ok				410999				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+No			ok				411708				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114D0863}>
+Yes		#<DIALOG-ACT {1010FEEB93}>	confirmation				413110				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+Yes		#<DIALOG-ACT {1010FF35A3}>	confirmation				418331				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Meka	2016-02-26_13-11-47		
+Yes	y	#<DIALOG-ACT {1010FF7DE3}>	gardenRequest	y			421239				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	gardenRequest	1	shiftedAnnotationsExplicit	gardenRequest	Meka	2016-02-26_13-11-47		
+No			ok				422550				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114D4E53}>
+No			confirmation				425008				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114D96B3}>
+Yes							425689				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	confirmation	1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114DDF33}>
+No			confirmation				428661				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114E27B3}>
+Yes	y 	#<DIALOG-ACT {1010FFCD23}>	lightOn	y 			429584				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	lightOn	1	shiftedAnnotationsExplicit	lightOn	Meka	2016-02-26_13-11-47		
+Yes	y 	#<DIALOG-ACT {10110019C3}>	ok	y 			430269				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	ok	1	shiftedAnnotationsExplicit	ok	Meka	2016-02-26_13-11-47		
+No			confirmation				433739				Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114E7043}>
+No							442499				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	ok	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114F3B93}>
+Yes	y	#<DIALOG-ACT {1011005F63}>	lightOn	n		y	443728			n	Moving	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf	lightOn	1	shiftedAnnotationsExplicit	lightOn	Meka	2016-02-26_13-11-47		
+No							445139				Stable	study1_11_2016-02-26_13-11-47-shiftedAnnotationsExplicit.eaf		1	shiftedAnnotationsExplicit	confirmation	Other	2016-02-26_13-11-47		#<DIALOG-ACT {10114F86D3}>
+Yes							22368				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011BD8863}>
+No			confirmation				25414				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011BDD0C3}>
+No							33158				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011BE1953}>
+No							34046				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011BE64C3}>
+No							35129				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011BEAD03}>
+No	n			n - falsche person		n	41240				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	timeRequest	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011BF4033}>
+No							43030				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011BF8D43}>
+No			negation				43756				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011BFD883}>
+No							51895				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C02113}>
+No							64840				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C06703}>
+Yes							99052				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C0B3B3}>
+Yes		#<DIALOG-ACT {100E7F98D3}>	ok				108042				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+No							119725				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C0FC23}>
+No			negation				120993				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C14483}>
+No							123344				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C18D33}>
+No							123724				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C1D7D3}>
+Yes	y			y- falsch Person		n	125555				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	timeRequest	2	shiftedAnnotationsExactly	timeRequest	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C26BC3}>
+No							133570				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C2B8A3}>
+No							148683				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C2FE93}>
+Yes							150466				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C346F3}>
+No			confirmation				152465				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C390B3}>
+Yes	y 	#<DIALOG-ACT {100EAACD63}>	timeRequest	 y		y	153712				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	timeRequest	2	shiftedAnnotationsExactly	timeRequest	Meka	2016-02-26_13-42-09		
+No			confirmation				155422				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C3D933}>
+No	n negation		lightOn	n		n	159253				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C42203}>
+Yes	n negation	#<DIALOG-ACT {100EAB19E3}>	negation	n		n	160104				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Meka	2016-02-26_13-42-09		
+No							162715				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C471A3}>
+Yes							168976				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C4BA83}>
+Yes	y packetRequest			y			175986				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	packetRequest	2	shiftedAnnotationsExactly	packetRequest	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C50323}>
+Yes	y packetRequest			y			176951				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C54E23}>
+Yes	y packetRequest			y			180415				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	packetRequest	2	shiftedAnnotationsExactly	packetRequest	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C59753}>
+Yes							186533				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C5E503}>
+Yes	y 	#<DIALOG-ACT {100EABAF13}>	timeRequest	y		y	187736				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	timeRequest	2	shiftedAnnotationsExactly	timeRequest	Meka	2016-02-26_13-42-09		
+Yes							189393				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C62B43}>
+Yes	y lightOn	#<DIALOG-ACT {100EABFBB3}>	lightOn	y			192411				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOn	2	shiftedAnnotationsExactly	lightOn	Meka	2016-02-26_13-42-09		
+Yes							193867				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C673A3}>
+Yes	y packetRequest	#<DIALOG-ACT {100EAC48F3}>	packetRequest	y			196114				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	packetRequest	2	shiftedAnnotationsExactly	packetRequest	Meka	2016-02-26_13-42-09		
+Yes	y packetRequest	#<DIALOG-ACT {100EAC98A3}>	ok	y			196631				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+Yes	lightOn y			y			200456				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOn	2	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C6B9D3}>
+Yes	packetRequest y	#<DIALOG-ACT {100EACDE63}>	packetRequest	y			204417				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	packetRequest	2	shiftedAnnotationsExactly	packetRequest	Meka	2016-02-26_13-42-09		
+Yes	y			n		n	206606			y	Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	packetRequest	2	shiftedAnnotationsExactly	packetRequest	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C70763}>
+No							210786				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C75533}>
+No			ok				214454				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C79DA3}>
+Yes		#<DIALOG-ACT {100EAD2E13}>	ok				221331				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+No							227243				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C7E393}>
+Yes							229643				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C82C03}>
+Yes	y-falsche Person gardenRequest			y-falsche Person		n	234244				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	gardenRequest	2	shiftedAnnotationsExactly	gardenRequest	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C874F3}>
+No							242174				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C8C213}>
+No			ok				243512				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C90B93}>
+Yes	lightOff y-falsche Person			y-falsche Person		n	250089				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOff	2	shiftedAnnotationsExactly	lightOff	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C95693}>
+Yes		#<DIALOG-ACT {100EAD7863}>	confirmation				251742				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_13-42-09		
+Yes	y lightOff	#<DIALOG-ACT {100EADC093}>	lightOff	y			254772				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOff	2	shiftedAnnotationsExactly	lightOff	Meka	2016-02-26_13-42-09		
+Yes							256954				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C9A633}>
+No							269287				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011C9EEA3}>
+No			ok				275315				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CA37B3}>
+Yes	dataRequest y	#<DIALOG-ACT {100EAE0D93}>	dataRequest	y		y	278842				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	dataRequest	2	shiftedAnnotationsExactly	dataRequest	Meka	2016-02-26_13-42-09		
+Yes							280741				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CA7DB3}>
+Yes							281162				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CAC653}>
+No							282158				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CB0C93}>
+No			confirmation				282657				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CB5513}>
+Yes		#<DIALOG-ACT {100EAE5B63}>	ok				283110				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+Yes							285355				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CB9D83}>
+Yes	y			n		n	286761			y	Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOn	2	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CBE863}>
+Yes							295601				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CC3623}>
+No							299921				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CC7E93}>
+Yes							309522				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CCC6F3}>
+Yes							310474				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CD0FA3}>
+Yes							314395				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CD5A53}>
+Yes							315094				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CDA103}>
+Yes		#<DIALOG-ACT {100EAEA133}>	ok				316191				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+Yes	y			y		y	317244				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOn	2	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CDE993}>
+Yes							322913				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CE37D3}>
+Yes							324444				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CE8043}>
+Yes							326240				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CEC8B3}>
+No			ok				327481				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CF1153}>
+No							329885				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CF5743}>
+Yes	lightOn n			n - falsche person		n	335465				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOn	2	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CFA243}>
+Yes	y-falsche Person lightOff			y-falsche Person		n	337941				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOff	2	shiftedAnnotationsExactly	lightOff	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011CFF213}>
+Yes							339451				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D041E3}>
+Yes							347812				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D08C93}>
+No							349562				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D0D283}>
+Yes	nameRequest nameRequest y	#<DIALOG-ACT {100EAF3673}>	timeRequest	y		y	351076				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	timeRequest	2	shiftedAnnotationsExactly	nameRequest timeRequest	Meka	2016-02-26_13-42-09		
+Yes							353115				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D11AF3}>
+Yes	lightOn y 	#<DIALOG-ACT {100EAF8583}>	lightOn	y 		y 	355273				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOn	2	shiftedAnnotationsExactly	lightOn	Meka	2016-02-26_13-42-09		
+Yes	lightOn y 	#<DIALOG-ACT {100EAFD243}>	confirmation	y 		y 	355934				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_13-42-09		
+No			negation				360585				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D16823}>
+Yes	n lightOff	#<DIALOG-ACT {100EB01A83}>	lightOff	n - falsche person		n	364802				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOff	2	shiftedAnnotationsExactly	lightOff	Meka	2016-02-26_13-42-09		
+No							366043				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D1B193}>
+Yes							367034				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D1FC63}>
+Yes		#<DIALOG-ACT {100EB069A3}>	confirmation				368074				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_13-42-09		
+No			ok				376262				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D244C3}>
+No							376891				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D28B93}>
+No							377802				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D2D413}>
+Yes							380279				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D31F13}>
+Yes	y lightOn	#<DIALOG-ACT {100EB0B363}>	lightOn	y			385653				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOn	2	shiftedAnnotationsExactly	lightOn	Meka	2016-02-26_13-42-09		
+No			negation				388090				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D367E3}>
+Yes		#<DIALOG-ACT {100EB10293}>	confirmation				390220				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_13-42-09		
+No							392714				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D3B3B3}>
+Yes		#<DIALOG-ACT {100EB14A73}>	ok				397881				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+No			confirmation				398472				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D3FE83}>
+Yes		#<DIALOG-ACT {100EB190B3}>	ok				400329				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+Yes							406253				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D44703}>
+Yes							409632				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D48FA3}>
+Yes							410141				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D4D573}>
+Yes							411680				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D51B83}>
+No	y			n - falsche Person		n	416220				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D56453}>
+Yes	y lightOn	#<DIALOG-ACT {100EB1DB23}>	lightOn	y			421692				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOn	2	shiftedAnnotationsExactly	lightOn	Meka	2016-02-26_13-42-09		
+Yes	y	#<DIALOG-ACT {100EB22833}>	lightOn	y		y	422780			y	Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOn	2	shiftedAnnotationsExactly	lightOn	Meka	2016-02-26_13-42-09		
+Yes		#<DIALOG-ACT {100EB274F3}>	confirmation				424071				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_13-42-09		
+Yes		#<DIALOG-ACT {100EB2BD03}>	ok				428000				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+Yes	y experimentsRequest	#<DIALOG-ACT {100EB307A3}>	experimentsRequest	y			429581				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	experimentsRequest	2	shiftedAnnotationsExactly	experimentsRequest	Meka	2016-02-26_13-42-09		
+Yes		#<DIALOG-ACT {100EB35563}>	ok				431721				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+Yes							435985				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D5B193}>
+No							437870				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D5FA43}>
+Yes							438862				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D64513}>
+No			confirmation				439796				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D68DD3}>
+No	n			n		y	449281				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D6D663}>
+No							455860				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D723C3}>
+Yes	gardenRequest y	#<DIALOG-ACT {100EB3A243}>	gardenRequest	y			457161				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	gardenRequest	2	shiftedAnnotationsExactly	gardenRequest	Meka	2016-02-26_13-42-09		
+Yes							460093				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D76C73}>
+No			confirmation				460948				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D7B7E3}>
+No							461613				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D80073}>
+No							474829				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D84903}>
+No							476549				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D894B3}>
+Yes		#<DIALOG-ACT {100EB3EED3}>	negation				478506				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Meka	2016-02-26_13-42-09		
+Yes		#<DIALOG-ACT {100EB43743}>	ok				479287				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+Yes	y packetRequest	#<DIALOG-ACT {100EB47D03}>	packetRequest	y			480458				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	packetRequest	2	shiftedAnnotationsExactly	packetRequest	Meka	2016-02-26_13-42-09		
+No	y		packetRequest	n		n	482668			y	Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	packetRequest	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D8DDA3}>
+No							484591				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D92B63}>
+Yes							490681				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D973C3}>
+No			ok				493340				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011D9BC43}>
+No			confirmation				495839				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DA0733}>
+No							500558				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DA7343}>
+Yes	y lightOff	#<DIALOG-ACT {100EB4CA83}>	lightOff	y			504822				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOff	2	shiftedAnnotationsExactly	lightOff	Meka	2016-02-26_13-42-09		
+No							507351				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DABBA3}>
+Yes		#<DIALOG-ACT {100EB51753}>	ok				512188				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+Yes	y callRequest	#<DIALOG-ACT {100EB561E3}>	callRequest	y			516212				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	callRequest	2	shiftedAnnotationsExactly	callRequest	Meka	2016-02-26_13-42-09		
+No			negation				518054				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DB01C3}>
+No			negation				519583				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DB4D43}>
+Yes		#<DIALOG-ACT {100EB5B113}>	confirmation				520941				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_13-42-09		
+Yes							521631				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DB95F3}>
+No							529211				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DBDE83}>
+No							530949				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DC2C23}>
+No							534059				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DC74B3}>
+No							534885				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DCBAA3}>
+Yes	y experimentsRequest	#<DIALOG-ACT {100EB5F953}>	experimentsRequest	y			538298				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	experimentsRequest	2	shiftedAnnotationsExactly	experimentsRequest	Meka	2016-02-26_13-42-09		
+Yes							540400				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DD00D3}>
+No							543119				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DD4C53}>
+Yes							544671				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DD9753}>
+No							546511				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DDE003}>
+No							550409				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DE2B63}>
+Yes	nameRequest nameRequest y timeRequest	#<DIALOG-ACT {100EB694B3}>	timeRequest	 y			552789				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	timeRequest	2	shiftedAnnotationsExactly	nameRequest timeRequest	Meka	2016-02-26_13-42-09		
+Yes	y			n		n	554788			y	Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	callRequest	2	shiftedAnnotationsExactly	callRequest	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DE7973}>
+Yes		#<DIALOG-ACT {100EB6E133}>	ok				557417				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+Yes		#<DIALOG-ACT {100EB72B83}>	negation				560237				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Meka	2016-02-26_13-42-09		
+Yes		#<DIALOG-ACT {100EB773C3}>	ok				562735				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+Yes	y experimentsRequest	#<DIALOG-ACT {100EBD3E53}>	experimentsRequest	y			566939				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	experimentsRequest	2	shiftedAnnotationsExactly	experimentsRequest	Meka	2016-02-26_13-42-09		
+Yes							569043				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	negation	2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DEC7A3}>
+No			ok				571697				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DF13A3}>
+Yes							573287				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DF5E53}>
+No			ok				575157				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DFA453}>
+No							576141				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011DFEEF3}>
+Yes							583221				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E03613}>
+No							585979				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E07E63}>
+No							586579				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E0C6D3}>
+Yes							588307				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E10FA3}>
+Yes	y gardenRequest			y			591676				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	gardenRequest	2	shiftedAnnotationsExactly	gardenRequest	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E155D3}>
+Yes	y gardenRequest			y			595087				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	gardenRequest	2	shiftedAnnotationsExactly	gardenRequest	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E1A583}>
+Yes	gardenRequest y	#<DIALOG-ACT {100EBD8C43}>	gardenRequest	y		y	599217				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	gardenRequest	2	shiftedAnnotationsExactly	gardenRequest	Meka	2016-02-26_13-42-09		
+Yes							602406				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E1F293}>
+No							603630				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E23B23}>
+No			lightOff	y		y	609168				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	lightOff	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E28403}>
+No							614051				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E2D143}>
+No							615364				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E31A13}>
+No							616108				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E36273}>
+Yes	y lightOn			y - falsche person		n	621867				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOn	2	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E3A8A3}>
+No			ok				623535				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E3F5E3}>
+Yes		#<DIALOG-ACT {100EBDDB13}>	ok				624542				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Meka	2016-02-26_13-42-09		
+Yes	dataRequest y	#<DIALOG-ACT {100EBE2133}>	dataRequest	y		y	626888				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	dataRequest	2	shiftedAnnotationsExactly	dataRequest	Meka	2016-02-26_13-42-09		
+No							629142				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E440E3}>
+Yes							630109				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E492D3}>
+Yes		#<DIALOG-ACT {100EBE6F23}>	confirmation				630630				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	confirmation	2	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_13-42-09		
+Yes							633121				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E4DB63}>
+Yes	y			n		n	634709			y	Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOn	2	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E528A3}>
+No							644689				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E575F3}>
+Yes	callRequest y			y		y	648606				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	callRequest	2	shiftedAnnotationsExactly	callRequest	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E5C163}>
+Yes	callRequest y	#<DIALOG-ACT {100EBEB783}>	callRequest	y			653800				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	callRequest	2	shiftedAnnotationsExactly	callRequest	Meka	2016-02-26_13-42-09		
+No							657121				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E60FA3}>
+No							660837				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011E65B03}>
+No							662651				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011EC2103}>
+Yes							667096				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	ok	2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011EC6983}>
+No							672200				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011ED3603}>
+Yes	lightOn y	#<DIALOG-ACT {100EBF0323}>	lightOn	y		y	674064				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOn	2	shiftedAnnotationsExactly	lightOn	Meka	2016-02-26_13-42-09		
+Yes	y			y falsche Person		n	679943				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf	lightOn	2	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011ED7C13}>
+No			negation				681405				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	negation	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011EDC963}>
+No			ok				682636				Moving	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011EE1203}>
+No							685857				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly		Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011EE57F3}>
+No							687561				Stable	study2_11_2016-02-26_13-42-09-shiftedAnnotationsExactly.eaf		2	shiftedAnnotationsExactly	ok	Other	2016-02-26_13-42-09		#<DIALOG-ACT {1011EEA103}>
+							24439					study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation		2016-02-26_14-36-09		#<DIALOG-ACT {1011B180D3}>
+							25074					study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	negation		2016-02-26_14-36-09		#<DIALOG-ACT {1011B1CC13}>
+	n			n - falsche person		n	28699					study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	lightOn		2016-02-26_14-36-09		#<DIALOG-ACT {1011B21553}>
+							32442					study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok		2016-02-26_14-36-09		#<DIALOG-ACT {1011B26263}>
+							35402					study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	negation		2016-02-26_14-36-09		#<DIALOG-ACT {1011B2A893}>
+							37540					study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok		2016-02-26_14-36-09		#<DIALOG-ACT {1011B2F123}>
+No	n			n - falsche person		n	39326				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	timeRequest	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B38523}>
+No							40922				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B3D233}>
+Yes		#<DIALOG-ACT {100E8697D3}>	confirmation				44881				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_14-36-09		
+No							55051				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B41FF3}>
+No							59950				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B46843}>
+No							65361				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B4B3C3}>
+No							66721				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B4FEE3}>
+No							68992				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B544F3}>
+No							69923				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B58D93}>
+No	n		dataRequest	n - falsche person		n	72869				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	dataRequest	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B5D8A3}>
+No	n			n - falsche person		n	73809				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B62713}>
+No							75019				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B66FD3}>
+No	n			n - falsche person		n	76060				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	timeRequest	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B705F3}>
+No	n			n - falsche person		n	76596				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B752F3}>
+Yes							78706				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B79B83}>
+No							79911				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B7E413}>
+No							82015				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B82F73}>
+Yes							82521				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B87803}>
+No							82992				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B8BE13}>
+Yes							88910				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B906A3}>
+No			ok				92767				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B951D3}>
+No							97971				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B99D23}>
+Yes							104542				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011B9E863}>
+No							115727				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BA31A3}>
+No							126188				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BA7CF3}>
+No							126764				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BACA33}>
+No			ok				134994				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BB12B3}>
+No							139627				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BB5AE3}>
+No							147020				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BBA103}>
+No			confirmation				148221				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BBEC43}>
+No							152740				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BC3633}>
+Yes		#<DIALOG-ACT {100EB784D3}>	confirmation				153964				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_14-36-09		
+Yes		#<DIALOG-ACT {100EB7CCD3}>	confirmation				155131				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_14-36-09		
+Yes							161308				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BC8173}>
+Yes		#<DIALOG-ACT {100EB861F3}>	timeRequest	y			162244				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	timeRequest	3	shiftedAnnotationsExactly	timeRequest	Meka	2016-02-26_14-36-09		
+No							164253				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BCCC43}>
+No							164817				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BD1753}>
+Yes		#<DIALOG-ACT {100EB8AF13}>	lightOn	y			169947				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	lightOn	3	shiftedAnnotationsExactly	lightOn	Meka	2016-02-26_14-36-09		
+No							172420				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BD5FD3}>
+Yes		#<DIALOG-ACT {100EB8FBF3}>	confirmation				173463				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_14-36-09		
+No			ok				174289				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BDA883}>
+No			ok				182401				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BDEE73}>
+Yes	n	#<DIALOG-ACT {100EB946E3}>	lightOn	n		y	186031				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	lightOn	3	shiftedAnnotationsExactly	lightOn	Meka	2016-02-26_14-36-09		
+No							190948				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BE37C3}>
+Yes							194000				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	negation	3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BE7DC3}>
+Yes							198475				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BEC673}>
+Yes							218691				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BF0FA3}>
+No			ok				221080				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BF57D3}>
+No							229931				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BF9EB3}>
+No							231739				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011BFE713}>
+Yes		#<DIALOG-ACT {100EB9E2C3}>	timeRequest	 y			236986				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	timeRequest	3	shiftedAnnotationsExactly	timeRequest	Meka	2016-02-26_14-36-09		
+Yes							238612				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C02CF3}>
+Yes		#<DIALOG-ACT {100EBA30F3}>	ok				240239				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+Yes	y	#<DIALOG-ACT {100EBA7693}>	lightOn	y			258157				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	lightOn	3	shiftedAnnotationsExactly	lightOn	Meka	2016-02-26_14-36-09		
+Yes	y	#<DIALOG-ACT {100EBAC353}>	ok	y			258869				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+Yes		#<DIALOG-ACT {100EBB0D93}>	ok				260259				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+Yes							263899				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C072F3}>
+No							271358				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C63B83}>
+No	n		lightOff	n - falsche person		n	274030				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	lightOff	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C68443}>
+No							276527				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C6D3D3}>
+No							281918				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C71C43}>
+No	y		lightOn	y - falsche person		n	289335				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C764D3}>
+Yes		#<DIALOG-ACT {100EBB5333}>	lightOn	y			292355				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	lightOn	3	shiftedAnnotationsExactly	lightOn	Meka	2016-02-26_14-36-09		
+Yes		#<DIALOG-ACT {100EBBA093}>	ok				294985				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+Yes		#<DIALOG-ACT {100EBBE5F3}>	ok				296557				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+Yes							298840				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C7B613}>
+No							305919				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C7FE73}>
+No			negation				307570				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C846F3}>
+No							308867				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C88FA3}>
+No							309520				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C8D5A3}>
+No							311569				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C91EB3}>
+No							316900				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C964B3}>
+No			ok				318627				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C9AD23}>
+No							326010				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011C9F583}>
+No			confirmation				330039				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011CA3E53}>
+No							334271				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011CA86D3}>
+Yes		#<DIALOG-ACT {100EBC2B63}>	ok				335058				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+Yes		#<DIALOG-ACT {100EBC70E3}>	confirmation				336642				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_14-36-09		
+No							377496				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011CACCE3}>
+Yes							379127				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D09843}>
+Yes		#<DIALOG-ACT {100EBCB993}>	gardenRequest	y			381145				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	gardenRequest	3	shiftedAnnotationsExactly	gardenRequest	Meka	2016-02-26_14-36-09		
+Yes				y			382037				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	negation	3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D0DE43}>
+Yes							383177				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D126E3}>
+Yes							384300				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D16CF3}>
+No	y			n		n	385531			y	Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	lightOff	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D1B8E3}>
+No							394224				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D20643}>
+No							397576				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D251C3}>
+No			ok				398929				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D29A53}>
+Yes							400434				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D2E043}>
+Yes		#<DIALOG-ACT {100EBD0643}>	ok				408358				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+Yes		#<DIALOG-ACT {100EBD5093}>	confirmation				420409				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_14-36-09		
+Yes							428955				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D32893}>
+No							431418				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D370D3}>
+Yes		#<DIALOG-ACT {100EBD98A3}>	confirmation				432867				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_14-36-09		
+No			confirmation				433377				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D3B7E3}>
+No	n		packetRequest	y - schaut falsche Person an		n	435004				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	packetRequest	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D40093}>
+Yes	y	#<DIALOG-ACT {100EBDE0C3}>	lightOn	y			439772				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	lightOn	3	shiftedAnnotationsExactly	lightOn	Meka	2016-02-26_14-36-09		
+No							451779				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D44E53}>
+Yes	n	#<DIALOG-ACT {100EBE2DD3}>	lightOn	n - falsche person		n	452737				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	lightOn	3	shiftedAnnotationsExactly	lightOn	Meka	2016-02-26_14-36-09		
+Yes							457729				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D496D3}>
+No							462467				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D4E403}>
+Yes							474334				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D52CE3}>
+No			ok				475588				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D57533}>
+Yes		#<DIALOG-ACT {100EBEC763}>	timeRequest	 y			481117				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	timeRequest	3	shiftedAnnotationsExactly	timeRequest	Meka	2016-02-26_14-36-09		
+Yes	y	#<DIALOG-ACT {100EBF63D3}>	timeRequest	y		y	486850				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	timeRequest	3	shiftedAnnotationsExactly	timeRequest	Meka	2016-02-26_14-36-09		
+Yes	y	#<DIALOG-ACT {100EBFB333}>	negation	y		y	487598				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	negation	3	shiftedAnnotationsExactly	negation	Meka	2016-02-26_14-36-09		
+No			confirmation				494694				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D5BDA3}>
+No							503724				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D608E3}>
+No							504363				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D65113}>
+No			lightOn	y		y	507366				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D69753}>
+Yes		#<DIALOG-ACT {100EBFFB73}>	ok				510246				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+Yes		#<DIALOG-ACT {100EC04343}>	ok				510687				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+Yes	y	#<DIALOG-ACT {100EC08903}>	gardenRequest	y		y	515743				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	gardenRequest	3	shiftedAnnotationsExactly	gardenRequest	Meka	2016-02-26_14-36-09		
+Yes	y			y		y	516537				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D6E483}>
+No							519477				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D72F73}>
+No							520147				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D777F3}>
+No							524616				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D7C063}>
+No							527258				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D808E3}>
+Yes							528816				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D85163}>
+Yes		#<DIALOG-ACT {100EC0D7A3}>	ok				529509				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+No							532845				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D89C43}>
+No			ok				534129				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D8E493}>
+Yes		#<DIALOG-ACT {100EC16D33}>	timeRequest	 y			535229				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	timeRequest	3	shiftedAnnotationsExactly	timeRequest	Meka	2016-02-26_14-36-09		
+Yes							536898				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D94DC3}>
+Yes		#<DIALOG-ACT {100EC1BA43}>	experimentsRequest	y			540365				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	experimentsRequest	3	shiftedAnnotationsExactly	experimentsRequest	Meka	2016-02-26_14-36-09		
+Yes	y			n		n	542487			y	Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	lightOn	3	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D998A3}>
+Yes	y			n		n	543264			y	Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011D9E5E3}>
+No	n			n		n	545665			y	Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	lightOff	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DA2EA3}>
+No							546738				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DA7BE3}>
+No							548597				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DAC4B3}>
+Yes							549587				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	negation	3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DB0FA3}>
+No							550414				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DB5863}>
+No			ok				552048				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DBA103}>
+No			confirmation				563355				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DBE703}>
+Yes		#<DIALOG-ACT {100EC20833}>	confirmation				565034				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_14-36-09		
+Yes		#<DIALOG-ACT {100EC252F3}>	confirmation				565533				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_14-36-09		
+Yes				y			568180				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	timeRequest	3	shiftedAnnotationsExactly	timeRequest	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DC7EB3}>
+Yes		#<DIALOG-ACT {100EC29B33}>	gardenRequest	y			573205				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	gardenRequest	3	shiftedAnnotationsExactly	gardenRequest	Meka	2016-02-26_14-36-09		
+Yes				y			574004				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DD4BB3}>
+Yes	y			y		y	577612			y	Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	lightOff	3	shiftedAnnotationsExactly	lightOff	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DD94B3}>
+No			confirmation				585988				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DDE223}>
+No			confirmation				588702				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DE3193}>
+Yes							593046				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DE79F3}>
+No							594032				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DEBFD3}>
+No							595731				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DF05F3}>
+No							596514				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DF4E33}>
+No							599426				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DF94B3}>
+No							601362				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011DFDAA3}>
+Yes		#<DIALOG-ACT {100EC2E7D3}>	ok				602675				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+Yes		#<DIALOG-ACT {100EC33353}>	callRequest	y			608393				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	callRequest	3	shiftedAnnotationsExactly	callRequest	Meka	2016-02-26_14-36-09		
+Yes							610173				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	negation	3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E02303}>
+Yes							611714				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	negation	3	shiftedAnnotationsExactly	negation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E06BD3}>
+Yes		#<DIALOG-ACT {100EC37E83}>	confirmation				613175				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_14-36-09		
+No			ok				619954				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E0B7C3}>
+No							628003				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E0FDD3}>
+Yes		#<DIALOG-ACT {100EC3C663}>	ok				628847				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+Yes				y			630289				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	lightOff	3	shiftedAnnotationsExactly	lightOff	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E14943}>
+Yes		#<DIALOG-ACT {100EC40C33}>	ok	y			631214				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+Yes	nameRequest y	#<DIALOG-ACT {100EC49EC3}>	timeRequest	y		y	634451				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	timeRequest	3	shiftedAnnotationsExactly	timeRequest	Meka	2016-02-26_14-36-09		
+Yes	nameRequest y	#<DIALOG-ACT {100EC4EB23}>	ok	y		y	635144				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Meka	2016-02-26_14-36-09		
+Yes							636040				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E196B3}>
+Yes	y	#<DIALOG-ACT {100EC53133}>	lightOff	y			639679				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	lightOff	3	shiftedAnnotationsExactly	lightOff	Meka	2016-02-26_14-36-09		
+Yes							641424				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E1DF23}>
+No			ok			n	654676				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E22B33}>
+Yes	n	#<DIALOG-ACT {100EC57E13}>	lightOn	n		n	655533				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	lightOn	3	shiftedAnnotationsExactly	lightOn	Meka	2016-02-26_14-36-09		
+No							661596				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E27383}>
+Yes		#<DIALOG-ACT {100EC5CAD3}>	confirmation				662926				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_14-36-09		
+Yes		#<DIALOG-ACT {100EC612D3}>	confirmation				664487				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Meka	2016-02-26_14-36-09		
+Yes	y	#<DIALOG-ACT {100EC65B13}>	dataRequest	y			668682				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	dataRequest	3	shiftedAnnotationsExactly	dataRequest	Meka	2016-02-26_14-36-09		
+Yes							670497				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E2BBE3}>
+Yes							671904				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E306D3}>
+Yes							672864				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	confirmation	3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E34F53}>
+Yes							674904				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf	ok	3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E39843}>
+No	n		lightOn	n		n	676714			y	Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	lightOn	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E3E323}>
+No	y		timeRequest	y		y	700655				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	timeRequest	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E47EB3}>
+No			ok				702312				Moving	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	ok	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E4CBA3}>
+No							704835				Stable	study3_11_2016-02-26_14-36-09-shiftedAnnotationsExactly.eaf		3	shiftedAnnotationsExactly	confirmation	Other	2016-02-26_14-36-09		#<DIALOG-ACT {1011E514B3}>
+							11138					study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok		2016-03-03_13-46-29		#<DIALOG-ACT {101538C8E3}>
+							11706					study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok		2016-03-03_13-46-29		#<DIALOG-ACT {10153914B3}>
+							12265					study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation		2016-03-03_13-46-29		#<DIALOG-ACT {1015395AB3}>
+							14535					study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation		2016-03-03_13-46-29		#<DIALOG-ACT {101539A363}>
+No							15668				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101539EBD3}>
+No							26836				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153A35F3}>
+No	n		callRequest	n - falsche person		n	29834				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	callRequest	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153A7C13}>
+No							31565				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153AC7A3}>
+Yes							33569				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153B0D93}>
+No							38185				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153B53A3}>
+No	n			n - falsche person		n	40119				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	timeRequest	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153BEC43}>
+No							44706				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153C39E3}>
+No			negation				46420				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153C82B3}>
+No							47807				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153CCB53}>
+No							56746				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153D1153}>
+No							74815				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153D59E3}>
+No			ok				87434				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153DA583}>
+Yes							91049				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153DEDC3}>
+Yes							91864				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153E3393}>
+No	n			n - falsche person		n	94346				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	lightOn	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153E79A3}>
+No			confirmation				114562				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153EC733}>
+No							115546				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153F1253}>
+No							117992				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153F5843}>
+No			confirmation				118658				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153FA103}>
+No			confirmation				119127				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10153FE983}>
+Yes	y	#<DIALOG-ACT {1011582043}>	callRequest	y			124523				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	callRequest	4	shiftedAnnotations	callRequest	Meka	2016-03-03_13-46-29		
+Yes	y	#<DIALOG-ACT {1011952143}>	confirmation	y			125146				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	confirmation	4	shiftedAnnotations	confirmation	Meka	2016-03-03_13-46-29		
+No							126307				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154033B3}>
+No			confirmation				126834				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015407C73}>
+Yes		#<DIALOG-ACT {1011956B93}>	negation				127973				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	negation	4	shiftedAnnotations	negation	Meka	2016-03-03_13-46-29		
+No			confirmation				132603				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101540C503}>
+No							139205				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015410D93}>
+Yes		#<DIALOG-ACT {101195B5A3}>	confirmation				140353				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	confirmation	4	shiftedAnnotations	confirmation	Meka	2016-03-03_13-46-29		
+Yes							142322				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	negation	4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154158D3}>
+Yes	y			y			145672				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	dataRequest	4	shiftedAnnotations	dataRequest	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101541A203}>
+Yes	y			y			151171				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	dataRequest	4	shiftedAnnotations	dataRequest	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101541F313}>
+No							153238				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015424193}>
+No							165954				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015428CA3}>
+No							166504				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101542D743}>
+No	n			n - falsche person		n	175684				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	lightOn	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015431D73}>
+Yes							176963				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015436CE3}>
+Yes		#<DIALOG-ACT {101195FDC3}>	lightOn	y			187884				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	lightOn	4	shiftedAnnotations	lightOn	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {1011964A83}>	negation				193155				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	negation	4	shiftedAnnotations	negation	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {10119692B3}>	ok				193671				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {101196D833}>	confirmation				199380				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	confirmation	4	shiftedAnnotations	confirmation	Meka	2016-03-03_13-46-29		
+Yes	y	#<DIALOG-ACT {1011972093}>	callRequest	y		y	200583				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	callRequest	4	shiftedAnnotations	callRequest	Meka	2016-03-03_13-46-29		
+No			negation				202446				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101543B3B3}>
+Yes							203934				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	negation	4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101543FC73}>
+No			confirmation				204505				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015444543}>
+No							210665				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015448DB3}>
+No							211772				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101544D5F3}>
+Yes	y	#<DIALOG-ACT {1011976C03}>	packetRequest	y			225039				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	packetRequest	4	shiftedAnnotations	packetRequest	Meka	2016-03-03_13-46-29		
+No							226489				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015451C43}>
+No			negation				230882				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015456723}>
+No							235420				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101545B3B3}>
+Yes							241381				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101545FC23}>
+Yes		#<DIALOG-ACT {101197B993}>	lightOn	y			242901				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	lightOn	4	shiftedAnnotations	lightOn	Meka	2016-03-03_13-46-29		
+Yes	y	#<DIALOG-ACT {10119806A3}>	packetRequest	y			246873				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	packetRequest	4	shiftedAnnotations	packetRequest	Meka	2016-03-03_13-46-29		
+Yes	y	#<DIALOG-ACT {1011985433}>	packetRequest	y			253119				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	packetRequest	4	shiftedAnnotations	packetRequest	Meka	2016-03-03_13-46-29		
+Yes							254570				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015464473}>
+Yes							258554				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015468FA3}>
+Yes		#<DIALOG-ACT {101198A3B3}>	ok				263441				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {101198E943}>	ok				274061				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Meka	2016-03-03_13-46-29		
+No			ok				275462				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101546D7E3}>
+Yes		#<DIALOG-ACT {10119A0323}>	timeRequest	 y			279052				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	timeRequest	4	shiftedAnnotations	timeRequest	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {10119A4FA3}>	ok	 y			279661				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Meka	2016-03-03_13-46-29		
+No	n			n		n	281131			y	Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	lightOff	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015471EB3}>
+No	n			n		n	282795			y	Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations		Other	2016-03-03_13-46-29		#<DIALOG-ACT {101547B9F3}>
+Yes		#<DIALOG-ACT {10119B1A13}>	ok				285454				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {10119B61F3}>	confirmation				290250				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	confirmation	4	shiftedAnnotations	confirmation	Meka	2016-03-03_13-46-29		
+No			negation				291495				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015480713}>
+Yes		#<DIALOG-ACT {10119BAAC3}>	confirmation				292034				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	confirmation	4	shiftedAnnotations	confirmation	Meka	2016-03-03_13-46-29		
+Yes							292631				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	negation	4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015484FD3}>
+Yes		#<DIALOG-ACT {10119C3F83}>	timeRequest	y			295984				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	timeRequest	4	shiftedAnnotations	timeRequest	Meka	2016-03-03_13-46-29		
+No			ok				297631				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154898A3}>
+No			ok				297993				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101548E343}>
+No	n			y - falsch Person		n	324689				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	lightOn	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015492963}>
+Yes		#<DIALOG-ACT {10119C8C33}>	lightOn	y			335201				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	lightOn	4	shiftedAnnotations	lightOn	Meka	2016-03-03_13-46-29		
+No				y			336158				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015497683}>
+Yes	y			 y - falsche person		n	353872				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	timeRequest	4	shiftedAnnotations	timeRequest	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154A0C43}>
+No							355652				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154A5B73}>
+Yes	y	#<DIALOG-ACT {10119D25C3}>	timeRequest	 y -falsche person		n	357537				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	timeRequest	4	shiftedAnnotations	timeRequest	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {10119D7243}>	ok				359172				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Meka	2016-03-03_13-46-29		
+Yes							359642				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154AA1A3}>
+No							368042				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154AE7A3}>
+No							369423				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154B3173}>
+No							373839				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154B7763}>
+Yes		#<DIALOG-ACT {10119DBC93}>	ok				375892				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {10119E06D3}>	ok				391029				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {10119E4C73}>	confirmation				394913				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	confirmation	4	shiftedAnnotations	confirmation	Meka	2016-03-03_13-46-29		
+Yes	y	#<DIALOG-ACT {10119E97B3}>	gardenRequest	y		y	430240				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	gardenRequest	4	shiftedAnnotations	gardenRequest	Meka	2016-03-03_13-46-29		
+No							432293				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154BBFD3}>
+Yes							433982				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	confirmation	4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154C0863}>
+Yes							434649				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	confirmation	4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154C50E3}>
+Yes							436099				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	confirmation	4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154C99A3}>
+No							452202				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154CE4F3}>
+No							453578				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154D3193}>
+No							456417				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154D7A43}>
+Yes		#<DIALOG-ACT {10119EE473}>	lightOn	y			458009				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	lightOn	4	shiftedAnnotations	lightOn	Meka	2016-03-03_13-46-29		
+No			ok				462270				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154DC293}>
+No							465702				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154E0B93}>
+No			ok				468220				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154E5183}>
+No							478260				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154E99E3}>
+Yes		#<DIALOG-ACT {10119F3583}>	ok				480450				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {10119F7B03}>	confirmation				481311				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	confirmation	4	shiftedAnnotations	confirmation	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {1011A090B3}>	timeRequest	 y			484850				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	timeRequest	4	shiftedAnnotations	timeRequest	Meka	2016-03-03_13-46-29		
+No			confirmation				486587				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154EE263}>
+Yes	 y	#<DIALOG-ACT {1011A1AAE3}>	timeRequest	 y		 y	490272				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	timeRequest	4	shiftedAnnotations	timeRequest	Meka	2016-03-03_13-46-29		
+Yes	 y	#<DIALOG-ACT {1011A1F763}>	ok	 y		 y	490831				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Meka	2016-03-03_13-46-29		
+Yes	n	#<DIALOG-ACT {1011A23F83}>	gardenRequest	n		n	491949			y	Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	gardenRequest	4	shiftedAnnotations	gardenRequest	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {1011A2D8D3}>	timeRequest	 y			494708				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	timeRequest	4	shiftedAnnotations	timeRequest	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {1011A32563}>	ok	 y			495300				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Meka	2016-03-03_13-46-29		
+Yes	n	#<DIALOG-ACT {1011A36FD3}>	lightOn	n		n	496063			y	Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	lightOn	4	shiftedAnnotations	lightOn	Meka	2016-03-03_13-46-29		
+No			ok				497122				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154F2B23}>
+No							498682				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154F7113}>
+No							500230				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10154FB9B3}>
+No			ok				501442				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015500203}>
+No			ok				503201				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10155047F3}>
+Yes	y			y falsche Person		n	523000				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	lightOff	4	shiftedAnnotations	lightOff	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10155090B3}>
+Yes	y-falsche person			y-falsche person		n	528917				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	lightOff	4	shiftedAnnotations	lightOff	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101550E2E3}>
+Yes		#<DIALOG-ACT {1011A3BC83}>	ok				531602				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Meka	2016-03-03_13-46-29		
+Yes	y	#<DIALOG-ACT {1011A40223}>	lightOff	y			536175				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	lightOff	4	shiftedAnnotations	lightOff	Meka	2016-03-03_13-46-29		
+No			ok				544512				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10155133A3}>
+Yes		#<DIALOG-ACT {1011A44EC3}>	ok				552873				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {1011A494B3}>	negation				566138				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	negation	4	shiftedAnnotations	negation	Meka	2016-03-03_13-46-29		
+Yes		#<DIALOG-ACT {1011A4DCF3}>	confirmation				571482				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	confirmation	4	shiftedAnnotations	confirmation	Meka	2016-03-03_13-46-29		
+Yes							573792				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015517BF3}>
+No							579324				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101551C443}>
+No			ok				580480				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015520C93}>
+Yes		#<DIALOG-ACT {1011A57453}>	timeRequest	 y			585661				Moving	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	timeRequest	4	shiftedAnnotations	timeRequest	Meka	2016-03-03_13-46-29		
+Yes							587420				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf	ok	4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {10155254E3}>
+No							626920				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015529FF3}>
+No							628039				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	confirmation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {101552E603}>
+No							629620				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	ok	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015533173}>
+No					negation		754419				Stable	study4_11_2016-03-03_13-46-29-shiftedAnnotations.eaf		4	shiftedAnnotations	negation	Other	2016-03-03_13-46-29		#<DIALOG-ACT {1015537783}>
+							7931					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E033BB3}>
+							10047					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	negation		2016-03-03_14-47-56		#<DIALOG-ACT {100E0381C3}>
+							13415					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E03CD33}>
+							13999					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E0415B3}>
+							18386					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E045BA3}>
+							20958					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	negation		2016-03-03_14-47-56		#<DIALOG-ACT {100E04A413}>
+							22511					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E04ECA3}>
+							23067					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E053393}>
+							26498					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E057963}>
+					confirmation		28231					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation		2016-03-03_14-47-56		#<DIALOG-ACT {100E05BF63}>
+							30282					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E0607D3}>
+							38001					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E065003}>
+							42030					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	negation		2016-03-03_14-47-56		#<DIALOG-ACT {100E069603}>
+							60536					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation		2016-03-03_14-47-56		#<DIALOG-ACT {100E06DEC3}>
+							62303					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E072733}>
+							63986					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E076F83}>
+							67749					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation		2016-03-03_14-47-56		#<DIALOG-ACT {100E07B7F3}>
+							72129					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E080323}>
+							76840					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E084B73}>
+							80307					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E0894B3}>
+							88296					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E08DAA3}>
+							90770					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	negation		2016-03-03_14-47-56		#<DIALOG-ACT {100E092583}>
+							104720					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E096E33}>
+							111984					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation		2016-03-03_14-47-56		#<DIALOG-ACT {100E09B6D3}>
+							112436					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation		2016-03-03_14-47-56		#<DIALOG-ACT {100E0A0223}>
+							114436					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E0A4A93}>
+							118610					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E0A92D3}>
+							132977					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E0AD8A3}>
+							135218					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E0B1EB3}>
+							146938					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E0B69B3}>
+							147795					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation		2016-03-03_14-47-56		#<DIALOG-ACT {100E0BB193}>
+							148830					study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok		2016-03-03_14-47-56		#<DIALOG-ACT {100E0BF9F3}>
+Yes							150110				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	negation	5	shiftedAnnotations	negation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0C4003}>
+No							155410				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0C8893}>
+No	y			n - falsche person		n	165245				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	callRequest	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0CCEC3}>
+Yes							166619				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0D1CE3}>
+Yes							169924				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0D6563}>
+No							189356				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0DADF3}>
+No							212217				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0DF943}>
+Yes							226006				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0E4483}>
+Yes	y			n - falsche person		n	230039				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	lightOn	5	shiftedAnnotations	lightOn	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0E8D03}>
+Yes	y			n - falsche person		n	230763				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0EDA13}>
+No			ok				236191				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0F2103}>
+Yes							238444				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0F6BB3}>
+No			negation				241527				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	negation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0FB3C3}>
+No							243327				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	negation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E0FFF43}>
+No							252373				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E104823}>
+No	n			n		y	255466				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	lightOff	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1093A3}>
+No	n			n		y	255906				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E10E0E3}>
+No							256327				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E112973}>
+No							257560				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1171D3}>
+No							262180				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E11B7E3}>
+No			ok				277615				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E120043}>
+No							279177				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E124633}>
+Yes							280198				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E128EA3}>
+No			confirmation				309298				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E12D4A3}>
+Yes		#<DIALOG-ACT {1011E69623}>	ok				310064				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {1012218343}>	ok				311875				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {101221CAF3}>	ok				312458				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {10122210B3}>	ok				313574				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes	y	#<DIALOG-ACT {1012225B53}>	experimentsRequest	y			318332				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	experimentsRequest	5	shiftedAnnotations	experimentsRequest	Meka	2016-03-03_14-47-56		
+Yes							320182				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	negation	5	shiftedAnnotations	negation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E131D23}>
+No							323101				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1365D3}>
+Yes							326594				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E13B183}>
+Yes							328424				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	negation	5	shiftedAnnotations	negation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E13FC53}>
+No							344133				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E144513}>
+Yes		#<DIALOG-ACT {101222AB83}>	confirmation				352227				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Meka	2016-03-03_14-47-56		
+No							352915				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E148D93}>
+Yes		#<DIALOG-ACT {101222F383}>	confirmation				361616				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Meka	2016-03-03_14-47-56		
+Yes	y	#<DIALOG-ACT {1012233BB3}>	gardenRequest	y		y	363205				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	gardenRequest	5	shiftedAnnotations	gardenRequest	Meka	2016-03-03_14-47-56		
+No							366945				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E14D393}>
+Yes							367604				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E151C43}>
+No							380215				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	negation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1564C3}>
+Yes		#<DIALOG-ACT {1012238833}>	ok				381299				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+No			packetRequest	y		y	404665				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	packetRequest	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E15ADC3}>
+Yes							418985				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E15FB63}>
+Yes	y	#<DIALOG-ACT {101223D033}>	lightOn	y			428217				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	lightOn	5	shiftedAnnotations	lightOn	Meka	2016-03-03_14-47-56		
+Yes							429782				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E164143}>
+Yes	y	#<DIALOG-ACT {1012241D13}>	lightOff	y			433140				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	lightOff	5	shiftedAnnotations	lightOff	Meka	2016-03-03_14-47-56		
+Yes	y	#<DIALOG-ACT {10122469F3}>	lightOff	y			438354				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	lightOff	5	shiftedAnnotations	lightOff	Meka	2016-03-03_14-47-56		
+Yes							440498				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E168763}>
+Yes		#<DIALOG-ACT {101224B763}>	confirmation				456245				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Meka	2016-03-03_14-47-56		
+Yes							456692				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E16CFE3}>
+No							459634				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E171843}>
+No			confirmation				460925				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E175E43}>
+Yes	y			y			469708				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	lightOn	5	shiftedAnnotations	lightOn	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E17A6E3}>
+Yes	y	#<DIALOG-ACT {101224FF43}>	ok	y			470452				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {10122544F3}>	negation				476651				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	negation	5	shiftedAnnotations	negation	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {10122590B3}>	ok				482811				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {101225D893}>	negation				485685				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	negation	5	shiftedAnnotations	negation	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {1012262133}>	ok				486202				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {10122666B3}>	confirmation				486723				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Meka	2016-03-03_14-47-56		
+No							497345				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E17F403}>
+Yes		#<DIALOG-ACT {101226AED3}>	ok				508951				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {101226F453}>	confirmation				509510				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {1012273C53}>	confirmation				511200				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {101227D3A3}>	timeRequest	 y			522223				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	timeRequest	5	shiftedAnnotations	timeRequest	Meka	2016-03-03_14-47-56		
+No							529530				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E183A33}>
+No							534620				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E188043}>
+Yes		#<DIALOG-ACT {1012282293}>	ok				536463				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {1012286A73}>	confirmation				541351				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Meka	2016-03-03_14-47-56		
+No							544111				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E18C893}>
+No							545353				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1910C3}>
+Yes							549940				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1956A3}>
+Yes		#<DIALOG-ACT {101228B333}>	ok				551562				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes	y	#<DIALOG-ACT {101228FB33}>	callRequest	y			558232				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	callRequest	5	shiftedAnnotations	callRequest	Meka	2016-03-03_14-47-56		
+Yes	y			y			558902				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E199CA3}>
+No							560044				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	negation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E19E523}>
+Yes							561581				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	negation	5	shiftedAnnotations	negation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1A2DE3}>
+Yes	y	#<DIALOG-ACT {10122946A3}>	gardenRequest	y			574271				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	gardenRequest	5	shiftedAnnotations	gardenRequest	Meka	2016-03-03_14-47-56		
+Yes	y			y			575112				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1A7693}>
+Yes							578058				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1AC173}>
+Yes							578714				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1B0A83}>
+No							579581				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1B5303}>
+No							589542				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1B9B83}>
+Yes		#<DIALOG-ACT {10122993A3}>	ok				591365				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {101229DB63}>	ok				592433				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {10122A2133}>	ok				593674				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {10122A6BA3}>	confirmation				602913				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Meka	2016-03-03_14-47-56		
+Yes							615469				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	negation	5	shiftedAnnotations	negation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1BE403}>
+Yes							616992				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1C2CF3}>
+No			confirmation				627579				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1C7583}>
+Yes		#<DIALOG-ACT {10122AB753}>	ok				628923				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {10122AFF63}>	confirmation				631619				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {10122B4CB3}>	confirmation				632809				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Meka	2016-03-03_14-47-56		
+No			timeRequest	 y			635140				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	timeRequest	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1D10B3}>
+Yes		#<DIALOG-ACT {10122BE473}>	timeRequest	 y			638451				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	timeRequest	5	shiftedAnnotations	timeRequest	Meka	2016-03-03_14-47-56		
+Yes							640441				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1D6003}>
+No							653740				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1DAB33}>
+Yes			ok				654577				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1DF373}>
+Yes		#<DIALOG-ACT {10122C8043}>	timeRequest	y 			659456				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	timeRequest	5	shiftedAnnotations	timeRequest	Meka	2016-03-03_14-47-56		
+Yes		#<DIALOG-ACT {10122CCCC3}>	ok	y 			660230				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+No							661463				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1E39C3}>
+Yes		#<DIALOG-ACT {10122D1553}>	experimentsRequest	y			665703				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	experimentsRequest	5	shiftedAnnotations	experimentsRequest	Meka	2016-03-03_14-47-56		
+Yes							667618				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	negation	5	shiftedAnnotations	negation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1E84D3}>
+No							670493				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1ED053}>
+Yes							672074				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E1F1B33}>
+No							673991				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E200493}>
+No							674933				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E204F53}>
+No							675848				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E209A33}>
+No							685161				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	negation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E20E2B3}>
+No							685931				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E212B73}>
+Yes							691147				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E2173C3}>
+No							692768				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E21B9B3}>
+No			ok				693791				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E220203}>
+Yes	y	#<DIALOG-ACT {10122D6323}>	lightOn	y			695562				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	lightOn	5	shiftedAnnotations	lightOn	Meka	2016-03-03_14-47-56		
+Yes	y			y			696493				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E2247D3}>
+No							704072				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E228DD3}>
+No			confirmation				705102				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E22D633}>
+Yes		#<DIALOG-ACT {10122DB103}>	ok				715492				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Meka	2016-03-03_14-47-56		
+No			ok				716398				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E231EB3}>
+Yes							717928				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E236493}>
+Yes							718870				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E23AB43}>
+Yes							723482				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E23F3B3}>
+Yes							724320				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E243C13}>
+Yes							725055				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E248493}>
+Yes		#<DIALOG-ACT {10122DF8E3}>	confirmation				730042				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Meka	2016-03-03_14-47-56		
+No							731054				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E24CD03}>
+Yes	y	#<DIALOG-ACT {10122E4123}>	lightOff	y			732799				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	lightOff	5	shiftedAnnotations	lightOff	Meka	2016-03-03_14-47-56		
+No	y		ok	y			733501				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E251553}>
+No							733940				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E255B33}>
+No			confirmation				741732				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E25A1A3}>
+Yes	y	#<DIALOG-ACT {10122E90B3}>	lightOn	y			748966				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	lightOn	5	shiftedAnnotations	lightOn	Meka	2016-03-03_14-47-56		
+No	y			y			749918				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E25E9F3}>
+No							755309				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E263183}>
+No							756070				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E2679E3}>
+Yes		#<DIALOG-ACT {10122EDDB3}>	packetRequest	y			763909				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	packetRequest	5	shiftedAnnotations	packetRequest	Meka	2016-03-03_14-47-56		
+No	n			n		n	766071			y	Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	packetRequest	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E26C2B3}>
+Yes	y	#<DIALOG-ACT {10122F2DB3}>	dataRequest	y			780249				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	dataRequest	5	shiftedAnnotations	dataRequest	Meka	2016-03-03_14-47-56		
+Yes	y	#<DIALOG-ACT {10122F8073}>	negation	y			781227				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	negation	5	shiftedAnnotations	negation	Meka	2016-03-03_14-47-56		
+No							783478				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E2712D3}>
+No							783970				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E275DA3}>
+No							786469				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E27A633}>
+No	n			n		n	788275			y	Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	lightOn	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E27F373}>
+Yes		#<DIALOG-ACT {10122FC913}>	dataRequest	y			790948				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	dataRequest	5	shiftedAnnotations	dataRequest	Meka	2016-03-03_14-47-56		
+No							792788				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	negation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E2840D3}>
+Yes							794200				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E288C93}>
+No							794697				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E28D513}>
+No							797188				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E291DA3}>
+Yes	n			n		n	798798			y	Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	lightOn	5	shiftedAnnotations	lightOn	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E296AE3}>
+Yes							809257				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	negation	5	shiftedAnnotations	negation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E29B8C3}>
+No			confirmation				811030				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E2A0193}>
+Yes							813437				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	confirmation	5	shiftedAnnotations	confirmation	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E2A4A13}>
+No							814677				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E2A9263}>
+Yes							815971				Stable	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf	ok	5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E2AD843}>
+No			ok				819140				Moving	study5_11_2016-03-03_14-47-56-shiftedAnnotations.eaf		5	shiftedAnnotations	ok	Other	2016-03-03_14-47-56		#<DIALOG-ACT {100E2B1EB3}>

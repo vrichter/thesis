@@ -1,0 +1,40 @@
+\usetikzlibrary{shapes,arrows}
+\tikzset{
+  root/.style     = {circle, fill=black},
+  role/.style     = {shape=rectangle, line width=0.1em, rounded corners, draw=mygreen, align=center, fill=white, minimum height=1.5em},
+  decision/.style = {diamond, line width=0.1em, draw=myblue, aspect=2, align=center, fill=white, minimum width=7em, text width=5em, text height=0.5em, inner sep=0em},
+  input/.style    = {trapezium, line width=0.1em, draw=myred, trapezium left angle=60, trapezium right angle=120, align=center, fill=white, minimum height=1.5em}
+}
+\begin{tikzpicture}
+  [
+    every node/.style       = {font=\scriptsize},
+    sloped,
+    node distance = 2em and 1em
+  ]
+   \node [root] (root) {};
+   \node [decision, right=of root, xshift=0em] (ing) {In Group};
+   \node [decision, right=of ing, yshift=3em] (spe) {Speaking};
+   \node [decision, right=of spe, yshift=-3em] (mug) {Addressed};
+   \node [role, below=of ing] (rno) {Non-Participant};
+   \node [role, below=of spe] (rsp) {Speaker};
+   \node [role, below=of mug, xshift=-4em] (rme) {Side-Participant};
+   \node [role, below=of mug, xshift=2em] (rad) {Addressee};
+   \node [input, above=of ing, yshift=1em] (iing) {Gco-4500-50};
+   \node [input, above=of spe] (ispe) {Speech Production};
+   \node [input, above=of mug, yshift=1em] (imug) {Addressee Recognition};
+
+   \path (root) edge[->] (ing);
+   \path (iing) edge[->] node [rotate=-90,fill=white] {\(|g(P_{agent})|>1\)} (ing);
+   \path (ispe) edge[->] node [rotate=-90,fill=white] {\(\text{Active}(\text{SP})\)} (spe);
+   \path (imug) edge[->] node [rotate=-90,fill=white] {\(P(A|G,M) > 50\%\)} (mug);
+   \path (ing) edge[->] node [fill=white] {Yes}  (spe);
+   \path (ing) edge[->] node [fill=white,rotate=90] {No}  (rno);
+   \path (spe) edge[->] node [fill=white,rotate=90] {Yes}  (rsp);
+   \path (spe) edge[->] node [fill=white] {No}  (mug);
+   \path (mug) edge[->] (rad);
+   \path (mug) edge[->] (rme);
+   \node [fill=white,above=of rad, yshift=-1.5em, xshift=-1em] {Yes};
+   \node [fill=white,above=of rme, yshift=-1.5em, xshift=1.75em] {No};
+\end{tikzpicture}
+
+

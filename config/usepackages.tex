@@ -1,0 +1,487 @@
+% required for lualatex in 2018 due to microtype bug
+\usepackage{luatexbase}
+
+% show overfull boxes
+\overfullrule=2cm
+
+\usepackage{caption}
+\PassOptionsToPackage{%
+    eulerchapternumbers,%
+    % listings,%
+    % drafting,%
+    pdfspacing,%
+    dottedtoc,%
+    %floatperchapter,%
+    % subfig,%
+    beramono,%
+    eulermath,%
+    parts,
+    style=classicthesis,
+    }%
+{classicthesis}
+
+\newcounter{dummy} % necessary for correct hyperlinks (to index, bib, etc.)
+\newlength{\abcd} % for ab..z string length calculation
+
+\usepackage[shortcuts]{extdash}
+
+\PassOptionsToPackage{british}{babel}
+\usepackage{babel}
+
+\usepackage{csquotes}
+\renewcommand{\mkcitation}[1]{~#1}
+\renewcommand{\mkccitation}[1]{~#1}
+\renewcommand{\mktextquote}[6]{#1#2#3#6#4#5}
+\PassOptionsToPackage{%
+    backend=biber,%
+    language=auto,%
+    style=alphabetic,%
+    maxnames=6,%
+    minnames=6,%
+    backref=true,%
+    urldate=iso,%
+    seconds=true,%
+    date=iso,%
+    datamodel=custom,%
+    datecirca=true,%
+    dateuncertain=true,%
+}{biblatex}
+\usepackage{biblatex}
+\setcounter{biburllcpenalty}{2000}
+\setcounter{biburlucpenalty}{2000}
+\DeclareBibliographyAlias{software}{online}
+\DeclareLanguageMapping{english}{american-apa}
+\DeclareSourcemap{
+    \maps[datatype=bibtex]{
+        \map[overwrite=true]{
+            \step[fieldsource=author, match=Richter, final]
+            \step[fieldset=keywords, fieldvalue=ownpub]
+        }
+        \map{
+            \step[fieldsource=organization, final]
+            \step[fieldset=usera, origfieldval]
+        }
+        \map{
+            \pertype{standard}
+            \step[typesource=standard, typetarget=manual]
+            \step[fieldset=keywords, fieldvalue={,type:standard}, append]
+        }
+        % remove fields that are always useless
+        \map{
+            \step[fieldset=abstract, null]
+            \step[fieldset=pagetotal, null]
+        }
+        % remove URLs for everything apart from online and software sources
+        \map{
+            \pernottype{software}
+            \pernottype{online}
+            \pernottype{report}
+            \pernottype{techreport}
+            \pernottype{standard}
+            \pernottype{manual}
+            \pernottype{misc}
+            \step[fieldset=url, null]
+            \step[fieldset=urldate, null]
+        }
+        \map{
+            \pertype{inproceedings}
+            % remove redundant conference information
+            \step[fieldset=venue, null]
+            \step[fieldset=eventdate, null]
+            \step[fieldset=eventtitle, null]
+            % do not show ISBN for proceedings
+            \step[fieldset=isbn, null]
+            % Citavi bug
+            \step[fieldset=volume, null]
+        }
+        \map{
+            \pertype{software}
+            %\step[fieldset=author, null]
+        }
+    }
+}
+\newrobustcmd*{\citefullauthor}{\AtNextCite{\DeclareNameAlias{labelname}{given-family}}\citeauthor}
+\newrobustcmd*{\Citefullauthor}{\AtNextCite{\DeclareNameAlias{labelname}{given-family}}\Citeauthor}
+% use organization as a replacement for author or editor
+\DeclareLabelalphaTemplate{
+    \labelelement{
+        \field[final]{shorthand}
+        \field{label}
+        \field[strwidth=3,strside=left,ifnames=1]{labelname}
+        \field[strwidth=1,strside=left]{labelname}
+        \field[strwidth=3]{usera}
+    }
+    \labelelement{
+        \field[strwidth=2,strside=right]{year}
+    }
+}
+\newcommand{\citesoftware}[1]{\citetitle{#1} by \citefullauthor*{#1} \autocite{#1}}
+\newcommand{\citesoft}[1]{\citetitle{#1} \autocite{#1}}
+\newcommand{\citewithauthor}[1]{\citeauthor*{#1}~\cite{#1}}
+
+% configure back references
+\DefineBibliographyStrings{english}{%
+  backrefpage = {used on: p\adddot},
+  backrefpages = {used on: pp\adddot},
+}
+\renewbibmacro*{finentry}{\iflistundef{pageref}{}{\renewcommand{\finentrypunct}{}}\finentry}
+\DeclareFieldFormat{pagerefformat}{\mkbibemph{#1}}
+\renewbibmacro*{pageref}{%
+  \iflistundef{pageref}
+    {\adddot}
+    {\setunit{\adddot\addspace}\printtext[pagerefformat]{%
+       \ifnumgreater{\value{pageref}}{1}
+         {\bibstring{backrefpages}\ppspace}
+         {\bibstring{backrefpage}\ppspace}%
+       \printlist[pageref][-\value{listtotal}]{pageref}}}}
+\renewcommand*{\bibfont}{\small}
+\DeclareBibliographyDriver{software}{%
+  \noindent\usebibmacro{author}%
+  \newunit
+  \usebibmacro{title}%
+  \newunit
+  \usebibmacro{url} \usebibmacro{urldate}
+  \iffieldundef{addendum}{}{\newunit \printfield{addendum}}%
+  \newunit
+  \usebibmacro{pageref}
+  \usebibmacro{finentry}
+}
+
+\bibliography{bib/library}
+\bibliography{bib/software}
+
+% validate language fields
+\makeatletter
+\DeclareIndexListFormat{language}{%
+  \ifboolexpr{ test {\ifbibstring{#1}} or test {\ifbibstring{lang#1}} }
+    {}
+    {\blx@warning@noline{Unknown language '#1' in 'language' field of\MessageBreak '\thefield{entrykey}'}}}
+\AtDataInput{\indexlist{language}}
+\makeatother
+
+% try to prevent more hboxes in the bibliography
+\usepackage{etoolbox}
+\apptocmd{\sloppy}{\hbadness 100000\relax}{}{} % chktex 1
+
+\PassOptionsToPackage{fleqn}{amsmath}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\PassOptionsToPackage{T1}{fontenc} % T2A for cyrillics
+\usepackage{fontenc}
+\usepackage{textcomp} % fix warning with missing font shapes
+\usepackage{xspace} % to get the spacing after macros right
+\usepackage{mparhack} % get marginpar right
+\PassOptionsToPackage{smaller}{acronym}
+\usepackage{caption}
+\captionsetup{font=small} % format=hang,
+\usepackage{paralist}
+\usepackage{wrapfig}
+\usepackage{booktabs}
+\usepackage{blindtext}
+\PassOptionsToPackage{luatex}{graphicx}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{multirow}
+\AtBeginEnvironment{tabular}{\footnotesize}
+
+\usepackage[hyperref,framed]{ntheorem}
+\makeatletter
+\newtheoremstyle{mine}%
+  {\item[\hskip\labelsep \spacedlowsmallcaps{##1\ ##2}\theorem@separator]}%
+  {\item[\hskip\labelsep \spacedlowsmallcaps{##1\ ##2\ (##3)}\theorem@separator]}
+\newtheoremstyle{nonumbermine}%
+  {\item[\hskip\labelsep \spacedlowsmallcaps{##1}\theorem@separator]}%
+  {\item[\hskip\labelsep \spacedlowsmallcaps{##1\ (##3)}\theorem@separator]}
+\makeatother
+\theoremstyle{mine}
+\theoremlisttype{allname}
+\newtheorem*{hyp1}{Goal}
+\newtheorem{hyp2}{RQ}
+\newtheorem{hyp3}{Claim}[chapter]
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{corollary}
+
+\usepackage{varioref}
+\PassOptionsToPackage{hyperfootnotes=false,pdfpagelabels,bookmarksdepth=3}{hyperref}
+\usepackage{hyperref}  % backref linktocpage pagebackref
+\pdfcompresslevel=9
+% hyperref links to the float environments, not the captions
+\usepackage[all]{hypcap}
+\usepackage{hyphenat}
+
+% must be loaded after hyperref
+\usepackage[style=indexgroup,nolist,xindy,acronyms]{glossaries-extra}
+\usepackage{glossaries-prefix}
+\usepackage{mfirstuc}
+\RestoreAcronyms
+
+% additional forms of glossary entries
+% attributive form
+\glsaddkey
+ {attributive}% key
+ {}% default value
+ {\glsentryattributive}% no link cs
+ {\Glsentryattributive}% no link ucfirst cs
+ {\glsatt}% link cs
+ {\Glsatt}% link ucfirst cs
+ {\GLSatt}% link all caps cs
+% some alternative form
+\glsaddkey
+ {alternative}% key
+ {}% default value
+ {\glsentryalt}% no link cs
+ {\Glsentryalt}% no link ucfirst cs
+ {\glsalt}% link cs
+ {\Glsalt}% link ucfirst cs
+ {\GLSalt}% link all caps cs
+
+
+\GlsXtrEnableLinkCounting[chapter]{general,acronym}
+% disable hyperlink if link count is greater than 1:
+\renewcommand*{\glslinkpresetkeys}{%
+ \ifnum\GlsXtrLinkCounterValue{\glslabel}>1
+  \setkeys{glslink}{hyper=false}%
+ \fi
+}
+
+\renewcommand{\glsxtrpostdescacronym}{.}
+\newcommand{\glsxtrpostdescdualacronym}{.}
+% start linking to entries now that they are defined
+\newcommand{\glsxtrpostlinkdualacronym}{\glsadd{main-\glslabel}}
+\renewcommand{\glstreeitem}{%
+  \parindent0pt\par\hangindent40pt
+  \everypar{\parindent50pt\hangindent40pt}}
+\renewcommand{\glstreepredesc}{\par\nopagebreak
+  \glstreeitem\parindent\hangindent}
+\renewcommand{\glsnamefont}[1]{\textnormal{\itshape #1}} % chktex 1 chktex 6
+\renewcommand*{\glsgroupheading}[1]{\parindent0pt\textcolor{Maroon}{\textnormal{\glsgetgrouptitle{#1}}}%
+  \par\nopagebreak
+}
+\GlsXtrEnablePreLocationTag{\textit{used on: p.~}}{\textit{used on: pp.~}}
+\renewcommand{\GlsXtrFormatLocationList}{\textit}
+\newcommand*{\newdualentrypl}[6][]{%
+  \newglossaryentry{main-#2}{%
+  name={#4 (\gls{#2})},%
+  plural={#5},%
+  text={#3\glsadd{main-#2}},%
+  description={{#6}},%
+  #1
+  }%
+
+  \newglossaryentry{#2}{
+  type=\acronymtype,
+  category=dualacronym,
+  first={#4 (#3)},
+  long={#4},
+  short={#3},
+  shortplural={#3s},
+  longplural={#4s},
+  name={#3},
+  description={\glslink{main-#2}{\capitalisewords{#4}}},
+  #1
+  }%
+}
+\newcommand*{\newdualentry}[5][]{\newdualentrypl{#2}{#3}{#4}{#4s}{#5}}
+\newcommand*{\newaltglossentry}[4][]{%
+  \newglossaryentry{#2}{name={#3},%
+  text={#3\glsadd{#2}},%
+  description={{Also known as \gls{#4}}},%
+  #1
+  }%
+}
+
+
+\loadglsentries{frontback/Glossary}
+\makeglossaries{}
+
+\usepackage[useregional]{datetime2}
+\PassOptionsToPackage{activate={true,nocompatibility},final,tracking=true}{microtype}
+\usepackage{fnpct}
+\usepackage{soul}
+
+% command for hyphenated type writer font
+\makeatletter
+\DeclareRobustCommand\ttfamily
+        {\not@math@alphabet\ttfamily\mathtt
+         \fontfamily\ttdefault\selectfont\hyphenchar\font=-1\relax}
+\makeatother
+\DeclareTextFontCommand{\texthtt}{\ttfamily\hyphenchar\font=45\relax}
+
+\usepackage{classicthesis}
+% need hypersetup after classicthesis to override colors
+\hypersetup{%
+    %draft, % = no hyperlinking at all (useful in b/w printouts)
+    colorlinks=true, linktocpage=true, pdfstartpage=3, pdfstartview=FitV,%
+    % uncomment the following line if you want to have black links (e.g., for printing)
+    colorlinks=false, linktocpage=false, pdfstartpage=3, pdfstartview=FitV, pdfborder={0 0 0},
+    urlcolor=mybrown, linkcolor=myblue, citecolor=mygreen,%
+    %urlcolor=Black, linkcolor=Black, citecolor=Black,%
+    breaklinks=true, pdfpagemode=UseNone, pageanchor=true, pdfpagemode=UseOutlines,%
+    plainpages=false, bookmarksnumbered, bookmarksopen=true, bookmarksopenlevel=1,%
+    hypertexnames=true, pdfhighlight=/O,%nesting=true,%frenchlinks,%
+    pdftitle={\myTitle},%
+    pdfauthor={\myName},%
+    pdfsubject={PhD Thesis},%
+    pdfkeywords={},%
+    pdfcreator={LuaTeX},%
+}
+\usepackage[pass,verbose]{geometry}%showframe
+
+% avoid the en dash from sticking too far out of the text body
+\LoadMicrotypeFile{ppl}
+\SetProtrusion[load=ppl-T1]
+  {encoding = T1,
+   family   = {ppl,pplx,pplj}}
+  {\textendash = {0,0}} % chktex 1
+\SetProtrusion[load=ppl-OT1]
+  {encoding = OT1,
+   family   = {ppl,pplx,pplj}}
+  {\textendash = {0,0}} % chktex 1
+
+% some fixes for TOCs
+\addtolength{\figurelabelwidth}{-1.0em}
+\cftsetindents{figure}{0em}{\figurelabelwidth}
+\addtolength{\tablelabelwidth}{-1.0em}
+\cftsetindents{table}{0em}{\tablelabelwidth}
+
+\usepackage{scrhack}
+\usepackage[binary-units=true]{siunitx}
+\sisetup{detect-all}
+\usepackage{setspace}
+\usepackage{calc}
+\usepackage{array}
+\usepackage{fontawesome}
+
+\usepackage[nameinlink,noabbrev,capitalise]{cleveref}
+\crefformat{part}{#2Part \MakeUppercase{#1}#3}
+\crefname{hyp1}{Goal}{Goals}
+\crefname{hyp2}{RQ}{RQs}
+\crefrangelabelformat{hyp2}{#3#1#4--#5#2#6}
+\Crefname{hyp3}{Claim}{Claims}
+
+\usepackage{ragged2e}
+\usepackage{placeins}
+\usepackage{subcaption}
+\usepackage{fancyvrb}
+\usepackage{interval}
+\usepackage[inline]{enumitem}
+
+% prevent a page break before a list
+\makeatletter
+\newcommand\mynobreakpar{\par\nobreak\@afterheading}
+\makeatother
+
+% allow splitting math across pages
+\allowdisplaybreaks
+
+\titleformat{name=\part,numberless}[display]%
+{\normalfont\centering\large}%
+{\thispagestyle{empty}~}{1em}%
+{\color{Maroon}\spacedallcaps}[\bigskip\normalfont\normalsize\color{Black}]
+
+\usepackage{todonotes}
+\setuptodonotes{fancyline, color=color_table_emph_two}
+\usepackage{marginnote}
+\usepackage{tikz}
+\usepackage{tabulary}
+\usepackage{eurosym}
+\usepackage{pgfgantt}
+\usepackage{ellipsis}
+\usepackage{datatool}
+
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\graphicspath{{figures/},{generated/}}
+
+\makeatletter
+\let\thetitle\@title
+\let\thesubtitle\@subtitle
+\let\theauthor\@author
+\makeatother
+
+% Signature and date
+\newcommand*{\SignatureAndDate}[2][3cm]{%
+	\vspace*{#1}
+    \par\noindent\makebox[.45\textwidth]{\hrulefill} \hfill\makebox[.45\textwidth]{\hrulefill}%
+    \par\noindent\makebox[.45\textwidth][l]{#2}      \hfill\makebox[.45\textwidth][l]{Place, Date}%
+}%
+
+% special writing and not decided
+\newcommand{\naive}{na{\"i}ve}
+\newcommand{\Naive}{Na{\"i}ve}
+\newcommand{\visavis}{vis-{\`a}-vis}
+\newcommand{\yele}{Y{\`e}l{\^i} Dnye}
+\newcommand{\cramv}{Cram\'er's \~V}
+\newcommand{\chisq}{Pearson's chi-square}
+\newcommand{\fish}{Fisher's exact}
+
+% formatting
+\def\code#1{\textcolor{code}{\texttt{#1}}}
+
+% create a special environment for colored tables. allows non-colored tabled and
+% prevents colored text in pdf_tex exported from inkscape in bionic
+\newenvironment{colored_table}[1]
+{
+    \rowcolors{1}{color_table_one}{color_table_two}
+    \begin{table}[#1]
+}
+{
+    \end{table}
+    \rowcolors{1}{white}{white}
+}
+
+% definition marks on margin
+\newcommand*{\mnote}[2]{
+\marginnote
+[ % left pages
+  {\setlength{\tabcolsep}{2pt}
+  \begin{tabular}{>{\RaggedLeft\hspace{0pt}}p{.769\marginparwidth}>{\RaggedLeft\hspace{-2pt}}p{1em}}
+    #1 & \textcolor{halfgray}{#2}\\
+  \end{tabular}
+  }
+]
+{ % right pages
+  {\setlength{\tabcolsep}{2pt}
+  \begin{tabular}{>{\RaggedRight\hspace{-2pt}}p{1em}>{\RaggedRight\hspace{0pt}}p{.769\marginparwidth}}
+    \textcolor{halfgray}{#2} & #1\\
+  \end{tabular}
+  }
+}
+% voffset
+[-\baselineskip]
+}
+\newcommand{\newdefmanual}[2]{\mnote{\begin{footnotesize}#1\end{footnotesize}}{\faEdit}\emph{#2}}
+\newcommand{\newdefgls}[1]{\newdefmanual{\gls+{#1}\glsreset{#1}}{\gls+{#1}}}
+\newcommand{\newdefGls}[1]{\newdefmanual{\gls+{#1}\glsreset{#1}}{\Gls+{#1}}}
+\newcommand{\newdefglspl}[1]{\newdefmanual{\gls+{#1}\glsreset{#1}}{\glspl+{#1}}}
+\newcommand{\newdefGlspl}[1]{\newdefmanual{\gls+{#1}\glsreset{#1}}{\Glspl+{#1}}}
+%\newcommand{\rqnote}[2]{\marginnote{\begin{footnotesize}\hyperref[#1]{\textcolor{halfgray}{\Cref*{#1}:}} #2\end{footnotesize}}}
+%\newcommand{\rqnote}[2]{\marginnote{\justify\begin{footnotesize}\hyperref[#1]{\textcolor{halfgray}{\Cref*{#1}:}} #2\end{footnotesize}}[-1.65\baselineskip]}
+%\newcommand{\rqnote}[2]{
+%  \begin{wrapfigure}{r}[\marginparwidth+\marginparsep]{2.\marginparwidth+\marginparsep}
+%          \hyperref[#1]{\textcolor{halfgray}{\Cref*{#1}:}} #2
+%  \end{wrapfigure}
+%}
+\usepackage{manyfoot}
+\DeclareNewFootnote{A}
+\newcommand{\rqnote}[2]{\FootnoteA{\textcolor{halfgray}{\tiny\faRefresh}}{\hyperref[#1]{\textcolor{halfgray}{\Cref*{#1}:}} #2}}
+
+% load and use data from an ini file
+\DTLsetseparator{ = }
+\newcommand{\iniload}[2]{\DTLloaddb[noheader, keys={key,value}]{#1}{#2}}
+\newcommand{\inidata}[2]{\DTLfetch{#1}{key}{#2}{value}}
+\newcommand{\inisi}[3]{\(\DTLfetch{#1}{key}{#2}{value}\,\si{#3}\)}
+
+\hyphenation{%
+    pre-sen-ter
+    vi-de-os
+    con-ver-sa-tion-al
+    au-ton-o-mous
+    au-ton-o-mously
+    ro-bot-ics
+    ro-bot
+    ro-bots
+    mod-el
+    over-view
+}

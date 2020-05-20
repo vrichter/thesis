@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="c3f0e4e9-4c00-4c00-9394-ed36ca8cad84" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-15T12:56:55.297Z</CreationDate>
+            <ModificationDate>2016-01-15T12:56:55.297Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:cf3ceb3e-2ad4-4807-919a-f763c62af601#t=25.608/35.043;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VL ist nicht Jasmin (Paul)</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="f418ad9d-8d7d-4036-ba3d-772442ad1f0f" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-15T12:56:20.256Z</CreationDate>
+            <ModificationDate>2016-01-15T12:56:20.256Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:cf3ceb3e-2ad4-4807-919a-f763c62af601#t=38.173/45.043;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt, dass das Licht angeht, (ob er das auch als Begrüßung des Appartments wahrnimmt?)</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="c35bd77f-31b2-4cee-b0cc-b8a9c14bf8b8" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-15T12:57:50.122Z</CreationDate>
+            <ModificationDate>2016-01-15T12:57:50.122Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:cf3ceb3e-2ad4-4807-919a-f763c62af601#t=48.390/56.564;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP holt sich ein Getränk</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="1fc2e4fd-5da9-487b-8744-1f83c6478bc2" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T09:24:42.240Z</CreationDate>
+            <ModificationDate>2016-01-19T09:24:42.240Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:cf3ceb3e-2ad4-4807-919a-f763c62af601#t=136.434/141.999;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon die erste Karte</Message>
+    </ColTime>
+</ColTimeList>

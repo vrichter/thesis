@@ -1,0 +1,19 @@
+\addtocontents{toc}{\protect\vspace{\beforebibskip}} % to have the bib a bit from the rest in the toc
+\refstepcounter{dummy}
+
+\renewcommand{\glossarysection}[2][]{}
+
+\GlsXtrSetDefaultGlsOpts{noindex}
+\renewcommand{\glsxtrpostlinkdualacronym}{}
+
+\addchap{Acronyms}
+\label{app:acronyms}
+\sloppy
+\printglossary[type=\acronymtype]
+\fussy
+
+\addchap{Glossary}
+\label{app:glossary}
+\sloppy
+\printglossary{}
+\fussy

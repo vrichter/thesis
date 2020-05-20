@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="dca733c5-d8e4-4c63-8e7c-c4469adcf736" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-22T13:43:16.560Z</CreationDate>
+            <ModificationDate>2016-01-22T13:43:16.560Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1e78a043-e9f6-41f4-9886-46e7602ab421#t=0.000/0.700;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Video beginnt sehr spät, aber passend und endet aber zu früh, weil man nicht sieht, wie VP ihre Sachen wieder mit raus nimmt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="3886af17-5445-4f74-9aef-8dccd1921a02" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-22T13:44:12.062Z</CreationDate>
+            <ModificationDate>2016-01-22T13:44:12.062Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1e78a043-e9f6-41f4-9886-46e7602ab421#t=4.450/6.800;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Jasmin ist nicht VL.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="9d3a77b9-a5bc-4926-a0bf-36d7e128c614" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-22T13:57:33.889Z</CreationDate>
+            <ModificationDate>2016-01-22T13:57:33.889Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1e78a043-e9f6-41f4-9886-46e7602ab421#t=62.950/72.050;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VL winkt dem Roboter zurück, wahrscheinlich nicht von der VP bemerkt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="51839d13-dc67-462c-af32-de6870108f92" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-22T14:14:33.488Z</CreationDate>
+            <ModificationDate>2016-01-22T14:14:33.488Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1e78a043-e9f6-41f4-9886-46e7602ab421#t=167.075/169.725;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP fragt Notaus-Person, ob sie die Schalter am Apartmenteingang drücken darf. Notaus-Person verweist auf die VL.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="2a7c0e09-f650-41a4-a3ca-3c476481fab5" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-22T14:15:34.839Z</CreationDate>
+            <ModificationDate>2016-01-22T14:15:34.839Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1e78a043-e9f6-41f4-9886-46e7602ab421#t=172.225/188.425;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP geht raus und redet mit VL.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="3070e347-6220-4396-aea9-e3400df854b7" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-22T15:02:35.128Z</CreationDate>
+            <ModificationDate>2016-01-22T15:02:35.128Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1e78a043-e9f6-41f4-9886-46e7602ab421#t=269.725/273.425;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Adressat selbst: VP liest die Karte, da hatten wir gesagt, wir codieren das als "selbst".</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="3e5d5834-0f31-4272-b94b-06026f250e6e" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-22T15:47:47.223Z</CreationDate>
+            <ModificationDate>2016-01-22T15:47:47.223Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1e78a043-e9f6-41f4-9886-46e7602ab421#t=342.625/343.825;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP ist fertig und geht zur VL. Unglücklich ist, dass das Video früh endet.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="9ae5bcd8-4815-414a-a6ae-8e927ef4eade" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-22T15:49:40.357Z</CreationDate>
+            <ModificationDate>2016-01-22T15:49:40.357Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:1e78a043-e9f6-41f4-9886-46e7602ab421#t=345.925/349.625;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP macht alle Aufgaben. Wirkt von der Stimmung her neutral. Zeigt wenig Reaktionen.
+VL ist nicht Jasmin, VL winkt dem Roboter zu,scheint VP aber nicht gesehen zu haben.
+VP verlässt einmal den Raum, weil VP eine Frage hat.</Message>
+    </ColTime>
+</ColTimeList>

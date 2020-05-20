@@ -1,0 +1,567 @@
+% ###################################################################
+\chapter{Addressing in Human-Robot Conversational Groups}\label{ch.meka}
+
+\iniload{meka.info}{data/data.info_meka.ini}
+
+\begin{displaycquote}[p. 36]{Kendon1967}
+From \emph{p}'s point of view then, \emph{p} may be said to be 'offering' \emph{q} the floor, for in looking steadily at him he indicates that he is now \enquote{open} to his actions, whatever they may be.\\
+\end{displaycquote}
+
+In this chapter I investigate \Cref{hyp.meka}\rqnote{hyp.meka}{\hypmeka}.
+To this end, I present a scenario in which a \gls{robot} participates in a \gls{conversational group} with multiple people in the \gls{csra} to solve tasks verbally directed at it.
+The collected observations are used to evaluate an approach to \gls{addressee} recognition in multi-party \acrlong{hri}.
+Finally, I discuss the results of the evaluation and the implications for the research question.
+
+\section{Introduction}
+
+In dyadic \gls{hri} scenarios, it can by definition be assumed that only one person interacts with the \gls{robot}.
+Therefore, \glspl{robot} can assume to always be the \gls{addressee} of speech~\cite{Holthaus,Carlmeyer2014,Huang2016}.
+For instance, a poll questioning \gls{robot}---presented by~\citewithauthor{Bruce2002}---pays attention to a person from the moment its \emph{area of interest} is entered and until the end of the interaction.
+All other persons are ignored during that time.
+However, the assumptions that \glspl{conversation} are always dyadic and that all utterances are produced to cause a verbal response from the \glsatt{conversation} partner do not hold in most interaction scenarios.
+When several persons are present, they can not only speak to a \gls{robot}.
+They dynamically create and change \glspl{conversational group} and converse with each other (see: \cref{sec.rw.hi.faceengagements}).
+Even when the \gls{robot} knows that it is in a \gls{conversational group} and with whom\footnote{the problem of {conversational group} detection with \glspl{artificial agent} is investigated in \cref{ch.fformation}}, it still needs to actively participate in this group.
+At least, it needs to know when to react to an utterance and when not.
+As presented in \cref{sec.rw.hi.focused-rw.addressing}, different approaches to automatic \gls{addressee} recognition are possible.
+Most of the approaches used in \gls{hri} employ information about the participants \gls{vfoa} and acoustic information to decide whether the \gls{robot} is addressed by a \gls{speaker} or not.
+To distinguish which person speaks at a particular time, techniques for sound source localization or close-talk microphones are often applied~\cite{Lang2003,Skantze2014}.
+In this chapter, I present a multi-party, \acrlong{hri} scenario, designed to confront the \gls{robot} with the problems of participation in a \gls{conversational group} and autonomous decision whether to react to an utterance within the group or not.
+We designed this scenario, implemented it on the \gls{floka}, and applied it in an experimental study in the \gls{csra}~\cite{Richter}.
+This scenario is particularly suitable for the evaluation of \gls{addressee} recognition approaches for \glspl{artificial agent}.
+A description of the study set-up, recording and annotation, used platform, implemented attention and dialogue management systems, as well as an initial evaluation of the used addressing recognition can be found in the corresponding publication~\cite{Richter}.
+On the basis of the collected data, I investigate \Cref{hyp.meka} by examining the following claims: 
+\newcommand{\hypmekahone}{By visually observing movements of lips, an agent can recognize if a person has the role of \gls{speaker} in a \gls{conversational group}.}
+\begin{hyp3}[Speaker Detection]
+    \label{meka.h1}
+    \hypmekahone
+\end{hyp3}
+\newcommand{\hypmekahtwo}{Recognizing mutual gaze with a participant of the \gls{conversational group} at the end of an utterance, can be interpreted by an agent as a prompt to take the next \gls{turn}.}
+\begin{hyp3}[Next Speaker Detection]
+    \label{meka.h2}
+    \hypmekahtwo
+\end{hyp3}
+\newcommand{\hypmekahthree}{Mouth movement and gaze information about a participant of a \gls{conversational group} can be combined and put into context to recognize if a \gls{robot} is addressed with an utterance or not.}
+\begin{hyp3}[Addressee Detection]
+    \label{meka.h3}
+    \hypmekahthree
+\end{hyp3}
+I investigate \Cref{hyp.meka} by incorporating these claims into an \gls{addressee} recognition system and evaluating its applicability in a multi-party \gls{hri} scenario.
+
+\section{Human-Robot Addressing Corpus}\label{sec.meka.corpus}
+
+The evaluation of \gls{addressee} recognition approaches in \gls{hri} poses multiple challenges to the design of the interaction.
+\Gls{addressee} recognition is the distinction of utterances addressed towards the agent from utterances exchanged between other people in the situation.
+Therefore, a scenario needs to be chosen that encourages both: interactions with the agent and with other people.
+Furthermore, the interaction should encourage that both the speaker and the \gls{addressee} change on a regular basis and both addressing and non-addressing of the \gls{robot} can be regularly observed.
+In this section, I present a \gls{hri} scenario and implemented \gls{robot} behaviour that satisfies these requirements.
+Subsequently, I describe the corresponding experiment and annotation procedure.
+The resulting corpus is presented at the end of this section.
+
+\subsection{Multi-Party Interaction Scenario}\label{sec:meka-scenario}
+
+We designed a multi-party \gls{hri} scenario in the \gls{csra} in which human participants ask a \gls{robot} questions and make it control the environment.
+To this end, the participants are equipped with a set of notes, containing tasks for the \gls{robot}.
+% procedure
+To enforce a better balance between addressing of the \gls{robot} and other participants, a two-step communication of the tasks is performed.
+The procedure is as follows:
+\begin{enumerate}
+    \item Participant \(P_a\) uncovers a note.
+    \item \(P_a\) communicates the task to a second participant \(P_b\).
+    \item \(P_b\) takes the \gls{turn} and communicates the task to the \gls{robot} \(R\).
+    \item The \gls{robot} \(R\) accepts and solves the task. 
+    \item \(P_b\) takes the role of \(P_a\)\footnote{Participants naturally ensure a uniform distribution of participation in the group in such a tash. This can be expected based on the literature and is confirmed in this study.}.
+    \item This is repeated until all notes are uncovered. 
+\end{enumerate}
+The communication of the task from one participant to another not only enforces interaction between the participants.
+It additionally confronts the \gls{robot} with utterances that verbally match its expectations but address someone else.
+% enforced f-formation
+To further support a uniform distribution of the \glspl{conversational role} in the interaction, we recommend a closed, circular \gls{conversational group} configuration.
+To this end, we chose interactions with three human participants and one \gls{robot}, distributed around a table in the \gls{csra}'s living room (see \cref{fig:meka-intro}).
+\begin{figure}[tbh]
+    \centering
+    \begin{subfigure}[t]{0.49\textwidth}
+        \includegraphics[trim=55 0 80 0, clip, width=\textwidth]{figures/addressee-meka-intro.jpg}
+        \caption{Scene during the briefing.}
+        \label{fig:meka-intro-shot}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.49\textwidth}
+        \def\svgwidth{1.0\textwidth}
+        \input{generated/csra_map_study_meka.pdf_tex}
+        \caption{Map of the study set-up.}
+        \label{fig:meka-map}
+    \end{subfigure}
+    \caption[Configuration during robot addressing study.]{\label{fig:meka-intro}
+    (a) The left image shows a scene during the briefing of participants, recorded by the camera \(C_1\).
+    The participants and \gls{robot} are already correctly placed for the study.
+    The experimenter is standing next to the \gls{robot} and describing the study procedure.
+    (b) The right image shows a map of the \gls{apartment}'s living room during the study.
+    The participants \(P_1\), \(P_2\), and \(P_3\) are seated on the armchairs and sofa (yellow).
+    They and the \gls{robot} (green) surround a table (gray) on which the task notes (red) are spread.
+    }
+\end{figure}
+This allows the participants to interact with each other and with the \gls{robot} without the need to rearrange between \glspl{turn}.
+Therefore, there is no need for changes in the \gls{conversational group} arrangement.
+When the interactants position themselves at the edges of the table, their resulting distribution in the \gls{pspace} of the \gls{conversational group} is uniform.
+Therefore, all participants have the same access to the \gls{conversational group} and no particular distribution of roles is imposed on the interaction (see \cref{sec.rw.hi.cg}).
+%  summary
+With this approach we create a suitable scenario for the evaluation of \glsatt{robot} \gls{addressee} recognition with (1) a clear motivation for the participants, (2) a fixed \gls{conversational group}, and (3) a good ratio between addressing of the \gls{robot} and other participants.
+
+
+\subsection{System Set-Up}
+% intro and robot
+Literature suggests that the behaviour of an agent influences the behaviour of participants (see \cref{sec.rw.hi.focused-rw.perception}).
+Therefore, it is important to consider which behaviours of the \gls{robot} are desirable and how these may influence the course of the interaction.
+We used the anthropomorphic \gls{robot} \gls{floka} with its sensor head (as presented in \vref{fig:csra-map-meka}).
+The human-like upper body of the \gls{robot} allows a clear recognizability of its front, and therefore allows people to estimate its \gls{transactional segment}.
+Furthermore, by turning its head---pan and tilt---the \gls{robot} can show attention. 
+
+% attention and dialogue management
+To allow \gls{floka} to actively participate in the interaction, we provided it with an attention management system.
+It integrates multi-modal sensor information from the \glspl{robot} camera and microphones to direct its visual attention to salient areas.
+This allows \gls{floka} to (1) focus on participants of the interaction by looking at their faces and (2) shift its attention towards a \gls{speaker} by turning towards sound sources.
+The \gls{robot} continuously exhibits this attentive behaviour to provoke the impression that it is following the interaction.
+Furthermore, this should allow the \gls{robot} to focus on the current \gls{speaker} of the \gls{conversational group}.
+The implementation of the attention management system is presented in the corresponding publication~\cite{Richter}.
+The dialogue management system, presented by~\citewithauthor{Carlmeyer2014}, utilizes the results of the \gls{addressee} recognition component to only processes utterances when the \gls{robot} considers itself addressed.
+In this case the \gls{robot} implicitly takes the \gls{turn}, produces a verbal response to the recognized task, and finally yields its \gls{turn} by ending speech production and continuing with its gazing behaviour.
+The \gls{addressee} recognition component is presented in detail in the following section.
+
+\subsection{Addressee Recognition}\label{sec.meka.study.classifiers}
+
+To investigate the \cref{meka.h1,meka.h2,meka.h3} I implemented a system for \gls{addressee} recognition that incorporates the detection of mouth movements and mutual gaze to distinguish utterances addressed towards the \gls{robot} from other utterances.
+% \gls{addressee} recognition system
+It combines two kinds of information (\cref{meka.h1}) whether a person is speaking, and (\cref{meka.h2}) whether this person maintains mutual gaze with the \gls{robot}.
+To this end, I extended the gaze detector created by~\citewithauthor{Schillingmann2015} to make its gaze recognition results and the results of the facial landmark detection~\cite{Sagonas2013} available within the \gls{csra}.
+The used features are visualized in \cref{fig:meka-features}.
+\begin{figure}[htb]
+    \centering
+    \def\svgwidth{1.0\textwidth}
+    \input{generated/meka-addressee-gzetool.pdf_tex}
+    \caption[Mutual gaze and mouth movement features.]{\label{fig:meka-features}
+    Visualization of the features used in the \gls{addressee} recognition.
+    The person on the left maintains mutual gaze and is speaking, the person on the right does neither of it.
+    The upper images show the results of the gaze recognition system---horizontal and vertical angle---from~\citewithauthor{Schillingmann2015}, augmented with the default thresholds for mutual gaze (blue bars) and the current estimation (green bars).
+    The centred images show visualizations of the estimated head orientation (blue), and a red rectangle in case of mutual gaze.
+    The inner corner-points of the eyes are highlighted in pink.
+    The lower images show the facial landmarks (cyan lines) in the region of the mouth and highlight the central mouth landmarks (red dots) and corresponding distances (yellow lines).
+    }
+\end{figure}
+The gaze detection provides the horizontal and vertical angle between the participants gaze direction and the image centre.
+Because the \gls{robot}'s camera is located at the centre of its head, the person is looking directly into the \glspl{robot} face when both angles are zero.
+Therefore, to decide whether a person \(p\) maintains mutual gaze with the \gls{robot}, I compare the magnitude of both their horizontal (\(\alpha_p\)) and vertical (\(\beta_p\)) gaze angles to a threshold \(\theta\).
+\begin{equation}\label{eq:meka.mg}
+    G(p) = | \alpha_p | < \theta \land | \beta_p | < \theta
+\end{equation}
+For the recognition of mouth movements, distances between the central points of the inner mouth (see \cref{fig:meka-features}) are observed during a sliding time window \(\Delta_t\).
+This results in a set of distances \(\mathbf{D_p}\) for each person \(p\).
+A person is recognized as speaking if the variance of these distances exceeds a threshold \(d\).
+\begin{equation}\label{eq:meka.sp}
+    S(p) = \text{Var}(\mathbf{D_p}) > d
+\end{equation}
+To decide whether a person \(p\) is addressing the \gls{robot} at a particular time, the results of both \cref{eq:meka.mg} and \cref{eq:meka.sp} are then combined.
+\begin{equation}\label{eq:meka.ad}
+    A(p) = G(p) \land S(p)
+\end{equation}
+The thresholds \(\theta = \ang{12}\), \(d=1.5\), and the time window \(\Delta_t=\SI{600}{\ms}\) were selected based on a pre-study with the same set-up.
+
+\subsection{Study Procedure}
+
+After the participants gave their consent to the recording, they were accompanied into the \gls{apartment}'s living room by the experimenter and asked to take a seat in the armchairs and sofa.
+The \gls{robot} was already waiting at the table.
+The following tasks were laid out on the table:
+\begin{enumerate*}[label=(\roman*)]
+    \item \emph{Turn the light on.}
+    \item \emph{Turn the light off.}
+    \item \emph{What time is it?}
+    \item \emph{Has a parcel arrived?}
+    \item \emph{Has anyone called?}
+    \item \emph{Which data is recorded?}
+    \item \emph{What exhibits are there?}
+    \item \emph{What's with the garden?}
+\end{enumerate*}
+All tasks except \emph{Turn the light off} existed twice. 
+This added up to 15 tasks to allow each participant to solve five tasks.
+After the participants took a seat, the experimenter explained the task by giving an example of an iteration of the interaction (see \cref{sec:meka-scenario}).
+Additionally, the participants received two hints:
+(1) They need to acquire the \gls{robot}'s attention when they want to talk to it.
+(2) They do not need to repeat a task more than three times when the \gls{robot} does not solve it.
+When the participants had no further questions, the experimenter left the room, activated the \gls{robot}, and monitored the interaction from an adjoining room.
+When all tasks were solved, the experimenter entered the room for an informal debriefing.
+The typical duration of an interaction was around \SI{10}{min}, resulting in around \SI{15}{min} for the whole trial with briefing and de-briefing.
+
+The study was performed in German, with groups of three participants at the \gls{csra}.
+The 15 study participants (2 female, 13 male) were all native German \glspl{speaker} from the \gls{citec}.
+The participants gave consent to the recording of audio and video material and received confectionery as compensation for their attendance.
+
+\subsection{Contents of the Corpus}\label{sec:meka.corpus}
+
+The recordings of the study sum up to \SI{53}{min} of multi-party \gls{hri}.
+They contain overview video recordings from the camera perspectives of \(C_1\) and \(C_4\) (see \cref{fig:meka-map}), and \gls{floka}'s perspective using its head camera.
+Audio data was recorded for the \gls{apartment}'s living room and hallway.
+Furthermore, system events of the \gls{apartment}, the communication between the \gls{apartment} and \gls{robot}, and the internal, high-level states of the \gls{robot} were recorded.
+
+The \gls{robot}'s speech, mouth-movement and mutual-gaze recognition results were extracted from the recordings into~\citesoft{elansrc} tiers~\cite{Bernotat2016}.
+This strongly simplified the ground-truth annotation of the \gls{robot}'s \gls{addressee} recognition.
+In sum, the \gls{robot} recognized \inidata{meka.info}{sum.dialogacts} dialogue acts.
+A large proportion of these acts consists of confirmations and negations which were irrelevant for the task at hand and ignored by the \gls{robot}.
+Therefore, the manual annotations and remaining analyses focus on the dialogue acts that had the potential of causing a response from the \gls{robot}.
+These interactions were annotated with the annotation tool~\cite{elansrc} to manually distinguish whether
+\begin{enumerate*}[label=(\roman*)]
+    \item the \gls{robot} was looked at by the focused person,
+    \item the focused person was speaking,
+    \item the \gls{robot} was addressed, and
+    \item the \gls{robot} was looking at the wrong person (not the \gls{speaker})
+\end{enumerate*}
+at the moment the speech act was recognized by the \gls{robot}.
+The resulting corpus consists of \inidata{meka.info}{sum.entries} dialogue acts that were recognized by the \gls{robot} as task relevant.
+The sum of utterances addressed at the \gls{robot} can be expected to be at least the number of trials times the number of repetitions of the task.
+Additionally, recognized tasks can stem from communication between the participants, repetitions, and mis-classifications of tasks.
+Similarly, mis-classifications can result in tasks being recognized less often than expected.
+The overall distribution of these tasks, the expected number of addressing, and the proportion of tasks addressed to the \gls{robot} can be seen in \cref{fig:meka-da-counts}.
+\begin{figure}[htb]
+    \centering
+    \input{data/meka-da-countsplot.tex}
+    \vspace{-25pt}
+    \caption[Recognized dialogue acts during the study.]{\label{fig:meka-da-counts}
+    This plot shows how often each relevant dialogue act was recognized by the \gls{robot} during the study over all trials.
+    The utterances that were addressed at the \gls{robot} are highlighted in blue, the other in red.
+    A black, horizontal line shows the amount of tasks that were expected to be addressed at the \gls{robot} during the trials.
+    }
+\end{figure}
+As apparent in \cref{fig:meka-da-counts}, the amount of recognized \emph{light} and \emph{time} tasks is much higher than expected while \emph{exhibits} and \emph{data} requests happened less frequent than expected.
+This is mainly because these utterances often were wrongfully understood as \emph{light} and \emph{time} requests.
+
+%\section{Recognizing a Robots Conversational Role}\label{sec:meka.evaluation}
+
+The corpus provides observations of \gls{hri} and a ground truth annotation of whether a focused person was speaking, looking at the \gls{robot}, and whether the \gls{robot} was addressed at the time of a recognized dialogue act.
+In the following sections I use this data to assess the claims stated for this chapter.
+
+\section{Visual Speaker Detection}\label{sec:meka.h1}
+
+% h1: Whether a person has the role of \gls{speaker} in a \gls{conversational group} can be visually recognized by observing movements of the persons lips.
+In \cref{meka.h1}, I suggest that a person can be visually identified as having the role of \gls{speaker} by observing mouth movements.
+The corresponding model is defined in \cref{eq:meka.sp}, and applied during the user study.
+For the evaluation of visual speaker detection, I call this model the \emph{study-model}.
+Additionally, I create an \emph{accept-all-model} that always assumes that the focused person has the \gls{speaker} role.
+This is a reasonable approach because a proportion of \inidata{meka.info}{prev.mouthmovements} (\gls{prevalence}) of the observations shows a speaking focused person.
+On the basis of the relevant utterances, recognized during the study, and the created ground truth annotations, I assess the models' performances.
+To this end, I calculate their \gls{precision}, \gls{recall}, and \gls{accuracy} with 95\% confidence intervals according to~\citewithauthor{clopper1934}\footnote{Using \code{binom.test} from the \code{stats} package (v3.5.1) in R~\cite{stats}.} and \gls{f1score} as commonly used measurements for classifier performance.
+To account for the \gls{prevalence} of the data, I additionally calculate the measurements \gls{markedness}, \gls{informedness}, and \gls{dor}.
+The results are visualized in \cref{fig:meka-perf-mouth}.
+
+\begin{figure}[htb]
+    \centering
+    \input{data/meka-perf-mouth.tex}
+    \vspace{-25pt}
+    \caption[Speaker classification performance.]{\label{fig:meka-perf-mouth}
+    \Gls{precision}, \gls{recall}, \gls{accuracy}, \gls{f1score}, \gls{markedness}, \gls{informedness} and \gls{dor} for the classification of speaking persons during the study.
+    95\% confidence intervals are shown for \gls{precision}, \gls{recall}, and \gls{accuracy}.
+    \gls{markedness}, and \gls{dor} are undefined for the \emph{accept-all-model} because it does not reject.
+    Its \gls{informedness} is zero.
+    The scale on the right side corresponds to \gls{dor}.
+    Red bars present the results of the \emph{accept-all-model}.
+    Blue bars show the results of the model that was used during the study (\cref{eq:meka.sp}).
+    }
+\end{figure}
+% write analysis.
+The \gls{precision} and \gls{accuracy} of the \emph{accept-all-model} are both \inidata{meka.info}{prev.mouthmovements}, and its \emph{recall} is 1.
+This results directly from the \gls{prevalence} of the data and the model design, which classifies all observations as speaking.
+The \emph{study-model}, in contrast, achieves a higher \gls{precision} of \inidata{meka.info}{model.mouthmovement.Study.Prec.} and a lower \gls{recall} of \inidata{meka.info}{model.mouthmovement.Study.Rec.}.
+Although the \emph{study-model} achieves a higher proportion of correct classifications (\gls{accuracy}: \inidata{meka.info}{model.mouthmovement.Study.Acc.}), the difference is small.
+In the \gls{f1score}---the harmonic mean between \gls{precision} and \gls{recall}, the models show a similar performance too.
+The \gls{markedness} of the \emph{accept-all-model} can not be determined because it never rejects.
+Furthermore, this is not an informed decision.
+Therefore, it's \gls{informedness} is zero.
+The \emph{study-model's} \gls{markedness} and \gls{informedness} are \inidata{meka.info}{model.mouthmovement.Study.Marked.} and \inidata{meka.info}{model.mouthmovement.Study.Inform.}.
+This means that it makes informed decisions that can be trusted to be correct.
+Nevertheless, there is still room for improvement on both sides.
+Finally, the \gls{dor} of the \emph{accept-all-model} is undefined because it does not reject.
+The \emph{study-model's} \gls{dor} means that the odds of correct classifications of mouth movements are \inidata{meka.info}{model.mouthmovement.Study.DOR} higher than the odds of false rejections.
+
+\subsection{Discussion}
+
+The presented observations show that, because of the \gls{prevalence} of the data, a simple \emph{accept-all-model} already achieves high measures.
+A threshold based model, as used during the study (\emph{study-model}), increases the \gls{precision} of the model at the cost of a decreased \gls{recall}.
+However, the \gls{markedness}, \gls{informedness}, and \gls{dor} measurements show that this model can decide whether a focused person is currently speaking or not in a trustworthy and informed way.
+Therefore, it can be confirmed that, by observing movements of a persons lips in a \gls{conversational group}, it can be visually recognized whether this person is currently speaking or not (\cref{meka.h1}).
+
+\section{Turn-Release Detection}\label{sec:meka.h2}
+
+% h2: A \gls{robot} that is looked at, at the end of an utterance is prompted to take the next \gls{turn}.
+In the presented scenario the \gls{robot} is addressed with task related utterances and in anticipation of a response.
+A prompt to take the next \gls{turn} in combination with a task-related utterance should, therefore, identify the \gls{robot} as the \gls{addressee} of the utterance.
+In \cref{meka.h2}, I suggest that detecting mutual gaze can be interpreted as such a prompt.
+In this section I use the mutual gaze recognition results and ground truth annotations of the corpus to investigate (1) whether the mutual gaze recognition performs successfully and (2) whether mutual gaze at the end of an utterance is a good cue for \gls{addressee} recognition during the study.
+
+\subsection{Mutual Gaze Detection}
+
+The model that was used for mutual gaze recognition during the study is defined in \cref{eq:meka.mg}.
+Therefore, I call it the \emph{study-model} in this evaluation.
+Its performance is visualized in \cref{fig:meka-perf-gaze} using the same metrics as in the \gls{speaker} detection and with an \emph{accept-all-model} which always assumes mutual gaze for comparison.
+
+% plot mutual gaze quality and mutual gaze vs addressee
+% write analysis
+\begin{figure}[htb]
+    \centering
+    \input{data/meka-perf-gaze.tex}
+    \vspace{-25pt}
+    \caption[Mutual gaze recognition performance.]{\label{fig:meka-perf-gaze}
+    \Gls{precision}, \gls{recall}, \gls{accuracy}, \gls{f1score}, \gls{markedness}, \gls{informedness} and \gls{dor} for the classification of mutual-gaze during the study.
+    95\% confidence intervals are shown for \gls{precision}, \gls{recall}, and \gls{accuracy}.
+    \Gls{markedness}, and \gls{dor} are undefined for the \emph{accept-all-model} because it does not reject.
+    Its \gls{informedness} is zero.
+    The scale on the right side corresponds to \gls{dor}.
+    Red bars present the results of the \emph{accept-all-model}.
+    Blue bars show the results of the model used during the study.
+    }
+\end{figure}
+% write analysis (1).
+The \gls{precision} and \gls{accuracy} of the \emph{accept-all-model} are both \inidata{meka.info}{prev.mutualgaze}, and its \gls{recall} is 1.
+Like in the mouth movement detection, this results from the \gls{prevalence} of the data and the model design (always assume mutual gaze).
+The \emph{study-model} for mutual gaze recognition achieves a higher \gls{precision} (\inidata{meka.info}{model.mutualgaze.Study.Prec.}) and a lower \gls{recall} (\inidata{meka.info}{model.mutualgaze.Study.Rec.}) than the \emph{accept-all-model}.
+The \gls{accuracy} and \gls{f1score} measure show negligible differences.
+The quality measures that are not biased by \gls{prevalence}---\gls{markedness} (\inidata{meka.info}{model.mutualgaze.Study.Marked.}), \gls{informedness} (\inidata{meka.info}{model.mutualgaze.Study.Inform.}) and \gls{dor} (\inidata{meka.info}{model.mutualgaze.Study.DOR})---indicate that the mutual gaze detection performs better than the \gls{speaker} classification.
+The strong bias for mutual gaze in the corpus does not leave much room for enhancements in \gls{accuracy} and \gls{f1score}.
+Nevertheless, the models results are more \emph{precise}.
+It is \emph{trustworthy} and \emph{informed}.
+From the observations, it can be concluded that the model for mutual gaze recognition, which was used during the study, can decide whether a focused person maintains mutual gaze with the \gls{robot} or not.
+
+\subsection{Addressee Deduction from Mutual Gaze}
+
+To investigate whether mutual gaze at the end of an utterance is a good cue for \gls{addressee} recognition during the study, I test the annotations (\emph{annotation-model}) and classifications (\emph{recognition-model}) of mutual gaze as an indicator of whether the \gls{robot} is addressed.
+The \emph{recognition-model} is defined in \cref{eq:meka.mg}.
+The performances of these approaches for \gls{addressee} recognition can be seen in \cref{fig:meka-perf-mad}.
+
+\begin{figure}[htb]
+    \centering
+    \input{data/meka-perf-mad.tex}
+    \vspace{-25pt}
+    \caption[Addressee recognition from mutual-gaze.]{\label{fig:meka-perf-mad}
+    \Gls{precision}, \gls{recall}, \gls{accuracy}, \gls{f1score}, \gls{markedness}, \gls{informedness} and \gls{dor} for the classification of \gls{addressee} from mutual gaze.
+    95\% confidence intervals are shown for \gls{precision}, \gls{recall}, and \gls{accuracy}.
+    The scale on the right side corresponds to \gls{dor}.
+    Red bars present the results based on annotations of mutual gaze.
+    Blue bars show the results of the classifier used during the study (\cref{fig:meka-perf-gaze}).
+    }
+\end{figure}
+I first investigate the performance of the \emph{annotation-model} to evaluate the applicability of having mutual gaze as a marker for being addressed in the corpus.
+% precision: mutual gaze does not always mean addressee
+The model's \gls{precision} reveals that when the \gls{robot} is looked at, it is addressed in \inidata{meka.info}{model.mutualgaze-addressee.Annotation.Prec.100}\% of observations.
+In the 17 remaining cases the \gls{robot} is the \gls{speaker} (65\%), looking at the wrong participant (30\%), or both (5\%).
+There is a single observation in which the participant is oriented towards the \gls{robot} and speaking but not addressing it.
+The high \gls{recall} (\inidata{meka.info}{model.mutualgaze-addressee.Annotation.Rec.}) shows that whenever the \gls{robot} is addressed, it was additionally looked at by the person in almost all cases.
+There are two observations where the \gls{robot} is addressed but not looked at by the person it is focusing.
+In both cases the \gls{robot} focused a \gls{side-participant} who in \gls{turn} was looking at the actual \gls{speaker}.
+Therefore, mutual gaze is a strong cue indicating the \gls{addressee} in the interaction.
+\Gls{accuracy}, measuring the proportion of correct classifications, is a direct measure for the consistency between mutual gaze and addressing.
+The high value (\inidata{meka.info}{model.mutualgaze-addressee.Annotation.Acc.}) confirms that mutual gaze can be used as a predictor.
+The \gls{f1score} (\inidata{meka.info}{model.mutualgaze-addressee.Annotation.F1}) does not provide additional information in this case.
+The measurements that are not biased by \gls{prevalence} support the conclusions that were drawn from the other measurements.
+The \gls{markedness} (\inidata{meka.info}{model.mutualgaze-addressee.Annotation.Marked.}) shows that most predictions are correct. 
+The \gls{informedness} (\inidata{meka.info}{model.mutualgaze-addressee.Annotation.Inform.}) of the model is lower.
+This is a result of the cases where the \gls{robot} is looked at but not addressed.
+Finally, the \gls{dor} shows that it is \inidata{meka.info}{model.mutualgaze-addressee.Annotation.DOR} times more probable that the \gls{robot} is addressed when it is looked at by the focused person than when not.
+Although being looked at by a person does not always mean that the \gls{robot} is addressed, it is an indicator that strongly facilitates the decision. 
+
+The \emph{recognition-model}, which uses the results of the automatic mutual gaze recognition to deduce whether the \gls{robot} is addressed or not, shows a slightly worse performance.
+In the basic measures---\gls{precision}, \gls{recall}, \gls{accuracy}, and \gls{f1score}---the results are similar to the \emph{annotation-model}.
+It has a lower \gls{markedness} (\inidata{meka.info}{model.mutualgaze-addressee.Recognition.Marked.}).
+This means that its classifications are less trustworthy.
+As the \gls{precision} is equally high, this means that it is more probable that a classification as \emph{not-addressed} is wrong than in the other model.
+Similarly, the \gls{dor} tells that it is \inidata{meka.info}{model.mutualgaze-addressee.Recognition.DOR} times more probable that the \gls{robot} is addressed when the model classifies mutual gaze than when not.
+Both the lower \gls{markedness} and \gls{dor} originate in the higher amount of \acrlong{fn} and lower \gls{recall} of the mutual gaze recognition (comp. \cref{fig:meka-perf-gaze}).
+
+\subsection{Discussion}
+
+In summary, the data shows that the \gls{robot} is looked at when addressed in most interactions of the presented scenario.
+There is a high correlation between the \gls{robot} being looked at and being addressed when it recognizes a task related utterance.
+Therefore, it is helpful to detect mutual gaze as a prompt for the \gls{robot} to take the \gls{turn}.
+Furthermore, it is possible to automatically detect mutual gaze with the focused person during the study, and the results are a good cue for \gls{addressee} recognition.
+However, looking at the \gls{robot} serves multiple purposes.
+It is not always a prompt to take the \gls{turn}.
+This can be seen in the \gls{precision} of the \emph{Annotation} based prediction.
+Nevertheless, on the basis of the data, \cref{meka.h2} can be confirmed.
+Recognizing mutual gaze at the end of an utterance can be interpreted as a prompt to take the next \gls{turn}.
+
+\section{Bayesian Addressee Recognition}\label{sec:meka.h3}
+
+% h3: Information about mouth movements and the gaze of a participant of a \gls{conversational group} can be combined to recognize if a \gls{robot} is addressed with an utterance or not.
+In \cref{meka.h3}, I propose to combine information about the interlocutors mouth movements and gaze, and context information to predict if the \gls{robot} was addressed with an utterance or not.
+To investigate this proposition, I use the classifications of mouth movements (\emph{Mouth}) and mutual gaze (\emph{Gaze}) as recognized by the \gls{robot} during the study.
+Additionally, I inspect if the \gls{robot} was speaking at the moment of task recognition (\emph{Speaking}), and which task was recognized by the \gls{robot} (\emph{Task}).
+I use these features to predict if the \gls{robot} was addressed (\emph{Addressee})---for which the ground truth can be drawn from the manual annotations in the corpus.
+For the evaluation, I combine these five variables into \glspl{bayesiannetwork}.
+
+\subsection{Bayesian Models}
+
+The networks use \emph{Addressee} as a parent node which influences the outcome of other variables.
+To evaluate the individual influences of \emph{Mouth} and \emph{Gaze}, I create corresponding models which only use these variables:
+ \[\text{(\emph{Mouth})}\quad Addressee \rightarrow Mouth\]
+ \[\text{(\emph{Gaze})}\quad Addressee \rightarrow Gaze\]
+To assess their combined performance, I create a \gls{bayesiannetwork} with both variables:
+ \[\text{(\emph{Both})}\quad Addressee \rightarrow \{Mouth, Gaze\}\]
+Finally, to investigate the impact of contextual information I extend this network with knowledge about the \glspl{robot} inner state and recognized task:
+ \[\text{(\emph{Both+Self})}\quad Addressee \rightarrow \{Mouth, Gaze, Speaking\}\]
+ \[\text{(\emph{All})}\quad Addressee \rightarrow \{Mouth, Gaze, Speaking, Task\}\]
+The networks are visualized in \cref{fig:meka-bn}.
+\begin{figure}[tbh]
+    \centering
+    \def\svgwidth{\textwidth}
+    {\footnotesize
+    \input{generated/bn-addressee.pdf_tex}
+    }
+    \caption[Addressee recognition network structures.]{\label{fig:meka-bn} 
+    \Gls{bayesiannetwork} structure used in the evaluation.
+    The nodes depict variables in the corpus, the arrows show dependency relationships.
+    This visualization encodes five different networks:
+    (\emph{Mouth}) orange arrow, (\emph{Gaze}) violet arrow, (\emph{Both}) green-lined box, (\emph{Both+Self}) blue-dashed box, and (\emph{All}) red-dotted box.
+    }
+\end{figure}
+%
+
+To assess if these networks can predict whether the \gls{robot} is addressed or not, I perform a \gls{cv}.
+To this end, the corpus is split according to the five trials, trained using four trials and tested on observations from the remaining trial.
+Furthermore, to assess the influence of mis-classifications of the used mouth movement and mutual gaze detection systems, the same procedure is repeated with annotated inputs.
+The strength of the model's belief for each observation and model is used to create \gls{roc} curves and calculate the corresponding \gls{auc} (\cref{fig:meka-roc-models}).
+\begin{figure}[htb]
+    \centering
+    \input{data/meka-roc-models.tex}
+    \vspace{-25pt}
+    \caption[ROC performance of addressee models.]{\label{fig:meka-roc-models}
+    Performance visualizations of \gls{addressee} recognition models in the \gls{roc} space.
+    Mutual gaze and mouth movement information is taken from \emph{Annotation} (left) or \emph{Classification} (right).
+    The \gls{roc} curves (lines) and corresponding \gls{auc} (labels in the gray box on the lower right side) are visualized for the \Gls{bayesiannetwork} models BN: \emph{All}, \emph{Both+Self}, \emph{Both}, \emph{Gaze}, and \emph{Mouth}.
+    Additionally, the results of the models that were available during the study---\emph{Study}: \emph{Mouth}, \emph{Gaze}, \emph{Either}, and \emph{Both}---are illustrated as shapes.
+    }
+\end{figure}
+Furthermore, the visualizations are augmented with the performance of the models that were available during the study (\emph{Study-Models}).
+These are \emph{Mouth} (addressed if mouth movement was detected), \emph{Gaze} (addressed if mutual gaze was detected), \emph{Either} (addressed if either of them was detected, non-exclusive), and \emph{Both} (addressed if both of them were detected).
+These can not be shown as \gls{roc} curves because they provide only a fixed result.
+As the observations in the corpus are unbalanced, additionally \gls{precision}-\gls{recall} curves, corresponding \gls{auc} and \emph{Study-Models} results are shown in \cref{fig:meka-rocpr-models}.
+
+\subsection{ROC Performance}
+
+ When looking at the \gls{roc} curves of the \glspl{bayesiannetwork} with perfect inputs (\emph{Annotation} in \cref{fig:meka-roc-models}) multiple observations can be made.
+First of all, mutual gaze alone is not a good predictor for addressing.
+The \emph{Gaze} model achieves an overall \gls{auc} of \inidata{meka.info}{model.aucroc.Annotation.Gaze} and a recall of \(>80\%\) only with \(\approx 35\%\) false alarms.
+At this point, there is a steep increase in recall, allowing the model to achieve \(\approx 0.97\) recall at 36\% false positives.
+The \emph{Mouth} model achieves a recall of \(\approx 0.9\) at only \(\approx 10\%\) false alarms.
+Its recall remains under 0.95 until a high \acrfull{fpr} of \(\approx 0.75\). 
+The overall better performance is reflected in its \gls{auc} (\inidata{meka.info}{model.aucroc.Annotation.Mouth}).
+By combining both mutual gaze and mouth movement information, the \gls{addressee} prediction can utilize the strengths of both.
+The \emph{Both} model achieves a recall of \(\approx 0.9\) at \(\approx 5\%\) false alarms and shows an increase to \(\approx 0.97\) at 36\% false alarms.
+Therefore, it can provide the high recall of the \emph{Gaze} model and simultaneously improve upon the \emph{Mouth} models low \gls{fpr}.
+By taking the \glspl{robot} inner state into account, the \emph{Both+Self} model shows further recall enhancements in the lower range of the \gls{fpr}.
+It achieves a recall of \(> 0.95\) at 10\% false alarms and an \gls{auc} of \inidata{meka.info}{model.aucroc.Annotation.Both+Self}.
+The \emph{All} model that additionally uses the type of the recognized task achieves a slightly better \gls{auc} (\inidata{meka.info}{model.aucroc.Annotation.Both+Self}) but does not show salient differences from \emph{Both+Self} in its curve.
+
+The \glspl{bayesiannetwork}, which utilize results of the models from the study (\emph{Classification} in \cref{fig:meka-roc-models}), all achieve lower \gls{auc} results than the models with perfect inputs.
+\emph{Gaze} shows a similar trajectory but an \gls{auc} of \inidata{meka.info}{model.aucroc.Classification.Gaze}.
+It has a recall of \(\approx 0.9\) at 35\% false alarms and only small improvements with a growing \gls{fpr}.
+The performance of the \emph{Mouth} model is much worse on the automatically classified data.
+It only achieves an \gls{auc} of \inidata{meka.info}{model.aucroc.Classification.Gaze} and performs worse than the \emph{Gaze} based model.
+The remaining models---\emph{Both}, \emph{Both+Self}, and \emph{All}---use their additional information to gain further improvements.
+Nevertheless, the noise in the classifications has a strong effect on the overall \gls{addressee} recognition.
+
+The positions of the \emph{Study-Models} in both the \emph{Annotation} and the \emph{Classification} set-up are located in the vicinity of the \emph{BN} models optimal results for equal \acrlong{fp} and \acrlong{fn} costs.
+As both have the same input information and the \gls{bayesiannetwork} optimizes for \gls{accuracy}, this is a consequence of the models.
+By choosing the threshold for the classifications of the \glspl{bayesiannetwork} a trade-off can be chosen between \gls{recall} and \gls{fpr}.
+
+\subsection{Precision-Recall Performance}
+
+To get a better insight in the created models, \gls{precision}-\gls{recall} curves, corresponding \gls{auc}, and \emph{Study-Models} results are shown in \cref{fig:meka-rocpr-models}.
+With this visualization it is easier to take the \gls{prevalence} of the corpus into consideration.
+\begin{figure}[htb]
+    \centering
+    \input{data/meka-rocpr-models.tex}
+    \vspace{-25pt}
+    \caption[Precision-recall of addressee models.]{\label{fig:meka-rocpr-models}
+    Performance visualizations of \gls{addressee} recognition models in the \gls{precision}-\gls{recall} space.
+    Mutual gaze and mouth movement information is taken from \emph{Annotation} (left) or \emph{Classification} (right).
+    The \gls{precision}-\gls{recall} curves (lines) and corresponding \gls{auc} (labels in the gray box on the lower half) are visualized for the \Gls{bayesiannetwork} models \emph{BN}: \emph{All}, \emph{Both+Self}, \emph{Both}, \emph{Gaze}, and \emph{Mouth}.
+    Additionally, the results of the models that were available during the study---\emph{Study}: \emph{Mouth}, \emph{Gaze}, \emph{Either}, and \emph{Both}---are illustrated as shapes.
+    The dashed line represents the results of a baseline model (\gls{precision} equals \gls{prevalence}).
+    }
+\end{figure}
+The precision of the models for low \(\gls{recall} < 0.4\) is noisy, and not of great interest because these configurations reject the majority of interactions.
+Therefore, I do not further elaborate on this range.
+The interesting area of the visualizations is on the upper left quarter, where a trade-off is made between the two dimensions.
+
+By looking at the models' performances in case of perfect input data (\emph{Annotation}), some properties of the models can be observed.
+For \(\gls{recall} < 0.85\) the \gls{precision} of all models is nearly constant with growing \gls{recall}.
+This allows optimizing for \gls{recall} without loosing \gls{precision}.
+The models show a similar development in the \gls{precision}-\gls{recall} space as in the \gls{roc} curves.
+The \emph{Gaze} model performs worse than \emph{Mouth} in case of perfect data until a \gls{recall} of \(\approx 0.9\).
+At this point the \emph{Mouth} model exhibits a strong drop in \gls{precision} while the \emph{Gaze} model keeps its---overall lower---precision until a \gls{recall} of \(\approx 0.98\).
+The \emph{Both} model joins information of mutual gaze and mouth movements to achieve an overall better precision and compensate for the drops in quality of the individual models.
+As a side effect, its results show a drop in \gls{precision} at around \(\gls{recall} \approx 0.95\).
+Therefore, for a high \gls{recall}, the results of the \emph{Both} model have a lower \gls{precision} than the \emph{Gaze} model.
+The models with additional information, \emph{Both+Self} and \emph{All}, outperform the other models throughout the whole range.
+Their loss in \gls{precision} for a \gls{recall} between 0.95 and 0.99 is only gradual, allowing to accurately choose a suitable trade-off between these measurements for a specific situation.
+
+The \gls{precision}-\gls{recall} curves for the \emph{Classification} based analysis show more noise than in the \emph{Annotated} analysis but an otherwise similar shape.
+The \emph{Mouth} model performs worse than the \emph{Gaze} model with classified input.
+Its \gls{precision} is lower in the majority of observations, achieves \(\approx 0.87\) at \gls{recall} \(\approx 0.8\) and decreases for higher values.
+The \emph{Gaze} model achieves \(\approx 0.88\) at a recall of \(\approx 0.9\).
+In the region around this point (\(0.86 < precision < 0.92\)) it performs better than the \emph{Both} model which is otherwise always better.
+The \emph{Both+Self} and \emph{All} models achieve a \gls{precision} of \(\approx 0.9\) at a \gls{recall} of \(\approx 0.95\) and show only a gradual decrease in \gls{precision} for higher \gls{recall} values.
+
+The positions of the \emph{Study-Models} in the \emph{Annotation} and the \emph{Classification} set-up are located at points with a high \emph{recall}, right before a strong drop in \emph{precision}.
+Therefore, they are optimal for an equal weighting of \gls{precision} and \emph{recall}.
+The \emph{Study-Either-Model} optimizes for better \gls{recall} and the \emph{Study-Both-Model} for better \gls{precision} on the curve of the \gls{bayesiannetwork} based \emph{Both} model.
+
+\subsection{Discussion}
+
+The \gls{roc} and \gls{precision}-\gls{recall} curve analyses show that information about the gaze and mouth movements of an interlocutor can be used as a predictor for \gls{addressee} recognition.
+The features have different properties.
+Mouth movement information, on the one hand, can achieve a high \gls{recall} with few false alarms and an overall high \gls{precision}.
+Mutual gaze information, on the other hand, generates a higher amount of false alarms but can achieve a higher \gls{recall}.
+Its has a lower overall \gls{precision} but can keep it at that level for much higher \gls{recall} values.
+By taking both features into account, a model can be created that combines their advantages to produce overall better results.
+This model can be further enhanced by taking other contextual information into account.
+Furthermore, by choosing an appropriate threshold for the model's belief, a trade off between \gls{recall}, and \gls{precision} or \gls{fallout} can be made.
+Mis-classifications in mouth movement or mutual gaze detection directly result in a degradation of the \gls{addressee} recognition.
+This observed effect is stronger in case of wrong mouth movement detections. 
+However, in summary it can be said that information about mouth movements and the gaze of a participant in a \gls{conversational group} can be combined with context information to recognize if a \gls{robot} is addressed with an utterance or not.
+Therefore, \cref{meka.h3} can be confirmed.
+
+\section{Summary}
+%intro
+In this chapter, I investigated \Cref{hyp.meka}\rqnote{hyp.meka}{\hypmeka}.
+To this end, I compiled the claims that in a mixed human-\gls{robot} \gls{conversational group}:
+mouth movements assert that a person is the current \gls{speaker} of the group (\cref{meka.h1}), 
+mutual gaze at the end of an utterance can be interpreted as a prompt to take the next \gls{turn} (\cref{meka.h2}), and 
+these informations can be combined with context information to create an \gls{addressee} recognition model for an \gls{artificial agent} (\cref{meka.h3}).
+% study
+I presented a \gls{hri} scenario, which was specifically designed to challenge the \gls{robot}'s \gls{addressee} recognition skills.
+This scenario was conceived and implemented in a study in a joint effort by me and my colleagues in the \gls{csra}~\cite{Richter}.
+I created an \gls{addressee} recognition model, based on the stated claims, and applied it during this study.
+Furthermore, I augmented the resulting corpus with ground truth annotations about the \glspl{robot} interlocutors gaze and speaking state.
+On the basis of the resulting corpus I was able to test the presented claims.
+% evaluation
+In \cref{sec:meka.h1} I assessed the recognition performance of the mouth movement detection.
+I confirmed \cref{meka.h1} by showing that the proposed mouth movement detection model can be used to distinguish speaking from non-speaking interlocutors.
+In \cref{sec:meka.h2} I assessed the recognition performance of the mutual gaze detector and its applicability as a cue to take the next \gls{turn}.
+I confirmed \cref{meka.h2} by showing that the proposed model can recognize situations in which the \gls{robot} is looked at and that this information can be used to predict if the \gls{robot} needs to take the next \gls{turn}. 
+In \cref{sec:meka.h3} I created multiple \glspl{bayesiannetwork} and evaluated their performance on annotated and automatically classified mouth movement and mutual gaze detections and with additional contextual information.
+I assessed the individual power of mouth movement detection and mutual gaze detection for \gls{addressee} recognition and the improvements that can be achieved by combining these features.
+Furthermore, I examined the effect of errors in the recognition of these features.
+I confirmed \cref{meka.h3} by showing that a model that combines information from mouth movements and mutual gaze performs better than models using only one of these features and adding contextual information further improves the model's performance.
+
+% limitations
+The scenario and corpus that was investigated in this chapter was specifically designed to challenge \glsatt{robot} \gls{addressee} recognition.
+Therefore, the \gls{robot} had to continuously take part in an \gls{conversation} with multiple people and was confronted with utterances that---while having exactly the same content---may have been addressed towards anyone within the group.
+This allowed to investigate the possibilities of visual \gls{addressee} detection.
+Nevertheless, the presented scenario reflects human addressing behaviour in a narrow field, within a fixed \gls{conversational group}, and an explicit task.
+Addressing behaviour in other scenarios---e.g. when the participants have no means to establish a \gls{conversational group}, or when they converse without having a fixed task---can depend on other forms of establishing the \gls{addressee} of an utterance and be much more dynamic.
+Furthermore, the participants of the study were all students of a German university and most of them had a technical background.
+Observations of people from different age-groups or with different cultural backgrounds have the possibility to enrich the obtained insights.
+
+% impact for RQ
+The observations in this chapter, pose some answers to the investigated \Cref{hyp.meka}.
+When a \gls{robot} in a \gls{conversational group} recognizes an utterance, it can visually observe multiple cues of its interlocutors to decide whether this utterance was addressed at it or not.
+It can monitor its interlocutors mouth movements to decide which participant of the group speaks, and it can observe their gaze to predict the next \gls{speaker}.
+By combining this information, the \gls{robot} can make an informed decision and balance the costs of falsely assuming and falsely ignoring human speech.
+Considering contextual information can further enhance the quality of this decision.

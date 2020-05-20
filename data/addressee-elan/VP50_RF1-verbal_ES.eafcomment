@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="7cf1d02c-c405-48e1-a3c7-bc24ea0ea46e" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-18T14:01:39.324Z</CreationDate>
+            <ModificationDate>2016-02-18T14:01:39.324Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:62502789-8483-406c-93f2-70044d31f090#t=13.000/20.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt die Begrüßung des Apartments nicht
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="3eba91a1-530c-4dc0-b105-5e00125e6d09" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-18T14:04:38.724Z</CreationDate>
+            <ModificationDate>2016-02-18T14:05:10.676Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:62502789-8483-406c-93f2-70044d31f090#t=88.200/95.400;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Das Paket lag noch draußen, Jasmin legt das unauffällig wieder in den Schrank, während die VP schon die erste Karte liest
+
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="2cced6aa-2f73-40f1-b875-04b99e8b9af7" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-18T14:58:23.414Z</CreationDate>
+            <ModificationDate>2016-02-18T14:58:23.414Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:62502789-8483-406c-93f2-70044d31f090#t=774.950/778.050;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest die nächste Karte
+
+
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="949835d6-6a68-472c-a6d3-98867fb46051" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-19T09:11:01.712Z</CreationDate>
+            <ModificationDate>2016-02-19T09:13:41.016Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:62502789-8483-406c-93f2-70044d31f090#t=1023.950/1058.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP unterbricht 2x den Studienverlauf und geht raus,
+Aufgabe 4 (Paket) löst sie konservativ,
+Aufgabe 5 (Anrufe) löst sie nicht,
+braucht insgesamt sehr lange, traut sich nichts auszuprobieren.</Message>
+    </ColTime>
+</ColTimeList>

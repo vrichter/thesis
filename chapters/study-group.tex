@@ -1,0 +1,392 @@
+\chapter{Conversational Group Detection}\label{ch.fformation}
+
+The literature presented in \cref{sec.rw.hi.unfocused} suggests that people, who perceive an agent as \glsatt{copresence}, show similar behaviours and have similar expectations towards it as in interactions with humans.
+To be accepted in long term interactions, agents therefore need to understand these behaviours and the implied expectations.
+They need to know when to interact and when to show \gls{civil inattention} (\cref{sec.rw.hi.focused-rw.perception}).
+Without distinguishing participants of the agents \gls{conversational group} from \glspl{non-participant}, it can not treat them accordingly. 
+The detection of \glspl{conversational group} in the presence of humans and \gls{artificial agent} is therefore an important basis for \gls{conversational role} recognition and behaviour recognition.
+Therefore, I investigate \Cref{hyp.fformation}\rqnote{hyp.fformation}{\hypfformation} in this chapter.
+To this end, I use the corpus of unconstrained, mixed human-agent interactions presented in \cref{sec.group.corpus}. 
+Because of the discussed similarities between peoples behaviour towards humans and \glspl{artificial agent}, I investigate this research question by examining the following claim: 
+\newcommand{\hypffmone}{Mixed \glspl{conversational group} of people and \glspl{artificial agent} can be detected using \glspl{ffm} as known from \gls{hhi}.}
+\begin{hyp3}[Group from \gls{ffm}]
+    \label{ffm.h1}
+    \hypffmone
+\end{hyp3}
+It is often sufficient to know if the agent is in a group or not without identifying the participants of the group. 
+Furthermore, the detection of \glspl{ffm} requires a good understanding of the distribution of persons in the scene which can be computationally expensive and not always feasible.
+Therefore, I propose the following simplifications for comparison:
+\newcommand{\hypffmgaze}{The detection of peoples ga\-ze di\-rec\-tion in the agents field of view can sufficiently inform about whether it is in a \gls{conversational group} or not.}
+\begin{hyp3}[Group from Mutual Gaze]
+    \label{ffm.gaze}
+    \hypffmgaze
+\end{hyp3}
+\newcommand{\hypffmface}{The detection of faces in the agents field of view can sufficiently inform about whether it is in a \gls{conversational group} or not.}
+\begin{hyp3}[Group from Faces]
+    \label{ffm.face}
+    \hypffmface
+\end{hyp3}
+
+
+In this chapter I evaluate the detection of \glspl{conversational group} for \glspl{virtual agent} in a \gls{smart environment}.
+To this end, I first evaluate \cref{ffm.h1}---the portability of \gls{ffm} detection as presented by~\citewithauthor{Setti2015} from human groups to mixed human-agent groups---on automatically extracted data (see \cref{sec.fformation.fformation}).
+Subsequently, I evaluate \cref{ffm.gaze,ffm.face} by testing if the agents' participation in a \gls{conversational group} can be deduced from gaze directions and detected face sizes (see \cref{sec.fformation.inout}).
+
+\section{F-Formation Detection}\label{sec.fformation.fformation}
+
+The participants of a \gls{conversational group} need to optimize their mutual access to the joint interaction space (\gls{ospace}).
+This is achieved by overlapping their \glspl{transactional segment} (\cref{sec.rw.hi.focused}).
+One approach for \gls{ffm}-detection in \gls{hhi}, is presented by~\citewithauthor{Setti2015}.
+It uses 2D positions \([x,y]\) and orientations \(\theta\) of persons in an open space to estimate the centres of their \glspl{transactional segment} (\(TS\)).
+This segment is assumed to be in front of the person with its centre at a fixed distance called \gls{stride} (\(S\)).
+Based on the distance between the \(TS\) and the \gls{ospace} of a potential group and its visibility for a person, a cost function can be created.
+This cost-function should be zero for a perfect overlap of \gls{transactional segment} and \gls{ospace} without obstacles, and grow when they move apart or the \gls{ospace} is occluded.
+A good assignment of persons to \glspl{conversational group} can then be found by optimizing the overall costs for a scene. 
+In \cref{fig:ffm.approach} an exemplary scene can be seen with visualizations of the relevant variables.
+The used variables are explained in the next subsection.
+\begin{figure}[htbp]
+    \centering
+    \def\svgwidth{1.0\textwidth}
+    \input{generated/fformation-costs.pdf_tex}
+    \caption[F-Formation detection scene.]{\label{fig:ffm.approach}
+    A visualization of a scene in the \gls{ffm} detection.
+    People (\(P_i\)) are defined as positions \([ x_i, y_i ]\) (green points) with an optional orientation \(\theta_i\).
+    \(P_2\) is shown as a circle because there is no known orientation.
+    Centres of \glspl{transactional segment} (\(TS_i = [x_{\mu_i},y_{\mu_i}]\), blue points) are at the distance \(S\) (\gls{stride}) in front of persons or---when orientation is unknown---at their position (\(TS_2=P_2\)).
+    \(P_3\) and \(P_5\) form the \gls{conversational group} \(G_1\) (gray dashed circle) with the \gls{ospace} centre \(O(G_1)\) (red dot).
+    \(P_4\) is not part of \(G_1\) because the \gls{ospace} is occluded by \(P_3\).
+    The \glspl{transactional segment} of \(P_1\) and \(P_2\) are too far away from \(O(G_1)\) for them to be part of the group.
+    The distances \(d^1_1\) and \(d^1_2\) represent the distance between the \gls{ospace} centre \(O(G_1)\) (superscript index) and the position of \(P_1\) or \(P_2\) (subscript index) respectively.
+    The angle \(\theta^1_{1,2}\) is the angle between \(P_1\) and \(P_2\) (subscript index) regarding the \gls{ospace} centre \(O(G_1)\) (superscript index).
+    }
+\end{figure}
+
+To investigate if this approach can be used to detect \glspl{conversational group} with an \gls{artificial agent}, I create the open-source group detection framework~\citesoft{ffm}.
+It models observations of persons and the cost of assigning them to \glspl{conversational group} according to the cost function presented by~\citewithauthor{Setti2015} with an adaptation to cover observations with unknown orientation.
+
+\subsection{Assignment Costs \& Detectors}\label{sec.fformation.formation.detectors}
+
+The cost function is drawn from~\citewithauthor{Setti2015}.
+The calculation is done with the following definitions in mind:
+An observation is defined as a set of persons \(P = \{P_1,\dots,P_n\}\) with 2D positions and orientations---i.e. \(P_i = [x_i, y_i, \theta_i]\).
+From a person's pose, the \gls{transactional segment} \(TS_i\) can be computed using the \gls{stride} (\(S\)), which encodes the expected distance between a persons position and \gls{transactional segment}.
+If the orientation of a person is not known, the \(TS_i\) can not be computed.
+Therefore, I extend the \(TS_i\) formula to return the original position of the person when the orientation is not known.
+This equals to the mean \(TS_i\) over all possible orientations.
+The calculation of \glspl{transactional segment} is visualized in \cref{fig:ffm.approach} and formalized as follows:
+\[
+    TS_i = [x_{\mu_i},y_{\mu_i}] = 
+    \begin{cases}
+        [x_i + S\text{cos}(\theta_i)], y_i + S \text{sin} \theta_i],& \text{if }\theta_i\text{ is known} \\
+        [x_i, y_i],& \text{otherwise}
+    \end{cases}
+\]
+This allows calculating \(TS = \{TS_1,\dots,TS_n\}\) from \(P = \{P_1,\dots,P_n\}\).
+
+An assignment of persons to groups is defined as the set of groups \(G = \{G_1,\dots,G_m\}\) with each person assigned to exactly one group.
+Groups with \(|G_k|=1\) are allowed and represent persons that do not participate in a \gls{conversational group}.
+Consequently, the group of person \(P_i\) is unambiguous and can be defined as \(g(P_i)\).
+The \gls{ospace}-centre \(O(G_k)\) of a group \(G_k\) is calculated from the \glspl{transactional segment} of its participants.
+\[
+    O(G_k) = [u_{G_k}, v_{G_k}] = \frac{\sum_{i \in G_k}{TS_i}}{|G_k|}
+\]
+The \gls{ospace}-centre that corresponds to the group of \(P_i\) is therefore: 
+\[
+    O(g(P_i)) = [u_{g(P_i)},v_{g(P_i)}]
+ \]
+
+\paragraph{Assignment Cost}
+
+The overall cost of an assignment \(G\) (\cref{eq:ffm.cost}) is calculated as the sum of \gls{ospace}-distance costs (\cref{eq:ffm.cost1}), \gls{ospace}-visibility costs (\cref{eq:ffm.cost2}) and an additional \gls{mdl}-prior (\cref{eq:ffm.cost3}):
+\begin{equation}\label{eq:ffm.cost}
+    \underbrace{C(G)}_{\text{assignment cost}} = \underbrace{D(G)}_{\text{distance cost}} + \underbrace{V(G|P)}_{\text{visibility cost}} + \underbrace{P(G)}_{\text{\gls{mdl}-prior}}
+\end{equation}
+The different parts of the formula are explained in the following.
+A detailed motivation and in-depth analysis of this cost function can be looked up from ~\citewithauthor{Setti2015}.
+
+\paragraph{Distance Cost}
+
+The \emph{distance cost} \(D(G)\) penalizes deviations of \gls{transactional segment} centres from the groups' \gls{ospace}.
+It therefore is zero when the \glspl{transactional segment} of the participants and the \gls{ospace} perfectly overlap and rises when the distance between \gls{transactional segment} and \gls{ospace} centre grows.
+A high distance cost, means that the \gls{ospace} is too far away from the person to be maintained effectively.
+The distance cost is calculated as follows:
+\begin{equation}\label{eq:ffm.cost1}
+     D(G) = \sum_{i \in P}{(u_{g(P_i)}-x_{\mu_i})^2+(v_{g(P_i)}-y_{\mu_i})^2}
+\end{equation}
+
+\paragraph{Visibility Cost}
+The \emph{visibility cost} ensures that the \gls{ospace} \(O(g(P_i))\) of a person \(P_i\)'s \gls{conversational group} is not occluded by any other person \(P_{j \neq i}\).
+Because the visibility can be occluded by any other person in the scene, the overall visibility cost for an assignment is the sum over the visibility constraint for all two-person permutations from \(P\):
+\begin{equation}\label{eq:ffm.cost2}
+    V(G) = \sum_{i,j \in P, i \neq j}{\underbrace{R_{i,j}(g(P_i))}_{\text{visibility constraint}}}
+\end{equation}
+The \emph{visibility constraint} can be calculated for a combination of two persons \(P_i\), \(P_j\), and a group centre \(O(G_k)\).
+To not disrupt \(P_i\)'s visibility to the \gls{ospace}-centre, \(P_j\) must either stand farther away than \(P_i\) or on a different side of it.
+The first can be ensured by comparing their distances to \(O(G_k)\), and the second by considering the angle between them regarding the same \(O(G_k)\).
+To this end, \(d^k_i\) is defined as the distance between the position of \(P_i\) and \(O(G_k)\), and \(\theta^k_{i,j}\) is the angle between \(P_i\) and \(P_j\) regarding \(O(G_k)\).
+An exemplary visualization of these measurements can be seen in \cref{fig:ffm.approach}.
+The relevance of occlusions can be adjusted with a constant factor \(K\) for angles between \(0\) and a cut-off \(\hat{\theta}\).
+As applied in the evaluations by~\citewithauthor{Setti2015}, these are chosen as \(\hat{\theta} = 0.75\) and \(K = 100\) for the evaluations in this chapter.
+On this basis, the visibility constraint for any combination of \(P_i\), \(P_j\), and \(G_k\) calculates as follows:
+\[
+    R_{i,j}(G_k) = 
+    \begin{cases}
+        0,& \text{if }\theta^k_{i,j} > \hat{\theta}\text{ or }d^k_i < d^k_j \\
+        \text{exp}(K\text{cos}(\theta^k_{i,j}))\frac{d^k_i-d^k_j}{d^k_j},& \text{otherwise}
+    \end{cases}
+\]
+
+\paragraph{MDL-Prior}
+
+Finally, \cref{eq:ffm.cost1,eq:ffm.cost2} both result in zero assignment costs for \(|G_k|=1\).
+Therefore, an additional term is required to penalize small groups.
+This is achieved by adding an \emph{\gls{mdl}-prior} over the amount of groups, which can be adapted with the parameter \(M\):
+\begin{equation}\label{eq:ffm.cost3}
+     P(G) = M|G|
+\end{equation}
+
+An assignment of persons in a scene to \glspl{conversational group} can be created by optimizing the cost function in \cref{eq:ffm.cost}.
+To this end, I implement three different detectors:
+(1) Detector \emph{Gco} from~\citesoft{ffm-gco}: uses ~\citesoftware{gco} to implement the approach from~\citewithauthor{Setti2015}.
+For comparison, the original implementation can be found in~\citesoftware{gcff}.
+The detectors (2) \emph{Shrink} and (3) \emph{Grow} from~\citesoft{ffm} use \emph{k-means} to find the best assignment for a fixed number of groups.
+To find the best number of groups, \emph{shrink} increases it starting from one---thereby shrinking the group size---as long as the cost decreases.
+\emph{Grow} starts with one group for each person and reduces the amount of groups as long as the cost decreases.
+Finally, two dummy detectors are available: \emph{None} always returns a group for each person and \emph{One} always assigns all persons to a single group \cite{ffm}.
+By applying these detectors to the created corpus, I can investigate \cref{ffm.h1}\rqnote{ffm.h1}{\hypffmone}.
+
+\subsection{Evaluation}
+
+To evaluate \cref{ffm.h1}, I use the ground truth annotations of group assignments and person positions from both the annotations and the automatic detections.
+An evaluation of the \gls{ffm} detection for \gls{hhi} is already done by~\citewithauthor{Setti2015}.
+Because the evaluation in this section is concerned with the quality of detected \glspl{conversational group} of \glspl{artificial agent}, a quality metric is required that can be applied to a single agent in the scene separately.
+To this end, I use the definition of a \gls{tolerant match} by~\citewithauthor{Setti2015}:
+\begin{definition}[Tolerant Match]
+    \label{def.tm}
+     With a threshold \(T \in [0,1]\) (\gls{tolerance threshold}), a predicted group \(G_k\) is a \emph{tolerant match} if at least \(T|G_k|\) participants of the group are correctly assigned and less than \(1-T|G_k|\) participants are falsely assigned to it~\cite[]{Setti2015}.
+\end{definition}
+The choice of \(T\) determines how exact the detected group must match the ground truth to be correct.
+\begin{corollary}
+    \label{cor.tm.1}
+    Tolerant matches for \(T < \frac{1}{2}\) classify groups with more than 50\% wrong or missing persons as correct.
+\end{corollary}
+With this definition, a \gls{confusion matrix} can be calculated.
+In contrast to~\citewithauthor{Setti2015}, the \glspl{confusion matrix} in this section are calculated for each agent separately.
+The matrix is calculated as sums of observations where:
+\begin{description}
+    \item[\acrshort{tp}:] the agent is correctly assigned to a group and the group matches the annotation according to the \gls{tolerant match}.
+    \item[\acrshort{fp}:] the agent is falsely assigned to any group.
+    \item[\acrshort{tn}:] the agent is correctly classified as not in a group.
+    \item[\acrshort{fn}:] the agent is falsely classified as not in a group or assigned to the wrong group according to the \gls{tolerant match}\footnote{Counting an assignment to the wrong group when the agent is in a group as \acrlong{fn} may seem counter-intuitive.
+    However, \acrlong{fp} implies that the agent is not in a group.
+    This case can be interpreted as: falsely not assigning to the correct group (\acrlong{fn}).
+    }.
+\end{description}
+By definition, the agent is always a participant of it's own group: \(P_i \in g(P_i)\).
+Therefore, it is always correctly assigned and the match is always greater than 0.
+\begin{corollary}
+    \label{cor.tm.2}
+    With \(T=\frac{1}{|P|+1}\) the \gls{confusion matrix} measures the detection of the agent being in a group or not, regardless the other participants of the group.
+\end{corollary}
+On the basis of these measures, four detector configurations are chosen from a grid search on \gls{mdl}, \gls{stride}, and algorithm.
+For the range of \(T \in [0.5,1]\) (\cref{cor.tm.1}), the usual quality measurements are calculated over the whole corpus and visualized for each agent on annotated and detected person percepts.
+The detected percepts are the fusion results from the \gls{apartment}'s person tracking and \citewithauthor{openposegit} based detections.
+The resulting plot can be seen in \cref{fig:ffm-ffm} and is analysed in the following.
+\begin{figure}[tbhp]
+    \centering
+    %\fbox{\begin{minipage}{\textwidth}
+    %\fbox{
+    \input{data/group-ffm-evaluation.tex}
+    %}
+    %\vspace{-50pt}
+    \caption[F-Formation detection quality.]{\label{fig:ffm-ffm}
+    The values of performance metrics \gls{precision}, \gls{recall}, \gls{f1score}, \gls{markedness}, and \gls{informedness}, plotted over different choices of \(T\) (Threshold).
+    The results for \gls{Flobi Assistance} are shown in the upper row, \gls{Flobi Entrance} can be seen in the lower row.
+    Solid lines represent the results of group detections based on annotated person positions.
+    Dashed lines show group detection results from automatically detected person percepts.
+    The detector names consist of the name of the algorithm, the used \gls{mdl} and the \gls{stride}.
+    }
+    %\end{minipage}}
+\end{figure}
+
+\subsection{Results}
+
+A set of observations and conclusions can be drawn from the performance visualization in \cref{fig:ffm-ffm}:
+\begin{enumerate*}[label=(\roman*)]
+    \item Group detections on the basis of automatically detected person percepts show worse performance for all configurations and \glspl{tolerance threshold} in all quality metrics---except for \gls{recall} in case of \gls{Flobi Entrance} and a small \(T\).
+    The strongest performance decrease can be observed for \gls{Flobi Entrance} in the \gls{precision} and \gls{markedness} measurements.
+    Only 20\%-40\% of the groups detected for the \gls{Flobi Entrance} correctly match the annotation in case of automatic person detections while 65\%-80\% based on the annotations.
+    The effect is much smaller for \gls{recall}, and \gls{informedness} at \gls{Flobi Entrance} and for all metrics in case of \gls{Flobi Assistance}.
+    It is consequential that the group detection results are worse with automatically detected person percepts than with manually annotated person positions.
+    Especially the strong, decrease in case of \gls{Flobi Entrance} suggests  problems in the detection of persons.
+    Indeed, both person detection approaches are challenged by the used corpus.
+    For the~\citewithauthor{openposegit} based approach, the positions of the agents and camera perspectives (\(O\) perspectives in \cref{fig:group-perspectives}) are problematic.
+    The feet of people interacting with \gls{Flobi Assistance} can not be detected as they stand behind the kitchen unit.
+    This is not a problem in case of \gls{Flobi Entrance}, but the corridor is crowded, which results in occlusions between the persons.
+    The person detection of the \gls{apartment}, works on the basis of top-down perspectives (\(T1\) and \(T2\) in \cref{fig:group-perspectives}).
+    Therefore, people neither can occlude each other nor be occluded by furniture.
+    Nevertheless, this system does not perform well in crowded situations, because it often can not separate the percepts of people who are standing close to each other.
+    Especially problematic is the hallway, which is narrow and crowded.
+    \item The overall performance in case of \gls{Flobi Entrance} is worse than in case of \gls{Flobi Assistance}.
+    This can have multiple reasons.
+    First of all, the \gls{prevalence} for being in a group for \gls{Flobi Entrance} (\inidata{group.info}{prev_entrance}) is much lower than for \gls{Flobi Assistance} (\inidata{group.info}{prev_assistance}).
+    Therefore, with the same classifier-quality, a lower precision can be expected.
+    This is confirmed by the fact that the classifiers' \gls{markedness}---which is less prone to the \gls{prevalence}---is on a similar level for both agents.
+    For \gls{recall} and \gls{informedness} this is different.
+    They are both worse for \gls{Flobi Entrance}.
+    Therefore, the classifiers are less qualified in correctly distinguishing group and non-group configurations for \gls{Flobi Entrance}.
+    \item While the \gls{precision} decreases slightly for a growing \gls{tolerance threshold}, the impact is much stronger for \gls{recall}, \gls{markedness}, and \gls{informedness} in case of \gls{Flobi Assistance}.
+    This is rooted in the definitions of \acrlong{fp} and \acrlong{fn} for these evaluations.
+    Correctly detecting that an agent is in a group, but assigning it to the wrong group is counted as \acrlong{fn}.
+    Therefore, these cases have no impact on the classifier's precision.
+    The \gls{markedness} metric accounts for \acrlong{fn} and therefore shows a decline.
+    A much smaller decline can be seen in case of \gls{Flobi Entrance}.
+    This is rooted in the overall smaller group sizes observed for the hallway.
+    \item \emph{Gco-4500-50} achieves the best \gls{precision}, and \gls{markedness} for both agents.
+    This means that the classifier configuration can be chosen in an agent-agnostic way.
+    Furthermore, it shows that the results of the \emph{graph cuts} based approach are the most trustworthy.
+    \item The \gls{recall} and \gls{informedness} results are best in case of \emph{Grow-6000-50}.
+    The \emph{k-means} based approach can correctly find more of the annotated groups and non-groups than the other configurations when using a higher \gls{mdl}.
+    This underlines the trade-off that has to be made between \gls{precision} and \gls{recall}.
+    \item Finally, the plots of \gls{precision} and \gls{recall} show only small differences to \gls{markedness} and \gls{informedness}.
+    This means that the probabilities of false omissions (\gls{for}) and false alarms (\gls{fpr}) are small.
+    The only exception here is \gls{precision} and \gls{markedness} for \gls{Flobi Assistance} witch indicates \(\approx20\%\) false omissions.
+\end{enumerate*}
+The results can not be directly compared to the performance of \gls{ffm} detections in \gls{hhi} \cite{Setti2015,Vascon2016} because the quality measures in this chapter had to be calculated for each agent separately.
+Nevertheless, the results show that by detecting \glspl{ffm} with the approach presented by~\citewithauthor{Setti2015}, \glspl{conversational group} with \glspl{artificial agent} can be detected.
+
+\subsection{Discussion}
+
+In this section, I Investigated \cref{ffm.h1}\rqnote{ffm.h1}{\hypffmone}.
+To this end, I implemented a system for \gls{ffm}-detection according to~\citewithauthor{Setti2015} and evaluated its applicability for the detection of \glspl{conversational group} with \glspl{artificial agent} using the corpus presented in \cref{sec.group.corpus}.
+The evaluation shows that the quality of the \gls{conversational group} detection depends on and the crowdedness of the environment and the participants incentive to interact with the agents.
+Errors in the detection of participants can strongly interfere with the quality of the group detections.
+Furthermore, it gets increasingly hard to assign each participant to the correct group while the group size grows.
+Nevertheless, it is evidently possible to utilize the approach to correctly find the participants of the \glspl{conversational group} of \glspl{artificial agent} in the majority of the observations, which confirms \cref{ffm.h1}.
+
+\section{In/Out of Group Distinction}\label{sec.fformation.inout}
+
+As suggested in the beginning of this chapter, it is not always necessary for an \gls{artificial agent} to correctly identify all participants of its \gls{conversational group} to be able to solve its task in a socially acceptable manner.
+For example, to exhibit \gls{civil inattention} it is fully sufficient to know whether the \gls{robot} is in a \gls{conversational group} or not.
+Therefore, in such situations a much simpler classifier may be sufficient.
+In this section, I investigate whether the detection of faces in the agents field of view (\Cref{ffm.face}\rqnote{ffm.face}{\hypffmface}), or mutual gaze (\Cref{ffm.gaze}\rqnote{ffm.gaze}{\hypffmgaze}), can sufficiently inform about whether the agent is in a \gls{conversational group} or not (\emph{in-group}-detection).
+To this end, I compare the applicability of face detections, and gaze detections with the results of the \gls{conversational group} detection based on \gls{ffm} from \cref{sec.fformation.fformation}.
+
+\subsection{Detectors}
+
+To better understand, if face detection, gaze detection, and \gls{ffm} detection can be applied to distinct situations where an agent is in a group from situations where it is not, I create a scalar feature from each of these inputs.
+This is done as follows:
+\begin{description}
+   \item[Face:] To get a scalar feature for the face detection I calculate the amount of the agents field of view that is occupied by the face of the nearest person.
+    As an approximation, the size of the \gls{roi} from the face detection can be used.
+    If multiple faces are detected simultaneously, the biggest face (\gls{roi}) is chosen as the nearest and therefore most informative.
+    The resulting feature is zero when no face can be detected and grows when someone gets closer to the agent.
+    \item[Gaze:] The gaze feature is calculated from the horizontal and vertical gaze angle of the face of the nearest person.
+    To this end, the angle of the combined rotation (yaw and pitch) is calculated and used as a scalar feature vector.
+    It is zero when the agent is directly looked at and \(\pi\) when the person looks in the opposite direction.
+    Because the gaze detection model is based on frontal views of faces, this angle does not exceed \(\frac{\pi}{3}\) in this evaluation.
+    In case no face and therefore no gaze direction can be detected, the angle is set to \(\frac{\pi}{2}\) as an upper bound.
+    \item[Gco-agent:] From the \gls{ffm}-detection models as presented in \cref{sec.fformation.fformation}, I use the \emph{graph-cuts} based detection with \(\text{\gls{mdl}}=4500\) and \(\text{\gls{stride}}=50\) (\emph{Gco-4500-50}).
+    This configuration has an overall good performance in the \gls{ffm} detection.
+    The automatically detected person percepts are used as input information to allow a fully automatic recognition.
+    To get a scalar feature, I calculate the distance and visibility cost (\cref{eq:ffm.cost1,eq:ffm.cost2}) for the agent.
+    Cases where the agent is detected as not in a group (\(|G_k|=1\)) are set to the maximum observed cost.
+    The resulting feature approaches zero for group assignments with low costs for the agent, and grows when it becomes difficult to access a group.
+\end{description}
+
+\subsection{Evaluation}\label{sec.fformation.evaluation}
+
+To evaluate the applicability of face information for \emph{in-group} detection, the face detection observations need to be linked to the group annotations.
+To this end, the face detection data---which is produced with \SI{15}{Hz}---is assumed to be constant between observations and sampled using the timestamps from the group annotations.
+This results in \inidata{group.info}{num_frames_agent} observations for each agent and feature.
+By varying a threshold between the smallest and largest observed value of each feature, \gls{roc} and \gls{precision}-\gls{recall} curves can be created.
+It should be possible to create a classifier that combines these features to achieve an overall better performance.
+However, the performance of such a classifier is not relevant for the investigated claims (\cref{ffm.gaze,ffm.face}) and therefore not inspected.
+The performance of the three features is visualized in \cref{fig:group-roc-models,fig:group-pr-models} and further analysed in the following.
+
+\subsection{Results}
+
+The visualization of the \gls{roc} curves and \gls{auc} of the proposed detectors \emph{Face}, \emph{Gaze}, and \emph{Gco-Agent} in \cref{fig:group-roc-models} allows some insights into their applicability for \emph{in-group} detection.
+\begin{figure}[htb]
+    \centering
+    \input{data/group-ingroup-roc.tex}
+    \caption[ROC curves for \emph{in-group} detectors.]{\label{fig:group-roc-models}
+    Performance visualizations of \emph{in-group} detection from the \emph{Face} (red), \emph{Gaze} (blue), and \emph{Gco-Agent} (green) models in the \gls{roc} space.
+    The corresponding \gls{auc} values are shown in the gray box on the lower centre.
+    The results are shown separately for the agents \gls{Flobi Assistance} (solid lines, dark-filled \gls{auc}), and \gls{Flobi Entrance} (dashed lines, light filled \gls{auc}).
+    }
+\end{figure}
+\begin{enumerate*}[label=(\roman*)]
+    \item The \gls{recall} is strongly increasing for small values of \gls{fpr} and there are no observations of \gls{fpr} in the range \([0.09,0.97]\).
+    This strong increase in the \gls{fpr} happens for the face detection based features when observations without a face detection are accepted as \emph{in-group} and for the \gls{ffm} based feature when no group was detected.
+    At this point all observations are accepted as \emph{in-group} and the detectors lack diagnostic power.
+    \item The \gls{ffm} based feature (\emph{Gco-Agent}) produces the lower bound in recall and the upper bound of \emph{False Alarms} for \gls{Flobi Entrance}.
+    Although a perfect \gls{ffm} based group detection would result in an optimal \gls{roc} curve, this is the worst performing classifier.
+    The lower quality of this feature for \gls{Flobi Entrance}, therefore, must be rooted in (1) the overall worse performance of \gls{ffm} detection for this agent and (2) the higher noise in the person detection in the vicinity of this agent.
+    \item For \gls{Flobi Assistance}, this feature achieves the upper bound in \gls{recall} while showing a slightly worse \gls{fpr}.
+    It furthermore achieves the highest \gls{auc}.
+    This shows that the feature has a much higher potential in correctly deciding whether an agent is in a group or not.
+    \item Finally, the face detection based detectors result in similar curves for each agent and feature.
+    While they achieve a slightly better recall for \gls{Flobi Assistance}, their \gls{fpr} is lower for \gls{Flobi Entrance}.
+    Nevertheless, the overall difference is negligible, as can be seen in their \gls{auc}.
+    This property indicates that information about the size of the detected face or gaze direction---at least in this scenario---does not provide much information to \emph{in-group} detection.
+    The detectability of a face as such is much more important.
+\end{enumerate*}
+
+Because the proportion of observations in which the agent is in a group are low in the used data (\inidata{group.info}{prev_assistance} for \gls{Flobi Assistance} and \inidata{group.info}{prev_entrance} for \gls{Flobi Entrance}), the \gls{fpr} value is an optimistic measure.
+Therefore, it is interesting to additionally investigate the applicability of the features in the \gls{precision}-\gls{recall} space.
+The curves can be seen in \cref{fig:group-pr-models} and give further insights.
+\begin{figure}[htb]
+    \centering
+    \input{data/group-ingroup-pr.tex}
+    \caption[Precision-recall curves for \emph{in-group} detectors.]{\label{fig:group-pr-models}
+    Performance visualizations of \emph{in-group} detection from the \emph{Face} (red), \emph{Gaze} (blue), and \emph{Gco-Agent} (green) models in the \gls{precision}-\gls{recall} space.
+    The corresponding \gls{auc} values are shown in a gray box on the lower left.
+    The results are shown separately for the agents \gls{Flobi Assistance} (solid lines, dark-filled \gls{auc}), and \gls{Flobi Entrance} (dashed lines, light filled \gls{auc}).
+    }
+\end{figure}
+\begin{enumerate*}[label=(\roman*)]
+    \item The breakdown in diagnostic power of the features when all observations are accepted as \emph{in-group} can be seen in this visualization too (for high values of recall).
+    %\item The overall \gls{prevalence} of the agents being in a group can be seen at \(\text{\emph{recall}}=1\) because the \gls{precision} can not get lower than the \gls{prevalence}.
+    \item The differences of the features' applicability is more apparent in this visualization.
+    It can be seen in the curves and the \gls{auc} values of the classifiers.
+    \item The \emph{Gco-Agent} based classifier for \gls{Flobi Entrance} is gradually loosing precision when \gls{recall} is increased and shows an overall low \gls{auc} of \(\approx 0.67\).
+    \item This does not apply for \gls{Flobi Assistance}, for which the feature produces a continuously high \gls{precision} of \(\approx 90\%\) even for high \gls{recall} values.
+    \item \emph{Gco-Agent} for \gls{Flobi Assistance} and \emph{Gaze} for \gls{Flobi Entrance} show a high variance in \gls{precision} for low \gls{recall} values.
+    While configurations with low \gls{recall} are not of great interest, this property lowers the overall \gls{auc} of these detectors.
+    \item The best \gls{auc} is achieved by the \emph{Face} feature for \gls{Flobi Assistance} which shows a reliably high \gls{precision} for \(\text{\gls{recall}} < 80\%\).
+\end{enumerate*}
+
+\subsection{Discussion}
+
+In this section, I created scalar features from the results of a face detection and a gaze detection approach.
+I used these features to test their applicability as \emph{in-group} detectors and compared them to a feature based on an \gls{ffm} group assignment cost to investigate \cref{ffm.gaze}\rqnote{ffm.gaze}{\hypffmgaze} and \cref{ffm.face}\rqnote{ffm.face}{\hypffmface}.
+On the one hand, this investigation shows that a feature based on the detection of \glspl{conversational group} can outperform approaches that only utilize informations from the detection of faces in the agents field of view.
+This is especially true when a high \emph{recall} is required.
+On the other hand, this only works if the \gls{conversational group} detection itself produces reliable results.
+If the reliability of the group detection approach is low, an approach based on the detection of gazes produces better results.
+This feature achieves a \gls{recall} of \(\approx 75\%-80\%\) with a \gls{precision} of \(\approx 90\%\) and produces overall better results for \gls{Flobi Entrance} than the group detection based approach.
+Therefore, it can be said that the detection of peoples gaze can inform about whether the agent is in a group or not sufficiently to outperform a group detection based approach.
+This confirms \cref{ffm.gaze}.
+Although, this is only the case when the reliability of the group detection is low---as with \gls{Flobi Entrance}.
+The feature based on the size of the face produces comparable results.
+This confirms \cref{ffm.face}.
+Furthermore, it is apparent that both \emph{face-detection} based features show only small changes in the investigated quality measures for varying thresholds as long as observations without a detected face can be distinguished from observations with a face.
+It can be concluded from this observation that the most important information for the \emph{in-group} detection is not the gaze angle or face size but whether a face can be detected in the first place or not.
+
+
+\section{Summary}
+
+%intro
+By detecting arrangements of verbally interacting people as \glspl{conversational group}, an agent enriches its understanding of the social situation.
+This allows it to distinguish focused from \glspl{unfocused interaction}, and behave more socially adequate (see \cref{sec.rw.hi.focused,sec.rw.hi.unfocused}).
+Therefore, I investigated \Cref{hyp.fformation}\rqnote{hyp.fformation}{\hypfformation} in this chapter.
+To this end, I showed that a \gls{conversational group} with an \gls{artificial agent} can be detected using \glspl{ffm} as known from \gls{hhi} (\cref{ffm.h1}).
+Furthermore, I examined whether simpler approaches can be used as a substitute for the group detection in cases where the participants of the group are of no interest.
+To this end, I showed that the detection of peoples gaze direction in the agents field of view is sufficient for \emph{in-group} detection (\cref{ffm.gaze}), and that this can be further simplified by using face detection results (\cref{ffm.face}).
+
+%% impact for RQ
+Considering \Cref{hyp.fformation} the collected observations show that \glspl{conversational group} with \glspl{artificial agent} can be detected as \glspl{ffm} using the same approach as known from \gls{hhi} research.
+When the agent only needs to know whether it is in a \gls{conversational group}, and an identification of the groups participants is not required, the \gls{ffm} based group detection can achieve better results than approaches based on face and gaze detection.
+However, this investigation shows that noise in the person detection has a strong negative impact on this group detection.
+In case of noisy person detection, better \emph{in-group} detection results can be achieved by using the result of a face detector instead of detecting person positions and calculating assignment costs.

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="4e4b057f-9b86-48f2-92db-77b88bbcf774" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-15T12:05:09.285Z</CreationDate>
+            <ModificationDate>2016-02-15T12:05:09.285Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:8604db43-b065-4945-9e3f-ec03258b947e#t=26.866/30.099;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt die Begrüßung des Apartments nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="fe9fd09c-4b48-4d25-be41-579c4384ae75" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-15T12:32:31.707Z</CreationDate>
+            <ModificationDate>2016-02-15T12:32:31.707Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:8604db43-b065-4945-9e3f-ec03258b947e#t=345.599/364.400;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP unternimmt keine Versuche und löst keine Aufgabe,
+außer Aufgabe 3 und 7 (konservativ)</Message>
+    </ColTime>
+</ColTimeList>

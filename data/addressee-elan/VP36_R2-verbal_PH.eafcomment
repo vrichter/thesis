@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="54ff1e10-e265-458a-b288-51cad57cc5e2" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T17:27:19.648Z</CreationDate>
+            <ModificationDate>2016-01-19T17:27:19.648Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:243811a0-f84d-42d8-bd0a-0adf8bf9467d#t=8.700/14.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Am Anfang: Probleme mit dem Tisch, aber von der VP nicht gesehen, da nicht im Raum.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="5d239411-a35d-4213-831b-7c0e4005327d" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T17:47:10.802Z</CreationDate>
+            <ModificationDate>2016-01-19T17:47:10.802Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:243811a0-f84d-42d8-bd0a-0adf8bf9467d#t=40.000/42.700;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Jasmin ist nicht VL.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="2f043e4b-83fa-4547-b894-8a086b14bd90" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T17:44:25.040Z</CreationDate>
+            <ModificationDate>2016-01-19T17:44:25.040Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:243811a0-f84d-42d8-bd0a-0adf8bf9467d#t=45.500/54.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt Vorstellung durch das Apartment nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="f53978e8-7680-450b-8def-8156114d54a4" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T17:46:52.506Z</CreationDate>
+            <ModificationDate>2016-01-19T17:47:01.762Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:243811a0-f84d-42d8-bd0a-0adf8bf9467d#t=100.100/109.800;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest hier schon die Karte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="1f366563-1552-4284-8734-46ea16a61d3b" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T17:31:15.162Z</CreationDate>
+            <ModificationDate>2016-01-19T17:31:15.162Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:243811a0-f84d-42d8-bd0a-0adf8bf9467d#t=108.000/110.600;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP löst Aufgabe während VL aus dem Raum geht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="e170ccbb-51c4-49a9-bcb2-8d4494f2b34a" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T14:34:49.441Z</CreationDate>
+            <ModificationDate>2016-01-20T14:35:52.064Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:243811a0-f84d-42d8-bd0a-0adf8bf9467d#t=190.525/194.125;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Tabelle der Wizzards sagt, dass die VP wahrscheinlich den Roboter adressiert hat. Das sieht in der Kamera auch etwas so aus, bwz. ist nicht klar zu sehen. 
+Ich glaube, dass die VP nicht wirklich zum Roboter guckt, sondern eher das Apartment meint, da die VP an selber Stelle zum Apartment geredet hat.
+Wizzards lassen auch das Apartment reagieren, was ich ok finde.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="558ba8eb-82cb-4ac2-a085-2433e965e3a5" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T17:42:04.439Z</CreationDate>
+            <ModificationDate>2016-01-19T17:42:04.439Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:243811a0-f84d-42d8-bd0a-0adf8bf9467d#t=342.750/348.650;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VL bricht den Versuch ab. VP ist aber auch schon länger fertig mit der Aufgabe, hat es aber nicht erkannt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="1128867b-2f24-4851-a22d-2f7a555068f5" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T14:28:48.901Z</CreationDate>
+            <ModificationDate>2016-01-20T14:28:48.901Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:243811a0-f84d-42d8-bd0a-0adf8bf9467d#t=344.300/349.800;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP macht alle Aufgaben. Erkennt nicht, dass er mit der Stehlampe schon fertig ist. Stimmung ist neutral, obwol er auf mich freundlich wirkt (als wäre er ein freundlicher Mensch), aber er zeigt kaum Reaktionen auf Apartmentverhalten, daher Mimik: neutral.
+VL ist nicht Jasmin.</Message>
+    </ColTime>
+</ColTimeList>

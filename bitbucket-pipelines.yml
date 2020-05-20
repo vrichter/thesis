@@ -1,0 +1,12 @@
+image: vrichter/docker-images:xenial-texlive-2018
+
+pipelines:
+  default:
+    - step:
+        script:
+          # build
+          - make all
+          - NAME="$(date +%Y-%m-%d-%H-%M-%S%z).pdf"
+          - mv thesis.pdf "${NAME}"
+          - curl -X POST "https://${BB_AUTH_STRING}@api.bitbucket.org/2.0/repositories/vrichter/pub.diss/downloads" --form files=@"${NAME}"
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="4a563ee1-ae9e-4e08-ab0a-512cccd6a6d2" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-16T10:08:33.642Z</CreationDate>
+            <ModificationDate>2015-12-16T10:08:33.642Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:54a3b16f-b59b-4e9e-814c-98d22c8aba1b#t=54.174/64.063;tier=Ausdruck%20spezifisch</AnnotationFile>
+        <Message>VP bemerkt die Begrüßung des Appartments nicht
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="44d63cb7-d76a-4746-b840-a0c6cd695d1b" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-16T10:22:25.279Z</CreationDate>
+            <ModificationDate>2015-12-16T10:22:25.279Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:54a3b16f-b59b-4e9e-814c-98d22c8aba1b#t=140.073/150.110;tier=Ausdruck%20spezifisch</AnnotationFile>
+        <Message>VP liest die erste Karte
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="511b520e-9912-4e93-a0a2-478f2a7787b8" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-16T12:06:54.487Z</CreationDate>
+            <ModificationDate>2015-12-16T12:06:54.487Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:54a3b16f-b59b-4e9e-814c-98d22c8aba1b#t=348.030/349.943;tier=Ausdruck%20spezifisch</AnnotationFile>
+        <Message>VP versucht die Steuerung der Lampe zu verstehen, berührt die Lampe und sagt zu sich selbst: "Okay!"
+</Message>
+    </ColTime>
+</ColTimeList>

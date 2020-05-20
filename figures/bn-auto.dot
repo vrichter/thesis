@@ -1,0 +1,69 @@
+digraph
+{
+  rankdir=LR
+  //concentrate=true
+  nodesep=0.1
+  // Define the nodes
+  // colors: "#E41A1C" "#377EB8" "#4DAF4A" "#984EA3" "#FF7F00" "#FFFF33" "#A65628"
+  /*
+      Fr", "M", "Aef", "Sf", "Sp", "Str", "Ssr", "Msr", "Er", "Aw", "T", "Pid", "C", "O"
+      Fr", "M", "Sf", "Sp", "Str", "Ssr", "Msr", "Er", "Pid"
+      Sf", "Sp", "Str", "Ssr"
+  */
+  Ar  [fontname="Liberation Serif",fontsize=17,style="filled,bold",fillcolor="#984EA3"]
+  Fr  [fontname="Liberation Serif",fontsize=17,style="filled",fillcolor="#FFFF33"]
+  Aef [fontname="Liberation Serif",fontsize=17,style="filled,dashed",fillcolor="#F5F5F5"]
+  Er  [fontname="Liberation Serif",fontsize=17,style="filled",fillcolor="#FFFF33"]
+  M   [fontname="Liberation Serif",fontsize=17,style="filled",fillcolor="#FFFF33"]
+  Msr [fontname="Liberation Serif",fontsize=17,style="filled",fillcolor="#FFFF33"]
+  Sf  [fontname="Liberation Serif",fontsize=17,style="filled",fillcolor="#FF7F00"]
+  Sp  [fontname="Liberation Serif",fontsize=17,style="filled",fillcolor="#FF7F00"]
+  Str [fontname="Liberation Serif",fontsize=17,style="filled",fillcolor="#FF7F00"]
+  Sph [fontname="Liberation Serif",fontsize=17,style="filled",fillcolor="#FF7F00"]
+  Ssr [fontname="Liberation Serif",fontsize=17,style="filled",fillcolor="#FF7F00"]
+  Aw  [fontname="Liberation Serif",fontsize=17,style="filled,dashed",fillcolor="#F5F5F5"]
+  T   [fontname="Liberation Serif",fontsize=17,style="filled,dashed",fillcolor="#F5F5F5"]
+  C   [fontname="Liberation Serif",fontsize=17,style="filled,dashed",fillcolor="#F5F5F5"]
+  O   [fontname="Liberation Serif",fontsize=17,style="filled,dashed",fillcolor="#F5F5F5"]
+  Pid [fontname="Liberation Serif",fontsize=17,style="filled",fillcolor="#FFFF33"]
+  //[Aef][Aw][Er][Pid][C][O][Sf][Sp][M][Str][Sph][Ar][Msr][Fr|Ar][Ssr][T]
+  //Ar -> Fr [style=all,color="#377EB8"];
+  // auto model
+  //[M][Aef][Er][Str|M][Msr|M][Sph|Str][Ssr|Str][Ar|Sph][Sf|Sph][Sp|Sph][Fr|Ar:Aef][Aw|Ar][O|Sf][T|Fr][Pid|O][C|Pid]
+  edge [style=bold,color="#E41A1C"]
+  Ar  -> Fr
+  M -> Str
+  M -> Msr
+  Str -> Sph
+  Str -> Ssr
+  Sph -> Ar
+  Sph -> Sf
+  Sph -> Sp
+  Aef -> Fr
+  Ar -> Aw
+  Sf -> O
+  Fr -> T
+  O -> Pid
+  Pid -> C
+  // manual model
+  //[Aef|Pid][Aw|Ar][Er|Pid][Pid][C][O][Sf|Sp][Sp|Ar:M][M|Ar:O][Str|Sp][Sph|Sp][Ar|C:T:Pid][Msr|M:Pid][Fr|Ar:Aef][Ssr|Ar][T]
+  edge [style=invis,color="#4DAF4A"]
+  //Ar  -> Fr
+  Pid -> Aef
+  Ar  -> Aw
+  Pid -> Er
+  Sp  -> Sf
+  Ar  -> Sp
+  M   -> Sp
+  Ar  -> M
+  O   -> M
+  Sp  -> Str
+  Sp  -> Sph
+  C   -> Ar
+  T   -> Ar
+  Pid -> Ar
+  M   -> Msr
+  Pid -> Msr
+  Aef -> Fr
+  Ar  -> Ssr
+}

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="61a6cc6f-4913-4cec-84a6-91f93f27d287" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-18T13:41:16.217Z</CreationDate>
+            <ModificationDate>2015-12-18T13:41:16.217Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:5b522ac9-d85e-4ba1-8c0a-950398dde34e#t=0.020/0.620;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Aufnahme startet spät, aber das passt trotzdem.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="5068635a-3fcb-46de-b4c4-ae303f53986e" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-18T14:01:39.474Z</CreationDate>
+            <ModificationDate>2015-12-18T14:01:39.474Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:5b522ac9-d85e-4ba1-8c0a-950398dde34e#t=2.280/4.290;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt "Hi" aber mir ist unklar, ob er das zur VL oder zum Apartment sagt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="29b1dd90-0d30-48d5-94b8-d30ff3f3fc55" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-18T14:02:31.377Z</CreationDate>
+            <ModificationDate>2015-12-18T14:03:28.842Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:5b522ac9-d85e-4ba1-8c0a-950398dde34e#t=25.100/28.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt "Hi" zur Person mit Notaus. Höflich, weil mit Lächeln.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="b92c729e-61c7-4ded-ae79-5970045ce9d4" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-18T14:07:01.699Z</CreationDate>
+            <ModificationDate>2015-12-18T14:07:01.699Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:5b522ac9-d85e-4ba1-8c0a-950398dde34e#t=86.800/99.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon hier die Aufgabenkarte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="00c7309c-2325-4a38-8275-dce42330b765" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-18T14:09:52.020Z</CreationDate>
+            <ModificationDate>2015-12-18T14:09:52.020Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:5b522ac9-d85e-4ba1-8c0a-950398dde34e#t=99.100/106.100;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Wichtig: VP sagt Kommando schön deutlich."</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="dd5d06d6-2736-4bf5-8dc5-3b81e4afa03a" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-18T14:37:11.616Z</CreationDate>
+            <ModificationDate>2015-12-18T14:37:11.616Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:5b522ac9-d85e-4ba1-8c0a-950398dde34e#t=225.600/233.700;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP löst alle Aufgaben (außer Stehlampe) mit Hilfe des Roboters. Wirkt insgesamt sicher und zufrieden. Mag den Roboter (hat er mir später auch nochmal gesagt.)</Message>
+    </ColTime>
+</ColTimeList>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="4e35ad19-d642-45f9-bb49-992139ba7503" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-15T09:54:05.390Z</CreationDate>
+            <ModificationDate>2016-01-15T09:54:05.390Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a615081b-5853-49ad-a406-887fee8eb4e9#t=10.100/18.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt die Begrüßung des Appartments nicht
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="4608225f-78d5-4bfb-ac25-c7bded69d269" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-14T17:13:21.071Z</CreationDate>
+            <ModificationDate>2016-01-14T17:13:21.071Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a615081b-5853-49ad-a406-887fee8eb4e9#t=98.500/105.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon die erste Karte
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="1fb8ee72-f118-40d2-946c-eb8add2c2954" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-15T10:44:59.513Z</CreationDate>
+            <ModificationDate>2016-01-15T10:44:59.513Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a615081b-5853-49ad-a406-887fee8eb4e9#t=193.022/201.063;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP löst die Aufgabe 1 nochmal
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="04fd5527-91c1-4b7e-8684-713019c7860a" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-15T10:46:25.506Z</CreationDate>
+            <ModificationDate>2016-01-15T10:46:25.506Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a615081b-5853-49ad-a406-887fee8eb4e9#t=193.022/201.063;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP löst die Aufgabe 1 und 2 nochmal, da er nicht verstanden hat wie das Licht ausging
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="6c86b16f-9ce4-40d9-ba6e-41aace8b1d05" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-15T11:51:49.677Z</CreationDate>
+            <ModificationDate>2016-01-15T11:51:49.677Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a615081b-5853-49ad-a406-887fee8eb4e9#t=225.700/233.100;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt nicht wie das Licht im Flur ausging, macht dann die Aufgaben 1 und 2 nochmal (zusammengefasst unter "Reaktion auf das Ausführen der Aufgabe 2"). 
+VP benutzt keine Sprache als Steuerungsmöglichkeit
+VP unterbricht die Studie bei der Paket- Aufgabe, wendet sich erst an den BNotaus-Mann, dann an die VL; wird ermutigt weiter zu probieren, was er dann auch tut.
+
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="6c995225-724a-492d-bd74-21566c80e389" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-15T11:03:24.028Z</CreationDate>
+            <ModificationDate>2016-01-15T12:12:31.002Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a615081b-5853-49ad-a406-887fee8eb4e9#t=437.200/486.500;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP weiß nicht weiter, unterbricht die Studie, wendet sich erst an den Notaus-Mann, dann an die VL; 
+wird ermutigt weiter zu probieren, was er dann auch tut.
+
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="1137f8fd-aa5d-41f2-b12d-5fba16c8f333" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-15T12:11:21.297Z</CreationDate>
+            <ModificationDate>2016-01-15T12:11:21.297Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a615081b-5853-49ad-a406-887fee8eb4e9#t=637.228/661.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt nicht wie das Licht im Flur ausging, macht dann die Aufgaben 1 und 2 nochmal (zusammengefasst unter "Reaktion auf das Ausführen der Aufgabe 2"). 
+VP unterbricht die Studie bei der Paket- Aufgabe, wendet sich erst an den Notaus-Mann, dann an die VL; wird ermutigt weiter zu probieren, was er dann auch tut.
+VP benutzt keine Sprache als Steuerungsmöglichkeit.
+Insgesamt beachtet die VP fast nur die Bildschirme.</Message>
+    </ColTime>
+</ColTimeList>

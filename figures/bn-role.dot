@@ -1,0 +1,21 @@
+digraph
+{
+  rankdir=TD
+  //concentrate=true
+  nodesep=0.1
+  // Define the nodes
+  // colors: "#E41A1C" "#377EB8" "#4DAF4A" "#984EA3" "#FF7F00" "#FFFF33" "#A65628"
+
+  role [fontname="Liberation Serif",fontsize=17,style="bold", color="#E41A1C", fillcolor="white", shape="record", label="{Role|{Speaker|Addressee|Side-Participant|Non-Participant}}" ]
+  ig   [fontname="Liberation Serif",fontsize=17,style="bold", color="#377EB8", fillcolor="white", shape="record", label="{In-Group|{True|False}}",          ]
+  sp   [fontname="Liberation Serif",fontsize=17,style="bold", color="#377EB8", fillcolor="white", shape="record", label="{Speech Production|{True|False}}", ]
+  mm   [fontname="Liberation Serif",fontsize=17,style="bold", color="#377EB8", fillcolor="white", shape="record", label="{Mouth Movement|{True|False}}",    ]
+  mg   [fontname="Liberation Serif",fontsize=17,style="bold", color="#377EB8", fillcolor="white", shape="record", label="{Mutual Gaze|{True|False}}",       ]
+
+  // rule model
+  mm -> role
+  sp -> role
+  mg -> role
+  ig -> role
+
+}

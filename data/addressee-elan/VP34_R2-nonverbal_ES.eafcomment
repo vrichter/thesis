@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="3e4af693-e544-4cd9-a67f-dd0b0ebf1369" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-15T10:22:26.499Z</CreationDate>
+            <ModificationDate>2015-12-15T10:22:26.499Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:f1efe25c-721f-40d7-85dd-5e7849e3ca5e#t=58.700/67.300;tier=Ausdruck%20spezifisch</AnnotationFile>
+        <Message>VP bemerkt die Begrüßung des Appantments nicht</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="71cdde29-888c-4028-ae5e-d45cba4d2dd3" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-15T11:11:16.696Z</CreationDate>
+            <ModificationDate>2015-12-15T11:11:16.696Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:f1efe25c-721f-40d7-85dd-5e7849e3ca5e#t=142.701/147.516;tier=Ausdruck%20spezifisch</AnnotationFile>
+        <Message>VP liest schon die erste Karte</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="d89f8347-9e89-4485-b88c-a83e000bb3a3" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-16T09:26:48.372Z</CreationDate>
+            <ModificationDate>2015-12-16T09:26:48.372Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:f1efe25c-721f-40d7-85dd-5e7849e3ca5e#t=331.000/345.000;tier=Ausdruck%20spezifisch</AnnotationFile>
+        <Message/>
+    </ColTime>
+    <ColTime ColTimeMessageID="670fcd72-6c83-4d0e-9e82-ec1deb8e1b93" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-16T09:29:48.043Z</CreationDate>
+            <ModificationDate>2015-12-16T09:29:48.043Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:f1efe25c-721f-40d7-85dd-5e7849e3ca5e#t=331.000/345.000;tier=Ausdruck%20spezifisch</AnnotationFile>
+        <Message>VP verlässt das Appartment, dreht sich einmal um , sagt aber nichts und geht weiter. Vor der Tür blickt nochmal nach oben zur Lampe.</Message>
+    </ColTime>
+</ColTimeList>

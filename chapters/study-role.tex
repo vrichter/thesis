@@ -1,0 +1,498 @@
+\chapter{Conversational Role Recognition}\label{ch.roles}
+
+With \gls{conversational group} detection, an agent can behave towards people depending on whether they are part of its \gls{conversational group} or not.
+It can show \gls{civil inattention} towards some while optimizing the mutual observability with others.
+However, to correctly interact with the people within the group further information is required.
+The agent needs to guide its attention towards the \gls{speaker} and identify utterances addressed towards it. 
+Simultaneously, it should support the interaction by acting according to its role, or may apply \gls{turn taking} to influence the roles within the group.
+However, to efficiently use them, the agent needs to know its current role (\cref{sec.rw.hi.focused-rw.addressing,sec.rw.hi.focused-rw.turntaking}). 
+%% introduction
+Therefore, I stated \Cref{hyp.roles}\rqnote{hyp.roles}{\hyproles}.
+To create an approach to \gls{conversational role} recognition, I elaborate on the following arguments and corresponding claims:
+On the one hand, \glspl{conversational role} can often be directly inferred from the state of the scene.
+Someone who speaks, for example, automatically becomes the accepted \gls{speaker} or stops speaking.
+A \emph{Non-Participant}, by definition, lacks a \gls{conversational group}.
+Therefore, I claim:
+\newcommand{\hyprolerule}{Given a set of high-level features, the \gls{conversational role} of an agent can be recognized using simple models.}
+\begin{hyp3}[High-Level Features]
+    \label{role.rule}
+    \hyprolerule
+\end{hyp3}
+On the other hand, the signals used to negotiate \glspl{conversational role} in human interaction can often be minimal and hard to determine:
+\newcommand{\hyproleraw}{By learning from lower level features, the recognition of \glspl{conversational role} can be further enhanced.}
+\begin{hyp3}[Low-Level Features]
+    \label{role.raw}
+    \hyproleraw
+\end{hyp3}
+Furthermore, a \gls{conversation} is a dynamic process that unfolds in time and in which the roles are negotiated through the system of \gls{turn} taking, one \gls{turn} at a time.
+Therefore, the problem should be treated as a time-dependent recognition problem:
+\newcommand{\hyproletime}{By observing how the interaction unfolds in time, the \gls{conversational role} can be better recognized than from the latest observation alone.}
+\begin{hyp3}[Time-Based Approach]
+    \label{role.time}
+    \hyproletime
+\end{hyp3}
+To investigate \Cref{hyp.roles} and the presented claims, I create and evaluate \gls{conversational role} recognition models for \glspl{virtual agent} in a \gls{smart environment}.
+To this end, I use high-level features and simple models on the one hand (\cref{role.rule}), and \glspl{ann} with varying feature sets (\cref{role.raw}) and time sequence information (\cref{role.time}) on the other hand.
+Like in \cref{ch.fformation}, this investigation is performed using the corpus presented in \cref{sec.group.corpus}.
+It contains \(\SI{57}{\min}\) of mixed human-agent interaction with the \glspl{virtual agent} \gls{Flobi Entrance} and \gls{Flobi Assistance}.
+Observations are sampled with a regular rate of \SI{15}{\Hz} for each agent separately.
+This results in a total of \inidata{role.info}{obs} observations, uniformly distributed over the time and agents.
+The observations are spread between the roles as follows: \emph{Speaker} (\(\inidata{role.info}{obs.sp}\%\)), \emph{Addressee} (\(\inidata{role.info}{obs.ap}\%\)), \emph{Side-Participant} (\(\inidata{role.info}{obs.mp}\%\)), and \emph{Non-Participant} (\(\inidata{role.info}{obs.np}\%\)).
+This imbalance between the classes needs to be considered during evaluation.
+
+\section{High-Level Role Features}
+
+For the evaluation of \cref{role.rule}\rqnote{role.rule}{\hyprolerule}, I create a set of high-level features based on the observations made in the previous chapters.
+These features are then combined using a set of rules and, for com\-pa\-ri\-son, a set of \glspl{bayesiannetwork} to create simple classifiers for the recognition of \glspl{conversational role}.
+
+\subsection{Feature Selection}\label{sec:role-rule-features}
+
+To allow the classification of \glspl{conversational role}, a set of high-level features can be compiled.
+Based on the observations made in the previous chapters, the following features can be automatically detected or are directly accessible to the agent during the interaction:
+
+\begin{description}
+% \gls{speaker} from corpus
+\item{Speaking:} Whenever an agent is speaking, its \gls{conversational role} must be \gls{speaker} or will become \gls{speaker} over time (\cref{sec.rw.hi.cr}).
+The agent's \emph{speech-production activity} (binary) is therefore an important information in the recognition of the \gls{speaker} role.
+As this is part of the agent's inner state, it does not need to be detected.
+The information can be extracted directly from the corpus (see \cref{sec.group.extraction}).
+% \gls{addressee} model
+\item{Addressed:} Whether an agent has the role of \gls{addressee} is determined by the current \gls{speaker} (\cref{sec.rw.hi.cr}).
+In \cref{ch.meka}, I present and evaluate a model to decide whether the agent is addressed.
+From this evaluation, I select a model for \gls{addressee} recognition that uses information about the interlocutors \emph{mouth movements} and \emph{mutual gaze} with the agent\footnote{the \gls{bayesiannetwork} named \emph{Both} in \vref{fig:meka-bn}}.
+I train this model using the full corpus that is presented in \cref{sec.meka.corpus}.
+By applying this model to observations in this evaluation, a binary prediction can be made whether the agent is \emph{addressed} (\(P(A|G,M)>50\%\)) or not.
+% in-group from group-detection
+\item{In-group:} One reason for the importance of \gls{conversational group} detection for \gls{conversational role} recognition is that it subdivides the set possible roles (\cref{sec.rw.hi.cg}).
+Whenever the agent is in a group, it can not assume the role of \emph{Non-Participant}.
+In \cref{ch.fformation}, I present an approach to \gls{ffm} detection that can be applied here too.
+As in \cref{sec.fformation.evaluation}, I use the \emph{graph-cuts} based optimization with \(M=4500\) and \(S=50\) in this investigation.
+By applying the \gls{ffm} detection to an observation, a binary \emph{in-group} detection (\(|g(P_{agent})|>1\)) can be created for the agent.
+% further features from \gls{addressee} recognition 
+\item{Mutual gaze:} Gaze is an important information in \glspl{conversation}.
+The distribution of the participants gaze in a \gls{conversational group} can be used as an indicator of the distribution of \glspl{conversational role}.
+Furthermore, gaze is used in the negotiation of the next \gls{turn} (\cref{sec.rw.hi.cr}).
+In \cref{ch.meka}, I present a model for a binary \emph{mutual gaze} detection which is based on the (continuous) angle of the interlocutors \emph{gaze}.
+\item{Mouth movements:} Like the \emph{speaking} feature for the agent, the detection of \emph{mouth movements} can identify its interlocutor as \gls{speaker}.
+When a different participant of the \gls{conversation} is the current \gls{speaker}, the agent can not assume this role simultaneously.
+Furthermore, whether the interlocutor is speaking or not has implications for the interpretation of \emph{mutual gaze} (\cref{sec.rw.hi.cr}).
+In \cref{ch.meka}, I present a model for (binary) \emph{mouth movement} detection based on the (continuous) variance of the distances between the interlocutors upper and lower lip (\emph{lip variance}) (\cref{sec.meka.study.classifiers}).
+\end{description}
+This set of high level, binary classification results are used in the following to create simple models for \gls{conversational role} recognition.
+
+\subsection{Rule Based Model}
+
+For the evaluation of \cref{role.rule}, I create a simple, rule based \gls{conversational role} recognition model. 
+It performs the following decisions:
+\begin{description}
+    \item{In-Group:} Whenever the agent is not in a \gls{conversational group}, its role must be \emph{Non-Participant}. 
+    Therefore, the agent is \emph{Non-Participant} when \(|g(P_{a})|=1\).
+    When it is part of a \gls{conversational group} (\(|g(P_{a})|>1\)), it can assume one of the remaining \glspl{conversational role}.
+    \item{Speaking}: The literature suggests, that only one participant can have the role of \gls{speaker} at a time during \glspl{conversation}.
+    This implies that, if one agent does not \emph{have the floor} but starts and continues to speak, the current \gls{speaker} will eventually yield and the agent become \gls{speaker} (see \vref{sec.rw.hi.cr}).
+    Therefore, the agent is classified as \gls{speaker}, whenever it is part of a \gls{conversational group} and speaking.
+    This information is drawn directly from the agent's \emph{speech-production activity}.
+    \item{Addressed}: When the agent is in a \gls{conversational group} but not the \gls{speaker}, it can assume the role \emph{Addressee} or \emph{Side-Participant}.
+    To distinguish these two roles, the \gls{addressee} recognition model as presented in \cref{sec:meka.h3} is used.
+    The model is trained using the full corpus presented in \cref{sec:meka.corpus} and predicts the probability of the agent being \emph{addressed} given \emph{mutual gaze} and the interlocutors \emph{mouth movements}.
+    As this is a binary decision, the agent is assumed to be \emph{Addressee} when the probability \(P(A|G,M)\) is higher than 50\%.
+    Finally, when the agent is neither \gls{speaker} nor \emph{Addressee} but still a participant of the \gls{conversational group}, it must have the role of a \emph{Side-Participant}.
+\end{description}
+By applying these three binary decisions in succession, a rule-based \gls{addressee} classifier can be created.
+A visualization of the resulting model can be seen in \cref{fig:role.rule}.
+\begin{figure}[htb]
+    \centering
+    \input{figures/role-rule.tex}
+    \caption[Rule based role recognition.]{\label{fig:role.rule} 
+    The decision tree for rule based role recognition.
+    The root node is shown as a black circle, decision nodes as blue diamonds, input nodes as red parallelograms, and role recognition results as green rectangles.
+    Decision nodes perform a binary (yes/no) distinction based on data provided by the input nodes.
+    }
+\end{figure}
+This simple model can be used to assess the applicability of approaches to \gls{conversational role} recognition based on high level features (\cref{role.rule}).
+
+\subsection{Bayesian Network}\label{sec:role-rule-bn}
+
+For comparison, I create \glspl{bayesiannetwork} that incorporate the high level features of the rule model.
+To this end, the agent's role is assumed to be dependent on these features.
+Furthermore, this model uses \emph{mutual gaze} and \emph{mouth movement} information directly (in contrast to the rule based model which uses the results of the \gls{addressee} recognition) to allow a better adaptation to the addressing behaviour in this corpus.
+The resulting model (\(BnM\)) can be seen in  \cref{fig:role-bn-structures}.
+\begin{figure}[tbh]
+    \centering
+    \def\svgwidth{0.98\textwidth}
+    {\footnotesize
+    \input{generated/bn-role.pdf_tex}
+    }
+    \caption[Bayesian Network for role recognition.]{\label{fig:role-bn-structures} 
+    Manually created \Gls{bayesiannetwork} structure (\emph{BnM}) that uses the high level features \emph{in-group}, \emph{speech production}, \emph{mouth movement}, and \emph{mutual-gaze} for \gls{conversational role} recognition.
+    Blue rectangles represent binary input nodes.
+    The red rectangle represents the \gls{conversational role} of the agent with the four possible outcomes \emph{Speaker}, \emph{Addressee}, \emph{Side Participant}, and \emph{Non-Participant}.
+    The arrows represent conditional dependency---the role depends on all other nodes.
+    }
+\end{figure}
+Additionally, I apply structure learning\footnote{Using \code{bnlearn::hc} from the \code{bnlearn} package (v4.4) in R\cite{bnlearn} with 1000 restarts and 1000 perturbations.} to automatically extract \gls{bayesiannetwork} structures.
+In the following, models created via structure learning are called \(BnA\).
+Furthermore, as \glspl{bayesiannetwork} are sensitive to class-imbalance, I additionally perform under-sampling in the training of these models.
+To prevent ties in the \gls{bayesiannetwork} results, the under-sampling uses slightly more examples for more common roles.
+This is done by taking all \(n\) observations of the rarest role and randomly sampling \(n+1\) of the second rarest, \(n+2\) of the second most common, and \(n+3\) of the most common role observations from within the training data.
+Models trained with under-sampling are subscripted with \enquote{u}.
+The resulting models \(BnM_u\) and \(BnA_u\) are trained with \emph{nearly equal} amounts of observations of all roles.
+In \cref{tab:rule-simple-models} a classification of the resulting models is shown.
+\begin{table}[tbh]
+    \centering
+    \begin{tabulary}{\textwidth}{ C | C C }
+        %\toprule
+                              & Full Training Set & Under-sampling \\ \hline
+        Manual Structure      &   \(BnM\)         & \(BnM_u\)      \\
+        Automatic Structure   &   \(BnA\)         & \(BnA_u\)      \\
+        %\bottomrule
+    \end{tabulary}
+    \caption[Bayesian Network for role recognition.]{\label{tab:rule-simple-models}
+    The configurations of \glspl{bayesiannetwork} as evaluated in this chapter.
+    Manual networks use the structure shown in \cref{fig:role-bn-structures}.
+    The structure of automatic networks is learnt from the training data.
+    The \enquote{u} subscript highlights models that are trained with under-sampling.
+    }
+\end{table}
+
+In the following section, I evaluate the classification performance of the rule-based classifier and compare it to the results of the \gls{bayesiannetwork} based approaches.
+
+\subsection{Evaluation}\label{sec:role-rule-eval}
+
+For the evaluation, I split the corpus into \(\SI{5}{\min}\) long slices on a regular scale.
+This results in 12 subsets which can be used to perform a 12-fold \gls{cv}, by holding one subset out for validation and training with the remaining 11.
+Structure learning and under-sampling are performed on the respective training-dataset within the fold.
+The rule based model (\emph{Rule}) does not need to be trained.
+In total, five models (\(Rule\), \(BnM\), \(BnM_u\), \(BnA\), and \(BnA_u\)), are evaluated in a 12-fold cross-validation.
+To get an impression of the models' performances for each role, I first visualize the \gls{f1score}, \gls{markedness}, and \gls{informedness} for each class separately.
+The resulting plot can be seen in \cref{fig:role-ev-classwise}.
+Furthermore, to allow the comparison of the overall quality of the models, I calculate two further performance measures.
+The \gls{accuracy} of the models can be calculated as the fraction of correct classifications in the population.
+However, because all observations are considered individually, \gls{accuracy} does not account for the class imbalance.
+Therefore, I additionally calculate the macro average of the \gls{f1score} over the possible roles: 
+\[F1_\mu = \frac{\sum_{r \in \text{Roles}}{F1_{r}}}{|\text{Roles}|}\]
+This way, each role is considered equally important for the model's performance, regardless of the \gls{prevalence}.
+The resulting plots of \(F1_\mu\) and \gls{accuracy} for the presented models can be seen in \cref{fig:role-ev-f1acc}.
+These visualizations are used to investigate and discuss the performance of \gls{conversational role} recognition with high-level features and simple models.
+
+\subsection{Results}
+
+Looking at the classification performances of the models for each class (see \cref{fig:role-ev-classwise}) the following observations can be made:
+\begin{figure}[htb]
+    \centering
+    \begin{small}
+    \input{data/role-rule-measures.tex}
+    \end{small}
+    \caption[Class-wise performance of simple models.]{\label{fig:role-ev-classwise}
+    Performance measures \gls{f1score}, \gls{markedness}, and \gls{informedness} for the rule based model and the \gls{bayesiannetwork} based models calculated for each role separately.
+    The roles are \emph{(S)peaker}, \emph{(A)ddressee}, \emph{Side-(P)articipant}, and \emph{(N)on-Participant}.
+    The results of the different models---from left to right---are coloured in red (\(Rule\)), blue (\(BnM\)), green (\(BnM_u\)), violet (\(BnA\)), and orange (\(BnA_u\)).
+    The results of \(BnA_u\) for \(P\) can not be calculated as it does not predict \emph{Side-Participants} (division by zero).
+    }
+\end{figure}
+\begin{description}
+    \item{F1:} The \(Rule\), \(BnM\), and \(BnM_u\) models achieve similar \glspl{f1score} for \emph{Speaker} and \emph{Addressee}, slightly better scores for \emph{Side\hyp{}Participant} and good results for \emph{Non\hyp{}Participant}.
+    In case of \emph{Side\hyp{}Participant}, \(BnM\) beats the other models by more than 0.15.
+    The \gls{bayesiannetwork} with automatically deduced structure (\(BnA\)) can not compete for \emph{Speaker} (\(\Delta > 0.1\)), and fails to classify \emph{Side\hyp{}Participant} and \emph{Addressee} (both \(<0.2\)).
+    When trained with under\hyp{}sampling, the same approach (\(BnA_u\)) produces a competitive \glspl{f1score} for \emph{Speaker}, \emph{Addressee}, and \emph{Non\hyp{}Participant} but entirely ignores \emph{Side\hyp{}Participant} (no orange bars for \(P\) because always rejecting results in division by zero).
+    \item{Markedness:} The \(Rule\) based model achieves a high \gls{markedness} for \emph{Speaker} and \emph{Non\hyp{}Participant}, while the values for \emph{Addressee} and \emph{Side\hyp{}Participant} are much lower (half as good).
+    \(BnM\) behaves similar but can achieve better results for \emph{Side\hyp{}Participant} (\(\Delta > 0.05\)).
+    \(BnM_u\) has a much lower \gls{markedness} for \emph{Speaker} than the other models but behaves otherwise similar to \(Role\).
+    The \(BnA\) model achieves a high \gls{markedness} of \(>0.9\) for \emph{Speaker}, performs similar to the other models for \emph{Addressee} and \emph{Side-Participant}, and worse than the other models for \emph{Non-Participant}.
+    \(BnA_u\) performs similar to the other models for \emph{Addressee} but is slightly worse for \emph{Speaker} and \emph{Non-Participant}.
+    \emph{Side-Participant} is never predicted by this model.
+    \item{Informedness:} The \gls{informedness} for \emph{Speaker} of all models except \(BnM_u\) is much worse than the \gls{markedness}.
+    \(BnM_u\) has a better \gls{informedness} for \emph{Speaker} and \emph{Addressee} than \gls{markedness}.
+    While \(Rule\) and \(BnM_u\) achieve a much higher \gls{informedness} for \emph{Addressee} than \(BnM\) (\(\Delta > 0.25\)), the difference is inverse for \emph{Side-Participant}.
+    The \gls{informedness} for \emph{Non-Participant} is high for \(Role\), \(BnM\), and \(BnM_u\) but low in comparison to the others for \(BnA\) and \(BnA_u\).
+    Finally, \(BnA_u\) shows an overall low \gls{informedness}.
+\end{description}
+
+To get a better impression of the models overall performances, \cref{fig:role-ev-f1acc} can be consulted.
+\begin{figure}[tbh]
+  \centering
+  \begin{subfigure}[t]{0.54\textwidth}
+    \centering
+    \begin{small}
+    \input{data/role-rule-accuracy.tex}
+    \end{small}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.45\textwidth}
+    \centering
+    \begin{small}
+    \input{data/role-rule-f1.tex}
+    \end{small}
+  \end{subfigure}
+  \vspace{-15pt}
+    \caption[Overall performance of simple models.]{\label{fig:role-ev-f1acc} 
+    The overall \gls{accuracy} and \(F1_\mu\) of the evaluated models.
+    The bars represent different models with the same colour coding as in \cref{fig:role-ev-classwise}.
+    While \gls{accuracy} is shown in the left plot, the models \(F1_\mu\) can be seen in the right plot.
+    \(F1_\mu\) for \(BnA_u\) can not be calculated as it does not predict \emph{Side-Participants} (division by zero).
+    }
+\end{figure}
+The following observations can be drawn from the visualizations of \gls{accuracy} and \(F1_\mu\):
+\begin{description}
+    \item{Accuracy:} The \gls{accuracy} of the evaluated models ranges between 0.76 (\(BnA\)) and 0.84 (\(BnM\)).
+    While \(BnM\) achieves the highest \gls{accuracy}, the \(Rule\) model (0.81) is second best.
+    The models \(Rule\), \(BnM_u\), and \(BnA\) are in the mean third of the range.
+    \(BnA_u\) performs worst with an \gls{accuracy} of 0.76 which is only slightly higher than the \gls{prevalence} of the \emph{Non-Participant} role. 
+    \item{\(F1_\mu\):} The \(F1_\mu\) measures show a similar but less encouraging image.
+    \(BnM\), \(Rule\), and \(BnM_u\) perform best and in the same order as for \gls{accuracy}. 
+    They achieve an \(F1_\mu\) between 0.54 and 0.59.
+    The \(BnA\) model achieves a low mean \gls{f1score} of 0.41.
+    Because \(F1_\mu\) requires the model to be able to predict all roles and \(BnA_u\) does not predict \emph{Side-Participant}, there is no result for \(BnA_u\).
+\end{description}
+
+\subsection{Discussion}
+
+The best results in this evaluation are achieved by the \gls{bayesiannetwork} based model \(BnM\).
+Under-sampling (\(BnM_u\)) does not improve it's \gls{f1score} or \gls{markedness} but it's \gls{informedness} for \emph{Speaker} and \emph{Addressee}.
+These observations are plausible considering the structure of the model (\cref{fig:role-bn-structures}).
+With all features being parent-nodes of the \emph{Role} node, the model can learn the probability distribution of roles for each combination of the feature values separately.
+This is possible because of the small amount of binary features (the resulting conditional probability table for \(Role\) has \(64\) cells).
+Given enough examples, and based on these features, this model always performs optimal from a statistical point of view.
+Additionally, it is not affected by an imbalance in the observations it learns from.
+This is confirmed by the lower performance of \(BnM_u\) which has the same structure but trains with fewer observations.
+
+In contrast to the \(BnM\) structure which is optimized for \(Role\) prediction, the structure learning optimizes for a global model of the data.
+Therefore, the \(BnA\) models can not compete with the other models in this set-up.
+This approach is better suited for bigger feature sets---which makes it impractical to set \emph{Role} a child-node of all features---or when the prediction of varying nodes in the network is required from incomplete observations.
+
+With an \gls{accuracy} of 0.81 and an averaged \gls{f1score} of 0.58, the \(Rule\) based \gls{conversational role} classification approach achieves the second best results.
+The \emph{in group} feature from the \gls{ffm} detection allows predicting the \emph{Non-Participant} role with a high reliability.
+As the \gls{f1score} for the remaining roles is between  0.4 and 0.5, it is evident that they are less easy to distinguish based on the provided features.
+The much higher \gls{markedness} than \gls{informedness} for \emph{Speaker} is rooted in the \emph{speech production activity} feature not accounting for situations in which the agent holds \emph{the floor} but does not speak or speaks without holding the floor.
+For \emph{Addressee} the difference between \gls{markedness} and \gls{informedness} is inverse.
+This imbalance means that the role of \emph{Addressee} is found correctly in the data but with a high amount of \acrlongpl{fp}.
+
+While the reliability of the \(Rule\) based \gls{conversational role} classification differs with the role that needs to be detected, its overall results are good for a multi-class problem.
+Given the high-level features used in this evaluation, an optimized, statistical model achieves slightly better results.
+Therefore, it can be concluded that simple models can be used to predict the \gls{conversational role} of an \gls{artificial agent} when high-level information about the situation is available (\Cref{role.rule}\rqnote{role.rule}{\hyprolerule}).
+
+\section{Low-Level \& Time-Based Features}
+
+For the investigation of \cref{role.raw}\rqnote{role.raw}{\hyproleraw} and \cref{role.time}\rqnote{role.time}{\hyproletime}, a classifier is required that predicts the \gls{conversational role} of the agent from lower-level features and based on sequences of observations.
+\Glspl{ann} have the potential to extract the relevant information from low-level features.
+Therefore, I utilize \glspl{ann} with simple, fully connected layers to test \cref{role.raw}.
+Furthermore, they can be extended to learn models on sequences of observations.
+To test \cref{role.time}, I create models with layers of \gls{lstm} units, which are specifically designed to process time-series~\cite[]{Hochreiter1997}.
+
+\subsection{Feature Selection}\label{sec:role-ann-features}
+
+For the investigation of \cref{role.rule}, a set of high-level features is used.
+In the following, I expand on the set of possible inputs and create different feature vectors for the evaluation of \cref{role.raw} and \cref{role.time}.
+\begin{description}
+    \item{\(rule\):} The \(rule\) feature vector contains the four binary features used in the \emph{Rule} and \gls{bayesiannetwork} based models in the evaluation of \cref{role.rule} (\emph{in group}, \emph{speech production activity}, \emph{mouth movement}, and \emph{mutual gaze}).
+    \item{\(rule_{raw}\):} This feature vector contains the continuous features that are used in the calculation of the \(rule\) features as presented in \cref{sec:role-rule-features}.
+    The \emph{speech production activity} is used \emph{as is}.
+    For \emph{mouth movement} the continuous feature \emph{lip variance}, and for \emph{mutual gaze} the continuous feature \emph{gaze angle} are used.
+    Instead of \emph{in group}, the agents \gls{ffm} \emph{participation costs} \(C_p\) are used.
+    These are calculated as presented in the cost function of the \gls{ffm} detection (\cref{sec.fformation.formation.detectors}) but only regarding the agent \(P_a\)'s distance and visibility costs without the \gls{mdl} prior.
+\[
+\begin{split}
+C_p(P_a) = & \overbrace{(u_{g(P_a)}-x_{\mu_a})^2+(v_{g(P_a)}-y_{\mu_a})^2}^{\text{distance cost}} \\ & + \underbrace{\sum_{j \in P, j \neq a}{R_{a,j}(g(P_a))}}_{\text{visibility cost}}
+\end{split}
+\]
+    This results in a 4D vector of continuous features.
+    \item{\(full\):} For this feature vector, I use lower-level information from the system data, face detection, and group detection.
+    The list of information used in the feature vector with descriptions and dimensionality can be seen in \cref{tab:role-full-features}.
+    I do not use the time-integrated features \emph{lip variance} and \emph{mouth movements}, and the other deduced features \emph{addressed}, \emph{in-group}, and \emph{mutual gaze}.
+    Hence, the time-integration feature abstraction has to be done in the model.
+    The resulting feature vector has 148 dimensions.
+\end{description}
+\begin{colored_table}{tbh}
+    \centering
+    \begin{tabulary}{\textwidth}{ L c C }
+        \toprule
+        Description & Dim & Source \\ \midrule
+        For which agent the \gls{conversational role} recognition is performed. & 1D & System Data \\
+        Whether the agent is currently speaking or not. & 1D & System Data \\
+        The number of faces detected in the agent's \gls{fov}. & 1D & Face Detection \\
+        The size of the agent's interlocutors face. & 1D & Face Detection \\
+        Facial landmark positions of the agent's interlocutor. & 136D & Face Detection \\
+        The gaze angle of the agents interlocutor. & 1D & Gaze Detection \\
+        The number of participants in the agents \gls{conversational group}. & 1D & Group Detection \\
+        The position of the \gls{ospace} centre of the agents \gls{conversational group}. & 2D & Group Detection \\
+        Assignment and visibility costs for the agent and its \gls{conversational group}. & 4D & Group Detection \\
+        \bottomrule
+    \end{tabulary}
+    \caption[Content of \(full\) feature set in role recognition.]{\label{tab:role-full-features}
+    The information that is encoded in the \(full\)  feature set for \gls{conversational role} recognition with \glspl{ann}.
+    Each row describes a portion of the feature vector with dimensionality (Dim) and source.
+    For the final feature all portions are stacked into a 148D vector.
+    }
+\end{colored_table}
+All these features can be automatically detected during an interaction and are used in the following to train and evaluate different \glspl{ann}.
+To support the training, the feature vectors \(rule\) (4D), \(rule_{raw}\) (4D), and \(full\) (148D) are centred and scaled.
+This is done for each dimension separately by first subtracting the mean and then dividing the results by the standard deviation\footnote{Performed with the \code{scale} function from the \code{base} package (v3.5.1) in R~\cite{base}.} (in the following, if not stated explicitly, a preceding centring is always implied when scaling is performed).
+
+\subsection{Neural Network Models}
+
+For this evaluation, I use the~\citesoftware{kerasr} (\code{v0.6.1}) with~\citesoftware{keras} (\code{v2.2.4}) and~\citesoftware{tensorflow} (\code{v1.14}) as back-end.
+I create two types of models, one that uses only the most recent observation to recognize the agents \gls{conversational role} (\(dense\)) and one that trains the recognition on time-series (\(lstm\)).
+\begin{description}
+    \item{\emph{dense}:} The model that classifies only on the basis of the most recent observation uses \emph{fully connected} layers to model the input features and a final \emph{dense} output layer with 4 units and \emph{soft-max} activation.
+    It's results are interpreted as a probability distribution over the possible \glspl{conversational role} and the most probable role is chosen as the result.
+    \item{\emph{lstm}:} The time-based model uses layers of \gls{lstm} units~\cite{Hochreiter1997} to learn a temporal representation of the input features.
+    It is trained with observation sequences of length \(n=15\), which encode the most recent \(\SI{1}{\sec}\).
+    Given that the negotiation of \glspl{conversational role} is performed in close collaboration this is a good trade-off between model size and history information available to the model.
+    The \gls{lstm} layers are followed by a \emph{time distributed}, \emph{dense} (fully connected) output layer with 4 units and a \emph{soft-max} activation.
+    This results in a sequence of 15 four-dimensional vectors interpreted as role probabilities over the last \(\SI{1}{\sec}\).
+    The first 14 encode the progress (history) of the agent's \gls{conversational role} and the final vector identifies the current role of the agent.
+    Further processing of the history will not improve the results as this is the task of the \gls{lstm} layers.
+    Therefore, for the evaluation I use the final vector (current role).
+\end{description}
+To prevent over-fitting, the non-output layers of the models are followed by a \emph{dropout} layer with \(p=0.5\)\footnote{For for an in depth motivation and analysis of \emph{dropout} see~\citewithauthor{Srivastava2014}.}.
+The amount of units \(u \in \{128,512\} \) in the inner layers of the models and the number of layers \(n \in \{1,4\}\) are varied during the evaluation. 
+A visualization of the model structure can be seen in \cref{fig:role-nn-models}.
+\begin{figure}[tbh]
+    \centering
+    \def\svgwidth{1.0\textwidth}
+    \begin{footnotesize}
+    \input{generated/role_nn_models.pdf_tex}
+    \end{footnotesize}
+    \caption[Neural networks for role recognition.]{\label{fig:role-nn-models}
+    The \gls{ann} models \emph{lstm} (left, red) and \emph{dense} (right, blue) as created for this investigation.
+    They consist of \(n \in \{1,4\}\) layers (highlighted in grey) with \(u \in \{128,512\}\) units, followed by a \emph{dense} layer with \emph{soft-max} activation.
+    While the \emph{dense} model considers only the most recent information, the \emph{lstm} model is trained from observation sequences and has a \emph{time distributed}, \emph{dense} output-layer.
+    }
+\end{figure}
+With the three variations of input features (\(role\), \(role_{raw}\), and \(full\)) and the parametrization of the two model types (\(lstm\) and \(dense\) with \(u \in \{128,512\}, n \in \{1,4\}\)), there are 24 \gls{ann} models to evaluate.
+The model-names encode the following information separated by dots: the type of the model (\(D = dense, L = lstm\)), the feature set (\(R = rule, W = rule_{raw}, F = full\)), the number of units in each hidden layer \(\{128,512\}\), and the number of layers \(\{1,4\}\).
+Therefore, \emph{L.F.128.4} represents an \emph{lstm} typed model, trained using the \emph{full} feature vector with 128 units and 4 layers.
+
+\subsection{Evaluation}
+
+To investigate the performance of the presented models, I perform a 12-fold cross-validation with folds of \(\SI{5}{min}\) length.
+An equal scaling (see \cref{sec:role-ann-features}) of the feature vectors in the training and test sets is ensured by determining the scaling parameters (mean and standard deviation in each input dimension) from the training set and considering them a part of the model.
+Thereafter, the test set is scaled using the same parameters.
+Furthermore, as the models are randomly initialized and prone to find different local minima, I create multiple instances (8 \emph{seeds}) of each model configuration.
+Thus, a confidence interval can be calculated for the models' performances.
+As in \cref{sec:role-rule-eval}, I investigate the \gls{accuracy}, \(F1_\mu\), and class-wise \gls{f1score} of the presented models.
+
+\subsection{Results}
+
+In the following, I present and discuss the results of the \(dense\) and \(lstm\) model configured with one hidden layer and 128 units in each layer after 50 epochs of training.
+Increasing the number of layers, units, or epochs has only a small impact on the results (this can be seen in \cref{app:role-nn-acc,app:role-nn-f1-class,app:role-nn-f1-class-long} in the appendix).
+
+The \gls{accuracy} and \(F1_\mu\) of the models, in combination with the results of the \(Rule\) and \(BnM\) models, can be seen in \cref{fig:role-nn-acc}.
+\begin{figure}[htbp]
+    \centering
+    \begin{footnotesize}
+    \input{data/role-nn-acc-f1-less.tex}
+    \end{footnotesize}
+    \caption[Overall performance of neural network models.]{\label{fig:role-nn-acc} 
+    \Gls{accuracy} (red) and \(F1_\mu\) values (blue)---both on the same vertical axis--for the \gls{ann} based models (horizontal axis).
+    The visualized value range is reduced from \([0,1]\) to \([0.5,0.9]\) for better visibility.
+    Horizontal lines represent the \gls{accuracy} and \(F1_\mu\) of the \(rule\) (dotted) and \(BnM\) (dashed) model.
+    }
+\end{figure}
+The following observations can be made on the basis of this visualization:
+
+Both \gls{ann} models achieve a better \gls{accuracy} than the \emph{Rule} based mo\-del.
+For the \emph{dense} model, an increase in the \gls{accuracy} and a decrease in the size of the confidence interval can be observed with growing feature complexity.
+When using the \emph{full} feature vector, the \emph{dense} model can achieve better \gls{accuracy} than the \(BnM\) model. 
+This does not happen with the \(rule_{raw}\) and \emph{rule} feature for which the \emph{dense} models perform similar to \(BnM\).
+The \gls{accuracy} of the \emph{lstm} based models is above the results of the \(BnM\) model.
+Between the different feature sets, only small changes in the \gls{accuracy} can be observed for the \emph{lstm} model.
+
+Considering the \textbf{\(F1_\mu\)} measurements, the models show different, partially contradictory, results.
+From the perspective of \(F1_\mu\), the \emph{dense} models perform for all feature sets equally or worse than both the \(Rule\) and the \(BnM\) model.
+They never perform better.
+Additionally, they show a high variability in combination with the \emph{rule} and \emph{full} feature.
+The \(rule_{raw}\) feature allows the \emph{dense} models to achieve results which are more stable but not necessarily better.
+%When the \emph{full} feature is used and the complexity of the model grows, an increase in the variability of the \emph{dense} models' performance can be suspected.
+\emph{Lstm} based models achieve better \(F1_\mu\) than \(Rule\) and \(BnM\) when used with the \(rule\) and \(rule_{raw}\) features.
+In case of the \(full\) feature, the \(F1_\mu\) of the \gls{lstm} models shows a degradation in comparison to the other features.
+The \(F1_\mu\) results of this configuration are in between the \emph{Rule} and \(BnM\) model.
+
+Although, most configurations of the \gls{ann} models achieve a better \gls{accuracy} than the \emph{Rule} model, a majority of them can not achieve better \(F1_\mu\).
+To further analyse this discrepancy, the \gls{f1score} for each class can be investigated.
+A visualization of these measurements is shown in \cref{fig:role-nn-f1-class}.
+\begin{figure}[htbp]
+    \centering
+    \begin{footnotesize}
+    \input{data/role-nn-f1-class-less.tex}
+    \end{footnotesize}
+    \caption[Class-wise performance of ANN models.]{\label{fig:role-nn-f1-class} 
+    \Glspl{f1score} (vertical axis) for the \gls{ann} based models (horizontal axis) for each class separately.
+    Colours of the error bars encode the classes \emph{Speaker} (black), \emph{Addressee} (red), \emph{Side-Participant} (violet), and \emph{Non-Participant} (blue).
+    Horizontal, lines represent the \gls{f1score} of the \(rule\) (solid) and \(BnM\) (dashed) model, using the same colour coding.
+    }
+\end{figure}
+This representation of the model performance allows the following observations:
+%
+The \gls{f1score} of \emph{Non-Participant} is high for all models including the \(Rule\) and \(BnM\) based models.
+\Gls{ann} based models achieve better results---by a small margin---when using \gls{lstm} layers with high-level features or the \emph{full} feature set and the \(dense\) model.
+%
+Predictions of \emph{Side-Participant} are better than the \(Rule\) based predictions in all configurations.
+The strongest improvement in comparison to the \(Rule\) model can be observed for this class.
+To achieve a prediction of \emph{Side-Participant} that is comparable to \(BnM\), the \emph{dense} model needs to be trained with the \emph{full} feature set and the \emph{lstm} model with the \(rule_{raw}\) features.
+Better results can be achieved when using the \(rule\) feature with the \emph{lstm} model.
+%
+In the prediction of \emph{Speaker}, the \emph{dense} model achieves results similar to the \(BnM\) model with the \(rule\) feature, similar to the \emph{rule} model with the \(rule_{raw}\) feature, and worse with the \(full\) feature set.
+The \emph{lstm} models achieve similar results for \emph{Speaker} with the \(rule\) and \(rule_{raw}\) features but show a strong drop in \gls{f1score} for the \(full\) feature.
+%
+\emph{Addressee} is the only role for which the \(BnM\) model can not compete with the \(Rule\) model.
+This observation is even stronger for the \gls{ann} models.
+The \glspl{f1score} of the \emph{dense} models for \emph{Addressee} is equal to or worse than the \(BnM\) models.
+While the \emph{lstm} model can achieve results between the \(Rule\) and \(BnM\) models, it's best recognition of \emph{Addressee} is achieved with the \(full\) feature set.
+
+\subsection{Discussion}
+
+By utilizing \glspl{ann} for the recognition of \glspl{conversational role}, the overall \gls{accuracy} can be improved in comparison to the \(Rule\) model.
+The \gls{accuracy} of the \(BnM\) model can only be surpassed when using high-dimensional data (\(full\) feature) with the \(dense\) model or time sequences of low-dimensional, high-level features (\(lstm\) model).
+The \(F1_\mu\) and class-wise \glspl{f1score} measurements present a more nuanced picture.
+%
+In case of the \(rule\) feature, and without time information, the \(BnM\) model can not be outperformed.
+It, by definition, produces statistically optimal results.
+This is confirmed by the observation that achieving higher \gls{accuracy} is only possible by providing the models with more information.
+By using the \(full\) feature set, the \emph{dense} models can achieve an \gls{accuracy} of \(\approx 85\%\) which is better than the \gls{accuracy} of the \(BnM\) model.
+A comparison with the \glspl{f1score} suggests that the increased \gls{accuracy} is achieved by further enhancing the recognition of \emph{Non-Participant}.
+For \emph{Side-Participant} the recognition remains unchanged and gets worse for the other roles.
+By observing the situation over time, the models that use \gls{lstm} layers can outperform the \(Rule\) and \(BnM\) models.
+In combination with the \(rule\) or \(rule_{raw}\) feature set, these models achieve the overall best \gls{accuracy} and \(F1_\mu\).
+This is the only configuration that can achieve a higher \gls{f1score} than \(BnM\) for \emph{Addressee} without loosing performance for the \emph{Speaker} and \emph{Side-Participant} roles.
+The results of the \gls{lstm} models can not be enhanced by increasing their complexity---the number of layers or units in each layer (see \cref{app:role-nn-acc,app:role-nn-f1-class}).
+This suggests that the less complex models already have enough capacity to represent the informative properties of the data.
+Over-fitting is reliably reduced by the drop-out layers, allowing the more complex models to achieve similar results.
+The resilience of the models against long training (\cref{app:role-nn-f1-class-long}), further confirms this. 
+Increasing the complexity of the input by using the \(full\) feature set does not help to further enhance the \emph{lstm} models' performance.
+While the \gls{f1score} for \emph{Non-Participant} further improves, the results for the other classes get worse.
+The strongest loss in \gls{f1score} can be observed for \emph{Speaker}, the role with the least amount of examples.  
+This suggests that the 148 dimensional \(full\) feature over a sequence of 15 observations introduces too much noise to be handled with the available amount of data.
+% overall potential
+Like the \glspl{bayesiannetwork}, the \gls{ann} models give preference to the more common role \emph{Side-Participant} before the \emph{Addressee} role.
+Therefore, the \(Rule\) based model may be considered preferable when the recognition of the \emph{Addressee} role is more important than of the \emph{Side-Participant}.
+However, as the \glspl{bayesiannetwork} and \glspl{ann} produce a probability distribution over the roles, their results can be further processed to account for any trade-off between the classes.
+Furthermore, the \(Rule\) model performance is fixed.
+The performance of the \(BnM\) model can not get much better because of its fixed structure and input.
+% claim raw
+By using \glspl{ann} with low-level features, the \gls{accuracy} of the system can be enhanced in comparison to the other models.
+Simultaneously, the \(F1_\mu\) of the system goes down.
+It is possible that these results will improve when trained with more data.
+Nevertheless, \cref{role.raw}\rqnote{role.raw}{\hyproleraw} can not be confirmed on the basis of the observations in this chapter.
+% claim time
+Using sequences of observations, the \emph{lstm} models achieve better overall results than the other models when using the high-level features.
+Provided with more training data, they have the potential to further improve---especially for the less common roles and low-level features.
+Therefore, it can be confirmed that models using time information achieve better results than models that only use the newest observation \cref{role.time}\rqnote{role.time}{\hyproletime}.
+
+\section{Summary}
+
+%intro
+Each participant of a \gls{conversational group} can assume different roles within the \gls{conversation} which dynamically change over time.
+Acting in accordance to its \gls{conversational role} allows an \gls{artificial agent} to better meet the expectations of its interaction partners and raise the quality of the interaction (see \cref{sec.rw.hi.cr,sec.rw.hi.focused-rw.perception}).
+Furthermore, this knowledge is a basic requirement if the agent is supposed to influence its role or the roles of its interlocutors in an informed and autonomous manner.
+Therefore, I stated \Cref{hyp.roles}\rqnote{hyp.roles}{\hyproles} and investigated it in this chapter.
+I showed that, on the basis of the high-level features that were developed in the previous chapters, the \gls{conversational role} of an \gls{artificial agent} can be recognized using simple rule or \gls{bayesiannetwork} based models (\cref{role.rule}\rqnote{role.rule}{\hyprolerule}).
+Furthermore, I examined whether a better classification can be achieved with different, lower-level features or by observing the situation over time.
+To this end, I created \glspl{ann} that use only the most recent observation and such that use all observations of the preceding second to predict the agent's role.
+An evaluation of these models revealed that observing the high-level features over time allows achieving better classification results than possible from only a single observation (\cref{role.time}).
+Using all available, raw features does not further improve the model performance.
+Therefore, \cref{role.raw} could not be confirmed.
+Nevertheless, the increase in the \gls{accuracy} of the model suggests, that further improvements are possible with more data.
+
+%% impact for RQ
+Considering \Cref{hyp.roles}, the collected observations show that the \glspl{conversational role} of \glspl{artificial agent} can be recognized on the basis of simple models when high-level information about the interaction is available.
+This can be further enhanced by observing the situation over time with more complex models.

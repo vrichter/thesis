@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="ffbd4a4d-28fd-4503-9d2c-661130e07e7d" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-10T14:17:13.560Z</CreationDate>
+            <ModificationDate>2015-12-10T14:17:13.560Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:4aceab7c-a79e-424a-9d86-93d6a7843499#t=25.552/36.378;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt die Begrüßung des Appartments nicht</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="bc287aca-b62c-414d-b4b3-48e1b9089748" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-10T14:26:26.233Z</CreationDate>
+            <ModificationDate>2015-12-10T14:26:26.233Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:4aceab7c-a79e-424a-9d86-93d6a7843499#t=44.291/46.291;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP begrüßt den Notaus-Mann: "Hallo!"</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ed4bf352-3887-4fd5-8603-d16179842e38" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-10T14:32:56.280Z</CreationDate>
+            <ModificationDate>2015-12-10T14:32:56.280Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:4aceab7c-a79e-424a-9d86-93d6a7843499#t=119.129/126.260;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon die erste Aufgabe</Message>
+    </ColTime>
+</ColTimeList>

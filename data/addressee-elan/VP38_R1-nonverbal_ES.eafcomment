@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="7d2667e5-1892-479a-95d2-de87dee8ee4f" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T09:58:35.767Z</CreationDate>
+            <ModificationDate>2016-01-20T09:58:35.767Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:28d32abf-de12-4459-9b3c-dfe5876940f2#t=20.100/30.100;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VL ist nicht Jasmin (Paul)</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="eb3a4cb0-8480-4862-b24e-8a3dc25ba059" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T10:01:46.655Z</CreationDate>
+            <ModificationDate>2016-01-20T10:01:46.655Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:28d32abf-de12-4459-9b3c-dfe5876940f2#t=31.000/40.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VL bemerkt, dass das Licht angeht, schaut kurz nach oben, ist aber fraglich, ob er das als Begrüßung des Appartments wahrnimmt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ecfbd90b-9afc-4a3c-9df0-6d46dcf9ee91" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T10:24:03.781Z</CreationDate>
+            <ModificationDate>2016-01-20T10:24:03.781Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:28d32abf-de12-4459-9b3c-dfe5876940f2#t=152.647/156.715;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>In der Vorstellungsphase fehlte Aussage, dass Schalter keine Funktion haben</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="63960e05-008c-4aab-813b-d6fae63f1229" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T11:11:50.667Z</CreationDate>
+            <ModificationDate>2016-01-20T11:11:50.667Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:28d32abf-de12-4459-9b3c-dfe5876940f2#t=241.550/242.220;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt nicht die Antwort auf den Bildschirmen, (vielleicht wäre ein Tonsignal sinnvoll?)</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="d55ec85c-c46e-4f6f-81f3-6fb61e1ab2b2" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T11:39:42.966Z</CreationDate>
+            <ModificationDate>2016-01-20T11:39:42.966Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:28d32abf-de12-4459-9b3c-dfe5876940f2#t=256.738/266.522;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP wiederholt die Aufgaben 5 und 6, um zu sehen, dass die tatsächlich so funktionieren
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="7b011152-ed85-49fa-ad3f-7e17aca77593" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T12:04:33.151Z</CreationDate>
+            <ModificationDate>2016-01-20T12:04:33.151Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:28d32abf-de12-4459-9b3c-dfe5876940f2#t=292.090/311.350;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP braucht lange, bis er die Ansage auf dem Bildschirm endlich sieht, danach wiederholt er die Aufgaben 5 und 6.
+Die ersten drei Aufgaben (Licht an und aus und Musik) habe ich mit Anrede annotiert adressiert an den Appartment, weil die Vp dezielt die Räume anspricht. Später tut er das nicht.
+Auffällig ist bei den Aufgaben 5 und 6, dass er immer nach oben schaut, als ob er die Antwort über Lautsprecher erwartet.
+</Message>
+    </ColTime>
+</ColTimeList>

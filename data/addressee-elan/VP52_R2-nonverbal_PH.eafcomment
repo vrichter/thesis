@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="6b71fb0e-e277-4f77-a4b1-a18cf80585e3" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T15:22:27.829Z</CreationDate>
+            <ModificationDate>2016-01-18T15:22:27.829Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:e4c90e5a-d503-4770-ac88-2b0129d1c5bf#t=9.200/18.100;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt Vorstellung des Apartments nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="1b21fa25-d7e2-4259-a494-f449140284be" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T15:24:36.798Z</CreationDate>
+            <ModificationDate>2016-01-18T15:24:36.798Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:e4c90e5a-d503-4770-ac88-2b0129d1c5bf#t=21.400/23.500;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt Notaus-Person "Hallo".</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="7c32fd63-d638-46ef-a888-ebf7551d7d21" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T15:27:02.463Z</CreationDate>
+            <ModificationDate>2016-01-18T15:27:02.463Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:e4c90e5a-d503-4770-ac88-2b0129d1c5bf#t=33.000/48.300;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP fragt VL, ob der Roboter auch einen Namen habe. VL sagt: "Das kannst du rausfinden". VP sagt: "Ach so."</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="50bd8740-3b5a-45e1-8587-263de5a34825" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T15:28:23.512Z</CreationDate>
+            <ModificationDate>2016-01-18T15:28:23.512Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:e4c90e5a-d503-4770-ac88-2b0129d1c5bf#t=93.000/98.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest hier schon die Aufgabe.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="8f5c65d6-50d4-4ad5-9bd2-cb678e0d5c0c" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T15:43:02.543Z</CreationDate>
+            <ModificationDate>2016-01-18T15:43:02.543Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:e4c90e5a-d503-4770-ac88-2b0129d1c5bf#t=155.342/156.607;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP guckt skeptisch.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="b8c911e8-2245-4223-8285-86a1f2e71e1a" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T15:57:40.823Z</CreationDate>
+            <ModificationDate>2016-01-18T15:57:40.823Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:e4c90e5a-d503-4770-ac88-2b0129d1c5bf#t=210.580/216.815;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP guckt wieder skeptisch.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="8f19d82e-fdda-468b-9a90-3898c172fc93" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T16:02:45.089Z</CreationDate>
+            <ModificationDate>2016-01-18T16:02:45.089Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:e4c90e5a-d503-4770-ac88-2b0129d1c5bf#t=217.000/317.600;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Stehlampe hat Fehlfunktion: VP macht alles richtig, aber Lampe geht nicht an, obwohl der Wizzard den Befehl dazu mehrfach gibt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="343d5423-2b06-4123-8900-dda8c9289b90" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T15:13:43.553Z</CreationDate>
+            <ModificationDate>2016-01-18T15:13:43.553Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:e4c90e5a-d503-4770-ac88-2b0129d1c5bf#t=317.750/338.550;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VL holt VP aus dem Raum, Stehlampe hatte technische Probleme.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="df45490c-cd08-4dd5-b670-fc5fd5a54f37" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-18T16:12:18.310Z</CreationDate>
+            <ModificationDate>2016-01-18T16:12:18.310Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:e4c90e5a-d503-4770-ac88-2b0129d1c5bf#t=330.500/349.400;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP macht alle Aufgaben mit Sprache und sehr schnell. Stehlampe hat technische Probleme daher nicht gelöst. Wird dann von VL aus dem Raum geholt.
+Wirkt insgesamt interessiert und fröhlich, nur bei der Stehlampenaufgabe zurecht ratlos.</Message>
+    </ColTime>
+</ColTimeList>

@@ -1,0 +1,78 @@
+\microtypesetup{protrusion=false}
+
+%\phantomsection
+\refstepcounter{dummy}
+\pdfbookmark[1]{\contentsname}{tableofcontents}
+\setcounter{tocdepth}{2} % <-- 2 includes up to subsections in the ToC
+\setcounter{secnumdepth}{3} % <-- 3 numbers up to subsubsections
+\manualmark{}
+\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+
+\begingroup
+    \setlength{\emergencystretch}{3em}
+    \tableofcontents
+\endgroup
+
+\renewcommand{\listfigurename}{List of figures}
+\renewcommand{\listtablename}{List of tables}
+
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+%*******************************************************
+% List of Figures and of the Tables
+%*******************************************************
+\clearpage
+
+\pagestyle{empty}
+\begingroup
+
+    % \setlength{\emergencystretch}{3em}
+    \let\clearpage\relax
+    \let\cleardoublepage\relax
+    \let\cleardoublepage\relax
+    %*******************************************************
+    % List of Figures
+    %*******************************************************
+    %\phantomsection
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listfigurename}
+    \pdfbookmark[1]{\listfigurename}{lof}
+    \listoffigures
+
+    %\newpage{}
+
+    %*******************************************************
+    % List of Tables
+    %*******************************************************
+    %\phantomsection
+    \refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listtablename}
+    \pdfbookmark[1]{\listtablename}{lot}
+    \listoftables
+
+    \newpage{}
+
+    %*******************************************************
+    % List of Listings
+    %*******************************************************
+    %\phantomsection
+    %\refstepcounter{dummy}
+    %\addcontentsline{toc}{chapter}{\listoflistingscaption}
+    %\pdfbookmark[1]{\lolcaption{}}{lol}
+    %\listoflistings{}
+
+    % \newpage{}
+    %
+    % %*******************************************************
+    % % List of Hypotheses
+    % %*******************************************************
+    % %\phantomsection
+    % \refstepcounter{dummy}
+    % \pdfbookmark[1]{List of hypotheses}{loh}
+    % \chapter*{List of hypotheses}
+    % \listtheorems{hyp1}
+
+\endgroup
+\pagestyle{scrheadings}
+\microtypesetup{protrusion=true}

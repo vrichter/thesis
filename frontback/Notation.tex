@@ -1,0 +1,118 @@
+\chapter*{Notation}
+
+\section*{Attribution of authorship}
+
+I speak of myself using \emph{I} in case of work originally done by myself alone.
+In case the results of a collaboration with others are presented, I use \emph{we}.
+The respective collaborators are indicated by the co\hyp{}authors of the corresponding publication.
+
+\section*{Margin notes}
+
+\noindent\begin{tabulary}{\textwidth}{LL}
+    \textcolor{halfgray}{\faEdit}   & Definitions are highlighted with this icon. \\
+    %\textcolor{halfgray}{RQ}        & Research questions are repeated when applicable. \\
+
+\end{tabulary}
+
+\section*{Footnotes}
+
+I use numbered footnotes to give additional, technical information.
+Furthermore, I repeat research questions and claims in footnotes wherever applicable.
+These repetitions are marked with a \textcolor{halfgray}{\tiny\faRefresh}.
+
+\section*{Notation of Bayesian Networks}
+
+When describing Bayesian Networks, I use arrows to mark conditional dependencies.
+\(A \rightarrow B \leftarrow C\) means that \(B\) conditionally depends on \(A\) and \(C\).
+Furthermore, I use curly brackets to represent dependencies on multiple variables.
+So, \(A \rightarrow B \leftarrow C\) can be written as \(\{A,C\} \rightarrow B\).
+
+\section*{Confidence Intervals}
+
+Wherever possible, I calculate 95\% confidence intervals for measurements and visualize them as error bars.
+
+\section*{Quality Measures}
+
+To assess the quality of classifiers, I calculate the usual measures.
+For binary classifications this is done as follows:
+From the classification results (predictions) and known, correct results, cases of \gls{tp}, \gls{fp}, \gls{tn}, and \gls{fn} can be calculated and shown in the:
+\[\text{\newdefgls{confusion matrix}} = 
+\begin{bmatrix}
+	\text{\gls{tp}} & \text{\gls{fp}} \\
+	\text{\gls{tn}} & \text{\gls{fn}}
+    \end{bmatrix}
+ \]
+The numbers of positive and negative observations in the data and positive and negative predictions can be directly extracted from this matrix:
+\[
+    \text{\gls{cp}}=\text{\gls{tp}}+\text{\gls{fn}}
+\]
+\[
+    \text{\gls{cn}}=\text{\gls{fp}}+\text{\gls{tn}}
+\]
+\[
+    \text{\gls{pp}}=\text{\gls{tp}}+\text{\gls{fp}}
+\]
+\[
+    \text{\gls{pn}}=\text{\gls{fn}}+\text{\gls{tn}}
+\]
+The proportion of positive observations in the data:
+\[
+    \text{\newdefgls{prevalence}}=\frac{\text{\gls{cp}}}{\text{\gls{cp}}+\text{\gls{cn}}}
+\]
+The proportion of overall correct classifications:
+\[
+    \text{\newdefgls{accuracy}}=\frac{\text{\gls{tp}}+\text{\gls{tn}}}{\text{\gls{cp}}+\text{\gls{cn}}}
+\]
+Other measures of classification performance are calculated as follows:
+\[
+    \text{\gls{tpr}}=\text{\newdefgls{recall}}=\text{\gls{sensitivity}}=\frac{\text{\gls{tp}}}{\text{\gls{cp}}}
+\]
+\[
+    \text{\gls{fpr}}=\text{\newdefgls{fallout}}=\frac{\text{\gls{fp}}}{\text{\gls{cn}}}
+\]
+\[
+    \text{\gls{fnr}}=\frac{\gls{fn}}{\gls{cp}}
+\]
+\[
+    \text{\gls{tnr}}=\gls{specificity}=\gls{selectivity}=\frac{\gls{tn}}{\gls{cn}}
+\]
+\[
+    \text{\gls{ppv}}=\newdefgls{precision}=\frac{\gls{tp}}{\gls{pp}}
+\]
+\[
+    \text{\gls{for}}=\frac{\gls{fn}}{\gls{pn}}
+\]
+\[
+    \text{\gls{fdr}}=\frac{\gls{fp}}{\gls{pp}}
+\]
+\[
+    \text{\gls{npv}}=\frac{\gls{tn}}{\gls{pn}}
+\]
+\[
+    \text{\newdefgls{f1score}}=2\cdot\frac{\gls{precision}\cdot\gls{recall}}{\gls{precision}+\gls{recall}}
+\]
+
+\section*{Alternative Quality Measures}
+For biased data, when the \gls{prevalence} differs strongly from \(0.5\), quality measures that are less sensitive to bias can be calculated.
+The value of \gls{dor} can be interpreted as the odds of correctly classifying divided by the odds of falsely rejecting~\cite[]{glas2003}.
+\[
+    \text{\gls{lrp}}=\frac{\gls{tpr}}{\gls{fpr}}
+\]
+\[
+    \text{\gls{lrm}}=\frac{\gls{fnr}}{\gls{tnr}}
+\]
+\[
+    \text{\newdefgls{dor}}=\frac{\gls{lrp}}{\gls{lrm}}
+\]
+Furthermore, \gls{markedness} and \gls{informedness} can be used as \gls{prevalence}-free \gls{precision} and \gls{recall} alternatives~\cite[]{powers2008}.
+\Gls{markedness} indicates how trustworthy the decision of a model is.
+A value of zero signifies that the decision is random, one means that it is fully trustworthy---all classifications are correct. 
+\[
+    \text{\newdefgls{markedness}}=\gls{ppv}+\gls{npv}-1
+\]
+\Gls{informedness} indicates how informed the classifier is about the classes in the data.
+A value of zero signifies that the model is uninformed about the data, one means that it is fully informed---positive and negative cases can both be correctly retrieved.
+\[
+    \text{\newdefgls{informedness}}=\gls{tpr}+\gls{tnr}-1
+\]
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="cdfd1ecc-643f-4b4a-8768-8a8c7d2eae81" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-14T14:24:12.653Z</CreationDate>
+            <ModificationDate>2016-01-14T14:24:12.653Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:5b7b1cb6-81a5-46d8-9ecf-9e828af343b0#t=28.076/32.538;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt die Begrüßung des Appartments nicht</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ebd162d2-f8d7-482c-ad2e-748364c9964f" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-14T14:31:45.241Z</CreationDate>
+            <ModificationDate>2016-01-14T14:31:45.241Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:5b7b1cb6-81a5-46d8-9ecf-9e828af343b0#t=101.538/107.153;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon die erste Aufgabe</Message>
+    </ColTime>
+</ColTimeList>

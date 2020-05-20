@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="605767a9-ec55-4246-b235-dece00bb026f" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T11:47:49.460Z</CreationDate>
+            <ModificationDate>2016-01-19T11:47:49.460Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:571dd30a-1e61-4789-be21-be377f1749ff#t=33.700/40.400;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt die Begrüßung des Appartments nicht</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="4425e697-f5b3-4ebe-b1a0-f20ec26f7817" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T11:55:04.807Z</CreationDate>
+            <ModificationDate>2016-01-19T11:55:04.807Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:571dd30a-1e61-4789-be21-be377f1749ff#t=107.648/110.631;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon die erste Aufgabe</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="6def1b43-0b7c-4e1e-8736-978ba219c3c1" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T11:56:14.208Z</CreationDate>
+            <ModificationDate>2016-01-19T11:56:14.208Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:571dd30a-1e61-4789-be21-be377f1749ff#t=110.648/115.210;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Orientierungsphase: VP läuft in den Flur und schaut sich um</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="5def01f1-7053-40fa-9873-b5aeb28d4a2f" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-20T09:27:05.886Z</CreationDate>
+            <ModificationDate>2016-01-20T09:27:05.886Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:571dd30a-1e61-4789-be21-be377f1749ff#t=282.886/291.298;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP löst alle Aufgaben (außer Stehlampe) verbal und fragt meistens Roboter
+</Message>
+    </ColTime>
+</ColTimeList>

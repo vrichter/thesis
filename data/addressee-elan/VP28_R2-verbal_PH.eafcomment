@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="67d7a2ca-5c8e-4be1-8c98-65216c2d379d" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T13:27:48.273Z</CreationDate>
+            <ModificationDate>2016-01-12T13:27:48.273Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:451a9341-4de8-44ec-9d69-d3b5624560f6#t=18.307/30.107;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt die Vorstellung durch das Apartment nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="7cc63c02-337a-41be-bc1d-c7398ff813f3" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T13:32:22.140Z</CreationDate>
+            <ModificationDate>2016-01-12T13:32:22.140Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:451a9341-4de8-44ec-9d69-d3b5624560f6#t=118.000/125.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest hier schon die Aufgabenkarte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="cad4987e-8953-44c2-8a36-d9e44435be80" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T13:54:52.782Z</CreationDate>
+            <ModificationDate>2016-01-12T13:54:52.782Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:451a9341-4de8-44ec-9d69-d3b5624560f6#t=180.150/184.050;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Es kann sein, dass die VP hier eine Box unter der Decke anguckt, das kann man aber nicht genau erkennen, gibt die Kameraperspektive nicht her.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="237b94e2-e674-4bbc-b494-18290e7964f9" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T14:09:19.968Z</CreationDate>
+            <ModificationDate>2016-01-12T14:09:19.968Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:451a9341-4de8-44ec-9d69-d3b5624560f6#t=209.150/213.550;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Wizzard wertet das als Lösungsversuch, was ich nicht richtig finde. Meiner Meinung nach versucht die VP nur den Tisch anzustellen und zu gucken, ob es hier etwas zum Lösen der Aufgabe gibt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="de498115-7743-4af1-84ce-fc6a32ed3428" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T14:15:18.602Z</CreationDate>
+            <ModificationDate>2016-01-12T14:15:18.602Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:451a9341-4de8-44ec-9d69-d3b5624560f6#t=225.850/232.650;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Wizzard verhält sich konsistent. Aber: auch das meiner Meinung nach kein geeigneter Lösungsversuch.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ddef09b9-8a1d-44c9-94cd-c9dc1580deea" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T14:16:59.033Z</CreationDate>
+            <ModificationDate>2016-01-12T14:16:59.033Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:451a9341-4de8-44ec-9d69-d3b5624560f6#t=245.650/251.250;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Ich finde es ist nicht logisch, dass der Wizzard diesen Lösungsversuch nicht gelten lässt, bei den Aufgaben davor schon.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="e54a283f-807f-42d9-8075-1f1e28dbfb4f" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T14:19:05.383Z</CreationDate>
+            <ModificationDate>2016-01-12T14:21:26.164Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:451a9341-4de8-44ec-9d69-d3b5624560f6#t=251.400/256.600;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Das nicht Reagieren des Wizzards werte ich als technischen Fehler.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="f70592e9-631f-431b-a9db-a17433510a74" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T14:21:16.332Z</CreationDate>
+            <ModificationDate>2016-01-12T14:21:16.332Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:451a9341-4de8-44ec-9d69-d3b5624560f6#t=262.050/273.150;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Das nicht Reagieren des Wizzards werte ich als technischen Fehler.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="8a33bc60-85cf-461c-a163-8040554d1c30" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T14:23:10.346Z</CreationDate>
+            <ModificationDate>2016-01-12T14:28:39.165Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:451a9341-4de8-44ec-9d69-d3b5624560f6#t=273.350/278.550;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP schaut für kurze Zeit genau in die Kamera.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="6651b239-284e-410c-bbf3-ebf17fc6915a" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T15:23:01.233Z</CreationDate>
+            <ModificationDate>2016-01-12T15:23:01.233Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:451a9341-4de8-44ec-9d69-d3b5624560f6#t=341.250/348.950;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP macht alle Aufgaben. Bei einigen Aufgaben strittige Wizzard Reaktionen. VP wirkt insgesamt relativ neutral, zeigt auf geschaffte Aufgaben keine wirkliche Reaktion.</Message>
+    </ColTime>
+</ColTimeList>

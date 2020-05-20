@@ -1,0 +1,13 @@
+% work-around to have small caps also here in the headline
+\manualmark{}
+\markboth{\spacedlowsmallcaps{\bibname}}{\spacedlowsmallcaps{\bibname}} % work-around to have small caps also
+%\phantomsection
+\refstepcounter{dummy}
+\addchap{Bibliography}
+\label{app:bibliography}
+\sloppy
+\defbibheading{sub}{\phantomsection\section*{#1}\addcontentsline{toc}{section}{#1}}
+\printbibliography[heading=bibintoc,nottype=software,keyword=ownpub,title={Own publications},heading=sub]{}
+\printbibliography[heading=bibintoc,nottype=software,notkeyword=ownpub,title={General},heading=sub]{}
+\printbibliography[heading=bibintoc,type=software,title={Software packages},heading=sub]{}
+\fussy

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="34c015e3-7d5e-42b8-9d10-73cd4da08889" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T14:05:07.276Z</CreationDate>
+            <ModificationDate>2015-12-04T14:05:07.276Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=31.398/38.698;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bearbeitet nur Aufgabe 1 und 2 im Sinne unserer Planung. Aufgabe Paket und Uhrzeit macht sie selbsständig ohne Hilfe von Apartment / Roboter.
+Aufgaben Musik und Anruf lässt die VP aus.
+VP redet nur mit VL  (Instruktionsphase) und Notausperson (Begrüßung und Verabschiedung).</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="c80d3699-ee73-4ee2-9768-c43fdfc4cbbb" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T14:02:23.794Z</CreationDate>
+            <ModificationDate>2015-12-04T14:02:29.986Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=31.398/38.698;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt "Tschüss" zur Notausperson.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="f64e055b-f258-46ba-ae16-67ebce68b8a6" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T12:56:36.641Z</CreationDate>
+            <ModificationDate>2015-12-04T12:56:36.641Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=68.000/69.900;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP reagiert nicht auf Vorstellung des Apartments.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="db310723-28ec-463a-9ff3-6b297390b7ad" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T12:57:26.321Z</CreationDate>
+            <ModificationDate>2015-12-04T12:57:26.321Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=77.400/78.300;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt "Hallo" zur Notausperson.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="a1010775-8919-486d-a8aa-46c3b4800cc7" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T13:03:15.484Z</CreationDate>
+            <ModificationDate>2015-12-04T13:03:15.484Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=105.850/107.350;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Ohne erkennbaren Grund: Licht im Kochbereich geht an, VP merkt dies aber nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="72c52d18-2ada-48c9-baa6-c73dee46bc64" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T13:04:39.589Z</CreationDate>
+            <ModificationDate>2015-12-04T13:04:39.589Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=144.150/152.450;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon die Aufgabenkarte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="4659eb16-1a22-412d-b80c-4f6fe3b0df2c" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T13:12:17.497Z</CreationDate>
+            <ModificationDate>2015-12-04T13:12:17.497Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=164.750/168.450;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP macht die Aufagbe 1 nicht, unternimmt keinen Lösungsversuch.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="170a09cc-7de5-408f-bcfe-3763438ddb72" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T12:24:26.176Z</CreationDate>
+            <ModificationDate>2015-12-04T12:24:26.176Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=171.908/211.608;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest Aufgabenkarte 2, hat aber Aufgabe 1 nicht bearbeitet. Tut dies aber im Folgenden.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="5c9d3e48-88d9-4bee-bc07-1d5673f85d5e" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T13:13:42.785Z</CreationDate>
+            <ModificationDate>2015-12-04T13:24:12.399Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=184.150/188.750;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Problem: was wird hier adressiert? Die VP fasst hier die Wand an.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="16220f51-d1c2-4602-b1da-86576bc7464b" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T12:25:56.953Z</CreationDate>
+            <ModificationDate>2015-12-04T12:25:56.953Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=214.458/227.358;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP macht Aufgabe 1 und zwei hintereinander.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="b7341da1-23d1-4040-80af-1248b8ead705" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T12:31:38.156Z</CreationDate>
+            <ModificationDate>2015-12-04T12:31:38.156Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=318.796/329.596;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest die neue Aufgabenkarte, hat aber die vorherige Aufgabe nicht gemacht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="630360b4-b51a-493d-bcd0-f4115254b306" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T12:36:02.454Z</CreationDate>
+            <ModificationDate>2015-12-08T15:04:33.234Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=453.696/462.896;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP hat das Paket gesucht und aus dem Schrank genommen. Was sagt der andere Anotator, was hier Adressat und Aufmerksamkeitsfokus sind?</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="68578d0f-a949-45dd-a915-c680f49a5c51" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T12:38:50.552Z</CreationDate>
+            <ModificationDate>2015-12-04T12:38:50.552Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=516.395/518.496;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest neue Aufgabenkarte, hat die Aufgabe davor aber nicht gemacht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="929528ea-905d-471d-a357-089a2a855a26" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-04T14:05:43.396Z</CreationDate>
+            <ModificationDate>2015-12-04T14:05:43.396Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a270a6c3-a0d2-448f-bbc9-bbe70d2509e4#t=622.518/624.218;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP verabschiedet sich von der Notausperson.</Message>
+    </ColTime>
+</ColTimeList>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="6fedffad-3e7c-483d-a1a0-bc1685299321" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-14T13:31:12.792Z</CreationDate>
+            <ModificationDate>2015-12-14T13:31:12.792Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:3c37c847-7979-43dc-ae1f-8890cdf948df#t=61.613/63.213;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt Vorstellung durch das Apartment nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="4f907c7d-3dba-4e4a-b630-13ded51448ac" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-14T13:42:54.389Z</CreationDate>
+            <ModificationDate>2015-12-14T13:42:54.389Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:3c37c847-7979-43dc-ae1f-8890cdf948df#t=81.713/96.513;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Hier höflich codiert, weil die VP den Roboter anlächelt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="53374f32-bee5-45e8-8676-2645476cc35a" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-14T13:36:01.063Z</CreationDate>
+            <ModificationDate>2015-12-14T13:36:01.063Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:3c37c847-7979-43dc-ae1f-8890cdf948df#t=121.763/127.363;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt nach Hinweis durch VL, dass keine Schalter bedient werden dürfen: "Ich fasse nichts an.". Daraufhin sagt die VL, dass die VP nur keine Schalter anfassen darf. Später wird nur Sprache von der VP verwendet.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="7f7efd21-9e35-49cf-bfa2-12078b9247dd" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-14T13:36:46.783Z</CreationDate>
+            <ModificationDate>2015-12-14T13:36:46.783Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:3c37c847-7979-43dc-ae1f-8890cdf948df#t=143.263/145.963;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon Aufgabenkarte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="6330719a-273a-476d-8a8e-b94d754d5afd" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-14T13:52:17.835Z</CreationDate>
+            <ModificationDate>2015-12-14T13:52:17.835Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:3c37c847-7979-43dc-ae1f-8890cdf948df#t=164.250/167.250;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Adressat könnte hier auch "unspezifisch" oder "Licht im Flur" sein. Für selbst spricht, dass ich das Gefühl habe, das "Ah" ist mehr an sich selbst, als an das Apartment gerichtet.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="5dee2cd8-68ea-4ad3-9dcb-f63095a5f36c" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-14T13:57:03.586Z</CreationDate>
+            <ModificationDate>2015-12-14T13:57:03.586Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:3c37c847-7979-43dc-ae1f-8890cdf948df#t=196.650/199.450;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Der Satz ist sehr simpel und sehr kurz.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="cdf74247-0cf0-4a86-8709-407938754272" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-14T14:01:19.457Z</CreationDate>
+            <ModificationDate>2015-12-14T14:01:19.457Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:3c37c847-7979-43dc-ae1f-8890cdf948df#t=199.500/210.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Dass die VP in den Kühlschrank guckt, liegt wahrscheinlich daran, dass auf der Aufgabenkarte steht, dass man sich etwas zu Trinken nehmen darf. Normalerweise müssten die Getränke in der Küche stehen, tun sie aber fehlerhafterweise nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="8eee66fa-56b6-4bed-89b0-007951e11849" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-14T14:27:24.795Z</CreationDate>
+            <ModificationDate>2015-12-14T14:27:24.795Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:3c37c847-7979-43dc-ae1f-8890cdf948df#t=266.648/267.179;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Adressat könnte auch "selbst" sein.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="c54769e1-bd74-4a9b-b782-41eef1c15d0c" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-14T14:30:49.907Z</CreationDate>
+            <ModificationDate>2015-12-14T14:30:49.907Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:3c37c847-7979-43dc-ae1f-8890cdf948df#t=296.200/301.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP will erst das Paket wieder in den Schranks tellen, tut das dann aber nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="1856624d-cccd-46ca-b4ff-554e3c2d53ef" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-14T14:45:53.151Z</CreationDate>
+            <ModificationDate>2015-12-14T14:45:53.151Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:3c37c847-7979-43dc-ae1f-8890cdf948df#t=331.700/340.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP guckt einmal kurz zur Notaus-Person und geht dann in Richtung Ausgang, dort schaut er einmal noch zum Licht im Flur und geht dann raus.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="25f3dab7-ea96-494f-8a9b-ff315819343e" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-14T14:47:57.999Z</CreationDate>
+            <ModificationDate>2015-12-14T14:49:08.334Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:3c37c847-7979-43dc-ae1f-8890cdf948df#t=341.300/344.900;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP  macht alle Aufgaben ohne Probleme. Hat zwar Spaß, wirkt aber insgesammt eher neutral. Redet sehr neutral-kommando-haft mit dem Apartment, zum Roboter am Anfang ist er netter, nutzt ihn dann aber gar nicht.</Message>
+    </ColTime>
+</ColTimeList>

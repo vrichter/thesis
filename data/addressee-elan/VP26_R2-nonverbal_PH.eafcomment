@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="133c9ac0-fa40-4331-b2f1-439ac6d3a552" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T13:00:49.715Z</CreationDate>
+            <ModificationDate>2016-01-25T13:00:49.715Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bcdd805d-b6b1-4d9f-b898-e6f05bb1f17a#t=61.050/68.450;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Die ersten 1:18 passiert nichts.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="7c85e786-bafe-4fc7-bfd5-86cf1bf1da75" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T13:21:36.955Z</CreationDate>
+            <ModificationDate>2016-01-25T13:21:36.955Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bcdd805d-b6b1-4d9f-b898-e6f05bb1f17a#t=90.393/95.293;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Notaus-Person kommt verspätet rein.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="fd2b88a8-b46b-4603-8622-174572af0cd2" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T13:22:17.155Z</CreationDate>
+            <ModificationDate>2016-01-25T13:22:17.155Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bcdd805d-b6b1-4d9f-b898-e6f05bb1f17a#t=96.793/100.593;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt Vorstellung durch das Apartment nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ada3c3e0-6bb1-4de9-9ac3-5133e7cbafbb" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T13:25:20.272Z</CreationDate>
+            <ModificationDate>2016-01-25T13:25:20.272Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bcdd805d-b6b1-4d9f-b898-e6f05bb1f17a#t=143.043/151.343;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP fragt VL ob er alle Aufgaben mit seiner Stimme lösen soll.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="f342c125-9899-4be2-818d-1f16c2e547fe" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T13:26:04.023Z</CreationDate>
+            <ModificationDate>2016-01-25T13:26:04.023Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bcdd805d-b6b1-4d9f-b898-e6f05bb1f17a#t=153.943/157.743;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP fragt VL ob der Roboter eher Deutsch oder Englisch versteht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="bdddb753-5ae7-4eb4-aafe-565c264e0693" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T13:26:37.614Z</CreationDate>
+            <ModificationDate>2016-01-25T13:26:37.614Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bcdd805d-b6b1-4d9f-b898-e6f05bb1f17a#t=166.743/172.143;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest hier schon die Karte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="9220cc0a-462b-4c7a-b60c-94d05bbc1d8a" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T14:05:40.150Z</CreationDate>
+            <ModificationDate>2016-01-25T14:05:40.150Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bcdd805d-b6b1-4d9f-b898-e6f05bb1f17a#t=218.300/277.600;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP hat Probleme damit, die Anweisung zu verstehen (ist Brite). Schaut das Wort mit Hilfe des Smartphones nach. Nimmt sich dann Wasser (steht auf der Karte), fragt kurz Notaus-Person um Hilfe.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="880925fd-37f0-4f79-8c19-4edc828a6744" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T14:11:51.312Z</CreationDate>
+            <ModificationDate>2016-01-25T14:11:51.312Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bcdd805d-b6b1-4d9f-b898-e6f05bb1f17a#t=296.150/322.750;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Höflich, weil "Bitte".</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="5047bdaa-6a7c-4640-ac09-42dbfc69e959" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T14:43:24.431Z</CreationDate>
+            <ModificationDate>2016-01-25T14:43:24.431Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bcdd805d-b6b1-4d9f-b898-e6f05bb1f17a#t=454.200/457.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Keine Reaktion am Ende. Zwischendurch aber Kopfnicken.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="1133b1df-47e0-4c7c-9788-ad8c1e2eb79d" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T14:44:16.614Z</CreationDate>
+            <ModificationDate>2016-01-25T14:44:16.614Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bcdd805d-b6b1-4d9f-b898-e6f05bb1f17a#t=473.500/481.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP denkt er muss die Stehlampe ausschalten und versucht das wieder über Steuerung mittels Tisch.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ad4e42a0-b171-4aa6-b2ad-4c94380b14de" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T14:46:17.996Z</CreationDate>
+            <ModificationDate>2016-01-25T14:46:17.996Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bcdd805d-b6b1-4d9f-b898-e6f05bb1f17a#t=482.500/486.500;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP räumt ihr Getränk weg.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="784711c5-36a9-4d73-ac58-ef7f80b10d0d" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T14:51:44.470Z</CreationDate>
+            <ModificationDate>2016-01-25T14:51:44.470Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:bcdd805d-b6b1-4d9f-b898-e6f05bb1f17a#t=500.940;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP macht alle Aufgaben bis auf die Paketaufgabe, da er nicht versteht, was der Ton bedeutet. Allerdings auch verständlich, da er die Lösung der Aufgabe auf dem Bildschirm an der Wand erwartet hätte (wie bei den zwei Aufgaben zuvor auch, das ist ein spezielles Problem der R2-nonverbal-Bedingung). Sonst kommt er gut zurecht. Stimmung insgesant neutral. Übersetzt einmal ein Wort und stellt am Anfang viele schwierige Fragen (z.B. "Ich soll also die Aufgaben verbal lösen?").</Message>
+    </ColTime>
+</ColTimeList>

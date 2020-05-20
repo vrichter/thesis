@@ -1,0 +1,145 @@
+\chapter{Addressing Behaviour in Smart Environments}
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabulary}{\textwidth}{ l C C C C C }
+        \toprule
+        Tier                                  &  T   &    A      &   V     &     N       &      L   \\ \midrule
+        Addressee final                       &  C   &    *      &         &             &     18   \\
+        Expression (facial, gestural, verbal) &  C   &    *      &         &             &      6   \\
+        Expression specific                   &  F   &    *      &         &             &     21   \\
+        Focus of attention                    &  C   &    *      &         &             &     19   \\
+        Method                                &  C   &    *      &         &             &      3   \\
+        Method specific                       &  F   &    *      &         &             &    282   \\
+        Speech form of address                &  C   &    *      &         &             &      3   \\
+        Speech politeness                     &  C   &    *      &         &             &      3   \\
+        Speech type of sentence               &  C   &    *      &         &             &      7   \\
+        Speech specific                       &  F   &    *      &         &             &    149   \\
+        Speech intention                      &  C   &    *      &         &             &      4   \\
+        Study progress coarse                 &  C   &    *      &         &             &      4   \\
+        Study progress fine                   &  C   &    *      &         &             &      8   \\
+        Wizard                                &  C   &           &         &             &     21   \\
+        Radio                                 &  B   &           &         &             &      2   \\
+        Robot gesture                         &  C   &           &         &             &      4   \\
+        Robot speech                          &  F   &           &   *     &             &     11   \\
+        Displayed text                        &  F   &           &         &     *       &     27   \\
+        Apartment Call                        &  B   &           &   *     &             &      2   \\ 
+        Apartment Parcel                      &  B   &           &   *     &             &      2   \\ 
+        Apartment Time                        &  B   &           &   *     &             &      2   \\  
+        Cupboard handle light                 &  B   &           &         &             &      2   \\
+        Cupboard handle sound                 &  B   &           &         &             &      2   \\
+        Cupboard door state                   &  B   &           &         &             &      2   \\
+        Apartment door state                  &  B   &           &         &             &      2   \\
+        \bottomrule
+    \end{tabulary}
+    \caption[\emph{Addressing} study tiers and properties.]{\label{app:study-addressee-autotiers}
+    The tiers, available in the~\citesoft{elansrc} annotations of the \gls{addressing study}.
+    The column T (Type) depicts the kind of annotation: (C)ategorical, (F)ree-text, or (B)inary;
+    The column A (Annotated) depicts whether the tiers were manually annotated (*) or extracted from system events.
+    The columns V (Verbal) and N (Non-Verbal) highlight tiers which are only relevant in the verbal/non-verbal condition.
+    The column L (Levels) tell how many different values the tier assumed in the annotation.
+    \emph{Addressee final} and \emph{Focus of attention} have different levels because not all entities were addressed/focused during the study.
+    } 
+\end{table}
+
+\begin{table}[!ht]
+    \centering
+    \begin{tabulary}{\textwidth}{L L L}
+        \toprule
+        Entity                                     & Mapped to \\ \midrule
+        Floor lamp \(L_F\)                         & Floor lamp \(L_F\) \\
+        Light in the hallway \(L_H\)               & Light in the hallway \(L_H\)     \\
+        Robot                                      & Robot      \\
+        Unspecific                                 & Unspecific      \\
+        Not discernible                            & Unspecific      \\
+        Self                                       & Unspecific      \\
+        Furniture of apartment                     & Parts of the Apartment  \\
+        Loudspeaker (by the fridge)                & Parts of the Apartment  \\
+        Screen (entrance)                          & Parts of the Apartment  \\
+        Screen (kitchen on worktop)                & Parts of the Apartment  \\
+        Screen (living room table)                 & Parts of the Apartment  \\
+        Screen (living room wall)                  & Parts of the Apartment  \\
+        Screen (living room window)                & Parts of the Apartment  \\
+        Sliding door (btw. hallway \& kitchen)     & Parts of the Apartment  \\
+        Switch (living room)                       & Parts of the Apartment  \\
+        Switches (entrance)                        & Parts of the Apartment  \\
+        Switches (kitchen by the fridge)           & Parts of the Apartment  \\
+        Switches (living room by the kitchen)      & Parts of the Apartment  \\
+        Switches (living room lamp),               & Parts of the Apartment  \\
+        Parts of the apartment                     & Parts of the Apartment  \\
+        \bottomrule
+    \end{tabulary}
+    \caption[Addressable entity mapping.]{\label{app:study-addressee-addressees-codes}
+    This shows the mapping of entities that could be addressed and focused to the reduced set that is used during the analyses in \vref{ch.address}.
+    }
+\end{table}
+
+\begin{figure}[!ht]
+\hrule
+\vspace{5pt}
+\begin{description}
+    \item[\emph{\{T, Pid\}} \(\rightarrow\) \emph{Ar}:] The \gls{addressee} is chosen according to the task at hand and the participants personal preferences.
+    \item[\emph{C} \(\rightarrow\) \emph{Ar}:] \emph{Condition} correlates with the \gls{addressee}.
+    It can understood as an external factor that influences the participants preferences in interaction with the environment.
+    \item[\emph{Ar} \(\rightarrow\) \emph{\{Fr, M\}}:] The selection of the \gls{addressee} influences the participants attention and which method is applied for interaction.
+    \item[\emph{Ar} \(\rightarrow\) \emph{\{Sp, Ssr\}}:] When speech is used, it additionally influences the politeness and whether the entity is verbally named.
+    \item[\emph{O} \(\rightarrow\) \emph{M}:] \emph{Order} correlates with the applied method.
+    Therefore, \emph{Order} acts as an external factor that influences the participants preferences.
+    \item[\emph{Pid} \(\rightarrow\) \emph{Aef} \(\rightarrow\) \emph{Fr}:] The participants preferences influence whether \gls{addressee} and focus must be equal which in return affects the focus.
+    The connection \emph{Aef} \(\rightarrow\) \emph{Fr} \(\leftarrow\) \emph{Ar} suits the intuition, that \emph{Addressee equals focus} can only inform about the \gls{addressee} when the focus is also known.
+    \item[\emph{Sp} \(\rightarrow\) \emph{\{Sf, Str, Sph\}}:] Politeness affects the appropriateness of forms of addressing, types of sentences, and phrasing.
+    \item[\emph{Pid} \(\rightarrow\) \emph{Er}:] Whether participants show strong emotions is determined by their character.
+    \item[\emph{M} \(\rightarrow\) \emph{\{Sp, Msr\}}:] Whether speech or gestures are used at all, in implied by the applied method.
+    \item[\emph{Pid} \(\rightarrow\) \emph{Msr}:] The choice of the appropriate gesture is influenced by the participants preferences and expectations.
+    \item[\emph{Ar} \(\rightarrow\) \emph{Aw}:] The \glspl{wizard} choice of \gls{addressee} only depends on the \glspl{wizard} estimate of the participants \gls{addressee}.
+    \end{description}
+\hrule
+    \caption[Reasoning behind BM.]{\label{app:bm-reasoning}
+    The reasoning behind the manually created \gls{bayesiannetwork} structure in \vref{sec:addressee-model}.
+    }
+\end{figure}
+
+\chapter{Conversational Role Recognition}
+
+\begin{figure}[!ht]
+    \centering
+    \begin{footnotesize}
+    \input{data/role-nn-acc-f1.tex}
+    \end{footnotesize}
+    \caption[Overall performance of all ANN models.]{\label{app:role-nn-acc} 
+    \Gls{accuracy} and \(F1_\mu\) values (both on the same vertical axis) for the \gls{ann} based models (horizontal axis).
+    The visualized value range is reduced from \([0,1]\) to \([0.5,0.9]\) for better visibility.
+    Colours of the error bars encode the type of measurement and number epochs the models were trained.
+    Horizontal lines represent the \gls{accuracy} (dashed) and \(F1_\mu\) (dotted) of the \(rule\) (red) and \(BnM\) (blue) model.
+    The different feature sets are separated by vertical dashed lines and labelled in violet.
+    The \emph{dense} models can be seen on the left, the \emph{lstm} models on the right side.
+    }
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \begin{footnotesize}
+    \input{data/role-nn-f1-class.tex}
+    \end{footnotesize}
+    \caption[Class-wise performance of all ANN models.]{\label{app:role-nn-f1-class} 
+    \Glspl{f1score} (vertical axis) for the \gls{ann} based models (horizontal axis) for each class separately.
+    Colours of the error bars encode the class and number of epochs the models were trained (\(S=\) \emph{Speaker}, \(A=\) \emph{Addressee}, \(P=\) \emph{Side-Participant}, and \(N=\) \emph{Non-Participant}).
+    Coloured, translucent background-strips highlight the value ranges of the classes.
+    Horizontal, lines represent the \gls{f1score} of the \(Rule\) (solid) and \(BnM\) model (dashed) for the classes, coloured in red (\emph{Addressee}), black (\emph{Speaker}), violet (\emph{Side-Participant}), and blue (\emph{Non-Participant}).
+    The different feature sets are separated by vertical dashed lines and labelled in violet.
+    The \emph{dense} models can be seen on the left, the \emph{lstm} models on the right side.
+    }
+\end{figure}
+
+\begin{figure}[!ht]
+    \centering
+    \begin{footnotesize}
+    \input{data/role-nn-f1-class-long.tex}
+    \end{footnotesize}
+    \caption[Role recognition results with longer training.]{\label{app:role-nn-f1-class-long} 
+    \Glspl{f1score} (vertical axis) for a \emph{dense} model (left) and an \emph{lstm} model configuration after 10 to 500 epochs of training (left to right for either side).
+    Colours of the error bars encode the class \emph{Speaker} (black), \emph{Addressee} (red), \emph{Side-Participant} (violet), and \emph{Non-Participant} (blue).
+    Horizontal, lines represent the \gls{f1score} of the \(rule\) (solid) and \(BnM\) model (dashed).
+    The models are separated by a dashed lines and labelled in violet.
+    }
+\end{figure}

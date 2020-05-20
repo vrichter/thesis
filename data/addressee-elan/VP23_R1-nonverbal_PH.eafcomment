@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="3aea50df-e0fc-4a40-bc74-d8ddda7695ab" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T13:29:59.666Z</CreationDate>
+            <ModificationDate>2016-01-11T13:29:59.666Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=23.950/34.350;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Die ersten 35 Sekunden passiert nichts.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="36d5a458-ddb2-4acd-badb-5d374f25e278" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T14:42:11.715Z</CreationDate>
+            <ModificationDate>2016-01-11T14:42:11.715Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=45.960/49.460;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Vp reagiert hier wahrscheinlich auf das Angehen des Lichtes, sie gibt im Fragebogen an, sie hätte das als angenehm empfunden. Ich glaube nicht, dass sie das als Begrüßung durch eine Entität wahrgenommen hat.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="3c375976-75b2-4c2b-b1d0-d8e716777ab1" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T14:42:50.634Z</CreationDate>
+            <ModificationDate>2016-01-11T14:42:50.634Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=59.100/61.600;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt: "Hallo" zur Notausperson.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="c0d689fd-5c6e-439b-9dd4-c96c739a2b59" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T14:47:06.686Z</CreationDate>
+            <ModificationDate>2016-01-11T14:47:06.686Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=89.200/111.400;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VL muss raus, da sie die Aufgabenkarten nicht dabei hat.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="782750fa-817b-4701-8b79-452af5d39158" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T14:51:27.369Z</CreationDate>
+            <ModificationDate>2016-01-11T14:51:27.369Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=124.850/166.450;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon ab hier immer mak wieder die Aufgabenkarte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="12aaac5b-4606-44cd-95f4-180a46f33619" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T14:56:36.060Z</CreationDate>
+            <ModificationDate>2016-01-11T14:56:36.060Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=177.425/187.025;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Das lächeln gilt wahrscheinlich eher sich selbst, ich glaube nicht, dass sie das Licht anlächelt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ce0e357d-e093-4063-8543-e391160c4446" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T15:03:05.189Z</CreationDate>
+            <ModificationDate>2016-01-11T15:03:05.189Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=203.725/212.625;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Hier hätte der Wizzard, meiner Meinung nach , nicht reagieren dürfen. Auf der Karte steht, dass man das Licht von der Küche aus ausmachen soll, was die VP nicht tut.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="d4af97c5-e568-4ed0-b63c-51eec25eae9c" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T15:12:26.180Z</CreationDate>
+            <ModificationDate>2016-01-11T15:12:26.180Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=255.725/260.725;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Ich finde, dass man auch hier diskutieren kann, ob es richtig ist, dass der Wizzard diesen Lösungsversuch gelten lässt, was hat denn der Tisch mit Musik zu tun? Ich glaube die VP berührt den Tisch, damit dieser angeht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="e6578785-a7d2-4b64-96cd-0d8f4fdb0ed5" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T15:16:56.903Z</CreationDate>
+            <ModificationDate>2016-01-11T15:16:56.903Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=294.725/300.525;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Ich finde, dass man auch hier diskutieren kann, ob es richtig ist, dass der Wizzard diesen Lösungsversuch gelten lässt, zuvor hat der Bildschirm doch das Licht angemacht. Auch hier wirkt es für mich eher so, als würde die VP den Bildschirm anmachen wollen.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="434112e3-692b-4cdf-8986-81fbea2b6013" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T15:33:42.181Z</CreationDate>
+            <ModificationDate>2016-01-11T15:33:42.181Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=339.475/342.475;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP seufzt hörbar.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="9dfc5526-e7f1-425e-94cc-e9593a26d598" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T15:41:12.669Z</CreationDate>
+            <ModificationDate>2016-01-11T15:41:12.669Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=365.775/370.475;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Auch hier: meiner Meinung nach nicht richtig, dass der Wizzard reagiert: VP selbst ist ja auch skeptisch: sie lacht über ihren eigenen Lösungsversuch.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="092e956c-66a6-4832-8ff2-61d50d67f36a" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T15:51:12.002Z</CreationDate>
+            <ModificationDate>2016-01-11T15:51:12.002Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=379.525/382.525;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Hier: immerhin konsistent, dass der Tisch wieder zur Lösung führt, aber logisch ist das nicht. Woher weiß der Tisch, was die VP will? Das ganze hier ist für mich einen Art abergläubisches Verhalten, erzeugt durch operante Konditionierung.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="497373fc-465c-4198-b961-508aa993b856" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T15:54:31.199Z</CreationDate>
+            <ModificationDate>2016-01-11T15:54:31.199Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=407.475/409.975;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt Person mit Notaus "Tschüss."</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ec8bca3e-40d4-43b0-82e1-0c8e0fa135b2" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-11T15:56:56.012Z</CreationDate>
+            <ModificationDate>2016-01-11T15:56:56.012Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:6b7d4686-0bb3-4cef-8700-4f191adc3367#t=412.475/423.175;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP macht alle Aufgaben. Einge Aufgaben aber mit Hilfe des Wizzards, der Lösungsversuche gelten lässt, die meiner Meinung nach nicht geeignet gewesen wären.
+VP wirkt, vielleicht auch deshalb,etwas unsicher und ratlos.</Message>
+    </ColTime>
+</ColTimeList>

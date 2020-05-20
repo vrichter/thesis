@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="f7b5f54b-6267-4352-8ac7-6cda2218694c" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-18T12:42:05.337Z</CreationDate>
+            <ModificationDate>2016-02-18T12:42:05.337Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:ba27e1fb-1625-4bbb-9f67-ceb3f1f2b177#t=10.200/18.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VL ist Paul</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="42ed012b-126e-4d2d-bf32-62c13e3e5bf8" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-18T12:42:50.145Z</CreationDate>
+            <ModificationDate>2016-02-18T12:42:50.145Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:ba27e1fb-1625-4bbb-9f67-ceb3f1f2b177#t=25.300/31.900;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt die Begrüßung des Apartments nicht</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="1f649f08-757e-4859-817a-e196219a7e35" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-18T12:45:36.674Z</CreationDate>
+            <ModificationDate>2016-02-18T12:45:36.674Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:ba27e1fb-1625-4bbb-9f67-ceb3f1f2b177#t=64.000/67.800;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP begrüßt die Notaus-Person</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="9a878733-eb0d-4864-8f2b-13de502e2caa" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-18T12:49:39.859Z</CreationDate>
+            <ModificationDate>2016-02-18T12:49:39.859Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:ba27e1fb-1625-4bbb-9f67-ceb3f1f2b177#t=135.100/139.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon die erste Karte
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="f40b1d25-4b18-4b9f-b95b-5e66f0e5c851" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-18T13:13:33.747Z</CreationDate>
+            <ModificationDate>2016-02-18T13:13:33.747Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:ba27e1fb-1625-4bbb-9f67-ceb3f1f2b177#t=240.600/252.750;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP löst fast alle Aufgaben nur mit Sprache,
+reagiert aber schnell, ohne lange zu suchen oder überlegen,
+als ob sie das jeden Tag machen würde.
+</Message>
+    </ColTime>
+</ColTimeList>

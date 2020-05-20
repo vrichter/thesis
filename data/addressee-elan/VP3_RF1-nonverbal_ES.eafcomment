@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="5dc1fe85-241e-4805-8251-35bf6176b432" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-18T11:03:13.903Z</CreationDate>
+            <ModificationDate>2016-02-18T11:03:13.903Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a4efa4ac-0313-4d94-a304-aaaef876df78#t=26.000/33.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt die Begrüßung des Apartments nicht
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="af56b61f-671c-4d52-9237-c3b9abf9b71a" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-18T11:06:22.232Z</CreationDate>
+            <ModificationDate>2016-02-18T11:06:22.232Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a4efa4ac-0313-4d94-a304-aaaef876df78#t=78.700/82.300;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest schon die erste Karte
+
+</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="b1cfeb2b-57f2-4af9-9871-37b99e02e47f" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-02-18T11:56:48.274Z</CreationDate>
+            <ModificationDate>2016-02-18T11:56:48.274Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:a4efa4ac-0313-4d94-a304-aaaef876df78#t=481.561/517.050;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP versucht immer wieder die Lichtschalter zu drücken,
+Spricht die Notaus-Person an.
+
+</Message>
+    </ColTime>
+</ColTimeList>

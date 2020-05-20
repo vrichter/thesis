@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="ffc64969-8e01-435b-ab28-616ddb8f2e53" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-22T17:15:23.396Z</CreationDate>
+            <ModificationDate>2016-01-22T17:15:23.396Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2810a266-6015-4fc0-b4a7-13b4c819d0c8#t=0.300/1.800;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VL ist nicht Jasmin.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="203c10b8-a64f-4cff-a770-1017f8db8cd1" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-22T17:18:16.573Z</CreationDate>
+            <ModificationDate>2016-01-22T17:18:16.573Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2810a266-6015-4fc0-b4a7-13b4c819d0c8#t=35.700/45.400;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP bemerkt die Vorstellung durch das Apartment nicht.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ca22ca23-f8f1-40fa-b10c-2d65facff30f" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-22T16:58:41.056Z</CreationDate>
+            <ModificationDate>2016-01-22T16:58:41.056Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2810a266-6015-4fc0-b4a7-13b4c819d0c8#t=156.500/162.900;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest hier schon die Karte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="f157a3bc-a5f8-489d-8d06-a5b6ba486ffc" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-22T17:39:25.339Z</CreationDate>
+            <ModificationDate>2016-01-22T17:39:25.339Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2810a266-6015-4fc0-b4a7-13b4c819d0c8#t=193.700/200.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt: "Licht wäre jetzt gut," Wizard reagiert aber nicht. Ist vertretbar, dass Wizard nicht handelt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="1fb19f2b-0d2e-42e1-92d0-c5348b31243f" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-22T17:46:08.269Z</CreationDate>
+            <ModificationDate>2016-01-22T17:46:08.269Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2810a266-6015-4fc0-b4a7-13b4c819d0c8#t=211.900/218.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Ich würede das nicht unbedingt als Lösungsversuch werten. Wizard schon.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="188b279b-ca68-48a8-b9bf-fec69e55b9b3" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T11:49:30.123Z</CreationDate>
+            <ModificationDate>2016-01-25T11:49:30.123Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2810a266-6015-4fc0-b4a7-13b4c819d0c8#t=270.900/276.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Hier handelt es sich um ein implizites Komanndo. Mit ihrer Aussage will die VP ja sagen, dass das Apartment Musik anmachen soll.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ffa13773-c402-4d89-8268-5ca35b15c4a8" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T12:28:04.780Z</CreationDate>
+            <ModificationDate>2016-01-25T12:28:04.780Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2810a266-6015-4fc0-b4a7-13b4c819d0c8#t=458.950/469.350;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt: "Versuchsleitung, ich bin fertig."und wartet auf die VL.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="c5384daa-b049-45da-98db-b5d3539ab916" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-25T12:29:03.563Z</CreationDate>
+            <ModificationDate>2016-01-25T12:29:03.563Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2810a266-6015-4fc0-b4a7-13b4c819d0c8#t=474.950/479.050;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP macht alle Aufgaben. Redet viel mit sich selbst. Wirkt an einigen Stellen unsicher. Insgesamt recht neutrale Stimmung. Jasmin ist nicht VL.</Message>
+    </ColTime>
+</ColTimeList>

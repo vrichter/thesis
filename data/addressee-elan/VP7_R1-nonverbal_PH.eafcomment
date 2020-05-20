@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="de91d2de-aea2-459e-bbe7-cb16b740f046" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T12:25:06.832Z</CreationDate>
+            <ModificationDate>2016-01-19T12:25:06.832Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2905ca4e-abcf-452a-a0fe-07218df928c3#t=23.700/26.600;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Fraglich, ob als Begrüßung wahgenommen, wahrscheinlich hat er nur auf das Licht reagiert.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="31eac3c5-6b1f-4d76-b94a-83486ef3faaf" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T12:26:33.719Z</CreationDate>
+            <ModificationDate>2016-01-19T12:26:33.719Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2905ca4e-abcf-452a-a0fe-07218df928c3#t=32.400/34.100;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP begrüßt die Notaus-Person (unverständlich).</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="83d339ce-4620-44b3-97bf-5b818a020e09" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T12:30:57.536Z</CreationDate>
+            <ModificationDate>2016-01-19T12:30:57.536Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2905ca4e-abcf-452a-a0fe-07218df928c3#t=62.500/67.600;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest hier schon die Aufgabenkarte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="d7203bd4-e174-41b9-93d0-fa3f4b3b3def" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T12:32:10.265Z</CreationDate>
+            <ModificationDate>2016-01-19T12:32:10.265Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2905ca4e-abcf-452a-a0fe-07218df928c3#t=79.100/82.700;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP orientiert sich hier schon in Richtung des Lichts, Zwecks Aufgabenlösung.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="a5f2c683-c497-45c0-a089-1720cc95448e" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T11:00:17.682Z</CreationDate>
+            <ModificationDate>2016-01-19T11:00:17.682Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2905ca4e-abcf-452a-a0fe-07218df928c3#t=82.900/88.500;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Diese Phase ist ungewöhnlich früh vorbei, da die VP schon die Aufgabe löst, während VL noch im Raum ist.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ba5bf5e4-d45d-4271-9245-870427d19b7c" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T12:37:57.530Z</CreationDate>
+            <ModificationDate>2016-01-19T12:37:57.530Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2905ca4e-abcf-452a-a0fe-07218df928c3#t=88.400/91.000;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Eigentlich schaut die VP wahrscheinlich den Bewegungssensor an, dieser ist genau über der Tür. (Adressat und Aufmerksamkeitsfokus).</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="19478016-f09c-46d9-9bdb-1fde3600a4d6" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T12:40:53.692Z</CreationDate>
+            <ModificationDate>2016-01-19T12:40:53.692Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2905ca4e-abcf-452a-a0fe-07218df928c3#t=91.150/109.750;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt zur Person mit Notaus: "Ich weiß nich genau, was ich getan habe, dass das Licht an ist".</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="5bb2c8a9-8dc1-4194-933d-cec299633868" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T12:44:33.900Z</CreationDate>
+            <ModificationDate>2016-01-19T12:44:33.900Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2905ca4e-abcf-452a-a0fe-07218df928c3#t=135.000/161.800;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP nimmt sich noch ein Getränk, dass steht als Möglichkeit auf der Karte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="9ccde327-d9ee-4bb7-a27e-3e3eb7f2c086" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T12:59:46.128Z</CreationDate>
+            <ModificationDate>2016-01-19T13:24:51.768Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2905ca4e-abcf-452a-a0fe-07218df928c3#t=199.850/203.250;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Man sieht deutlich, dass die VP unsicher ist und sich nicht wohl fühlt nach Musik zu fragen.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="bff95dba-d339-42b7-b511-a8e7c76006a7" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T13:25:17.624Z</CreationDate>
+            <ModificationDate>2016-01-19T13:25:17.624Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2905ca4e-abcf-452a-a0fe-07218df928c3#t=298.000/318.400;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP wirkt unsicher, wann sie fertig mit der Aufgabe ist.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ba1701e0-f7cc-469a-9f1c-0f609a73c7b7" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T13:27:54.689Z</CreationDate>
+            <ModificationDate>2016-01-19T13:27:54.689Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2905ca4e-abcf-452a-a0fe-07218df928c3#t=329.850/335.350;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP fragt Notaus-Person ach der VL, fragt ob sie das Getränk behalten darf.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="b35152df-f1e3-4be2-9dbc-a41acbee47e1" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T13:29:17.489Z</CreationDate>
+            <ModificationDate>2016-01-19T13:29:17.489Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2905ca4e-abcf-452a-a0fe-07218df928c3#t=336.250/347.950;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Interessant ist, dass die VP nicht durch die Schiebetür geht, sondern einen umweg geht um nach draußen zu gehen. Zuvor hate die VP das Licht im Flur über die Tür gesteuert.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="904cd5b4-0abe-4e0f-ae29-18d7fd8373fe" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-19T13:30:13.465Z</CreationDate>
+            <ModificationDate>2016-01-19T13:30:13.465Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:2905ca4e-abcf-452a-a0fe-07218df928c3#t=354.550/361.750;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP macht alle Aufagben. Aufgabe 1, als VL noch im Raum ist. VP wirkt stellenweise ratlos, bzw. ist unsicher.</Message>
+    </ColTime>
+</ColTimeList>

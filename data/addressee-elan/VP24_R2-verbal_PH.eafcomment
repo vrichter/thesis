@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="efb87698-08cc-4870-a657-cea4b052f460" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T15:36:49.587Z</CreationDate>
+            <ModificationDate>2016-01-12T15:36:49.587Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=18.200/39.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Die ersten 40 Sekunden noch kein Versuch. Der Roboter winkt einmal, merkt die VP aber nicht, da nicht im Raum.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="7a6b0a7c-1055-42ac-b9da-f17a32801c17" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T16:00:26.970Z</CreationDate>
+            <ModificationDate>2016-01-12T16:00:26.970Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=53.500/60.500;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Im Fragebogen gibt die VP an sie habe das Aufleuchten als sehr angenehm empfunden (7 von 7). Ich weiß trotzdem nicht, ob sie das als Begrüßung durch eine Entität empfunden hat.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="f51fb271-5a72-486c-85cb-7c1d00ce4e10" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T16:10:09.881Z</CreationDate>
+            <ModificationDate>2016-01-12T16:10:09.881Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=127.200/136.200;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP fragt die VL ob man mit dem Roboter sprechen kann. VL sagt, dass sie mehr, als das zuvor gesagte nicht sagen dürfe. Die VP sagt darauf hin "Achso" und muss lachen. VP arbeitet laut Fragebogen als wissenschaftliche Mitarbeiterin in einem technischem Bereich.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="e2a7c52b-214d-4f0e-ae39-b1d941a100e8" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T16:10:50.000Z</CreationDate>
+            <ModificationDate>2016-01-12T16:10:50.000Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=139.750/147.950;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest hier schon die Aufgabenkarte.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="ff3a457e-7870-40ff-a8e1-95b4afc55722" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T16:27:15.864Z</CreationDate>
+            <ModificationDate>2016-01-12T16:27:15.864Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=167.450/170.650;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Sprache wirkt extra langsam und deutlich.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="46318aff-b78c-4cd5-9188-b745a397c962" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T16:30:40.884Z</CreationDate>
+            <ModificationDate>2016-01-12T16:31:56.067Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=170.700/174.900;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Ich bin mir hier nicht sicher, ob sie das zu sich selbst sagt, oder zum Apartment.
+Höflich, weil mit Lächeln und Lob.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="fe5b6de2-e639-4871-b7df-299ddc0a5d5a" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T16:53:29.301Z</CreationDate>
+            <ModificationDate>2016-01-12T16:53:29.301Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=205.150/208.050;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Höflich, weil mit Lächeln, Tonlage klingt sanft und nett.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="11532790-48e9-4288-b9db-974e6ecdb8b6" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T16:54:48.772Z</CreationDate>
+            <ModificationDate>2016-01-12T16:54:48.772Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=208.150/214.450;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Höflich, weil Dankeschön.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="65a8c241-bb2c-4a13-afcf-97fe57194dfc" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T16:55:17.003Z</CreationDate>
+            <ModificationDate>2016-01-12T16:55:17.003Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=213.050/215.050;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP liest hier schon die Karte der nächsten Aufgabe.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="3a16b05e-7a68-470f-bccf-32fe0f66738a" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T16:57:06.498Z</CreationDate>
+            <ModificationDate>2016-01-12T16:57:06.498Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=214.450/217.550;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP ist höflich, weil lächelt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="877f9684-0313-4565-90ac-93285a8dc6eb" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T17:03:42.251Z</CreationDate>
+            <ModificationDate>2016-01-12T17:03:42.251Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=239.750/245.350;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP stellt dem Roboter eine Frage, die über die Aufgabe hinausgeht. Der Wizzard reagiert indem er den Roboter nochmal gleich antworten lässt.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="850303f2-54a4-4fc6-82c2-4eb232409d6c" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T17:05:38.513Z</CreationDate>
+            <ModificationDate>2016-01-12T17:05:38.513Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=250.400/253.800;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>Höflich, weil "Danke" gesagt und mit Lächeln.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="c0b8ab3b-1f29-4a09-a2f8-5c0042dd09d6" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T17:10:30.244Z</CreationDate>
+            <ModificationDate>2016-01-12T17:10:30.244Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=275.150/282.450;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP sagt in den Raum: "Ich bin fertig". Notaus-Person sagt ihr sie könne nun raus gehen.</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="dc3920ff-743b-44af-868e-d586205af255" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2016-01-12T17:12:00.995Z</CreationDate>
+            <ModificationDate>2016-01-12T17:12:42.210Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:81077a43-bf7e-4e9e-b857-600464b115e4#t=285.550/292.450;tier=Studienverlauf%20grob</AnnotationFile>
+        <Message>VP macht alle Aufgabn. Wirkt sicher und fröhlich. Ist wiss. Mitarbeiterin. Fragt zu Anfang, ob sie mit dem Roboter sprechen könne. Ist sehr nett zu dem Roboter.</Message>
+    </ColTime>
+</ColTimeList>

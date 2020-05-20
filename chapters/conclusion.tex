@@ -1,0 +1,157 @@
+\chapter{Recapitulation of Contributions}\label{ch.conclusion}
+
+% intro
+In this thesis, I investigate human interaction with arbitrary \glspl{device}, \glspl{virtual agent}, and \glspl{robot} in a \gls{smart environment}.
+With my investigations, I focus on the problems of \gls{addressee} recognition in interactions with changing types of \glspl{device} and mixed human-agent groups, and the more fundamental problems of \gls{conversational group} detection and \gls{conversational role} recognition in unconstrained \gls{hai}.
+
+%main hypothesis
+\section{Research Topic}
+The overarching goal of this thesis is to use the perceptive capabilities of the environment and contained agents to better recognize the \glsatt{conversation} expectations of inhabitants towards different kinds of \glspl{artificial agent}.
+% research questions short
+To approach this goal from different directions, I articulate four research questions.
+Two of them consider the distinction of the \gls{addressee} of communicational acts in interaction with changing agents on the one hand:
+\blockquote{\Cref{hyp.address}: \hypaddress}
+and in interactions in a fixed, \glslink{conversational group}{conversational} human-\gls{robot} \glslink{conversational group}{group} on the other hand:
+\blockquote{\Cref{hyp.meka}: \hypmeka}.
+The second two research questions aim at a more global recognition of the \glsatt{conversation} participation of \glspl{artificial agent}.
+By investigating the detection of \glspl{conversational group}:
+\blockquote{\Cref{hyp.fformation}: \hypfformation}
+ and the recognition of \glspl{conversational role} of the agent:
+\blockquote{\Cref{hyp.roles}: \hyproles}.
+% literature review
+In \cref{sec.rw}, I present the scientific foundation of these investigations.
+By performing a literature review on human interaction from the perspective of social sciences, I create an overview of how people behave in \gls{copresence}.
+I contrast these findings with a literature review from the perspective of computer sciences. 
+In this review, I show that behaviours and expectations from \gls{hhi} interaction can be similarly observed in human interactions with \glspl{artificial agent}.
+Furthermore, I show how they can be automatically recognized and how they are utilized in interaction scenarios with \glspl{artificial agent} and \glspl{smart environment} in the literature.
+The compiled overview of research on human interaction from both social sciences and computer science helps to understand human expectations and behaviours in \gls{copresence} with \glspl{artificial agent}.
+
+\section{Addressee in Communicative Acts}
+In \cref{part.addressee}, I investigate human addressing behaviour and how it can be interpreted in interactions with \glspl{device}, \glspl{robot}, and \glspl{smart environment}.
+%% RQ1:
+%% Which behaviours in naı̈ve human interaction with a \gls{smart environment} can be observed to distinguish which agent was addressed by a deliberate communicational act?
+Artificial agents and \glspl{device} are products of human imagination and design.
+To make them usable for people without prior training, they need to match the user's intuition.
+The literature on \glspl{smart environment}, suggests and evaluates multiple ways of communicating the \gls{addressee} and task in interaction.
+However, approaches in which people can freely choose their own way of interacting are rare (\cref{sec.rw.hi.focused-dev-rw}).
+The contribution I make with \Cref{hyp.address} in \cref{ch.address}, is an investigation of human addressing behaviour in a smart, \gls{robot} inhabited \gls{apartment} with \naive{} users and deliberately unconstrained interaction possibilities.
+The investigation shows that the visual focus of the user is the most important cue for the distinction of addressed entities, regardless of their form.
+If the \gls{addressee} has a humanoid form, like the \gls{robot} \gls{floka}, this effect is stronger.
+The used modality and its form encode further important features.
+In contrast to interactions proposed in the literature, direct, verbal addressing with terms such as \emph{\gls{robot}} or \emph{\gls{apartment}} is rare.
+The used gestures are general---e.g. waving, pointing, clapping---and only intelligible in combination with other modalities such as gaze or speech.
+
+%% RQ2:
+%% How can an \gls{artificial agent} visually recognize whether it was addressed by a person within its \gls{conversational group} or not?
+When an \gls{artificial agent} participates in a \gls{conversational group} with multiple persons, the problem of distinguishing utterances addressed towards it from utterances exchanged between the other participants is evident.
+Most systems that explicitly deal with this distinction, use close talk microphones or sound source localization to find the current \gls{speaker} and derive the \gls{addressee} from the \gls{speaker}'s visual focus of attention.
+The usefulness of the sound source localization to detect the \gls{speaker} is plausible and the \gls{speaker}'s gaze behaviour is repeatedly investigated in \gls{hhi} and \gls{hai}.
+In the investigation of \Cref{hyp.meka} in \cref{ch.meka}, I make a contribution to \gls{addressee} recognition within mixed human-\gls{robot} \glspl{conversational group} by presenting and evaluating a visual mouth-movement detection as an alternative source of information.
+A person---focused using sound source localization---can be verified or rejected as the current \gls{speaker} with this approach.
+On this basis, I create and evaluate an \gls{addressee} recognition model that fuses information from \gls{speaker} detection, mutual gaze detection, speech recognition, and the \glspl{robot} state using \glspl{bayesiannetwork}.
+The resulting model can strongly reduce the amount of unwanted responses in human interactions with \glspl{artificial agent} at the cost of a small amount of false rejections.
+
+\section{Groups \& Roles in Copresence}
+To behave socially appropriate in \gls{copresence} with humans over longer periods of time, \glspl{artificial agent} need to understand their role in the situation and act accordingly.
+In \cref{part.group}, I investigate how \glspl{artificial agent} can better understand the situation and the flow of interaction in \gls{copresence} with humans.
+To be able to investigate \Cref{hyp.fformation} and \Cref{hyp.roles}, I present a scenario and corresponding corpus in which people freely interact with each other and two \glspl{virtual agent} over an extended time period (\cref{sec.group.corpus}).
+
+%% RQ3: How can \glspl{focused interaction} of people with \glspl{artificial agent} be automatically recognized in a smart environment?
+\Glspl{conversational group} are a fundamental building block for human interactions.
+By creating a \gls{conversational group}, people not only optimize the efficiency of the communication within the group.
+They impose specific behaviours and responses on all agents in \gls{copresence} (\cref{sec.rw.hi.unfocused,sec.rw.hi.cg}).
+To be able act in conformance to these social norms, an \gls{artificial agent} needs to have an understanding of \glspl{conversational group}.
+While \glspl{ffm} are utilized in some \gls{hri} scenarios, their effects on people are mainly investigated in virtual environments and the detection performed on human-only groups (\cref{sec.rw.hi.focused-rw.mixedgroups}).
+To investigate \Cref{hyp.fformation} in \cref{ch.fformation}, I present a fully autonomous approach for the detection of mixed human-agent \glspl{conversational group} and dedicated in-group detections for agents that lack a robust person tracking.
+As a contribution, I show that \glspl{conversational group} containing a combination of humans and \glspl{artificial agent} can be detected using \glspl{ffm}, as it is done in the analysis of human interactions.
+I further show, that the distinction between in group and out-of group can already be performed on the basis of face detections in the agents field of view with acceptable results.
+
+%% RQ4: 
+%% How to determine the \glspl{conversational role} of \glspl{artificial agent} in dynamically changing interactions in a smart environment?
+The distinction of utterances that are addressed towards an \gls{artificial agent} from other utterances is a basic requirement for most modern conversing systems.
+In the literature, as in \cref{ch.meka}, this is done on the basis of utterances (\cref{sec.rw.hi.focused-rw.addressing}).
+While this allows the agent to respond to people's statements, it is not enough to generate role specific behaviour or to notice deviations between the course of the interaction and the \glspl{robot} inner representation (\cref{sec.rw.hi.focused-rw.turntaking}).
+For the investigation of \Cref{hyp.roles} in \cref{ch.roles}, I harness the results and models made while working on \Cref{hyp.address,hyp.meka,hyp.fformation}.
+I contribute to the advancement of the capabilities of \glspl{artificial agent} by showing that their \glspl{conversational role} can be recognized continuously.
+With simple rule based and \gls{bayesiannetwork} models, I show that the features developed in the previous chapters allow an automatic recognition of an agent's \gls{conversational role}.
+Furthermore, I show how time-sequence information and lower level features can be harnessed to further enhance the recognition quality with \glspl{ann}.
+These results constitute a basis for further research on the automatic recognition and utilization of \glspl{conversational role} in \gls{hai}.
+
+\chapter{Outlook}
+
+The contributions made in this thesis are based on the current state of research on human interaction with \glspl{artificial agent} and further extend on it.
+Although, the presented models leave room for further improvements, they already solve existing, practical problems.
+In doing this, they also lay the foundation for further advances in the state of the art.
+
+\section{Possibilities for Improvement}
+
+% addressing study
+The analyses in \cref{ch.address} are performed on manually annotated data.
+To create a better understanding of human addressing of agents in \glspl{smart environment}, a fully automatic approach for the \gls{addressee} detection is required.
+Only with an automatic recognition, these findings can be practically applied to aid further studies. 
+To this end, it is interesting to see if approaches to \gls{conversational group} detection and \gls{conversational role} recognition are transferable to human interactions with \glspl{device}.
+Furthermore, all objects in the \gls{csra} were possible \glspl{addressee} in the \gls{addressing study} and were annotated by an uninvolved person.
+Further research needs be undertaken to better understand which entity the participants \emph{intended} to address and if some objects only functioned as proxies for expected, invisible agents.  
+
+% meka study
+The \gls{addressee} recognition model used in \cref{ch.meka} can be further enhanced by reducing the noise in the \glspl{robot} face detections model or creating a dedicated \gls{ann} to better distinct speaking from other types of mouth movements.
+Furthermore, the model currently only considers visual information of the focused person.
+Acoustic information is used only indirectly through the attention management of the \gls{robot}.
+By maintaining a model of each participant and fusing information from visual and acoustic information, the \gls{speaker} detection can be further enhanced.
+
+%group
+The group detection model presented in \cref{ch.fformation} is sensitive to the quality of the underlying person tracking.
+Reducing the noise in the person tracking and eliminating blind spots will enhance the overall results of the group detection.
+Furthermore, a detailed investigation of the cases that pose problems in the evaluation can reveal possible improvements to the model.
+Because the model for \gls{conversational group} detection is based on an approach to \gls{ffm} detection from \gls{hhi} research, it is best suited for interaction of standing people in open areas.
+For the application in a smart flat, other situations need additional consideration.
+To deal with seated people or people who are occupied with a different task, further adaptations of the model may be required.
+
+%role
+%% more data especially on speaker/addressee, more features, usage on \gls{robot}, recognize roles of all participants not just agent
+In the role recognition presented in \cref{ch.roles}, the classification of the \emph{\gls{speaker}} and \emph{\gls{addressee}} roles needs further improvements.
+Because these are the roles with the least amount of observations, extending the corpus with observations of more interactions is likely to improve the results 
+To this end, observations with a low certainty in the \gls{ann} model results could be specifically and automatically collected.
+Furthermore, the role recognition currently only uses the assignment costs and \gls{ospace} centre of the \gls{conversational group}.
+By considering all the individuals that are part of the group and maintaining models of their state, further improvements of the \gls{conversational role} recognition are possible.
+
+Finally, all studies are performed in the \gls{csra} with the corresponding \glspl{artificial agent}.
+The participants are native German speakers, recruited from the campus of the Bielefeld University.
+Further research with participants with different backgrounds and capabilities, and with different agents will broaden the applicability of the results.
+
+\section{Applications \& Possibilities for Further Research}
+
+Despite the possibilities for further improvement, the results of this thesis already allow practical applications and pave the way for further research.
+
+% addressing study research
+The investigations on addressing behaviour present a strong argument for the consideration of the users attention and other modalities in human interaction with \glspl{smart environment} and \glspl{artificial agent}.
+Further research on the detection of attention in \glspl{smart environment} should be done to allow the utilization of this important information while simultaneously respecting other requirements of \glspl{smart environment} such as privacy, data safety, and energy efficiency.
+
+% meka application
+The proposed model for \gls{addressee} recognition in multi-party interaction can be used in intelligent \glspl{device}, \glspl{ipa}, or \glspl{artificial agent} to enhance their interaction capabilities. 
+In the \gls{csra}, this model is used to reduce unintended responses from the \glspl{virtual agent}.
+The visual detection of \glspl{speaker} is especially helpful for agents that can not perform sound source localization. 
+Because the approach is fully automatic, it can be applied in long-term studies on human interactions in \glspl{smart environment}. 
+
+% group detection
+The detection of mixed human-agent \glspl{conversational group} is also continuously active in the \gls{csra} and forms a basis of the presented \gls{conversational role} recognition models.
+Through it's fully automatic nature, it is a basic building block for the creation of group analysis and group behaviour generation models for \glspl{autonomous agent}.
+On the one hand, this allows the transfer of research from group based human interaction (\cref{sec.rw.hi.focused-rw.groups}) to mixed human-agent interaction scenarios.
+This entails, the analysis of the social and interactive meaning of group formations and distances.
+On the other hand, research on the generation and effects of \gls{artificial agent} behaviour (\cref{sec.rw.hi.focused-rw.mixedgroups}) can be performed without having to keep fixed group configurations.
+Furthermore, this allows the analysis of group formations and peoples preferences in \gls{hai} over longer periods of time.
+
+% role recognition
+The recognition of \glspl{conversational role} allows generating role specific agent behaviour.
+While some possible behaviours are already explored in the literature (\cref{sec.rw.hi.focused-rw.turntaking}), their application is rather sparse.
+The \glspl{robot} in these investigations use \glsatt{conversation} signals when taking or releasing the \gls{turn} or to show their attention when not speaking.
+By recognizing the role continuously, the behaviour of the agent can be further adapted during a \gls{turn}.
+An agent should not only be able to react when addressed or interrupted, but also when attention shifts and role changes happen during a \gls{turn}.
+By comparing the recognized role of the agent with the expected role, problems in the mutual understanding of the situation can be detected and repair strategies initiated.
+
+% overall nice to have
+To be accepted in long term interactions, \glspl{artificial agent} do not only need to understand commands.
+They need a model of the interaction they are in.
+They need to know to whom to talk and whom to listen to.
+To people who want to converse, they need to direct special attention, and they need to respect that others do not want attention.
+With the investigations in this thesis, I intend to make this more achievable by broadening the recognition-possibilities of \glspl{artificial agent} in \glspl{smart environment}.

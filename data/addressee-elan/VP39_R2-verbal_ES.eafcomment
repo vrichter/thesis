@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ColTimeList xmlns="http://mpi.nl/tools/coltime"
+    xmlns:NS1="http://www.w3.org/2001/XMLSchema-instance" NS1:schemaLocation="http://mpi.nl/tools/coltime http://www.mpi.nl/tools/coltime/schema.xsd">
+    <ColTime ColTimeMessageID="f44d3b48-c0c0-43ff-88e0-3b3c4cf4c693" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-16T12:43:04.255Z</CreationDate>
+            <ModificationDate>2015-12-16T12:43:04.255Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:f11c6eb0-40f0-4b57-b016-3db1e4e6cce3#t=15.100/25.600;tier=Ausdruck%20spezifisch</AnnotationFile>
+        <Message>VL ist nicht Jasmin (Paul)</Message>
+    </ColTime>
+    <ColTime ColTimeMessageID="f2818d8f-1e1d-4097-89fa-e472e1a98591" URL="">
+        <Metadata>
+            <Initials/>
+            <ThreadID/>
+            <Sender/>
+            <Recipient/>
+            <CreationDate>2015-12-16T12:44:03.134Z</CreationDate>
+            <ModificationDate>2015-12-16T12:44:03.134Z</ModificationDate>
+            <Category>unknown</Category>
+            <Status>unknown</Status>
+        </Metadata>
+        <AnnotationFile URL="" type="EAF">urn:nl-mpi-tools-elan-eaf:f11c6eb0-40f0-4b57-b016-3db1e4e6cce3#t=26.000/35.800;tier=Ausdruck%20spezifisch</AnnotationFile>
+        <Message>VP bemerkt die Begrüßung des Appartments nicht</Message>
+    </ColTime>
+</ColTimeList>

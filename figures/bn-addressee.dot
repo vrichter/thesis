@@ -1,0 +1,51 @@
+digraph
+{
+  //rankdir=LR
+  //concentrate=true
+  nodesep=1.0
+  ranksep=0.3
+  // Define the nodes
+  // colors: "#E41A1C" "#377EB8" "#4DAF4A" "#984EA3" "#FF7F00" "#FFFF33" "#A65628"
+  // green #4DAF4A
+  // blue #377EB8
+  // violett #984EA3
+  // orange #FF7F00
+  // red #E41A1C
+
+   subgraph cluster_1 {
+    style=dotted
+    color="#E41A1C"
+    fillcolor="white"
+    penwidth=5
+  subgraph cluster_2 {
+    style=dashed
+    color="#377EB8"
+    fillcolor="white"
+    penwidth=5
+  subgraph cluster_3 {
+    style=filled
+      color="#4DAF4A"
+    fillcolor="white"
+    penwidth=5
+  Addressee   [fontname="Liberation Serif",fontsize=17,style="bold",color="gray"]
+  Mouth       [fontname="Liberation Serif",fontsize=17,style="bold",color="#FF7F00"]
+  Gaze        [fontname="Liberation Serif",fontsize=17,style="bold",color="#984EA3"]
+  }
+  Speaking    [fontname="Liberation Serif",fontsize=17,style="bold",color="black"]
+  }
+  Task        [fontname="Liberation Serif",fontsize=17,style="bold",color="black"]
+  }
+
+ edge [style=bold,color="#984EA3"]
+  //Gaze -> Addressee
+  Addressee -> Gaze
+  edge [style=bold,color="#FF7F00"]
+  //Mouth -> Addressee
+  Addressee -> Mouth
+  edge [style=bold,color="black"]
+  //Task -> Addressee
+  Addressee -> Task
+  edge [style=bold,color="black"]
+  //Speaking -> Addressee
+  Addressee -> Speaking
+}

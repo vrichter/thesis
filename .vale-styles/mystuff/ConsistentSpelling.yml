@@ -1,0 +1,20 @@
+extends: substitution
+message: Use '%s' instead of '%s'
+ignorecase: true
+level: warning
+swap:
+  meta data: metadata
+  data set: dataset
+  data sets: datasets
+  meta model: metamodel
+  meta models: metamodels
+  timeseries: time series
+  data is: data are
+  open source: open-source
+  opensource: open-source
+  run-time: runtime
+  run time: runtime
+  front-end: front end
+  front-ends: front ends
+  javascript: JavaScript
+  Java Script: JavaScript

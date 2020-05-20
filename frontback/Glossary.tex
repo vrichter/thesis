@@ -1,0 +1,562 @@
+% acronyms
+\newacronym{hri}{HRI}{Human-Robot-Interaction}
+\newacronym{hci}{HCI}{Human-Computer-Interaction}
+\newacronym{hhi}{HHI}{Human-Human-Interaction}
+\newacronym{hai}{HAI}{Human-Agent-Interaction}
+\newacronym{foa}{FOA}{Focus of Attention}
+\newacronym{fov}{FOV}{Field of View}
+\newacronym{roi}{ROI}{Region of Interest}
+\newacronym{vfoa}{VFoA}{Visual Focus of Attention}
+\newacronym{citec}{CITEC}{Cluster of Excellence Cognitive Interaction Technology}
+\newacronym{gui}{GUI}{Graphical User Interface}
+\newacronym{cv}{CV}{Cross-Validation}
+\newacronym{mdl}{MDL}{Minimum Description Length}
+\newacronym[prefixfirst={a\ },prefix={an\ }]{svm}{SVM}{Support Vector Machine}
+\newacronym{hmm}{HMM}{Hidden Markov Model}
+\newacronym[prefixfirst={a\ },prefix={an\ }]{mlp}{MLP}{Multilayer Perceptron}
+\newacronym{tom}{ToM}{Theory of Mind}
+
+% dual entries
+\newdualentry{ipa}{IPA}{Intelligent Personal Assistant}{Speech activated and verbally interacting \glspl{artificial agent} which can be embedded in loudspeakers, televisions, smart phones, etc.. In contrast to other \glspl{virtual agent} they do not have a specific embodiment.}
+\newdualentry{auc}{AUC}{Area Under the Curve}{The area under the \gls{roc} curve can be calculated as a measure of classifier performance over a set of possible parametrisations.}
+\newdualentry{tp}{TP}{true positive}{Correctly accepted elements in a \gls{confusion matrix}.}
+\newdualentry{fn}{FN}{false negative}{Wrongly rejected elements in a \gls{confusion matrix} (\emph{Type II Error}).}
+\newdualentry{fp}{FP}{false positive}{Wrongly accepted elements in a \gls{confusion matrix} (\emph{Type I Error}).}
+\newdualentry{tn}{TN}{true negative}{Correctly rejected elements in a \gls{confusion matrix}.}
+\newdualentry{cp}{CP}{condition positive}{The sum of positive elements in the sample of a \gls{confusion matrix}.}
+\newdualentry{cn}{CN}{condition negative}{The sum of negative elements in the sample of a \gls{confusion matrix}.}
+\newdualentry{pp}{PP}{predicted positive}{The sum of elements accepted by a model.}
+\newdualentry{pn}{PN}{predicted negative}{The sum of elements rejected by a model.}
+\newdualentry{tpr}{TPR}{true positive rate}{\[TPR=\frac{\glslink{tp}{TP}}{\glslink{cp}{CP}}\]Probability of detection, also known as \gls{recall} or \gls{sensitivity}.}
+\newdualentry{fpr}{FPR}{false positive rate}{\[FPR=\frac{\glslink{fp}{FP}}{\glslink{cn}{CN}}\]Probability of false alarm, also known as \gls{fallout}. }
+\newdualentry{fnr}{FNR}{false negative rate}{\[FNR=\frac{\glslink{fn}{FN}}{\glslink{cp}{CP}}\]Miss rate.}
+\newdualentry{tnr}{TNR}{true negative rate}{\[TNR=\frac{\glslink{tn}{TN}}{\glslink{cn}{CN}}\]Also known as \gls{specificity} or \gls{selectivity}.}
+\newdualentry{ppv}{PPV}{positive prediction value}{\[PPV=\frac{\glslink{tp}{TP}}{\glslink{pp}{PP}}\]Also known as \gls{precision}. }
+\newdualentry{for}{FOR}{false omission rate}{\[FOR=\frac{\glslink{fn}{FN}}{\glslink{pn}{PN}}\]}
+\newdualentry{fdr}{FDR}{false discovery rate}{\[FDR=\frac{\glslink{fp}{FP}}{\glslink{pp}{PP}}\]}
+\newdualentry{npv}{NPV}{negative prediction value}{\[NPV=\frac{\glslink{tn}{TN}}{\glslink{pn}{PN}}\]}
+\newdualentry{lrp}{LR+}{positive likelihood ratio}{\[LR+=\frac{\gls{tpr}}{\gls{fpr}}\]}
+\newdualentry{lrm}{LR-}{negative likelihood ratio}{\[LR-=\frac{\glslink{fnr}{FNR}}{\glslink{tnr}{TNR}}\]}
+
+\newdualentry{dor}{DOR}{diagnostic odds ratio}{
+                \[\glslink{dor}{DOR}=\frac{\glslink{lrp}{LR+}}{\glslink{lrm}{LR-}}\]
+		The diagnostic odds ratio is an indicator for test quality which is independent from the \gls{prevalence} of the test set.
+		It can be read as \enquote{The odds of correcly accepting is \(x\) times higher than the odds of falsely rejecting}.
+                Therefore, tests with discriminative power have a DOR \(>1\)~\cite[]{glas2003}. 
+		}
+
+\newdualentry{roc}{ROC}{receiver operating characteristic}{
+  The receiver operating characteristic (ROC) Curve visualizes the \glslink{tpr}{TPR} of a classifier against its \glslink{fpr}{FPR} for a collection of thresholds.
+		This allows a better assessment of the trade-off between the probabilities of detection and false alarm.
+		}
+
+\newdualentry{woz}{WoZ}{Wizard-Of-Oz}{A study set-up, in which participants interact with a seemingly interactive interlocutor that is secretly controlled by a hidden experimenter.}
+
+\newdualentry{rnn}{RNN}{Recurrent Neural Network}{
+	\Glspl{ann} that hold a representation of recent inputs as an internal activation. 
+	This activation acts as a short-term memory that holds relevant aspects of the input sequence until they can be used. 
+	This allows the network to learn structures that can only be observed over time~\cite{Mozer1992}.
+	}
+
+\newdualentry{lstm}{LSTM}{Long Short-Term Memory}{\glslink{rnn}{Recurrent neural networks} with memory cells and gate units which allows efficient learning of long term time dependencies. They are introduced in~\cite{Hochreiter1997}.}
+
+\newdualentry{csra}{CSRA}{Cognitive Service Robotics Apartment as Ambient Host}{The \gls{csra} is a \gls{robot} inhabited, \gls{smart home}-laboratory in the \gls{citec} at Bielefeld University. A discription of the \gls{csra} can be found in \cref{sec.csra},~\cite{Wrede2017} and \url{https://www.cit-ec.de/csra}.
+}
+
+% glossary 'simlinks'
+\newaltglossentry{precision}{precision}{ppv}
+\newaltglossentry{recall}{recall}{tpr}
+\newaltglossentry{sensitivity}{sensitivity}{tpr}
+\newaltglossentry{specificity}{specificity}{tnr}
+\newaltglossentry{selectivity}{selectivity}{tnr}
+\newaltglossentry{fallout}{fall-out}{fpr}
+\newaltglossentry{apartment}{apartment}{csra}
+
+% glossary entries
+\newglossaryentry{confusion matrix}
+{
+	name={confusion matrix},
+	plural={confusion matrices},
+	description={
+		A matrix that contrasts classifications to ground truth data to visualize the performance of a classifier.
+		\[\text{\gls{confusion matrix}} = \begin{bmatrix}
+			\gls{tp} & \gls{fp} \\
+			\gls{tn} & \gls{fn}
+			\end{bmatrix}\]
+	}
+}
+
+\newglossaryentry{accuracy}
+{
+	name={accuracy},
+	description={
+		\[\text{\gls{accuracy}} = \frac{\glslink{tp}{TP}+\glslink{tn}{TN}}{\glslink{cp}{CP}+\glslink{cn}{CN}} = \frac{|\text{correct classifications}|}{|\text{all classifications}|}\]
+		The amount of correct classifications (correctly accepted and correctly rejected) in comparison to the total sample size. This measurement can be generalized for problems with more than two classes as the sum of correct classifications divided by the size of the population.
+	}
+}
+
+\newglossaryentry{markedness}
+{
+	name={markedness},
+	description={
+		\[\text{\gls{markedness}} = \glslink{ppv}{PPV}+\glslink{npv}{NPV}-1\]
+		An alternative measure for \gls{precision} which is not biased by the \gls{prevalence} of the sample~\cite[]{powers2008}. It tells how trustworthy the models predictions are. 1 means all predictions are correct, -1 means all predictions are wrong.
+	}
+}
+
+\newglossaryentry{informedness}
+{
+	name={informedness},
+	description={
+		\[\text{\gls{informedness}} = \glslink{tpr}{TPR}+\glslink{tnr}{TNR}-1\]
+		An alternative measure for \gls{recall} which is not biased by the \gls{prevalence} of the sample~\cite[]{powers2008}. It tells whether the model can detect positive and negative observations. 1 means all observations will be correctly retrieved, -1 means all will be wrongfully retrieved.
+	}
+}
+
+\newglossaryentry{prevalence}
+{
+	name={prevalence},
+	description={
+		\[\text{\gls{prevalence}} = \frac{\glslink{cp}{CP}}{\glslink{cp}{CP}+\glslink{cn}{CN}}\]
+		The proportion of true elements in the sample.
+	}
+}
+
+\newglossaryentry{f1score}
+{
+	name={{F1-score}},
+	description={
+		The harmonic mean between \gls{precision} and \gls{recall}:
+		\[F_1=2\frac{\glslink{ppv}{PPV}\cdot\glslink{tpr}{TPR}}{\glslink{ppv}{PPV}+\glslink{tpr}{TPR}}\]
+	}
+}
+
+\newglossaryentry{copresence}
+{
+	name={copresence},
+	attributive={copresent},
+	description={People are copresent, when they sense that they are close enough to mutually perceive each other and their mutual sensing of perceiving and being perceived.}
+}
+
+\newglossaryentry{unfocused interaction}
+{
+	name={unfocused interaction},
+	description={When people are not in a \gls{focused interaction} but to manage their \gls{copresence} they are in an \gls{unfocused interaction}.}
+}
+
+\newglossaryentry{face engagement}
+{
+	name={face engagement},
+	description={\citeauthor{goffman1963} uses the term \gls{face engagement} for instances of \gls{focused interaction} between people~\cite[p. 91]{goffman1963}.}
+}
+
+\newglossaryentry{participation unit}
+{
+	name={participation unit},
+	description={\Gls{participation unit} is a collective term for \glspl{face engagement} and single, unengaged persons~\cite[p. 91]{goffman1963}.}
+}
+
+\newglossaryentry{encounter}
+{
+	name={encounter},
+	description={An alternative term for \gls{face engagement}~\cite[]{goffman1963}.}
+}
+
+\newglossaryentry{focused interaction}
+{
+	name={focused interaction},
+	description={In a \gls{focused interaction}, people come together and actively cooperate to maintain a joint focus of attention (\cref{sec.rw.hi.focused}).}
+}
+
+\newglossaryentry{transactional segment}
+{
+	name={transactional segment},
+	description={Is the area in front of a person. In this area people perform most of their activities, have the best perception of and highest degree of control over their environment~\cite[p. 240]{Ciolek1980}.}
+}
+
+\newglossaryentry{conversation}
+{
+	name={conversation},
+	attributive={conversational},
+	description={A \gls{focused interaction} with the purpose of communication between a group of people in \gls{copresence}. Although, \glspl{conversation} can have different forms---e.g. manually coded or text based---this work focuses on direct, verbal \glspl{conversation}.}
+}
+
+\newglossaryentry{turn}
+{
+	name={turn},
+	description={The right to speak in a \gls{conversation}. Only one participant of said \gls{conversation} can own the \gls{turn}.}
+}
+
+\newglossaryentry{turn taking system}
+{
+	name={turn taking system},
+	description={A set of rules and behaviours by which the transition of a \gls{turn} between participants of a \gls{conversation} is negotiated (see \cref{sec.rw.hi.tt}).}
+}
+
+\newglossaryentry{turn taking}
+{
+	name={turn taking},
+	description={The act of acquiring  or releasing a \gls{turn} in a \gls{conversation}. Often used as synonym for the \gls{turn taking system}}
+}
+
+\newglossaryentry{conversational floor}
+{
+	name={conversational floor},
+	description={Often interchangeably used for the \gls{turn} in a \gls{conversation}~\cite[]{Hayashi1988a}.}
+}
+
+\newglossaryentry{conversational group}
+{
+	name={con\-ver\-sa\-tion\-al gro\-up},
+	description={A group of two or more persons that conduct a \gls{conversation} (see \cref{sec.rw.hi.cg}). \Glsatt{conversation} groups often assume \glspl{ffm}.}
+}
+\newglossaryentry{conversational role}
+{
+	name={conversational role},
+	description={The roles people can assume in respect to a \gls{conversation}. These can be \gls{speaker}, \gls{addressee}, or different types of \glspl{side-participant} (see \cref{sec.rw.hi.cr})}
+}
+\newglossaryentry{speaker}
+{
+	name={speaker},
+	description={
+		The \gls{speaker} is the participant of a \gls{conversation} who has the right to speak.
+		While the \glspl{speaker} change during the \gls{conversation}, only one person can be \gls{speaker} at a time.
+		}
+}
+\newglossaryentry{addressee}
+{
+	name={addressee},
+	description={The \gls{addressee} is the participant a \gls{speaker} directs the speech to.
+	While multiple or all participants of a \gls{conversation} can be addressed at the same time, one person usually can be considered the main \gls{addressee}.}
+}
+\newglossaryentry{side-participant}
+{
+	name={side-participant},
+	description={A participant of a \gls{conversation} who is neither \gls{speaker} not \gls{addressee} has the role of a \gls{side-participant}.}
+}
+\newglossaryentry{non-participant}
+{
+	name={non-participant},
+	description={All people in \gls{copresence} that do not participate a \gls{conversation} can be considered \glspl{non-participant} of regarding this \gls{conversation}.}
+}
+\newglossaryentry{civil inattention}
+{
+	name={civil inattention},
+	description={In \gls{unfocused interaction}, people need to display that they acknowledge the others presence and can potentially be approached. At the same time they may want to prevent the impression that they are trying to enter, disturb or eavesdrop on a \gls{focused interaction}.}
+}
+
+\newglossaryentry{proxemics}
+{
+	name={proxemics},
+	attributive={proxemic},
+	description={Proxemics investigate how people perceive and use interpersonal distances in different situations and social contexts.}
+}
+
+\newglossaryentry{farphase}
+{
+	name={far phase},
+	description={The outer region of a \glsatt{proxemics} distance as defined by~\cite{Hall1969}.}
+}
+
+\newglossaryentry{closephase}
+{
+	name={close phase},
+	description={The inner region of a \glsatt{proxemics} distance as defined by~\cite{Hall1969}.}
+}
+
+\newglossaryentry{intimatedist}
+{
+	name={intimate distance},
+	description={The area \(\leq\SI{0.46}{\meter}\) around a person where physical contact is probable and only partners and good friends may enter without discomfort~\cite[]{Hall1969}.}
+}
+
+\newglossaryentry{personaldist}
+{
+	name={personal distance},
+	description={The area \(\leq\SI{1.22}{\meter}\) around a person personal topics can be discussed by people who know each other. It is at the edge of \enquote{arms reach}~\cite[]{Hall1969}.}
+}
+
+\newglossaryentry{socialdist}
+{
+	name={social distance},
+	description={The area \(\leq\SI{3.66}{\meter}\) around a person where less personal interactions---e.g. with colleagues or on social gatherings---can be carried out. This distance allows simple engagement and disengagement~\cite[]{Hall1969}.}
+}
+
+\newglossaryentry{publicdist}
+{
+	name={public distance},
+	description={The area \(\leq\SI{7.62}{\meter}\) around a person where the voice level needs to get loud, the phrasing more format and facial expressions get replaced by gestures. It is more appropriate for speeches and presentations than for \glspl{conversation}~\cite[]{Hall1969}.}
+}
+
+\newglossaryentry{proxemicspace}
+{
+	name={proxemic space},
+	description={The set of spaces from~\citeauthor{Hall1969}'s \gls{proxemics} as used in a taxonomy of social spaces by~\cite{Lindner2011}. The original term in the taxonomy is \emph{personal space}. \Gls{proxemicspace} is used in this dissertation to prevent confusion.}
+}
+
+\newglossaryentry{activityspace}
+{
+	name={activity space},
+	description={The space that is occupied by the activity of an agent. Entering it may cause discomfort in the agent~\cite[]{Lindner2011}.}
+}
+
+\newglossaryentry{affordancespace}
+{
+	name={affordance space},
+	description={A space of a potential activity. Being there may prevent other agents from performing that activity~\cite[]{Lindner2011}.}
+}
+
+\newglossaryentry{territoryspace}
+{
+	name={territory space},
+	description={The space that is claimed and accordingly marked by an agent or a group---e.g. a garden or room~\cite[]{Lindner2011}.}
+}
+
+\newglossaryentry{penetratedspace}
+{
+	name={penetrated space},
+	description={The space that is affected by an activity---e.g. through noise or odour. Its form may be different from the \gls{activityspace}~\cite[]{Lindner2011}.}
+}
+
+\newglossaryentry{ffm}
+{
+	name={F-Formation},
+	description={A spacial and orientational arrangement entered and maintained by a group of people. The space between them is the \gls{ospace}, to which all participants have equal and exclusive access~\cite[p. 209]{kendon1990}.}
+}
+
+\newglossaryentry{ospace}
+{
+	name={o-space},
+	description={The space between the participants of a \gls{focused interaction}. The participants orient their upper body towards its center and coordinate themselves to maintain equal accessibility for participants and non-accessibility for \glspl{non-participant}~\cite[p. 243]{Ciolek1980}. }
+}
+
+\newglossaryentry{pspace}
+{
+	name={p-space},
+	description={A narrow zone in \glspl{ffm} where the bodies and personal belongings of the participants are located~\cite[p. 259]{Ciolek1980}.}
+}
+
+\newglossaryentry{rspace}
+{
+	name={r-space},
+	description={The space outside of and between \glspl{ffm}. In this space associates of the \gls{ffm} are usually located and it is avoided by other \glspl{participation unit}~\cite[p. 260]{Ciolek1980}.}
+}
+
+\newglossaryentry{stride}
+{
+	name={stride},
+	description={The distance between a persons position and the center of its \gls{transactional segment} as presented in~\cite[]{Setti2015}.}
+}
+
+\newglossaryentry{ips}
+{
+	name={information process space},
+	description={The space in front of pedestrians in which they observe other pedestrians and obstacles~\cite[]{Kitazawa2010}.}
+}
+
+\newglossaryentry{kinect}
+{
+	name={Kinect},
+	description={The Microsoft \gls{kinect} is a sensor that can provide a coloured video stream, a depth---distance measurement---stream and an audio stream.}
+}
+
+\newglossaryentry{ubicomp}
+{
+	name={ubicomp},
+	first={ubiquitous computing (ubicomp)},
+	description={In \acrfull{ubicomp}, technology and interfaces blend with their environment and therefore can not be distinguished from it~\cite[]{Greenberg1991}.}
+}
+
+\newglossaryentry{wizard}
+{
+	name={wizard},
+	description={The person that controls the behaviour of an agent in a \gls{woz} study.}
+}
+
+\newglossaryentry{bayesiannetwork}
+{
+	name={Bayesian Network},
+	description={A probabilistic, directed, acyclic graph that models dependent probabilities.}
+}
+
+\newglossaryentry{naivebayes}
+{
+	name={Na{\"i}ve Bayes},
+	description={A \gls{bayesiannetwork} with strong independence assumptions.}
+}
+
+\newglossaryentry{randomforest}
+{
+	name={Random Forests},
+	description={A learner that uses ensembles of decision trees and voting for classification~\cite[]{Breiman2001}.}
+}
+
+\newglossaryentry{flobi}
+{
+	name={Flobi},
+	description={
+		\gls{flobi} is an anthropomorphic \gls{robot} head designed at Bielefeld University specifically for \gls{hri} applications. 
+		It can actuate its eyes, lids, brows, mouth and neck to show emotions, attention, mouth movements during speech~\cite[]{Lutkebohle2010}.
+		A corresponding simulation is a \gls{virtual agent} with similar capabilities which can be used interchangeably with the \gls{robot} head~\cite[]{Lier2012}.
+		The adapted \gls{robot} head, that was created for the \gls{floka} is presented in~\cite{Schulz2019}.
+		}
+}
+\newglossaryentry{Flobi Assistance}
+{
+	name={Flobi Assistance},
+	description={
+		\gls{Flobi Assistance} is an instance of the simulation of the anthropomorphic \gls{robot} head \gls{flobi}.
+		It is located in the kitchen of the \gls{csra}.
+		A photograph of it can be seen in \vref{fig:csra-pics}.
+		}
+}
+\newglossaryentry{Flobi Entrance}
+{
+	name={Flobi Entrance},
+	description={
+		\gls{Flobi Entrance} is an instance of the simulation of the anthropomorphic \gls{robot} head \gls{flobi}.
+		It is located in the hallway of the \gls{csra}.
+		A photograph of it can be seen in \vref{fig:csra-pics}.
+		}
+}
+\newglossaryentry{floka}
+{
+	name={Floka},
+	description={
+		\gls{floka} is an anthropomorphic \gls{robot} based on the \emph{MekaBot M1}.
+		It has an omni-directional drive, can lift it's upper body up and down and two arms that end in hand-like manipulators.
+		It's head can be chosen between the original sensor head of the \emph{MekaBot M1} and a version of the \gls{flobi} head that was adapted for this particular case~\cite{Schulz2019}.
+		The \gls{robot} is presented in~\cite{Meyer2017}
+		}
+}
+\newglossaryentry{tolerant match}
+{
+	name={tolerant match},
+	description={
+		A definition from~\cite{Setti2015} of how to compare a detected group of persons with a ground truth annotation to decide whether they match or not.
+		The definition can be looked up in \cref{def.tm}.
+		}
+}
+\newglossaryentry{tolerance threshold}
+{
+	name={tolerance threshold},
+	description={
+		The threshold used in a \gls{tolerant match} (see \cref{def.tm}).
+		}
+}
+\newglossaryentry{ann}
+{
+	name={artificial neural network},
+	description={Inspired by the mechanics of biological neural networks, these networks can be used for machine learning tasks. They receive an activation in their input layer and propagate it through the network to produce an activation at their output layer.}
+}
+\newglossaryentry{tme}
+{
+	name={The Media Equation},
+	alternative={Media Equation},
+	description={
+		According to~\cite{Reeves1996}, humans treat computers, \glspl{artificial agent}, and media in general similar to other humans.
+		They show politeness, ascribe gender stereotypes, and physically react to visualized motion.
+		}
+}
+\newglossaryentry{in the wild}
+{
+	name={in the wild},
+	description={
+		This term is used to emphasize research or situations that are performed outside of the controlled laboratory environment.
+		Studies that place a \gls{robot} on a public square to interact with whoever passes by are \gls{in the wild}.
+		}
+}
+\newglossaryentry{interactive entity}
+{
+	name={interactive entity},
+	plural={interactive entities},
+	description={
+		Interactive entities are all entities with which a person can interact and which as a result change their internal state.
+		For the taxonomy of \glspl{interactive entity} see \cref{fig:rw.entities}.
+	}
+}
+\newglossaryentry{device}
+{
+	name={device},
+	description={
+		A \gls{device} is any \gls{interactive entity} that is not an \gls{autonomous agent}.
+		It has an inner state that can be changed, but neither believes nor goals.
+		For the taxonomy of \glspl{interactive entity} see \cref{fig:rw.entities}.
+	}
+}
+\newglossaryentry{autonomous agent}
+{
+	name={autonomous agent},
+	description={
+		Autonomous agents are \glspl{interactive entity} that can react and interact with their environment and with other entities in it.
+		They have believes about the world and goals which they pursue through interaction.
+		For the taxonomy of \glspl{interactive entity} see \cref{fig:rw.entities}.
+	}
+}
+\newglossaryentry{artificial agent}
+{
+	name={artificial agent},
+	description={
+		In contrast to living beings, \glspl{artificial agent} are a result of  human engineering.
+		This encompasses \glspl{robot} and \glspl{virtual agent}.
+		For the taxonomy of \glspl{interactive entity} see \cref{fig:rw.entities}.
+	}
+}
+\newglossaryentry{robot}
+{
+	name={robot},
+	attributive={robotic},
+	description={
+		\Glspl{robot} are \glspl{artificial agent} with an embodiment that occupies physical space.
+		They may be able to navigate, reconfigure themselves, or manipulate objects but not without changing the availability of space in doing so.
+		For the taxonomy of \glspl{interactive entity} see \cref{fig:rw.entities}.
+	}
+}
+\newglossaryentry{virtual agent}
+{
+	name={virtual agent},
+	description={
+		Virtual agents are \glspl{artificial agent} which are not \glspl{robot}.
+		They may have an embodiment---e.g. visualized on a screen---but do not change the availability of space when they act.
+		\Glspl{ipa} can be counted as \glspl{virtual agent} too.
+		For the taxonomy of \glspl{interactive entity} see \cref{fig:rw.entities}.
+	}
+}
+\newglossaryentry{addressing study}
+{
+	name={addressing study},
+	description={
+		A study of interactions of \naive{} people in the \gls{csra}, in which participants needed to solve a set of mundane tasks.
+		The study is presented in~\cite{Bernotat2016} and the corresponding corpus in~\cite{Holthaus2016a}.
+		}
+}
+\newglossaryentry{addressing corpus}
+{
+	name={addressing corpus},
+	description={
+		The \gls{addressing corpus} is the corpus I automatically extract in \cref{sec.addressing.corpus} from the corpus presented in~\cite{Holthaus2016a}.
+		}
+}
+\newglossaryentry{smart environment}
+{
+	name={smart environment},
+	description={
+		A \gls{smart environment} is composed of interconnected \glspl{device} with the capability of sensing and actuating.
+		It can observe inhabitants and adapt to improve their experience or simplify their tasks~\cite{Cook2005}.
+		}
+}
+\newglossaryentry{smart home}
+{
+	name={smart home},
+	description={
+		A \gls{smart home} is a home with the capabilities of a \gls{smart environment}.
+		}
+}
+\newglossaryentry{robotiquette}
+{
+	name={robotiquette},
+	description={
+		\citefullauthor*{dautenhahn2007socially} proposed that a \gls{robot} needs to behave in a manner that is socially acceptable to humans.
+		This is often referred to as \gls{robotiquette}~\cite{dautenhahn2007socially}. 
+		}
+}

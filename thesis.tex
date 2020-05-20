@@ -1,0 +1,108 @@
+\RequirePackage{fix-cm} % fix some latex issues see: http://texdoc.net/texmf-dist/doc/latex/base/fixltx2e.pdf
+\RequirePackage{silence}
+\WarningFilter{scrreprt}{Usage of package `titlesec'}
+\WarningFilter{scrreprt}{Usage of package `tocloft'}
+\WarningFilter{scrreprt}{Activating an ugly workaround}
+\WarningFilter{titlesec}{Non standard sectioning}
+\WarningFilter{tocloftt}{\string\@starttoc\space has already been redefined; tocloft bailing out.}
+\WarningFilter{microtype}{protrusion codes list}
+\WarningFilter{latexfont}{Font}
+\WarningFilter{latexfont}{Some font shapes}
+\WarningFilter*{pdftex}{invalid other resource which is no dict}
+\WarningFilter*{pdflatex}{invalid other resource which is no dict}
+\WarningFilter*{latex}{invalid other resource which is no dict}
+\documentclass[twoside,openright,titlepage,numbers=noenddot,headinclude,%
+               footinclude=true,cleardoublepage=empty,%
+               BCOR=5mm,paper=a4,fontsize=11pt,11pt,%
+               british,floatperchapter%
+               ]{scrreprt}
+
+\input{config/title-author-date}
+\input{config/colours}
+\input{config/usepackages}
+
+\begin{document}
+
+\title{\myTitle}
+\subtitle{\mySubtitle}
+\author{\myAuthor}
+\date{\myDate}
+
+\frenchspacing
+\raggedbottom{}
+\selectlanguage{british}
+\pagenumbering{roman}
+\pagestyle{plain}
+
+% frontmatter
+\include{frontback/DirtyTitlepage}
+\include{frontback/Titlepage}
+\include{frontback/Titleback}
+\cleardoublepage
+% \include{frontback/Dedication}
+% \cleardoublepage
+% \include{frontback/Foreword}
+\cleardoublepage
+\include{frontback/Acknowledgments}
+\cleardoublepage
+\include{frontback/Abstract}
+\pagestyle{scrheadings}
+\cleardoublepage
+\include{frontback/Contents}
+\include{frontback/Notation}
+
+% mainmatter
+\cleardoublepage\pagenumbering{arabic}
+\cleardoublepage{}
+\ctparttext{
+In this part of the thesis, I introduce the overarching goal, deduce the research questions that guide this work, and give an overview of the remaining document.
+Furthermore, I present the relevant literature from social and computer sciences to create an understanding of human behaviour in focused and unfocused interaction with humans, \glspl{artificial agent}, and interactive \glspl{device}.
+In doing so, I additionally introduce required terms and concepts.
+}
+\part{Research Topic}\label{part.research.topic}
+\include{chapters/introduction}
+\include{chapters/related-work}
+\cleardoublepage{}
+\ctparttext{
+In this part, I investigate human addressing behaviour in interactions with \glspl{smart environment} and \glspl{robot}.
+To this end, I evaluate the importance of different features for \gls{addressee} recognition in interactions of \naive{} people with a \gls{robot} inhabited \gls{smart home}.
+Furthermore, I present and evaluate a visual approach for \gls{speaker} detection and \gls{addressee} recognition for a \gls{robot} in interaction with a group of people.
+}
+\part{Addressee in Communicative Acts}\label{part.addressee}
+\include{chapters/study-addressee}
+\include{chapters/study-meka}
+\cleardoublepage{}
+\ctparttext{
+In this part, I broaden the social skills of \glspl{artificial agent} by investigating how mixed human-agent \glspl{conversational group} can be detected and how the \glspl{conversational role} of the agent within such a group can be recognized.
+To this end, I present an appropriate scenario and create a corresponding corpus.
+On this basis, I evaluate \gls{ffm} detection as an approach to detecting \glspl{conversational group} in an unconstrained interaction between a group of people and two \glspl{virtual agent} with changing constellations.
+Furthermore, I evaluate different approaches to detecting the \gls{conversational role} of the agent in such constellations.
+}
+\part{Groups \& Roles in Copresence}\label{part.group}
+\iniload{group.info}{data/data.info_group.ini}
+\include{chapters/study-corpus}
+\include{chapters/study-group}
+\iniload{role.info}{data/data.info_role.ini}
+\include{chapters/study-role}
+\cleardoublepage{}
+\ctparttext{
+In this part, I summarize the contributions I make in this thesis.
+Furthermore, I present possible enhancements, extensions, applications, and future work.
+}
+\part{Perspectives}\label{part.conclusion}
+\include{chapters/conclusion}
+\appendix
+\addtocontents{toc}{\protect\setcounter{tocdepth}{0}}
+\cleardoublepage{}
+\ctparttext{}
+\part{Appendix}
+\include{chapters/appendix}
+
+% backmatter
+\cleardoublepage\include{frontback/PrintGlossary}
+\cleardoublepage\include{frontback/Bibliography}
+\cleardoublepage\include{frontback/Declaration}
+\cleardoublepage\include{frontback/Colophon}
+
+
+\end{document}

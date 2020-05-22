@@ -16,12 +16,14 @@ Therefore, I claim:
 \newcommand{\hyprolerule}{Given a set of high-level features, the \gls{conversational role} of an agent can be recognized using simple models.}
 \begin{hyp3}[High-Level Features]
     \label{role.rule}
+    \hspace{0pt}\\
     \hyprolerule
 \end{hyp3}
 On the other hand, the signals used to negotiate \glspl{conversational role} in human interaction can often be minimal and hard to determine:
 \newcommand{\hyproleraw}{By learning from lower level features, the recognition of \glspl{conversational role} can be further enhanced.}
 \begin{hyp3}[Low-Level Features]
     \label{role.raw}
+    \hspace{0pt}\\
     \hyproleraw
 \end{hyp3}
 Furthermore, a \gls{conversation} is a dynamic process that unfolds in time and in which the roles are negotiated through the system of \gls{turn} taking, one \gls{turn} at a time.
@@ -29,6 +31,7 @@ Therefore, the problem should be treated as a time-dependent recognition problem
 \newcommand{\hyproletime}{By observing how the interaction unfolds in time, the \gls{conversational role} can be better recognized than from the latest observation alone.}
 \begin{hyp3}[Time-Based Approach]
     \label{role.time}
+    \hspace{0pt}\\
     \hyproletime
 \end{hyp3}
 To investigate \Cref{hyp.roles} and the presented claims, I create and evaluate \gls{conversational role} recognition models for \glspl{virtual agent} in a \gls{smart environment}.
@@ -440,7 +443,7 @@ The \glspl{f1score} of the \emph{dense} models for \emph{Addressee} is equal to 
 While the \emph{lstm} model can achieve results between the \(Rule\) and \(BnM\) models, it's best recognition of \emph{Addressee} is achieved with the \(full\) feature set.
 
 By looking at the confusion matrices of the best performing \(dense\) and \(lstm\) models in comparison to the \(rule\) and \(BnM\) model (\cref{fig:role-cm}) further observations can be made.  
-\begin{figure}[htbp]
+\begin{figure}[htb!]
     \centering
     \begin{footnotesize}
     \input{data/role-cm.tex}

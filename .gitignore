@@ -57,6 +57,7 @@ generated/*.mp4
 generated/*.jpg
 
 languagetool/*txt
+languagetool/textidote.jar
 
 .RData
 .Rhistory

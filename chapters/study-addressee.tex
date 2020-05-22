@@ -91,11 +91,11 @@ This person monitored the \gls{robot}, was introduced as such, and did not furth
 
 \subsubsection{Briefing}
 
-\begin{figure}[tbh]
+\begin{figure}[tbh!]
     \centering
     \def\svgwidth{1.0\textwidth}
     \input{generated/study-addressee-vp57-all.pdf_tex}
-    \caption[Addressing apartment study camera perspectives.]{\label{fig:study.addressee.views} 
+    \caption[Addressing apartment study cameras.]{\label{fig:study.addressee.views} 
     A scene in the living room, during the introduction of a participant from the perspective of camera \(C_1\) (top) and the cameras \(C_2\), \(C_3\) and \(C_4\) (bottom left to right). 
     The camera positions can be found in the \gls{apartment} map (\cref{fig:csra.map.addressee}).
     From left to right in \(C_1\) can be seen: the security person (yellow) with the emergency shut-down, the lamp from the seventh task \(L_F\) (orange), the experimenter (grey) introducing the \gls{robot}, the participant (pink) of the trial, the \gls{robot} (green) waving at them. 
@@ -236,7 +236,7 @@ To correspond with a solution attempt, a \gls{wizard} action needs to overlap wi
 The maximum of \inisi{addr.info}{max.time.seconds}{\second} was chosen on the basis of a sighting of the recordings, which revealed that annotations with a higher difference occurred due to misunderstandings.
 Repeated \gls{wizard} actions, that correspond to the same solution are ignored for the same reason.
 A visualization of the matching process can be seen in \cref{fig:study.addressee.gantt}.
-\begin{figure}[tbh]
+\begin{figure}[tbh!]
     \centering
     \newganttchartelement{tier}{tier/.style={draw=white}, tier inline label anchor=center}
     \begin{ganttchart}[
@@ -337,11 +337,11 @@ The following variables (abbreviations in square brackets) are derived from the 
     \item[{Focus of attention reduced [Fr]:}] Is created from \emph{Focus of attention}.
     Targets are grouped with the same mapping as in \emph{Addressee final reduced (Ar)}. 
     The entity \emph{self} is focused eight times and \emph{not discernible} is focused once.
-    \item[{Addressee equals focus [Aef]:}] Is created by checking whether the annotations in \emph{Addressee final} and \emph{Focus of attention} have the same value.
+    \item[{Addressee equals focus [Aef]:}] Is created by checking if the annotations in \emph{Addressee final} and \emph{Focus of attention} have the same value.
     \item[{Expression reduced [Er]:}] Is created from \emph{Expression (facial, gestural, verbal)} by clustering emotions into \emph{negative}, \emph{neutral}, and \emph{positive}.
     \item[{Method [M]:}] Encodes the used modality---\emph{speech}, \emph{gesture} or \emph{touch}.
     \item[{Method specific reduced [Msr]:}] Is created by extracting the usage of gestures (\emph{clap}, \emph{wave}, \emph{wipe}, and \emph{point}) from the textual descriptions in \emph{Method specific}.
-    \item[{Speech form of address [Sf]:}] Tells whether the entity is named or not, when speech is used.
+    \item[{Speech form of address [Sf]:}] Tells if the entity is named or not, when speech is used.
     \item[{Speech politeness [Sp]:}] Tells whether the phrasing is polite or not, when speech is used.
     \item[{Speech type of sentence reduced [Str]}] Is extracted from the tier \emph{Speech type of sentence}.
     It can take the values \emph{Command}, \emph{Question}, or \emph{Statement}. 
@@ -410,7 +410,7 @@ The following observations can be made from correlations and effect sizes betwee
     This confirms that the \gls{wizard} and annotators recognize the participants' \gls{addressee} in a similar way and that the task at hand has an influence on the \gls{addressee}---as expected in the study design.
     The \emph{Participant-Id [Pid]} is a strong cue for the recognition of the addressed entity too, showing that participants had different preferences.
     Furthermore, the strong correlations and effect sizes with \emph{Method [M]} and the speech related variables \emph{[Sf, Sp, Str, Sph, Ssr]} show that these can be used as predictors too.
-    \item[{Focus of attention reduced [Fr]:}] This shows correlations and effect sizes that are similar to \emph{Addressee final reduced [Ar]}.
+    \item[{Focus of attention reduced [Fr]:}] This vaariable shows correlations and effect sizes that are similar to \emph{Addressee final reduced [Ar]}.
     This observation supports the expectation that they are strongly correlated.
     \item[{Addressee equals focus [Aef]:}] Knowing this value together with the participants' focus of attention is informative for \gls{addressee} inference.
     However, it depends on the \gls{addressee} and therefore can not be directly observed.
@@ -429,7 +429,7 @@ The following observations can be made from correlations and effect sizes betwee
     \item[{Participant Id [Pid]:}] correlates with all variables except \emph{Wizard task [T]}.
     The non-correlation with the task and the strong correlations with \emph{Order} and \emph{Condition} result from the study design.
     The other correlations suggest that the participant's preferences can have a strong influence on the interaction.
-    \item[{Other Variables [Aw, T, C, O]:}] The variables \emph{Wizard \gls{addressee} [Aw]}, \emph{Wizard task [T]}, \emph{Condition [C]}, and \emph{Order [O]} are inherent to the study and can not normally be used directly for \gls{addressee} recognition.
+    \item[{Other Variables [Aw, T, C, O]:}] The remaining variables \emph{Wizard \gls{addressee} [Aw]}, \emph{Wizard task [T]}, \emph{Condition [C]}, and \emph{Order [O]} are inherent to the study and can not normally be used directly for \gls{addressee} recognition.
     Nevertheless, they show some interesting correlations.
     The strong correlations of \emph{Wizard Task} show that the task at hand is important for the way participants approach an interaction.
     The correlation of \emph{Condition [C]} with the \gls{addressee} shows that the participants adapt to the capabilities of their environment.
@@ -674,7 +674,7 @@ The results can be seen in \cref{fig:study-addressee-bn-cv-val} and are visualiz
     }
 \end{figure}
 
-In the \emph{Speech} condition, \emph{BF} performs worse than the other \glspl{bayesiannetwork} and \emph{BM} performs better than all other models.
+In the \emph{Speech} condition, \emph{BF} performs worse than other \glspl{bayesiannetwork} and \emph{BM} performs better than all other models.
 In the \emph{All} condition, \emph{BM} and \emph{RF} perform better than \emph{BF}.
 When using the \emph{Visual} or \emph{Observable} sets of variables, no differences in the recognition results of different models can be found.
 When only \emph{Speech} variables are observed, all models perform worse than in the other configurations.

@@ -119,12 +119,15 @@ fun_calc_curve_and_plot <- function(
 roc_orig <- fun_calc_curve_and_plot(result, base_data, 
                                `fpr`, `tpr`, 
                                "False Positive Rate (False Alarms)", "True Positive Rate (Recall)", 
+                               auc_x = 0.84,
+                               auc_y = seq(from=0.1, to=0.7, length.out = 5),
                                ggbase = ggplot() + 
-                                 annotate("rect", xmin = 0.45, xmax = 1, ymin = 0.0225, ymax = 0.775, alpha = 0.3) + 
-                                 annotate("text", x = 0.575, y = 0.4, label = "\\footnotesize{AUC}")
+                                 annotate("rect", xmin = 0.4, xmax = 1, ymin = 0.02, ymax = 0.78, alpha = 0.3) + 
+                                 annotate("text", x = 0.475, y = 0.4, label = "\\footnotesize{AUC}")
                                )
 
 (roc_orig$plot)
+
 
 roc_defence <- roc_orig$result %>%
   filter(model != "Both+Self") %>%
@@ -160,7 +163,7 @@ roc_pr <- fun_calc_curve_and_plot(result, base_data,
                                auc_y = rev(c(0.6, 0.6, 0.6, 0.15, 0.15)),
                                ggbase = ggplot() + 
                                  geom_hline(yintercept=info$prev.addressed,linetype="dashed") +
-                                 annotate("rect", xmin = 0.075, xmax = 0.925, ymin = 0.075, ymax = 0.675, alpha = 0.3) + 
+                                 annotate("rect", xmin = 0.05, xmax = 0.95, ymin = 0.075, ymax = 0.675, alpha = 0.3) + 
                                  annotate("text", x = 0.5, y = 0.375, label = "\\footnotesize{AUC}")
                                )
 (roc_pr$plot)
@@ -183,8 +186,8 @@ fun_write_all_out <- function(){
   fun_write_plot_tex(plot_cl_performance_mouth, 'meka-perf-mouth.tex', hfac=0.7*plot_height_factor_golden_ratio)
   fun_write_plot_tex(plot_cl_performance_gaze,  'meka-perf-gaze.tex', hfac=0.7*plot_height_factor_golden_ratio)
   fun_write_plot_tex(plot_cl_performance_mad,   'meka-perf-mad.tex', hfac=0.7*plot_height_factor_golden_ratio)
-  fun_write_plot_tex(roc_orig$plot,             'meka-roc-models.tex', hfac=1.1668*plot_height_factor_golden_ratio)
-  fun_write_plot_tex(roc_pr$plot,               'meka-rocpr-models.tex', hfac=1.1668*plot_height_factor_golden_ratio)
+  fun_write_plot_tex(roc_orig$plot,             'meka-roc-models.tex', hfac=1.3*plot_height_factor_golden_ratio)
+  fun_write_plot_tex(roc_pr$plot,               'meka-rocpr-models.tex', hfac=1.3*plot_height_factor_golden_ratio)
   fun_write_plot_beamer_tex(plot_da_counts, 'meka-da-countsplot-beamer.tex', hfac=plot_height_factor_golden_ratio)
   fun_write_plot_beamer_tex(plot_cl_performance_mouth, 'meka-perf-mouth-beamer.tex', hfac=0.8*plot_height_factor_golden_ratio)
   fun_write_plot_beamer_tex(plot_cl_performance_gaze,  'meka-perf-gaze-beamer.tex', hfac=0.8*plot_height_factor_golden_ratio)

@@ -186,7 +186,7 @@ fun_plot_with_auc <- function(
 fun_write_all_out <- function(){
   fun_write_info(info, filename="data.info_group.ini")
   fun_write_plot_tex(plot_ingroup_counts, 'group-ingroup-counts.tex', hfac=0.75*plot_height_factor_golden_ratio)
-  fun_write_plot_tex(plot_ffm_curves, 'group-ffm-evaluation.tex', hfac=2.6*plot_height_factor_golden_ratio)
+  fun_write_plot_tex(plot_ffm_curves, 'group-ffm-evaluation.tex', hfac=2.0*plot_height_factor_golden_ratio)
   fun_write_plot_tex(plot_in_group_roc, 'group-ingroup-roc.tex', hfac=1.*plot_height_factor_golden_ratio)
   fun_write_plot_tex(plot_in_group_pr, 'group-ingroup-pr.tex', hfac=1.*plot_height_factor_golden_ratio)
   fun_write_plot_beamer_tex(plot_ffm_curves_short, 'group-ffm-evaluation-beamer.tex', hfac=1.5*plot_height_factor_golden_ratio)

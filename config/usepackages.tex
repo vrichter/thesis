@@ -2,7 +2,7 @@
 \usepackage{luatexbase}
 
 % show overfull boxes
-\overfullrule=2cm
+%\overfullrule=2cm
 
 \usepackage{caption}
 \PassOptionsToPackage{%
@@ -436,14 +436,14 @@
 \marginnote
 [ % left pages
   {\setlength{\tabcolsep}{2pt}
-  \begin{tabular}{>{\RaggedLeft\hspace{0pt}}p{.769\marginparwidth}>{\RaggedLeft\hspace{-2pt}}p{1em}}
+  \begin{tabular}{>{\RaggedLeft\hspace{0pt}}p{.612\marginparwidth}>{\RaggedLeft\hspace{-2pt}}p{1em}}
     #1 & \textcolor{halfgray}{#2}\\
   \end{tabular}
   }
 ]
 { % right pages
   {\setlength{\tabcolsep}{2pt}
-  \begin{tabular}{>{\RaggedRight\hspace{-2pt}}p{1em}>{\RaggedRight\hspace{0pt}}p{.769\marginparwidth}}
+  \begin{tabular}{>{\RaggedRight\hspace{-2pt}}p{1em}>{\RaggedRight\hspace{0pt}}p{.612\marginparwidth}}
     \textcolor{halfgray}{#2} & #1\\
   \end{tabular}
   }
@@ -451,7 +451,8 @@
 % voffset
 [-\baselineskip]
 }
-\newcommand{\newdefmanual}[2]{\mnote{\begin{footnotesize}#1\end{footnotesize}}{\faEdit}\emph{#2}}
+%\newcommand{\newdefmanual}[2]{}
+\newcommand{\newdefmanual}[2]{\mnote{}{\faEdit}\emph{#2}}
 \newcommand{\newdefgls}[1]{\newdefmanual{\gls+{#1}\glsreset{#1}}{\gls+{#1}}}
 \newcommand{\newdefGls}[1]{\newdefmanual{\gls+{#1}\glsreset{#1}}{\Gls+{#1}}}
 \newcommand{\newdefglspl}[1]{\newdefmanual{\gls+{#1}\glsreset{#1}}{\glspl+{#1}}}

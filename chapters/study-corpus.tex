@@ -43,16 +43,16 @@ To investigate, how dynamically changing \glspl{conversational group} with peopl
 
 % available corpora
 In the \gls{conversational group} detection community there are multiple, frequently used datasets for the evaluation of recognition models.
-The most widely adopted are \emph{Synthetic} and \emph{Coffee Break} from~\citewithauthor{Cristani2011}, \emph{IDIAP Poster Data} from~\citewithauthor{Hung2011}, \emph{Cocktail Party} form~\citewithauthor{Setti2013}, and \emph{GDet} from~\citewithauthor{Bazzani2013}.
+The most widely adopted are \emph{Synthetic} and \emph{Coffee Break} from~\citewithauthor{Cristani2011}, \emph{IDIAP Poster Data} from~\citewithauthor{Hung2011}, \emph{Cocktail Party} form~\citewithauthor{Setti2013}, and \emph{GDet} which was presented by~\citewithauthor{Bazzani2013}.
 They are used for the evaluation of vision based \gls{conversational group} detection models as performed by~\citewithauthor{Setti2015} and~\citewithauthor{Vascon2016}.
 Furthermore, there are multi-modal datasets like \emph{SALSA} from~\citewithauthor{Alameda-Pineda2016} and \emph{MatchNMingle} from~\citewithauthor{Cabrera-Quiros2018}.
-The authors use these datasets to evaluate multi-modal approaches to \gls{conversational group} detection and subsequent analyses of group properties.
+The authors use these datasets to evaluate multi-modal approaches to \gls{conversational group} detection and consecutive analyses of group properties.
 All these datasets show similar situations:
 A crowded place where people stand and interact at a poster presentation, coffee break, speed-dating or similar socializing event.
 These scenarios are intentionally chosen to allow people to act as natural as possible while simultaneously allowing the observation of many interactions and changing groups.
 None of these scenarios feature \glspl{artificial agent}.
 
-Datasets for the analysis of \glspl{conversational role}, often use fixed groups of people without \glspl{artificial agent}~\cite{Jovanovic2006,Akhtiamov2017,Makino2018}.
+Datasets for the analysis of \glspl{conversational role}~\cite{Jovanovic2006,Akhtiamov2017,Makino2018}, often use fixed groups of people without \glspl{artificial agent}.
 If \glspl{artificial agent} are present in such interactions, they are controlled by a \gls{wizard}~\cite{VanTurnhout2005,Jayagopi2013a}, or only distinguish utterances addressed at them from others~\cite{Bohus2011,Skantze2014}.
 Furthermore, these systems consider \glspl{conversational group} only as a distinction between interacting and non-interacting people, using simple heuristics.
 %
@@ -139,7 +139,8 @@ Furthermore, poses of the same person, when annotated from multiple viewpoints, 
 The final dataset is created by sampling these annotations at a fixed rate of \SI{15}{\Hz}.
 The overall distribution of group-sizes for the two agents at this sampling rate can be seen in \cref{fig:group-sizes}.
 \begin{figure}[htb]
-    \centering
+  \centering
+    \small
     \input{data/group-ingroup-counts.tex}
     \caption[Distribution of group sizes of agents.]{\label{fig:group-sizes}
     The distribution of observed group sizes for the two agents in the group annotations of the corpus.
@@ -160,7 +161,7 @@ To assess the possibilities of fully automatic recognition of \glspl{conversatio
 \end{enumerate*}
 
 As the person tracking of the \gls{csra} does not provide rotational information, I additionally apply the~\citesoftware{openposegit} to the overview recordings (\emph{O} in \cref{fig:group-perspectives}) to detect 2D key-points of participants in video coordinates (see \cref{fig:group-openpose}).
-\begin{figure}[htb]
+\begin{figure}[htb!]
     \centering
     \def\svgwidth{0.95\textwidth}
     \begin{footnotesize}
@@ -190,7 +191,7 @@ Transforming this position and orientation into the floor-plane of the \gls{apar
 To fuse detections from multiple camera perspectives and the person tracking, and select the corresponding annotations, the optimal assignment is calculated using the ~\citesoftware{hungarian}.
 This identification of person percepts allows the evaluation of the fully automatic detections.
 A visualization of the annotated and detected overall movements of the participants in the corpus can be seen in \cref{fig:group-person-movement}.
-\begin{figure}[htb]
+\begin{figure}[htb!]
     \centering
     \def\svgwidth{1.0\textwidth}
     \input{generated/ffm-movements.pdf_tex}

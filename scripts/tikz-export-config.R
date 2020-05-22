@@ -3,7 +3,7 @@ tikz_document_declaration <- system("cd .. > /dev/null; latexpand --makeatletter
 tikz_document_declaration_beamer <- system("cd .. > /dev/null; latexpand --makeatletter defence.tex | sed '/begin{document}/Q'; cd - > /dev/null", intern = TRUE, ignore.stderr = TRUE)
 
 # document info for rendering
-latex_textwidth_in = 4.649232
+latex_textwidth_in = 3.985056
 latex_textwidth_beamer_in = 398.3386/72.27
 plot_height_factor_golden_ratio = 0.618
 
@@ -11,8 +11,8 @@ plot_height_factor_golden_ratio = 0.618
 theme_default = theme_get()
 my_theme = 
 theme_set(theme_default + 
-            theme(text = element_text(family = "Times", size=11, colour="black"),
-                  axis.text = element_text(family = "Times", size=11, colour="black")
+            theme(text = element_text(family = "Times", size=10, colour="black"),
+                  axis.text = element_text(family = "Times", size=10, colour="black")
             )
           )
 color_low  = "#377eb8"

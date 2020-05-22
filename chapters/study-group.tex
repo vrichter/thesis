@@ -11,6 +11,7 @@ Because of the discussed similarities between peoples behaviour towards humans a
 \newcommand{\hypffmone}{Mixed \glspl{conversational group} of people and \glspl{artificial agent} can be detected using \glspl{ffm} as known from \gls{hhi}.}
 \begin{hyp3}[Group from \gls{ffm}]
     \label{ffm.h1}
+    \hspace{0pt}\\
     \hypffmone
 \end{hyp3}
 It is often sufficient to know if the agent is in a group or not without identifying the participants of the group. 
@@ -19,11 +20,13 @@ Therefore, I propose the following simplifications for comparison:
 \newcommand{\hypffmgaze}{The detection of peoples ga\-ze di\-rec\-tion in the agents field of view can sufficiently inform about whether it is in a \gls{conversational group} or not.}
 \begin{hyp3}[Group from Mutual Gaze]
     \label{ffm.gaze}
+    \hspace{0pt}\\
     \hypffmgaze
 \end{hyp3}
 \newcommand{\hypffmface}{The detection of faces in the agents field of view can sufficiently inform about whether it is in a \gls{conversational group} or not.}
 \begin{hyp3}[Group from Faces]
     \label{ffm.face}
+    \hspace{0pt}\\
     \hypffmface
 \end{hyp3}
 
@@ -35,7 +38,7 @@ Subsequently, I evaluate \cref{ffm.gaze,ffm.face} by testing if the agents' part
 \section{F-Formation Detection}\label{sec.fformation.fformation}
 
 The participants of a \gls{conversational group} need to optimize their mutual access to the joint interaction space (\gls{ospace}).
-This is achieved by overlapping their \glspl{transactional segment} (\cref{sec.rw.hi.focused}).
+They achieve this by overlapping their \glspl{transactional segment} (\cref{sec.rw.hi.focused}).
 One approach for \gls{ffm}-detection in \gls{hhi}, is presented by~\citewithauthor{Setti2015}.
 It uses 2D positions \([x,y]\) and orientations \(\theta\) of persons in an open space to estimate the centres of their \glspl{transactional segment} (\(TS\)).
 This segment is assumed to be in front of the person with its centre at a fixed distance called \gls{stride} (\(S\)).
@@ -44,7 +47,7 @@ This cost-function should be zero for a perfect overlap of \gls{transactional se
 A good assignment of persons to \glspl{conversational group} can then be found by optimizing the overall costs for a scene. 
 In \cref{fig:ffm.approach} an exemplary scene can be seen with visualizations of the relevant variables.
 The used variables are explained in the next subsection.
-\begin{figure}[htbp]
+\begin{figure}[htbp!]
     \centering
     \def\svgwidth{1.0\textwidth}
     \input{generated/fformation-costs.pdf_tex}
@@ -174,7 +177,7 @@ With this definition, a \gls{confusion matrix} can be calculated.
 In contrast to~\citewithauthor{Setti2015}, the \glspl{confusion matrix} in this section are calculated for each agent separately.
 The matrix is calculated as sums of observations where:
 \begin{description}
-    \item[\acrshort{tp}:] the agent is correctly assigned to a group and the group matches the annotation according to the \gls{tolerant match}.
+    \item[\acrshort{tp}:] the agent is correctly assigned to a group and the group mat\-ches the annotation according to the \gls{tolerant match}.
     \item[\acrshort{fp}:] the agent is falsely assigned to any group.
     \item[\acrshort{tn}:] the agent is correctly classified as not in a group.
     \item[\acrshort{fn}:] the agent is falsely classified as not in a group or assigned to the wrong group according to the \gls{tolerant match}\footnote{Counting an assignment to the wrong group when the agent is in a group as \acrlong{fn} may seem counter-intuitive.
@@ -275,7 +278,7 @@ To this end, I compare the applicability of face detections, and gaze detections
 
 \subsection{Detectors}
 
-To better understand, if face detection, gaze detection, and \gls{ffm} detection can be applied to distinct situations where an agent is in a group from situations where it is not, I create a scalar feature from each of these inputs.
+To better understand, if the detection of faces, gaze directions and \glspl{ffm} can be applied to distinct situations where an agent is in a group from situations where it is not, I create a scalar feature from each of these inputs.
 This is done as follows:
 \begin{description}
    \item[Face:] To get a scalar feature for the face detection I calculate the amount of the agents field of view that is occupied by the face of the nearest person.

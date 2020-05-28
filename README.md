@@ -1,0 +1,1 @@
+<a href="https://pub.uni-bielefeld.de/record/2943368">![Title Imag](figures/readme-front.png "Addressing in Smart Environments. An Investigation of Human Conversational Behaviours Towards Devices and Autonomous Agents in a Smart Environment")</a>
